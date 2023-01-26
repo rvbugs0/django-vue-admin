@@ -15,6 +15,8 @@ from dvadmin.system.views.role import RoleViewSet
 from dvadmin.system.views.system_config import SystemConfigViewSet
 from dvadmin.system.views.user import UserViewSet
 
+from dvadmin.sensorydata.views.sensory_data_view import SensoryDataViewSet
+
 system_url = routers.SimpleRouter()
 system_url.register(r'menu', MenuViewSet)
 system_url.register(r'menu_button', MenuButtonViewSet)
@@ -28,6 +30,8 @@ system_url.register(r'file', FileViewSet)
 system_url.register(r'api_white_list', ApiWhiteListViewSet)
 system_url.register(r'system_config', SystemConfigViewSet)
 system_url.register(r'message_center',MessageCenterViewSet)
+
+system_url.register(r'sensory_data',SensoryDataViewSet)
 
 urlpatterns = [
     path('user/export/', UserViewSet.as_view({'post': 'export_data', })),
