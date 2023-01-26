@@ -44,4 +44,40 @@ class SensoryDataViewSet(CustomModelViewSet):
 
 
 # view set has all the basic apis and custom api's are addded below and their urls also added in the urls.py
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def average_temperatures(request):
+    months = ['Jan', 'Feb', 'March', 'April', 'May',
+              'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+    data = SensoryData.objects.all()
+    if(len(data)==0):
+        return HttpResponse("{}", content_type="application/json")
+
+
+
+    monthlyData = [[0] for i in range(12)]
+    for i in data:
+        dt = int(str(i.date_recorded).split("-")[1])
+        monthlyData[dt-1].append(i.sea_water_temperature_c)
+
+    res = "["
+    for i in range(len(monthlyData)-1):
+        if (len(monthlyData[i])-1 > 0):
+            res += "{\"month\":\""
+            res += months[i]
+            res += "\",\"average_temp\":"
+            res += str(sum(monthlyData[i]) / (len(monthlyData[i])-1))
+            res += "},"
+    if (len(monthlyData[11]) > 1):
+        res += "{\"month\":\""
+        res += months[11]
+        res += "\",\"average_temp\":"
+        res += str(sum(monthlyData[11]) / (len(monthlyData[11])-1))
+        res += "}"
+    else:
+        res = res[:len(res)-1]
+
+    res += "]"
+    return HttpResponse(res, content_type="application/json")
 

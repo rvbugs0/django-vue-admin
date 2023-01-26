@@ -300,3 +300,549 @@
 [2023-01-26 09:35:09,252][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:52638][0m
 [2023-01-26 09:35:09,445][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:52638][0m
 [2023-01-26 09:35:34,655][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:52638][0m
+[2023-01-26 09:53:10,132][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 09:53:10,476][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 09:53:10,476][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 09:53:10,477][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 09:53:12,664][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53236][0m
+[2023-01-26 09:53:12,689][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:53236][0m
+[2023-01-26 09:53:12,694][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53237][0m
+[2023-01-26 09:53:12,712][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53237][0m
+[2023-01-26 09:53:12,735][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.00, 127.0.0.1:53237][0m
+[2023-01-26 09:53:12,737][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53236][0m
+[2023-01-26 09:53:12,739][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53239][0m
+[2023-01-26 09:53:12,870][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.13, 127.0.0.1:53237][0m
+[2023-01-26 09:53:12,876][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.14, 127.0.0.1:53236][0m
+[2023-01-26 09:53:12,894][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.15, 127.0.0.1:53239][0m
+[2023-01-26 09:53:12,951][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53241]
+[2023-01-26 09:53:12,953][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53241]
+[2023-01-26 09:53:15,964][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:53239][0m
+[2023-01-26 09:54:00,107][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53239][0m
+[2023-01-26 09:56:31,174][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53241]
+[2023-01-26 10:10:16,572][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.04, 127.0.0.1:53269][0m
+[2023-01-26 10:10:21,405][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?parent=19 200 [0.03, 127.0.0.1:53269][0m
+[2023-01-26 10:10:24,587][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.03, 127.0.0.1:53269][0m
+[2023-01-26 10:11:50,687][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/menu/ 200 [0.04, 127.0.0.1:53289][0m
+[2023-01-26 10:11:50,809][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.03, 127.0.0.1:53289][0m
+[2023-01-26 10:11:54,241][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53289][0m
+[2023-01-26 10:11:54,258][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53294][0m
+[2023-01-26 10:11:54,337][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:53294][0m
+[2023-01-26 10:11:54,344][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:53289][0m
+[2023-01-26 10:11:54,362][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:53297][0m
+[2023-01-26 10:11:54,493][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53299]
+[2023-01-26 10:11:54,496][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53299]
+[2023-01-26 10:11:54,555][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.03, 127.0.0.1:53297][0m
+[2023-01-26 10:11:57,396][django.request.log_response():224] [WARNING] Not Found: /api/system/weatherinfo/get_average_temperatures/
+[2023-01-26 10:11:57,397][django.channels.server.log_action():155] [WARNING] [33mHTTP GET /api/system/weatherinfo/get_average_temperatures/ 404 [0.02, 127.0.0.1:53297][0m
+[2023-01-26 10:12:23,194][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53297][0m
+[2023-01-26 10:12:29,381][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53297][0m
+[2023-01-26 10:12:30,545][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.03, 127.0.0.1:53297][0m
+[2023-01-26 10:12:36,042][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53297][0m
+[2023-01-26 10:12:43,806][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53297][0m
+[2023-01-26 10:15:51,439][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53326][0m
+[2023-01-26 10:15:51,458][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53327][0m
+[2023-01-26 10:15:51,549][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:53327][0m
+[2023-01-26 10:15:51,555][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:53326][0m
+[2023-01-26 10:15:51,575][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:53330][0m
+[2023-01-26 10:15:51,695][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53331]
+[2023-01-26 10:15:51,696][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53331]
+[2023-01-26 10:15:51,729][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.01, 127.0.0.1:53330][0m
+[2023-01-26 10:15:53,217][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53330][0m
+[2023-01-26 10:16:05,552][django.channels.server.log_action():147] [INFO] [mHTTP GET / 200 [0.04, 127.0.0.1:53337][0m
+[2023-01-26 10:16:06,015][django.channels.server.log_action():147] [INFO] [mHTTP GET /?format=openapi 200 [0.26, 127.0.0.1:53337][0m
+[2023-01-26 10:16:19,882][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53330][0m
+[2023-01-26 10:16:20,454][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53330][0m
+[2023-01-26 10:16:21,446][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53330][0m
+[2023-01-26 10:16:22,377][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53330][0m
+[2023-01-26 10:18:25,040][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.04, 127.0.0.1:53364][0m
+[2023-01-26 10:18:25,608][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53364][0m
+[2023-01-26 10:19:31,696][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53299]
+[2023-01-26 10:19:32,289][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53375][0m
+[2023-01-26 10:19:32,305][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53375][0m
+[2023-01-26 10:19:32,310][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53376][0m
+[2023-01-26 10:19:32,321][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53376][0m
+[2023-01-26 10:19:32,380][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53376][0m
+[2023-01-26 10:19:32,386][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53375][0m
+[2023-01-26 10:19:32,391][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:53379][0m
+[2023-01-26 10:19:32,408][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:53376][0m
+[2023-01-26 10:19:32,419][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:53375][0m
+[2023-01-26 10:19:32,436][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:53379][0m
+[2023-01-26 10:19:32,521][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53380]
+[2023-01-26 10:19:32,523][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53380]
+[2023-01-26 10:19:32,529][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53379][0m
+[2023-01-26 10:19:32,540][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53379][0m
+[2023-01-26 10:20:41,219][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53331]
+[2023-01-26 10:20:41,232][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53380]
+[2023-01-26 10:20:42,091][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53401][0m
+[2023-01-26 10:20:42,346][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53401][0m
+[2023-01-26 10:20:42,362][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53403][0m
+[2023-01-26 10:20:42,421][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:53403][0m
+[2023-01-26 10:20:42,427][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:53401][0m
+[2023-01-26 10:20:42,448][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:53407][0m
+[2023-01-26 10:20:42,538][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53409]
+[2023-01-26 10:20:42,541][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53409]
+[2023-01-26 10:20:42,552][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53407][0m
+[2023-01-26 10:20:42,856][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53407][0m
+[2023-01-26 10:20:42,882][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:53407][0m
+[2023-01-26 10:20:42,890][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:53401][0m
+[2023-01-26 10:20:42,913][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:53403][0m
+[2023-01-26 10:20:43,015][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53410]
+[2023-01-26 10:20:43,022][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53410]
+[2023-01-26 10:20:43,033][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53403][0m
+[2023-01-26 10:21:42,605][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53409]
+[2023-01-26 10:21:43,120][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:53418][0m
+[2023-01-26 10:21:43,135][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53418][0m
+[2023-01-26 10:21:43,141][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53419][0m
+[2023-01-26 10:21:43,170][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53419][0m
+[2023-01-26 10:21:43,190][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53419][0m
+[2023-01-26 10:21:43,191][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53418][0m
+[2023-01-26 10:21:43,195][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53422][0m
+[2023-01-26 10:21:43,203][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53419][0m
+[2023-01-26 10:21:43,208][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:53418][0m
+[2023-01-26 10:21:43,226][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:53422][0m
+[2023-01-26 10:21:43,310][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53423]
+[2023-01-26 10:21:43,312][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53423]
+[2023-01-26 10:21:43,317][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53422][0m
+[2023-01-26 10:21:43,326][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53422][0m
+[2023-01-26 10:24:41,829][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53423]
+[2023-01-26 10:24:42,404][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:24:42,412][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:24:42,423][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:53489][0m
+[2023-01-26 10:24:42,433][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53488][0m
+[2023-01-26 10:24:42,490][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:24:42,494][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53489][0m
+[2023-01-26 10:24:42,497][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:24:42,506][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:24:42,510][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:53489][0m
+[2023-01-26 10:24:42,528][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:53492][0m
+[2023-01-26 10:24:42,617][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53493]
+[2023-01-26 10:24:42,619][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53493]
+[2023-01-26 10:24:42,627][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:24:42,636][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:24:54,300][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53492][0m
+[2023-01-26 10:25:19,707][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53493]
+[2023-01-26 10:25:20,236][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:25:20,254][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:25:20,260][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53489][0m
+[2023-01-26 10:25:20,278][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53489][0m
+[2023-01-26 10:25:20,304][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53489][0m
+[2023-01-26 10:25:20,306][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:25:20,308][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:25:20,315][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53489][0m
+[2023-01-26 10:25:20,319][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:53492][0m
+[2023-01-26 10:25:20,336][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:53488][0m
+[2023-01-26 10:25:20,422][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53514]
+[2023-01-26 10:25:20,425][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53514]
+[2023-01-26 10:25:20,430][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53488][0m
+[2023-01-26 10:25:20,441][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:25:25,781][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53488][0m
+[2023-01-26 10:25:57,183][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:26:03,198][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53488][0m
+[2023-01-26 10:26:03,739][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53488][0m
+[2023-01-26 10:30:17,736][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53547][0m
+[2023-01-26 10:30:17,745][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53548][0m
+[2023-01-26 10:31:26,663][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53554][0m
+[2023-01-26 10:31:26,670][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53555][0m
+[2023-01-26 10:31:35,217][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53555][0m
+[2023-01-26 10:31:35,225][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53554][0m
+[2023-01-26 10:31:39,925][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53554][0m
+[2023-01-26 10:31:39,933][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53555][0m
+[2023-01-26 10:31:48,789][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53555][0m
+[2023-01-26 10:31:48,796][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53554][0m
+[2023-01-26 10:31:55,510][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53554][0m
+[2023-01-26 10:31:55,517][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53555][0m
+[2023-01-26 10:33:06,998][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53574][0m
+[2023-01-26 10:33:07,005][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53575][0m
+[2023-01-26 10:33:51,495][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53575][0m
+[2023-01-26 10:33:51,502][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53574][0m
+[2023-01-26 10:34:35,858][django.channels.server.log_action():147] [INFO] [mHTTP GET /apiLogin/?next=/ 200 [0.04, 127.0.0.1:53583][0m
+[2023-01-26 10:34:35,880][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.01, 127.0.0.1:53583][0m
+[2023-01-26 10:34:35,883][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/jquery-3.5.1.min.js 200 [0.01, 127.0.0.1:53584][0m
+[2023-01-26 10:34:35,885][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/bootstrap.min.js 200 [0.01, 127.0.0.1:53587][0m
+[2023-01-26 10:34:35,887][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/prettify-min.js 200 [0.01, 127.0.0.1:53588][0m
+[2023-01-26 10:34:35,890][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/css/default.css 200 [0.01, 127.0.0.1:53590][0m
+[2023-01-26 10:34:35,892][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.01, 127.0.0.1:53592][0m
+[2023-01-26 10:34:35,893][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/css/prettify.css 200 [0.01, 127.0.0.1:53583][0m
+[2023-01-26 10:34:35,894][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/csrf.js 200 [0.01, 127.0.0.1:53584][0m
+[2023-01-26 10:34:35,897][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/ajax-form.js 200 [0.01, 127.0.0.1:53587][0m
+[2023-01-26 10:34:35,898][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/js/default.js 200 [0.01, 127.0.0.1:53588][0m
+[2023-01-26 10:34:35,900][django.channels.server.log_action():147] [INFO] [mHTTP GET /static/rest_framework/img/grid.png 200 [0.00, 127.0.0.1:53584][0m
+[2023-01-26 10:34:36,038][django.request.log_response():224] [WARNING] Not Found: /favicon.ico
+[2023-01-26 10:34:36,039][django.channels.server.log_action():155] [WARNING] [33mHTTP GET /favicon.ico 404 [0.01, 127.0.0.1:53584][0m
+[2023-01-26 10:34:44,600][dvadmin.utils.backends.authenticate():19] [INFO] superadmin 正在使用本地登录...
+[2023-01-26 10:34:44,741][django.channels.server.log_action():153] [INFO] [32mHTTP POST /apiLogin/?next=/ 302 [0.14, 127.0.0.1:53584][0m
+[2023-01-26 10:34:44,765][django.channels.server.log_action():147] [INFO] [mHTTP GET / 200 [0.01, 127.0.0.1:53584][0m
+[2023-01-26 10:34:45,097][django.channels.server.log_action():147] [INFO] [mHTTP GET /?format=openapi 200 [0.19, 127.0.0.1:53584][0m
+[2023-01-26 10:35:16,934][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.01, 127.0.0.1:53595][0m
+[2023-01-26 10:35:17,504][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53595][0m
+[2023-01-26 10:35:20,583][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:53595][0m
+[2023-01-26 10:35:23,220][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53595][0m
+[2023-01-26 10:35:27,465][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53514]
+[2023-01-26 10:35:27,997][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53595][0m
+[2023-01-26 10:35:28,012][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53595][0m
+[2023-01-26 10:35:28,016][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53602][0m
+[2023-01-26 10:35:28,032][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53602][0m
+[2023-01-26 10:35:28,084][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53602][0m
+[2023-01-26 10:35:28,086][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53595][0m
+[2023-01-26 10:35:28,088][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53605][0m
+[2023-01-26 10:35:28,095][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53602][0m
+[2023-01-26 10:35:28,099][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:53595][0m
+[2023-01-26 10:35:28,115][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:53605][0m
+[2023-01-26 10:35:28,205][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53606]
+[2023-01-26 10:35:28,207][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53606]
+[2023-01-26 10:35:28,215][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53605][0m
+[2023-01-26 10:35:28,224][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53605][0m
+[2023-01-26 10:37:59,503][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.03, 127.0.0.1:53626][0m
+[2023-01-26 10:38:21,841][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53626][0m
+[2023-01-26 10:38:23,039][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53626][0m
+[2023-01-26 10:38:25,755][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:53626][0m
+[2023-01-26 10:38:26,412][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53626][0m
+[2023-01-26 10:38:29,358][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:53626][0m
+[2023-01-26 10:40:06,843][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53628][0m
+[2023-01-26 10:42:21,207][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:42:22,099][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:42:22,575][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:42:22,575][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:42:22,576][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:42:29,207][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:42:29,876][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:42:30,189][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:42:30,190][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:42:30,190][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:42:48,081][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53646][0m
+[2023-01-26 10:42:48,102][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:53646][0m
+[2023-01-26 10:42:48,103][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53647][0m
+[2023-01-26 10:42:48,113][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53647][0m
+[2023-01-26 10:42:48,199][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53647][0m
+[2023-01-26 10:42:48,207][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53646][0m
+[2023-01-26 10:42:48,213][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:53649][0m
+[2023-01-26 10:42:48,330][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.13, 127.0.0.1:53647][0m
+[2023-01-26 10:42:48,334][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:53646][0m
+[2023-01-26 10:42:48,349][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.13, 127.0.0.1:53649][0m
+[2023-01-26 10:42:48,446][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53651]
+[2023-01-26 10:42:48,447][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53651]
+[2023-01-26 10:42:48,453][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53649][0m
+[2023-01-26 10:42:48,463][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53649][0m
+[2023-01-26 10:43:41,099][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:43:41,949][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:43:42,290][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:43:42,290][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:43:42,291][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:43:43,662][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:53665][0m
+[2023-01-26 10:43:43,682][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:53665][0m
+[2023-01-26 10:43:43,686][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53666][0m
+[2023-01-26 10:43:43,708][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53666][0m
+[2023-01-26 10:43:43,735][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.00, 127.0.0.1:53666][0m
+[2023-01-26 10:43:43,737][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:53665][0m
+[2023-01-26 10:43:43,739][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:53668][0m
+[2023-01-26 10:43:43,832][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.09, 127.0.0.1:53666][0m
+[2023-01-26 10:43:43,836][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.10, 127.0.0.1:53665][0m
+[2023-01-26 10:43:43,850][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.11, 127.0.0.1:53668][0m
+[2023-01-26 10:43:43,943][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53670]
+[2023-01-26 10:43:43,944][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53670]
+[2023-01-26 10:43:43,950][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53668][0m
+[2023-01-26 10:43:43,960][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53668][0m
+[2023-01-26 10:43:55,851][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:53668][0m
+[2023-01-26 10:44:20,995][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:44:21,791][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:44:22,241][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:44:22,241][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:44:22,241][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:44:29,925][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:44:30,574][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:44:30,878][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:44:30,878][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:44:30,878][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:44:36,458][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:44:36,755][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:44:36,755][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:44:36,755][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:44:42,625][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,644][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,671][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,692][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,775][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,782][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:53900][0m
+[2023-01-26 10:44:42,787][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:53901][0m
+[2023-01-26 10:44:42,900][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.12, 127.0.0.1:53897][0m
+[2023-01-26 10:44:42,905][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:53900][0m
+[2023-01-26 10:44:42,933][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.14, 127.0.0.1:53901][0m
+[2023-01-26 10:44:43,105][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53902]
+[2023-01-26 10:44:43,107][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:53902]
+[2023-01-26 10:44:43,117][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:53901][0m
+[2023-01-26 10:44:43,128][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:53901][0m
+[2023-01-26 10:46:02,569][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/system/urls.py changed, reloading.
+[2023-01-26 10:46:03,444][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:46:22,197][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/system/urls.py changed, reloading.
+[2023-01-26 10:46:22,953][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:46:23,309][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:46:23,309][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:46:23,310][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:46:26,403][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,428][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,443][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,458][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,553][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,562][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.02, 127.0.0.1:54337][0m
+[2023-01-26 10:46:26,565][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:54338][0m
+[2023-01-26 10:46:26,676][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.12, 127.0.0.1:54334][0m
+[2023-01-26 10:46:26,684][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:54337][0m
+[2023-01-26 10:46:26,702][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.13, 127.0.0.1:54338][0m
+[2023-01-26 10:46:26,874][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54339]
+[2023-01-26 10:46:26,878][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54339]
+[2023-01-26 10:46:26,892][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54338][0m
+[2023-01-26 10:46:26,906][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py", line 62, in average_temperatures
+    monthlyData[dt-1].append(i.temperature)
+AttributeError: 'SensoryData' object has no attribute 'temperature'
+
+[2023-01-26 10:46:26,911][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54338][0m
+[2023-01-26 10:46:38,278][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py", line 62, in average_temperatures
+    monthlyData[dt-1].append(i.temperature)
+AttributeError: 'SensoryData' object has no attribute 'temperature'
+
+[2023-01-26 10:46:38,284][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54338][0m
+[2023-01-26 10:48:09,608][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py changed, reloading.
+[2023-01-26 10:48:10,502][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-01-26 10:48:10,857][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-01-26 10:48:10,857][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-01-26 10:48:10,858][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-01-26 10:48:13,032][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,056][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,072][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,090][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,186][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,189][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:54789][0m
+[2023-01-26 10:48:13,192][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:48:13,365][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.17, 127.0.0.1:54786][0m
+[2023-01-26 10:48:13,371][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.18, 127.0.0.1:54789][0m
+[2023-01-26 10:48:13,394][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.20, 127.0.0.1:54790][0m
+[2023-01-26 10:48:13,559][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54791]
+[2023-01-26 10:48:13,561][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54791]
+[2023-01-26 10:48:13,576][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:48:32,819][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54791]
+[2023-01-26 10:48:33,590][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:54790][0m
+[2023-01-26 10:48:33,835][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:48:33,855][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:48:33,863][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54789][0m
+[2023-01-26 10:48:33,962][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:54789][0m
+[2023-01-26 10:48:33,967][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:54790][0m
+[2023-01-26 10:48:33,982][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:54786][0m
+[2023-01-26 10:48:33,991][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:54833][0m
+[2023-01-26 10:48:33,996][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:54789][0m
+[2023-01-26 10:48:34,011][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:54790][0m
+[2023-01-26 10:48:34,070][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54834]
+[2023-01-26 10:48:34,071][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54834]
+[2023-01-26 10:48:34,082][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:48:34,163][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54835]
+[2023-01-26 10:48:34,166][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54835]
+[2023-01-26 10:48:34,178][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54790][0m
+[2023-01-26 10:49:36,646][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:54849][0m
+[2023-01-26 10:49:39,230][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54849][0m
+[2023-01-26 10:49:40,040][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:54849][0m
+[2023-01-26 10:49:40,844][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54849][0m
+[2023-01-26 10:51:33,340][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54862][0m
+[2023-01-26 10:51:33,346][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54863][0m
+[2023-01-26 10:51:45,867][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54863][0m
+[2023-01-26 10:51:45,875][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54862][0m
+[2023-01-26 10:51:48,168][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54862][0m
+[2023-01-26 10:51:48,176][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54863][0m
+[2023-01-26 10:51:50,711][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:54863][0m
+[2023-01-26 10:51:51,271][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54863][0m
+[2023-01-26 10:51:59,609][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54863][0m
+[2023-01-26 10:51:59,616][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54862][0m
+[2023-01-26 10:52:02,806][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54862][0m
+[2023-01-26 10:52:02,815][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54863][0m
+[2023-01-26 10:52:04,622][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:54863][0m
+[2023-01-26 10:52:05,348][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54863][0m
+[2023-01-26 10:53:13,652][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.05, 127.0.0.1:54896][0m
+[2023-01-26 10:53:14,116][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54896][0m
+[2023-01-26 10:53:33,358][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:54896][0m
+[2023-01-26 10:53:34,046][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54896][0m
+[2023-01-26 10:53:46,892][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.04, 127.0.0.1:54896][0m
+[2023-01-26 10:53:47,620][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54896][0m
+[2023-01-26 10:54:05,619][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54896][0m
+[2023-01-26 10:54:05,626][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54914][0m
+[2023-01-26 10:54:07,365][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:54914][0m
+[2023-01-26 10:54:08,047][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54914][0m
+[2023-01-26 10:57:35,661][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54925][0m
+[2023-01-26 10:57:35,667][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54926][0m
+[2023-01-26 10:57:43,193][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54926][0m
+[2023-01-26 10:57:43,204][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54925][0m
+[2023-01-26 10:58:08,949][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.04, 127.0.0.1:54925][0m
+[2023-01-26 10:58:09,660][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54925][0m
+[2023-01-26 10:59:23,482][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54942][0m
+[2023-01-26 10:59:38,897][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54942][0m
+[2023-01-26 10:59:40,215][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54835]
+[2023-01-26 10:59:40,757][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54942][0m
+[2023-01-26 10:59:40,771][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54942][0m
+[2023-01-26 10:59:40,775][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54951][0m
+[2023-01-26 10:59:40,791][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54951][0m
+[2023-01-26 10:59:40,845][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:54951][0m
+[2023-01-26 10:59:40,851][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:54942][0m
+[2023-01-26 10:59:40,855][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:54954][0m
+[2023-01-26 10:59:40,865][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:54951][0m
+[2023-01-26 10:59:40,869][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:54942][0m
+[2023-01-26 10:59:40,887][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:54954][0m
+[2023-01-26 10:59:40,979][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54955]
+[2023-01-26 10:59:40,982][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54955]
+[2023-01-26 10:59:40,989][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:54954][0m
+[2023-01-26 10:59:40,996][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54954][0m
+[2023-01-26 10:59:44,687][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54954][0m
+[2023-01-26 11:00:42,516][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.03, 127.0.0.1:54954][0m
+[2023-01-26 11:00:42,536][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54969][0m
+[2023-01-26 11:00:44,093][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:54969][0m
+[2023-01-26 11:00:45,932][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54955]
+[2023-01-26 11:00:46,486][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54969][0m
+[2023-01-26 11:00:46,500][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:54969][0m
+[2023-01-26 11:00:46,504][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54954][0m
+[2023-01-26 11:00:46,520][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:54954][0m
+[2023-01-26 11:00:46,527][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.00, 127.0.0.1:54954][0m
+[2023-01-26 11:00:46,529][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:54969][0m
+[2023-01-26 11:00:46,531][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:54983][0m
+[2023-01-26 11:00:46,538][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:54954][0m
+[2023-01-26 11:00:46,543][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:54969][0m
+[2023-01-26 11:00:46,561][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:54983][0m
+[2023-01-26 11:00:46,653][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54984]
+[2023-01-26 11:00:46,655][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54984]
+[2023-01-26 11:00:46,662][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.00, 127.0.0.1:54983][0m
+[2023-01-26 11:00:46,669][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54983][0m
+[2023-01-26 11:01:12,808][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54983][0m
+[2023-01-26 11:01:19,453][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:54983][0m
+[2023-01-26 11:01:20,803][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.03, 127.0.0.1:54983][0m
+[2023-01-26 11:02:22,049][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54984]
+[2023-01-26 11:02:22,602][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55001][0m
+[2023-01-26 11:02:22,618][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55001][0m
+[2023-01-26 11:02:22,625][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55002][0m
+[2023-01-26 11:02:22,644][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55002][0m
+[2023-01-26 11:02:22,686][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55002][0m
+[2023-01-26 11:02:22,688][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:55001][0m
+[2023-01-26 11:02:22,690][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:02:22,698][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55002][0m
+[2023-01-26 11:02:22,703][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:55001][0m
+[2023-01-26 11:02:22,717][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:55004][0m
+[2023-01-26 11:02:22,822][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55006]
+[2023-01-26 11:02:22,828][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55006]
+[2023-01-26 11:02:22,834][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:02:22,843][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:02:26,120][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55004][0m
+[2023-01-26 11:02:51,961][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55004][0m
+[2023-01-26 11:03:31,980][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/sensory_data/ 200 [0.04, 127.0.0.1:55004][0m
+[2023-01-26 11:03:32,026][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:03:36,644][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55004][0m
+[2023-01-26 11:03:51,779][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55004][0m
+[2023-01-26 11:04:20,744][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/sensory_data/ 200 [0.04, 127.0.0.1:55004][0m
+[2023-01-26 11:04:20,795][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:04:24,780][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55004][0m
+[2023-01-26 11:06:30,909][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.04, 127.0.0.1:55043][0m
+[2023-01-26 11:06:35,716][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.03, 127.0.0.1:55043][0m
+[2023-01-26 11:06:49,451][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.04, 127.0.0.1:55043][0m
+[2023-01-26 11:06:54,258][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55043][0m
+[2023-01-26 11:06:58,594][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55045][0m
+[2023-01-26 11:08:28,130][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55054][0m
+[2023-01-26 11:09:38,862][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:09:55,069][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:01,745][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:05,025][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55064][0m
+[2023-01-26 11:10:41,414][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:41,547][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55064][0m
+[2023-01-26 11:10:43,367][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55006]
+[2023-01-26 11:10:43,908][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:43,923][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:43,927][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.02, 127.0.0.1:55086][0m
+[2023-01-26 11:10:43,939][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:10:43,995][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:10:43,999][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:44,005][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:55089][0m
+[2023-01-26 11:10:44,013][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:10:44,017][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:10:44,035][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:55089][0m
+[2023-01-26 11:10:44,245][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55090]
+[2023-01-26 11:10:44,248][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55090]
+[2023-01-26 11:10:44,258][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55089][0m
+[2023-01-26 11:10:44,278][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55089][0m
+[2023-01-26 11:11:27,359][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55090]
+[2023-01-26 11:11:27,909][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55089][0m
+[2023-01-26 11:11:27,918][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:11:27,928][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:55089][0m
+[2023-01-26 11:11:27,941][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:55064][0m
+[2023-01-26 11:11:27,949][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.00, 127.0.0.1:55064][0m
+[2023-01-26 11:11:27,951][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:55089][0m
+[2023-01-26 11:11:27,953][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:11:27,962][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55064][0m
+[2023-01-26 11:11:27,967][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:55089][0m
+[2023-01-26 11:11:27,983][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:55086][0m
+[2023-01-26 11:11:28,191][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55106]
+[2023-01-26 11:11:28,195][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55106]
+[2023-01-26 11:11:28,204][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:11:28,218][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:11:47,330][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55086][0m
+[2023-01-26 11:11:52,723][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55086][0m
+[2023-01-26 11:13:39,106][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:54834]
+[2023-01-26 11:13:39,134][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55106]
+[2023-01-26 11:13:39,997][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:55131][0m
+[2023-01-26 11:13:40,279][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:13:40,761][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:13:40,777][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:13:40,789][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:55131][0m
+[2023-01-26 11:13:40,795][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:13:40,833][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:55139][0m
+[2023-01-26 11:13:40,847][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.06, 127.0.0.1:55137][0m
+[2023-01-26 11:13:40,853][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.06, 127.0.0.1:55131][0m
+[2023-01-26 11:13:40,867][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:55138][0m
+[2023-01-26 11:13:41,190][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55140]
+[2023-01-26 11:13:41,194][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55140]
+[2023-01-26 11:13:41,213][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:13:41,555][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55141]
+[2023-01-26 11:13:41,558][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55141]
+[2023-01-26 11:13:41,582][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:14:01,876][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:14:02,130][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:14:05,798][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55141]
+[2023-01-26 11:14:06,351][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55138][0m
+[2023-01-26 11:14:06,366][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55138][0m
+[2023-01-26 11:14:06,370][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:06,380][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:06,443][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:06,446][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:55138][0m
+[2023-01-26 11:14:06,449][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:14:06,458][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:06,463][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:14:06,484][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:55137][0m
+[2023-01-26 11:14:06,703][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55150]
+[2023-01-26 11:14:06,706][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55150]
+[2023-01-26 11:14:06,715][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:14:06,730][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:14:27,291][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55150]
+[2023-01-26 11:14:27,848][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:14:27,855][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:55138][0m
+[2023-01-26 11:14:27,875][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:55137][0m
+[2023-01-26 11:14:27,885][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:55138][0m
+[2023-01-26 11:14:27,900][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.00, 127.0.0.1:55138][0m
+[2023-01-26 11:14:27,901][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:55137][0m
+[2023-01-26 11:14:27,905][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:27,912][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55138][0m
+[2023-01-26 11:14:27,916][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:55137][0m
+[2023-01-26 11:14:27,932][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:14:28,152][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55161]
+[2023-01-26 11:14:28,157][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc0NzAzMjM1LCJpYXQiOjE2NzQ2OTYwMzUsImp0aSI6ImNjYmE3ZjQ1NWQ5YzQwNDI4NDc3N2ViZGZlMzMxMDZjIiwidXNlcl9pZCI6MX0.xradYNCoX2L3K0YyA1RipWhwXUX2_1UvryYnMZjVbpw/ [127.0.0.1:55161]
+[2023-01-26 11:14:28,162][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:28,178][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:14:52,832][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55131][0m
+[2023-01-26 11:15:03,757][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:15:04,989][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55131][0m
+[2023-01-26 11:15:07,832][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:15:08,918][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:55131][0m
+[2023-01-26 11:15:17,866][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:15:20,683][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.02, 127.0.0.1:55131][0m
+[2023-01-26 11:15:29,014][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55131][0m
+[2023-01-26 11:15:34,255][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.03, 127.0.0.1:55131][0m

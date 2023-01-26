@@ -16,6 +16,8 @@ from dvadmin.system.views.system_config import SystemConfigViewSet
 from dvadmin.system.views.user import UserViewSet
 
 from dvadmin.sensorydata.views.sensory_data_view import SensoryDataViewSet
+from dvadmin.sensorydata.views.sensory_data_view import average_temperatures
+
 
 system_url = routers.SimpleRouter()
 system_url.register(r'menu', MenuViewSet)
@@ -43,5 +45,9 @@ urlpatterns = [
     path('login_log/', LoginLogViewSet.as_view({'get': 'list'})),
     path('login_log/<int:pk>/', LoginLogViewSet.as_view({'get': 'retrieve'})),
     path('dept_lazy_tree/', DeptViewSet.as_view({'get': 'dept_lazy_tree'})),
+
+    path('sensory_data/get_average_temperatures/', average_temperatures),
+
+
 ]
 urlpatterns += system_url.urls

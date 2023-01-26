@@ -1,0 +1,18 @@
+[2023-01-26 10:46:26,906][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py", line 62, in average_temperatures
+    monthlyData[dt-1].append(i.temperature)
+AttributeError: 'SensoryData' object has no attribute 'temperature'
+
+[2023-01-26 10:46:38,278][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Downloads/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Downloads/django-vue-admin/backend/dvadmin/sensorydata/views/sensory_data_view.py", line 62, in average_temperatures
+    monthlyData[dt-1].append(i.temperature)
+AttributeError: 'SensoryData' object has no attribute 'temperature'
+
