@@ -17,6 +17,9 @@ from dvadmin.system.views.user import UserViewSet
 
 from dvadmin.sensorydata.views.sensory_data_view import SensoryDataViewSet
 from dvadmin.sensorydata.views.sensory_data_view import average_temperatures
+from dvadmin.sensorydata.views.sensory_data_view import average_salinity
+from dvadmin.sensorydata.views.sensory_data_view import average_ph
+
 
 
 system_url = routers.SimpleRouter()
@@ -47,6 +50,9 @@ urlpatterns = [
     path('dept_lazy_tree/', DeptViewSet.as_view({'get': 'dept_lazy_tree'})),
 
     path('sensory_data/get_average_temperatures/', average_temperatures),
+    path('sensory_data/get_average_salinity/', average_salinity),
+    path('sensory_data/get_average_ph/', average_ph),
+
 
 
 ]
