@@ -1407,3 +1407,4 @@ AttributeError: 'SensoryData' object has no attribute 'temperature'
 [2023-01-30 05:44:56,731][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [0.03, 127.0.0.1:55792][0m
 [2023-01-30 05:44:56,757][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [0.05, 127.0.0.1:55791][0m
 [2023-01-30 05:44:56,763][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [0.06, 127.0.0.1:55790][0m
+[2023-01-30 05:53:41,300][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1MDI5NzY4LCJpYXQiOjE2NzUwMjI1NjgsImp0aSI6IjBmMGZlZmIxMjY2OTRiMGI4ODU5YWU1ZjgxZmJjYjhiIiwidXNlcl9pZCI6MX0.IsNorBLZApATWPwznWxW5Ua0OnhTvyq-o9Jj38K2VLE/ [127.0.0.1:56674]
