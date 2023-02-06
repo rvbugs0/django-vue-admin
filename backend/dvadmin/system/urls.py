@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework import routers
 
 from dvadmin.system.views.api_white_list import ApiWhiteListViewSet
@@ -14,11 +14,6 @@ from dvadmin.system.views.operation_log import OperationLogViewSet
 from dvadmin.system.views.role import RoleViewSet
 from dvadmin.system.views.system_config import SystemConfigViewSet
 from dvadmin.system.views.user import UserViewSet
-
-from dvadmin.sensorydata.views.sensory_data_view import SensoryDataViewSet
-from dvadmin.sensorydata.views.sensory_data_view import average_temperatures
-from dvadmin.sensorydata.views.sensory_data_view import average_salinity
-from dvadmin.sensorydata.views.sensory_data_view import average_ph
 
 
 
@@ -36,7 +31,6 @@ system_url.register(r'api_white_list', ApiWhiteListViewSet)
 system_url.register(r'system_config', SystemConfigViewSet)
 system_url.register(r'message_center',MessageCenterViewSet)
 
-system_url.register(r'sensory_data',SensoryDataViewSet)
 
 urlpatterns = [
     path('user/export/', UserViewSet.as_view({'post': 'export_data', })),
@@ -49,9 +43,9 @@ urlpatterns = [
     path('login_log/<int:pk>/', LoginLogViewSet.as_view({'get': 'retrieve'})),
     path('dept_lazy_tree/', DeptViewSet.as_view({'get': 'dept_lazy_tree'})),
 
-    path('sensory_data/get_average_temperatures/', average_temperatures),
-    path('sensory_data/get_average_salinity/', average_salinity),
-    path('sensory_data/get_average_ph/', average_ph),
+
+    ## to include the sensory_data_app urls 
+    path('',include('sensory_data_app.urls')),
 
 
 

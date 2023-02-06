@@ -1,15 +1,15 @@
+from django.shortcuts import render
+
+from .models import SensoryData
+# Create your views here.
+
 from rest_framework import serializers
 from rest_framework.response import Response
 from dvadmin.utils.json_response import DetailResponse, SuccessResponse
-
-
 from dvadmin.utils.viewset import CustomModelViewSet
-from dvadmin.system.models import SensoryData
 from django.http import HttpResponse
-
 from rest_framework.decorators import api_view, renderer_classes
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
-
 from dvadmin.utils.serializers import CustomModelSerializer
 
 

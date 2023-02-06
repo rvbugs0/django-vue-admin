@@ -58,6 +58,11 @@ INSTALLED_APPS = [
     "drf_yasg",
     "captcha",
     'channels',
+
+    "sensory_data_app",
+
+
+
 ]
 
 MIDDLEWARE = [
