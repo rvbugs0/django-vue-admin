@@ -1643,3 +1643,51 @@ AttributeError: 'SensoryData' object has no attribute 'temperature'
 [2023-02-06 13:57:46,464][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [0.04, 127.0.0.1:52356][0m
 [2023-02-06 13:57:46,474][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [0.05, 127.0.0.1:52357][0m
 [2023-02-06 13:57:50,335][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:52357][0m
+[2023-02-06 14:00:32,483][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NjY2MDA5LCJpYXQiOjE2NzU2NTg4MDksImp0aSI6IjJmYjBmNTg3ZTQwNjRlZTk4YmIyMDVkMTc2ZGM4YmQ0IiwidXNlcl9pZCI6MX0.h8fAPwaf62Njpe3wRkPT4MovZhF5Ul7F3EAX0EYKvkQ/ [127.0.0.1:52334]
+[2023-02-06 14:13:08,877][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/conf/env.py changed, reloading.
+[2023-02-06 14:30:25,944][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-06 14:36:29,691][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 03:48:17,546][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 03:48:44,317][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 03:55:41,335][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 04:03:11,397][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 04:03:11,714][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-02-07 04:03:11,715][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-02-07 04:03:11,715][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-02-07 04:03:14,760][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:49894][0m
+[2023-02-07 04:03:14,782][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:49894][0m
+[2023-02-07 04:03:14,784][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.02, 127.0.0.1:49895][0m
+[2023-02-07 04:03:14,794][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:49895][0m
+[2023-02-07 04:03:14,845][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:49895][0m
+[2023-02-07 04:03:14,849][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/captcha/ 200 [0.01, 127.0.0.1:49894][0m
+[2023-02-07 04:03:14,963][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:49901][0m
+[2023-02-07 04:03:15,017][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:49901][0m
+[2023-02-07 04:03:15,025][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.03, 127.0.0.1:49904][0m
+[2023-02-07 04:03:16,883][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.02, 127.0.0.1:49904][0m
+[2023-02-07 04:03:18,894][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.02, 127.0.0.1:49904][0m
+[2023-02-07 04:03:20,819][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.02, 127.0.0.1:49904][0m
+[2023-02-07 04:03:32,959][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 04:03:33,270][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-02-07 04:03:33,270][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-02-07 04:03:33,271][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-02-07 04:03:34,946][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.03, 127.0.0.1:49921][0m
+[2023-02-07 04:03:34,957][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:49923][0m
+[2023-02-07 04:03:34,976][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.02, 127.0.0.1:49925][0m
+[2023-02-07 04:03:36,038][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:49925][0m
+[2023-02-07 04:03:36,050][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:49923][0m
+[2023-02-07 04:03:36,055][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.02, 127.0.0.1:49921][0m
+[2023-02-07 04:04:15,739][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 04:04:16,055][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-02-07 04:04:16,055][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-02-07 04:04:16,056][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-02-07 04:04:17,921][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:49961][0m
+[2023-02-07 04:04:17,943][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:49961][0m
+[2023-02-07 04:04:17,952][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:49961][0m
+[2023-02-07 04:04:17,954][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/captcha/ 200 [0.00, 127.0.0.1:49965][0m
+[2023-02-07 04:04:17,963][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:49961][0m
+[2023-02-07 04:04:17,969][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.01, 127.0.0.1:49965][0m
+[2023-02-07 04:04:55,817][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Downloads/django-vue-admin/backend/conf/env.py changed, reloading.
+[2023-02-07 04:04:56,575][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-02-07 04:04:56,932][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-02-07 04:04:56,932][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-02-07 04:04:56,933][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000

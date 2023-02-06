@@ -1,3 +1,4 @@
+import pymysql
 """
 Django settings for application project.
 
@@ -114,6 +115,11 @@ DATABASES = {
 }
 AUTH_USER_MODEL = "system.Users"
 USERNAME_FIELD = "username"
+
+###added by me-ravi
+pymysql.version_info = (1, 4, 2, "final", 0)
+pymysql.install_as_MySQLdb()
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
