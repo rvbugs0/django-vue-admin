@@ -24,12 +24,11 @@ def get_request_user(request):
     user: AbstractBaseUser = getattr(request, 'user', None)
     if user and user.is_authenticated:
         return user
-    return AnonymousUser()
-    # try:
-    #     user, tokrn = JWTAuthentication().authenticate(request)
-    # except Exception as e:
-    #     pass
-    # return user or AnonymousUser()
+    try:
+        user, tokrn = JWTAuthentication().authenticate(request)
+    except Exception as e:
+        pass
+    return user or AnonymousUser()
 
 
 def get_request_ip(request):
