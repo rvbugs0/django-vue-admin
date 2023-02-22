@@ -13,6 +13,9 @@ from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from dvadmin.utils.serializers import CustomModelSerializer
 
 
+from rest_framework.decorators import action
+from dvadmin.utils.permission import AnonymousUserPermission
+
 class SensoryDataSerializer(CustomModelSerializer):
     """
     接口白名单-序列化器
@@ -44,11 +47,14 @@ class SensoryDataViewSet(CustomModelViewSet):
 
 
 # view set has all the basic apis and custom api's are addded below and their urls also added in the urls.py
+@action(methods=["GET"], detail=False, permission_classes=[AnonymousUserPermission])
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def average_temperatures(request):
     months = ['Jan', 'Feb', 'March', 'April', 'May',
               'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+    data = SensoryData.objects.values("sea_water_temperature_c")
 
     data = SensoryData.objects.all()
     if(len(data)==0):

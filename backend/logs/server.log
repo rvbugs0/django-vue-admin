@@ -1748,3 +1748,4 @@ AttributeError: 'SensoryData' object has no attribute 'temperature'
 [2023-02-07 05:11:31,682][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [0.06, 127.0.0.1:51280][0m
 [2023-02-07 05:11:31,700][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [0.07, 127.0.0.1:51281][0m
 [2023-02-07 05:14:23,604][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.01, 127.0.0.1:51290][0m
+[2023-02-23 03:08:35,988][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
