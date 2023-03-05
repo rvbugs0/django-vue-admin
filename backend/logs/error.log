@@ -16,3 +16,18 @@ AttributeError: 'SensoryData' object has no attribute 'temperature'
     monthlyData[dt-1].append(i.temperature)
 AttributeError: 'SensoryData' object has no attribute 'temperature'
 
+[2023-03-05 07:44:50,850][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Downloads/django-vue-admin/backend/sensory_data_app/views.py", line 280, in get_demo_chart_json
+    return HttpResponse(json.loads(res), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 5 column 9 (char 26)
+

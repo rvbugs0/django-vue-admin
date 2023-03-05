@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
+import json
 from .models import SensoryData
+from .models import ChartConfig
 # Create your views here.
 
 from rest_framework import serializers
@@ -161,3 +163,245 @@ def average_ph(request):
     res += "]"
     return HttpResponse(res, content_type="application/json")
 
+
+
+class ChartConfigSerializer(CustomModelSerializer):
+    """
+    接口白名单-序列化器
+    """
+    data_api = serializers.CharField(required = True)
+    public_exposed = serializers.BooleanField(required=True)
+
+
+    class Meta:
+        model = ChartConfig
+        fields = "__all__"
+        read_only_fields = ["id"]
+
+
+
+class ChartConfigViewSet(CustomModelViewSet):
+    """
+    部门管理接口
+    list:查询
+    create:新增
+    update:修改
+    retrieve:单例
+    destroy:删除
+    """
+    queryset = ChartConfig.objects.all()
+    serializer_class = ChartConfigSerializer
+
+
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def get_demo_chart_json(request):
+    res = '''
+    [{
+		"id": 1,
+		"type": "line",
+		"title": " Major change across the week",
+		"xData": [
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat",
+			"Sun"
+		],
+		"yData": [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		]
+	},
+	{
+		"id": 2,
+		"type": "area",
+		"title": "Area chart",
+		"xData": [
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat",
+			"Sun"
+		],
+		"yData": [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		]
+	},
+	{
+		"id": 3,
+		"title": "Trends across multiple points",
+		"type": "pie",
+		"tooltipTitle": "Access from",
+		"data": [{
+				"value": 1048,
+				"name": "Search Engine"
+			},
+			{
+				"value": 735,
+				"name": "Direct"
+			},
+			{
+				"value": 580,
+				"name": "Email"
+			},
+			{
+				"value": 484,
+				"name": "Union Ads"
+			},
+			{
+				"value": 300,
+				"name": "Video Ads"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"title": "Trends",
+		"type": "stacked-line",
+		"xData": [
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat",
+			"Sun"
+		],
+		"data": [{
+				"name": "Email",
+				"type": "line",
+				"stack": "Total",
+				"data": [
+					120,
+					132,
+					101,
+					134,
+					90,
+					230,
+					210
+				]
+			},
+			{
+				"name": "Union Ads",
+				"type": "line",
+				"stack": "Total",
+				"data": [
+					220,
+					182,
+					191,
+					234,
+					290,
+					330,
+					310
+				]
+			},
+			{
+				"name": "Video Ads",
+				"type": "line",
+				"stack": "Total",
+				"data": [
+					150,
+					232,
+					201,
+					154,
+					190,
+					330,
+					410
+				]
+			},
+			{
+				"name": "Direct",
+				"type": "line",
+				"stack": "Total",
+				"data": [
+					320,
+					332,
+					301,
+					334,
+					390,
+					330,
+					320
+				]
+			},
+			{
+				"name": "Search Engine",
+				"type": "line",
+				"stack": "Total",
+				"data": [
+					820,
+					932,
+					901,
+					934,
+					1290,
+					1330,
+					1320
+				]
+			}
+		]
+	},
+	{
+		"id": 5,
+		"title": "Bar chart",
+		"type": "bar",
+		"xData": [
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat",
+			"Sun"
+		],
+		"yData": [
+			120,
+			200,
+			150,
+			80,
+			70,
+			110,
+			130
+		]
+	}
+]    '''
+    
+    res = '''
+    {
+		"id": 1,
+		"type": "line",
+		"title": " Major change across the week",
+		"xData": [
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat",
+			"Sun"
+		],
+		"yData": [
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		]
+	}'''
+    return HttpResponse(res, content_type="application/json")
