@@ -230,11 +230,12 @@ function loadChart() {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 50px 100px 50px;
     min-height: 100vh;
     min-width: 100%;
     color: black;
     overflow: scroll;
+    height: 800px;
 }
 
 .chart_box {
