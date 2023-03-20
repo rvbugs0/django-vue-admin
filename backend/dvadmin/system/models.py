@@ -8,8 +8,8 @@ from application import dispatch
 from dvadmin.utils.models import CoreModel, table_prefix
 
 STATUS_CHOICES = (
-    (0, "禁用"),
-    (1, "启用"),
+    (0, "Enabled"),
+    (1, "Disabled"),
 )
 
 
