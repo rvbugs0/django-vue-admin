@@ -32,8 +32,8 @@ class DeptSerializer(CustomModelSerializer):
 
     def get_status_label(self, obj: Dept):
         if obj.status:
-            return "启用"
-        return "禁用"
+            return "Enabled"
+        return "Disabled"
 
     def get_has_children(self, obj: Dept):
         return Dept.objects.filter(parent_id=obj.id).count()
@@ -179,11 +179,11 @@ class DeptViewSet(CustomModelViewSet):
                 else:
                     dept_list = []
             queryset = Dept.objects.filter(id__in=dept_list).values('id', 'name', 'parent')
-        return DetailResponse(data=queryset, msg="获取成功")
+        return DetailResponse(data=queryset, msg="Request Success")
 
 
     @action(methods=["GET"], detail=False, permission_classes=[AnonymousUserPermission])
     def all_dept(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
         data = queryset.filter(status=True).order_by('sort').values('name', 'id', 'parent')
-        return DetailResponse(data=data, msg="获取成功")
+        return DetailResponse(data=data, msg="Request Success")
