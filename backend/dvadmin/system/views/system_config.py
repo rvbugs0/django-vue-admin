@@ -39,7 +39,7 @@ class SystemConfigCreateSerializer(CustomModelSerializer):
         """
         instance = SystemConfig.objects.filter(key=value, parent__isnull=True).exists()
         if instance:
-            raise CustomValidationError('已存在相同变量名')
+            raise CustomValidationError('Variable name already exists!')
         return value
 
 
@@ -178,14 +178,14 @@ class SystemConfigViewSet(CustomModelViewSet):
                 serializer = SystemConfigCreateSerializer(instance_obj, data=data)
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
-        return DetailResponse(msg="保存成功")
+        return DetailResponse(msg="Save Success")
 
     def get_association_table(self, request):
         """
         获取所有的model及字段信息
         """
         res = [ele.get('table') for ele in get_all_models_objects().values()]
-        return DetailResponse(msg="获取成功", data=res)
+        return DetailResponse(msg="Request Success", data=res)
 
     def get_table_data(self, request, pk):
         """
@@ -193,10 +193,10 @@ class SystemConfigViewSet(CustomModelViewSet):
         """
         instance = SystemConfig.objects.filter(id=pk).first()
         if instance is None:
-            return ErrorResponse(msg="查询出错了~")
+            return ErrorResponse(msg="Retrieve error!")
         setting = instance.setting
         if setting is None:
-            return ErrorResponse(msg="查询出错了~")
+            return ErrorResponse(msg="Retrieve error!")
         table = setting.get('table')  # 获取model名
         model = get_all_models_objects(table).get("object", {})
         # 自己判断一下不存在
@@ -214,7 +214,7 @@ class SystemConfigViewSet(CustomModelViewSet):
         page = self.paginate_queryset(queryset)
         if page is not None:
             return self.get_paginated_response(queryset)
-        return SuccessResponse(msg="获取成功", data=queryset, total=len(queryset))
+        return SuccessResponse(msg="Request Success", data=queryset, total=len(queryset))
 
     def get_relation_info(self, request):
         """
@@ -225,20 +225,20 @@ class SystemConfigViewSet(CustomModelViewSet):
         table = body.get('table', None)
         instance = SystemConfig.objects.filter(key=var_name, setting__table=table).first()
         if instance is None:
-            return ErrorResponse(msg="未获取到关联信息")
+            return ErrorResponse(msg="Failed to retrieve related information!")
         relation_id = body.get('relationIds', None)
         relationIds = []
         if relation_id is None:
-            return ErrorResponse(msg="未获取到关联信息")
+            return ErrorResponse(msg="Failed to retrieve related information!")
         if instance.form_item_type in [13]:
             relationIds = [relation_id]
         elif instance.form_item_type in [14]:
             relationIds = relation_id.split(',')
         queryset = SystemConfig.objects.filter(value__in=relationIds).first()
         if queryset is None:
-            return ErrorResponse(msg="未获取到关联信息")
+            return ErrorResponse(msg="Failed to retrieve related information!")
         serializer = SystemConfigChinldernSerializer(queryset.parent)
-        return DetailResponse(msg="查询成功", data=serializer.data)
+        return DetailResponse(msg="Request Success", data=serializer.data)
 
 
 class InitSettingsViewSet(APIView):
