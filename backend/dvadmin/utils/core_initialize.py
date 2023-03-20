@@ -52,11 +52,11 @@ class CoreInitialize:
                 serializer = Serializer(instance, data=data, request=self.request)
                 serializer.is_valid(raise_exception=True)
                 serializer.save()
-        print(f"[{self.app}][{model._meta.model_name}]初始化完成")
+        print(f"[{self.app}][{model._meta.model_name}] initialization done...")
 
     def save(self, obj, data: list, name=None, no_reset=False):
         name = name or obj._meta.verbose_name
-        print(f"正在初始化[{obj._meta.label} => {name}]")
+        print(f"initializing [{obj._meta.label} => {name}]")
         if not no_reset and self.reset and obj not in settings.INITIALIZE_RESET_LIST:
             try:
                 obj.objects.all().delete()
@@ -82,7 +82,7 @@ if object.{key}:
     values_list = list(set(list(values_list) + {m2m}))
     object.{key}.set(values_list)
 """)
-        print(f"初始化完成[{obj._meta.label} => {name}]")
+        print(f"initialization done [{obj._meta.label} => {name}]")
 
     def run(self):
         raise NotImplementedError('.run() must be overridden')
