@@ -40,7 +40,7 @@ class CustomOpenAPISchemaGenerator(OpenAPISchemaGenerator):
         swagger.tags = [
             {
                 "name": "token",
-                "description": "认证相关"
+                "description": "Token"
             },
         ]
         return swagger
