@@ -115,5 +115,5 @@ class InitDictionaryViewSet(APIView):
             else:
                 data = self.queryset.filter(parent__value=dictionary_key, status=True).values('label', 'value', 'type',
                                                                                               'color')
-            return SuccessResponse(data=data, msg="获取成功")
-        return SuccessResponse(data=[], msg="获取成功")
+            return SuccessResponse(data=data, msg="Request Sccess")
+        return SuccessResponse(data=[], msg="Request Success")
