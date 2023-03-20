@@ -55,7 +55,7 @@ class RoleCreateUpdateSerializer(CustomModelSerializer):
     dept = DeptSerializer(many=True, read_only=True)
     permission = MenuButtonSerializer(many=True, read_only=True)
     key = serializers.CharField(max_length=50,
-                                validators=[CustomUniqueValidator(queryset=Role.objects.all(), message="权限字符必须唯一")])
+                                validators=[CustomUniqueValidator(queryset=Role.objects.all(), message="Permission code must be unique!")])
     name = serializers.CharField(max_length=50, validators=[CustomUniqueValidator(queryset=Role.objects.all())])
 
     def validate(self, attrs: dict):
@@ -134,23 +134,23 @@ class RoleViewSet(CustomModelViewSet):
             data = [
                 {
                     "value": 0,
-                    "label": '仅本人数据权限'
+                    "label": 'Self Only Data Access'
                 },
                 {
                     "value": 1,
-                    "label": '本部门及以下数据权限'
+                    "label": 'Department and Subdepartment Data Access'
                 },
                 {
                     "value": 2,
-                    "label": '本部门数据权限'
+                    "label": 'Department Data Access'
                 },
                 {
                     "value": 3,
-                    "label": '全部数据权限'
+                    "label": 'All Data Access'
                 },
                 {
                     "value": 4,
-                    "label": '自定义数据权限'
+                    "label": 'Customized Data Access'
                 }
             ]
         else:
@@ -160,46 +160,46 @@ class RoleViewSet(CustomModelViewSet):
                 if item == 0:
                     data = [{
                         "value": 0,
-                        "label": '仅本人数据权限'
+                        "label": 'Self Only Data Access'
                     }]
                 elif item == 1:
                     data = [{
                         "value": 0,
-                        "label": '仅本人数据权限'
+                        "label": 'Self Only Data Access'
                     }, {
                         "value": 1,
-                        "label": '本部门及以下数据权限'
+                        "label": 'Department and Subdepartment Data Access'
                     },
                         {
                             "value": 2,
-                            "label": '本部门数据权限'
+                            "label": 'Department Data Access'
                         }]
                 elif item == 2:
                     data = [{
                         "value": 0,
-                        "label": '仅本人数据权限'
+                        "label": 'Self Only Data Access'
                     },
                         {
                             "value": 2,
-                            "label": '本部门数据权限'
+                            "label": 'Department Data Access'
                         }]
                 elif item == 3:
                     data = [{
                         "value": 0,
-                        "label": '仅本人数据权限'
+                        "label": 'Self Only Data Access'
                     },
                         {
                             "value": 3,
-                            "label": '全部数据权限'
+                            "label": 'All Data Access'
                         }, ]
                 elif item == 4:
                     data = [{
                         "value": 0,
-                        "label": '仅本人数据权限'
+                        "label": 'Self Only Data Access'
                     },
                         {
                             "value": 4,
-                            "label": '自定义数据权限'
+                            "label": 'Customized Data Access'
                         }]
                 else:
                     data = []
