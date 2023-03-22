@@ -4,10 +4,9 @@ from .views import *
 from rest_framework import routers
 
 
-
 system_url = routers.SimpleRouter()
-system_url.register(r'sensory_data',SensoryDataViewSet)
-system_url.register(r'chart_config',ChartConfigViewSet)
+system_url.register(r'sensory_data', SensoryDataViewSet)
+system_url.register(r'chart_config', ChartConfigViewSet)
 
 urlpatterns = [
 
@@ -21,8 +20,9 @@ urlpatterns = [
     path('chart_config/get_demo_chart_json_four/', get_demo_chart_json_four),
     path('chart_config/get_demo_chart_json_five/', get_demo_chart_json_five),
 
+    # for dynamic charts - single endpoint
+    path('chart_config/get_charts_data/', get_charts_data),
 
 ]
 
-urlpatterns+= system_url.urls
-
+urlpatterns += system_url.urls

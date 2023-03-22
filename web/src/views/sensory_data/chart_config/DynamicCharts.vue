@@ -1,4 +1,3 @@
-
 <script setup>
 
 import { ref } from "vue";
@@ -9,7 +8,7 @@ import { request } from '@/api/service'
 const charts = ref([])
 
 var chartConfigObjs = []
-const urlPrefix = '/api/system/chart_config/'
+const urlPrefix = '/api/system/chart_config/get_charts_data/'
 
 
 var promise = request({
@@ -19,18 +18,15 @@ var promise = request({
 })
 
 promise.then(function (data) {
-    chartConfigObjs = [...data.data.data];
+
+    chartConfigObjs = data;
+
     // console.log(chartConfigObjs);
     chartConfigObjs.forEach(e => {
-        request({ url: urlPrefix + e.data_api, method: 'get' }).then(function (d) {
 
+        charts.value.push(e)
+        setTimeout(loadChart, 1000)
 
-            charts.value.push(d)
-            setTimeout(loadChart, 1000)
-
-
-
-        })
     });
 
 
@@ -213,7 +209,7 @@ function loadChart() {
 <template>
     <div id="chart_container">
 
-        <div v-for="chart in charts" :id="chart.id + '_chart'" style="height:800px;width: 800px;display: block;"
+        <div v-for="chart in charts" :id="chart.id + '_chart'" style="height:420px;width: 560px;display: block;"
             class="chart_box"></div>
 
 
@@ -231,15 +227,17 @@ function loadChart() {
     align-items: center;
     display: flex;
     flex-direction: row;
-    padding: 50px;
+    padding: 25px;
     min-height: 100vh;
     min-width: 100%;
     color: black;
+    flex-wrap: wrap;
     overflow: scroll;
     height: 800px;
+    padding-bottom: 250px;
 }
 
 .chart_box {
-    margin: 50px;
+    margin: 5px;
 }
 </style>

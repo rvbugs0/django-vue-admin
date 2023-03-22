@@ -82,8 +82,8 @@ export const crudOptions = (vm) => {
       },
 
       {
-        title: "Chart name",
-        key: "chart_name",
+        title: "Title",
+        key: "title",
         sortable: true,
         search: {
           disabled: false,
@@ -140,35 +140,80 @@ export const crudOptions = (vm) => {
         },
       },
       {
-        title: "API Endpoint",
-        key: "data_api",
-        sortable: true,
-        search: {
-          disabled: false,
-          component: {
-            props: {
-              clearable: true,
-            },
-          },
-        },
+        title: "Sensory attribute",
+        key: "entity",
+        search : {},
+        type: "select",
 
-        type: "input",
         form: {
-          rules: [
-            // 表单校验规则
-            { required: true, message: "角色名称必填项" },
-          ],
-          component: {
-            props: {
-              clearable: true,
-            },
-            placeholder: "请输入角色名称",
-          },
-          itemProps: {
-            class: { yxtInput: true },
-          },
+          rules: [{ required: true, message: '请选择地区' }],
+          component: { //添加和修改时form表单的组件，支持任何v-model组件
+            props: { //配置自定义组件的属性
+              filterable: true, //可过滤选择项
+              multiple: false, //支持多选
+              clearable: true //可清除
+            }
+          }
+        },
+        dict: {  //本地数据字典
+          data: [
+            { value: 'sea_water_temperature_c', label: 'Sea Water Temperature' },
+            { value: 'salinity', label: 'Salinity' },
+            { value: 'ph', label: 'pH' },
+            { value: 'dissolved_oxygen', label: 'Dissolved Oxygen' }
+           
+          ]
         },
       },
-    ].concat(vm.commonEndColumns()),
+      {
+        title: "Chart type",
+        key: "type",
+        search : {},
+        type: "select",
+
+        form: {
+          rules: [{ required: true, message: '请选择地区' }],
+          component: { //添加和修改时form表单的组件，支持任何v-model组件
+            props: { //配置自定义组件的属性
+              filterable: true, //可过滤选择项
+              multiple: false, //支持多选
+              clearable: true //可清除
+            }
+          }
+        },
+        dict: {  //本地数据字典
+          data: [
+            { value: 'bar', label: 'Bar chart' },
+            { value: 'line', label: 'Line chart' },
+            { value: 'area', label: 'Area chart' },
+           
+          ]
+        },
+      }, {
+        title: "Function type",
+        key: "function_type",
+        search : {},
+        type: "select",
+
+        form: {
+          rules: [{ required: true, message: '请选择地区' }],
+          component: { //添加和修改时form表单的组件，支持任何v-model组件
+            props: { //配置自定义组件的属性
+              filterable: true, //可过滤选择项
+              multiple: false, //支持多选
+              clearable: true //可清除
+            }
+          }
+        },
+        dict: {  //本地数据字典
+          data: [
+            { value: 'monthly_average', label: 'Monthly Average' },
+            { value: 'monthly_max', label: 'Monthly Maximum Value' },
+            { value: 'monthly_min', label: 'Monthly Minimum Value' },
+           
+          ]
+        },
+      }
+    ],
   };
 };

@@ -31,3 +31,534 @@ AttributeError: 'SensoryData' object has no attribute 'temperature'
     obj, end = self.scan_once(s, idx)
 json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 5 column 9 (char 26)
 
+[2023-03-23 04:04:47,205][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 598, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+[2023-03-23 04:11:36,170][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 598, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+[2023-03-23 04:24:30,314][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 598, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.entity' in 'field list'")
+
+[2023-03-23 04:48:30,026][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1406, "Data too long for column 'entity' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/base.py", line 727, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/base.py", line 765, in save_base
+    force_update, using, update_fields,
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _do_insert
+    using=using, raw=raw,
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.DataError: (1406, "Data too long for column 'entity' at row 1")
+
+[2023-03-23 04:49:48,288][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:49:58,311][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:50:00,068][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:51:26,653][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:51:35,223][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:52:25,976][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 599, in get_charts_data
+    if (c.data_type == "montly_average"):
+AttributeError: 'ChartConfig' object has no attribute 'data_type'
+
+[2023-03-23 04:54:16,053][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.function_type' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 106, in destroy
+    instance = self.get_object()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.function_type' in 'field list'")
+
+[2023-03-23 04:56:52,202][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 602, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 643, in get_average_monthly_within_range
+    (months[i], str(sum(monthlyData[11]) / (len(monthlyData[11])-1))))
+ZeroDivisionError: division by zero
+
+[2023-03-23 05:32:23,266][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 598, in get_charts_data
+    chart_configs = ChartConfig.objects.filter(exposed=True)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1413, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1284, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1110, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1538, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'exposed' into field. Choices are: create_datetime, creator, creator_id, dept_belong_id, description, entity, function_type, id, modifier, public_exposed, title, type, update_datetime
+
+[2023-03-23 05:52:01,861][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 623, in get_charts_data
+    data = get_min_of_month(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 717, in get_min_of_month
+    (months[i], str(min(monthlyData[i]))))
+ValueError: min() arg is an empty sequence
+
+[2023-03-23 05:53:25,520][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 623, in get_charts_data
+    data = get_min_of_month(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 719, in get_min_of_month
+    (months[i], str(min(monthlyData[i]))))
+ValueError: min() arg is an empty sequence
+
+[2023-03-23 05:53:27,608][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 623, in get_charts_data
+    data = get_min_of_month(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 719, in get_min_of_month
+    (months[i], str(min(monthlyData[i]))))
+ValueError: min() arg is an empty sequence
+
+[2023-03-23 05:54:29,362][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 623, in get_charts_data
+    data = get_min_of_month(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 719, in get_min_of_month
+    (months[i], str(min(monthlyData[i]))))
+ValueError: min() arg is an empty sequence
+
+[2023-03-23 05:54:31,331][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/opt/anaconda3/envs/envs/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 623, in get_charts_data
+    data = get_min_of_month(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 719, in get_min_of_month
+    (months[i], str(min(monthlyData[i]))))
+ValueError: min() arg is an empty sequence
+

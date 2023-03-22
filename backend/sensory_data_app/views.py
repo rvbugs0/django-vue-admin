@@ -18,6 +18,7 @@ from dvadmin.utils.serializers import CustomModelSerializer
 from rest_framework.decorators import action
 from dvadmin.utils.permission import AnonymousUserPermission
 
+
 class SensoryDataSerializer(CustomModelSerializer):
     """
     接口白名单-序列化器
@@ -32,7 +33,6 @@ class SensoryDataSerializer(CustomModelSerializer):
         model = SensoryData
         fields = "__all__"
         read_only_fields = ["id"]
-
 
 
 class SensoryDataViewSet(CustomModelViewSet):
@@ -59,10 +59,8 @@ def average_temperatures(request):
     data = SensoryData.objects.values("sea_water_temperature_c")
 
     data = SensoryData.objects.all()
-    if(len(data)==0):
+    if (len(data) == 0):
         return HttpResponse("{}", content_type="application/json")
-
-
 
     monthlyData = [[0] for i in range(12)]
     for i in data:
@@ -89,6 +87,7 @@ def average_temperatures(request):
     res += "]"
     return HttpResponse(res, content_type="application/json")
 
+
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def average_salinity(request):
@@ -96,10 +95,8 @@ def average_salinity(request):
               'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
     data = SensoryData.objects.all()
-    if(len(data)==0):
+    if (len(data) == 0):
         return HttpResponse("{}", content_type="application/json")
-
-
 
     monthlyData = [[0] for i in range(12)]
     for i in data:
@@ -126,6 +123,7 @@ def average_salinity(request):
     res += "]"
     return HttpResponse(res, content_type="application/json")
 
+
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def average_ph(request):
@@ -133,10 +131,8 @@ def average_ph(request):
               'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 
     data = SensoryData.objects.all()
-    if(len(data)==0):
+    if (len(data) == 0):
         return HttpResponse("{}", content_type="application/json")
-
-
 
     monthlyData = [[0] for i in range(12)]
     for i in data:
@@ -164,20 +160,20 @@ def average_ph(request):
     return HttpResponse(res, content_type="application/json")
 
 
-
 class ChartConfigSerializer(CustomModelSerializer):
     """
     接口白名单-序列化器
     """
-    data_api = serializers.CharField(required = True)
     public_exposed = serializers.BooleanField(required=True)
-
+    entity = serializers.CharField(required=True)
+    type = serializers.CharField(required=True)
+    title = serializers.CharField(required=True)
+    function_type = serializers.CharField(required=True)
 
     class Meta:
         model = ChartConfig
         fields = "__all__"
         read_only_fields = ["id"]
-
 
 
 class ChartConfigViewSet(CustomModelViewSet):
@@ -379,7 +375,7 @@ def get_demo_chart_json(request):
 		]
 	}
 ]    '''
-    
+
     res = '''
     {
 		"id": 1,
@@ -437,7 +433,6 @@ def get_demo_chart_json_two(request):
     return HttpResponse(res, content_type="application/json")
 
 
-
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def get_demo_chart_json_three(request):
@@ -476,7 +471,7 @@ def get_demo_chart_json_three(request):
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def get_demo_chart_json_four(request):
     res = '''
-    
+
 	{
 		"id": 4,
 		"title": "Trends",
@@ -594,3 +589,132 @@ def get_demo_chart_json_five(request):
 	}
 '''
     return HttpResponse(res, content_type="application/json")
+
+
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def get_charts_data(request):
+    res = []
+    chart_configs = ChartConfig.objects.filter(public_exposed=True)
+    for c in chart_configs:
+        if (c.function_type == "monthly_average"):
+            data_objects = SensoryData.objects.all()
+            data = get_average_monthly_within_range(data_objects, c.entity)
+            if (c.type == "bar" or c.type == "area" or c.type == "line"):
+                xData = []
+                yData = []
+                for monthly_data in data:
+                    xData.append(monthly_data[0])
+                    yData.append(monthly_data[1])
+                res_object = {}
+                res_object["id"] = c.id
+                res_object["xData"] = xData
+                res_object["yData"] = yData
+                res_object["type"] = c.type
+                res_object["title"] = c.title
+                res.append(res_object)
+
+        if (c.function_type == "monthly_max" or c.function_type == "monthly_min"):
+            data_objects = SensoryData.objects.all()
+            data = []
+            if (c.function_type == "monthly_max"):
+                data = get_max_of_month(data_objects, c.entity)
+            else:
+                data = get_min_of_month(data_objects, c.entity)
+            if (c.type == "bar" or c.type == "area" or c.type == "line"):
+                xData = []
+                yData = []
+                for monthly_data in data:
+                    xData.append(monthly_data[0])
+                    yData.append(monthly_data[1])
+                res_object = {}
+                res_object["id"] = c.id
+                res_object["xData"] = xData
+                res_object["yData"] = yData
+                res_object["type"] = c.type
+                res_object["title"] = c.title
+                res.append(res_object)
+
+    return HttpResponse(json.dumps(res), content_type="application/json")
+
+
+def get_average_monthly_within_range(data, entity):
+    months = ['Jan', 'Feb', 'March', 'April', 'May',
+              'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+    # data = SensoryData.objects.all()
+    if (len(data) == 0):
+        return [(m, 0) for m in months]
+
+    monthlyData = [[0] for i in range(12)]
+    for i in data:
+        dt = int(str(i.date_recorded).split("-")[1])
+        if (entity == "sea_water_temperature_c"):
+            monthlyData[dt-1].append(i.sea_water_temperature_c)
+        elif (entity == "salinity"):
+            monthlyData[dt-1].append(i.salinity)
+        elif (entity == "ph"):
+            monthlyData[dt-1].append(i.ph)
+        elif (entity == "dissolved_oxygen"):
+            monthlyData[dt-1].append(i.dissolved_oxygen)
+
+    res = []
+    for i in range(len(monthlyData)):
+        res.append(
+            (months[i], str(sum(monthlyData[i]) / max(1, (len(monthlyData[11])-1)))))
+    return res
+
+
+def get_max_of_month(data, entity):
+    months = ['Jan', 'Feb', 'March', 'April', 'May',
+              'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+    if (len(data) == 0):
+        return [(m, 0) for m in months]
+
+    monthlyData = [[0] for i in range(12)]
+    for i in data:
+        dt = int(str(i.date_recorded).split("-")[1])
+        if (entity == "sea_water_temperature_c"):
+            monthlyData[dt-1].append(i.sea_water_temperature_c)
+        elif (entity == "salinity"):
+            monthlyData[dt-1].append(i.salinity)
+        elif (entity == "ph"):
+            monthlyData[dt-1].append(i.ph)
+        elif (entity == "dissolved_oxygen"):
+            monthlyData[dt-1].append(i.dissolved_oxygen)
+
+    res = []
+    for i in range(len(monthlyData)):
+        res.append(
+            (months[i], str(max(monthlyData[i]))))
+    return res
+
+
+def get_min_of_month(data, entity):
+    months = ['Jan', 'Feb', 'March', 'April', 'May',
+              'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+
+    if (len(data) == 0):
+        return [(m, 0) for m in months]
+
+    monthlyData = [[0] for i in range(12)]
+    for i in data:
+        dt = int(str(i.date_recorded).split("-")[1])
+        if (entity == "sea_water_temperature_c"):
+            monthlyData[dt-1].append(i.sea_water_temperature_c)
+        elif (entity == "salinity"):
+            monthlyData[dt-1].append(i.salinity)
+        elif (entity == "ph"):
+            monthlyData[dt-1].append(i.ph)
+        elif (entity == "dissolved_oxygen"):
+            monthlyData[dt-1].append(i.dissolved_oxygen)
+
+    res = []
+    for i in range(len(monthlyData)):
+        if (len(monthlyData[i]) <= 1):
+            continue
+        monthlyData[i].pop(0)
+        res.append(
+            (months[i], str(min(monthlyData[i]))))
+    return res

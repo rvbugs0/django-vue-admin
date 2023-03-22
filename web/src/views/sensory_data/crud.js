@@ -226,6 +226,7 @@ export const crudOptions = (vm) => {
         }
       }
     }
-    ].concat(vm.commonEndColumns())
+    ]
+    // .concat(vm.commonEndColumns())
   }
 }

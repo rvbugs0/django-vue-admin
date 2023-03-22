@@ -13,8 +13,15 @@ class SensoryData(CoreModel):
 
 
 class ChartConfig(CoreModel):
-    data_api = models.CharField(default="index",blank=False,max_length=200)
+
+    entity = models.CharField(
+        default="sea_water_temperature_c", blank=False, max_length=50)
+
+    function_type = models.CharField(
+        default="monthly_average", blank=False, max_length=50)
+
+    type = models.CharField(
+        default="bar", blank=False, max_length=20)
     public_exposed = models.BooleanField(default=True)
-    chart_name = models.CharField(default="New Chart",blank=False,max_length=100)
-
-
+    title = models.CharField(
+        default="Avg monthly sea water temp. deg Celcius", blank=False, max_length=100)

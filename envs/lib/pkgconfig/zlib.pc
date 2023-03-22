@@ -1,0 +1,13 @@
+prefix=/Users/raviailani/Documents/django-vue-admin/envs
+exec_prefix=/Users/raviailani/Documents/django-vue-admin/envs
+libdir=/Users/raviailani/Documents/django-vue-admin/envs/lib
+sharedlibdir=/Users/raviailani/Documents/django-vue-admin/envs/lib
+includedir=/Users/raviailani/Documents/django-vue-admin/envs/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
