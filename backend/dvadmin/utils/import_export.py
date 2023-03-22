@@ -22,7 +22,7 @@ def import_to_data(file_url, field_data, m2m_fields=None):
     workbook = openpyxl.load_workbook(file_path_dir)
     table = workbook[workbook.sheetnames[0]]
     theader = tuple(table.values)[0] #Excel的表头
-    is_update = '更新主键(勿改)' in theader #是否导入更新
+    is_update = 'Update Primary Key (Do not change)' in theader #是否导入更新
     if is_update is False: #不是更新时,删除id列
         field_data.pop('id')
     # 获取参数映射
@@ -62,7 +62,7 @@ def import_to_data(file_url, field_data, m2m_fields=None):
                 try:
                     cell_value = datetime.strptime(str(cell_value), '%Y-%m-%d %H:%M:%S').date()
                 except:
-                    raise CustomValidationError('日期格式不正确')
+                    raise CustomValidationError('Incorrect datetime format!')
             elif value_type == 'datetime':
                 cell_value = datetime.strptime(str(cell_value), '%Y-%m-%d %H:%M:%S')
             else:

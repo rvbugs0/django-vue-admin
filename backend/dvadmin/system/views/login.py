@@ -29,10 +29,10 @@ class CaptchaView(APIView):
     permission_classes = []
 
     @swagger_auto_schema(
-        responses={"200": openapi.Response("获取成功")},
+        responses={"200": openapi.Response("Request Success")},
         security=[],
         operation_id="captcha-get",
-        operation_description="验证码获取",
+        operation_description="Captcha Success",
     )
     def get(self, request):
         data = {}
@@ -64,20 +64,20 @@ class LoginSerializer(TokenObtainPairSerializer):
         fields = "__all__"
         read_only_fields = ["id"]
 
-    default_error_messages = {"no_active_account": _("账号/密码错误")}
+    default_error_messages = {"no_active_account": _("Wrong user password combination!")}
 
     def validate(self, attrs):
         captcha = self.initial_data.get("captcha", None)
         if dispatch.get_system_config_values("base.captcha_state"):
             if captcha is None:
-                raise CustomValidationError("验证码不能为空")
+                raise CustomValidationError("Captcha required!")
             self.image_code = CaptchaStore.objects.filter(
                 id=self.initial_data["captchaKey"]
             ).first()
             five_minute_ago = datetime.now() - timedelta(hours=0, minutes=5, seconds=0)
             if self.image_code and five_minute_ago > self.image_code.expiration:
                 self.image_code and self.image_code.delete()
-                raise CustomValidationError("验证码过期")
+                raise CustomValidationError("Captch expired!")
             else:
                 if self.image_code and (
                         self.image_code.response == captcha
@@ -86,7 +86,7 @@ class LoginSerializer(TokenObtainPairSerializer):
                     self.image_code and self.image_code.delete()
                 else:
                     self.image_code and self.image_code.delete()
-                    raise CustomValidationError("图片验证码错误")
+                    raise CustomValidationError("Captcha Wrong!")
         data = super().validate(attrs)
         data["name"] = self.user.name
         data["userId"] = self.user.id
@@ -105,7 +105,7 @@ class LoginSerializer(TokenObtainPairSerializer):
         request.user = self.user
         # 记录登录日志
         save_login_log(request=request)
-        return {"code": 2000, "msg": "请求成功", "data": data}
+        return {"code": 2000, "msg": "Request Success", "data": data}
 
 
 class LoginView(TokenObtainPairView):
@@ -127,15 +127,15 @@ class LoginTokenSerializer(TokenObtainPairSerializer):
         fields = "__all__"
         read_only_fields = ["id"]
 
-    default_error_messages = {"no_active_account": _("账号/密码不正确")}
+    default_error_messages = {"no_active_account": _("Wrong user password combination!")}
 
     def validate(self, attrs):
         if not getattr(settings, "LOGIN_NO_CAPTCHA_AUTH", False):
-            return {"code": 4000, "msg": "该接口暂未开通!", "data": None}
+            return {"code": 4000, "msg": "Request rejected!", "data": None}
         data = super().validate(attrs)
         data["name"] = self.user.name
         data["userId"] = self.user.id
-        return {"code": 2000, "msg": "请求成功", "data": data}
+        return {"code": 2000, "msg": "Request Success", "data": data}
 
 
 class LoginTokenView(TokenObtainPairView):
@@ -149,7 +149,7 @@ class LoginTokenView(TokenObtainPairView):
 
 class LogoutView(APIView):
     def post(self, request):
-        return DetailResponse(msg="注销成功")
+        return DetailResponse(msg="Logoff success!")
 
 
 class ApiLoginSerializer(CustomModelSerializer):
@@ -182,4 +182,4 @@ class ApiLogin(APIView):
             login(request, user_obj)
             return redirect("/")
         else:
-            return ErrorResponse(msg="账号/密码错误")
+            return ErrorResponse(msg="Wrong user password combination!")

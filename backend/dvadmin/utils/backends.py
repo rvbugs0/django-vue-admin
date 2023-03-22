@@ -15,7 +15,7 @@ class CustomBackend(ModelBackend):
     """
 
     def authenticate(self, request, username=None, password=None, **kwargs):
-        msg = '%s 正在使用本地登录...' % username
+        msg = '%s system user login ...' % username
         logger.info(msg)
         if username is None:
             username = kwargs.get(UserModel.USERNAME_FIELD)

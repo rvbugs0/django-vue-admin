@@ -36,7 +36,7 @@ def CustomExceptionHandler(ex, context):
         msg = ex.detail
     elif isinstance(ex,Http404):
         code = 400
-        msg = "接口地址不正确"
+        msg = "Wrong API path! "
     elif isinstance(ex, DRFAPIException):
         set_rollback()
         msg = ex.detail
@@ -46,10 +46,10 @@ def CustomExceptionHandler(ex, context):
                     msg = "%s:%s" % (k, i)
     elif isinstance(ex, ProtectedError):
         set_rollback()
-        msg = "删除失败:该条数据与其他数据有相关绑定"
+        msg = "Failed to delete: record is related to other records!"
     # elif isinstance(ex, DatabaseError):
     #     set_rollback()
-    #     msg = "接口服务器异常,请联系管理员"
+    #     msg = "API exception, please contact the Administration!"
     elif isinstance(ex, Exception):
         logger.error(traceback.format_exc())
         msg = str(ex)

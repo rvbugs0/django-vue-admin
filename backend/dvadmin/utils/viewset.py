@@ -73,7 +73,7 @@ class CustomModelViewSet(ModelViewSet,ImportSerializerMixin,ExportSerializerMixi
         serializer = self.get_serializer(data=request.data, request=request)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
-        return DetailResponse(data=serializer.data, msg="新增成功")
+        return DetailResponse(data=serializer.data, msg="Create Success")
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
@@ -82,12 +82,12 @@ class CustomModelViewSet(ModelViewSet,ImportSerializerMixin,ExportSerializerMixi
             serializer = self.get_serializer(page, many=True, request=request)
             return self.get_paginated_response(serializer.data)
         serializer = self.get_serializer(queryset, many=True, request=request)
-        return SuccessResponse(data=serializer.data, msg="获取成功")
+        return SuccessResponse(data=serializer.data, msg="Request Success")
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
-        return DetailResponse(data=serializer.data, msg="获取成功")
+        return DetailResponse(data=serializer.data, msg="Request Success")
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
@@ -100,26 +100,26 @@ class CustomModelViewSet(ModelViewSet,ImportSerializerMixin,ExportSerializerMixi
             # If 'prefetch_related' has been applied to a queryset, we need to
             # forcibly invalidate the prefetch cache on the instance.
             instance._prefetched_objects_cache = {}
-        return DetailResponse(data=serializer.data, msg="更新成功")
+        return DetailResponse(data=serializer.data, msg="Update Success")
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()
         instance.delete()
-        return DetailResponse(data=[], msg="删除成功")
+        return DetailResponse(data=[], msg="Delete Success")
 
 
-    keys = openapi.Schema(description='主键列表',type=openapi.TYPE_ARRAY,items=openapi.TYPE_STRING)
+    keys = openapi.Schema(description='Primary Keys',type=openapi.TYPE_ARRAY,items=openapi.TYPE_STRING)
     @swagger_auto_schema(request_body=openapi.Schema(
         type=openapi.TYPE_OBJECT,
         required=['keys'],
         properties={'keys': keys}
-    ), operation_summary='批量删除')
+    ), operation_summary='Batch Delete')
     @action(methods=['delete'],detail=False)
     def multiple_delete(self,request,*args,**kwargs):
         request_data = request.data
         keys = request_data.get('keys',None)
         if keys:
             self.get_queryset().filter(id__in=keys).delete()
-            return SuccessResponse(data=[], msg="删除成功")
+            return SuccessResponse(data=[], msg="Delete Success")
         else:
-            return ErrorResponse(msg="未获取到keys字段")
+            return ErrorResponse(msg="Failed to retrieve keys column!")
