@@ -6,45 +6,45 @@
  * 联系Qq:1638245306
  * @文件介绍: 角色管理接口
  */
-import { request } from '@/api/service'
+import { request } from "@/api/service";
 
-export const urlPrefix = '/api/system/chart_config/'
+export const urlPrefix = "/api/system/chart_config/";
 
-export function GetList (query) {
+export function GetList(query) {
   return request({
     url: urlPrefix,
-    method: 'get',
-    params: { ...query }
-  })
+    method: "get",
+    params: { ...query },
+  });
 }
 
-export function GetObj (obj) {
+export function GetObj(obj) {
   return request({
-    url: urlPrefix + obj.id + '/',
-    method: 'get'
-  })
+    url: urlPrefix + obj.id + "/",
+    method: "get",
+  });
 }
 
-export function createObj (obj) {
+export function createObj(obj) {
   return request({
     url: urlPrefix,
-    method: 'post',
-    data: obj
-  })
+    method: "post",
+    data: obj,
+  });
 }
 
-export function UpdateObj (obj) {
+export function UpdateObj(obj) {
   return request({
-    url: urlPrefix + obj.id + '/',
-    method: 'put',
-    data: obj
-  })
+    url: urlPrefix + obj.id + "/",
+    method: "put",
+    data: obj,
+  });
 }
 
-export function DelObj (id) {
+export function DelObj(id) {
   return request({
-    url: urlPrefix + id + '/',
-    method: 'delete',
-    data: { id }
-  })
+    url: urlPrefix + id + "/",
+    method: "delete",
+    data: { id },
+  });
 }

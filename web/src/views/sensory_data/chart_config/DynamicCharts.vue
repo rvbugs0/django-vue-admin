@@ -1,3 +1,4 @@
+
 <script setup>
 
 import { ref } from "vue";
@@ -25,7 +26,7 @@ promise.then(function (data) {
 
 
             charts.value.push(d)
-            setTimeout(loadChart,1000)
+            setTimeout(loadChart, 1000)
 
 
 
@@ -210,10 +211,10 @@ function loadChart() {
 
 
 <template>
-
     <div id="chart_container">
-        
-        <div v-for="chart in charts" :id="chart.id + '_chart'" style="height:500px;width: 800px;" class="chart_box"></div>
+
+        <div v-for="chart in charts" :id="chart.id + '_chart'" style="height:800px;width: 800px;display: block;"
+            class="chart_box"></div>
 
 
 
@@ -225,12 +226,12 @@ function loadChart() {
 
 <style scoped>
 #chart_container {
-    
+
     background-color: white;
     align-items: center;
     display: flex;
-    flex-direction: column;
-    padding: 50px 50px 100px 50px;
+    flex-direction: row;
+    padding: 50px;
     min-height: 100vh;
     min-width: 100%;
     color: black;
