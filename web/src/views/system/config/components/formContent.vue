@@ -68,7 +68,7 @@
                     <div slot="tip" class="el-upload__tip">After selecting the picture, it needs to be manually uploaded
                       to the server, and only jpg/png files can be uploaded</div>
                   </el-upload>
-                  <el-dialog:visible.sync="dialogImgVisible">
+                  <el-dialog :visible.sync="dialogImgVisible">
                     <img width="100%" :src="dialogImageUrl" alt="">
                     </el-dialog>
                 </div>
