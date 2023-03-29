@@ -1,10 +1,10 @@
 <!--
- * @创建文件时间: 2021-06-01 22:41:21
- * @Auther: 猿小天
- * @最后修改人: 猿小天
- * @最后修改时间: 2021-07-29 19:27:29
- * 联系Qq:1638245306
- * @文件介绍:角色管理
+  * @Create file time: 2021-06-01 22:41:21
+  * @Auther: Ape Xiaotian
+  * @last modified by: Yuan Xiaotian
+  * @last modification time: 2021-07-29 19:27:29
+  * Contact Qq:1638245306
+  * @file introduction: role management
 -->
 <template>
   <d2-container :class="{ 'page-compact': crud.pageOptions.compact }">
@@ -26,7 +26,7 @@
             v-permission="'Create'"
             type="primary"
             @click="addRow"
-            ><i class="el-icon-plus" /> 新增</el-button
+            ><i class="el-icon-plus" />Add</el-button
           >
         </el-button-group>
         <crud-toolbar
@@ -38,17 +38,17 @@
         />
       </div>
     </d2-crud-x>
-<!--  角色授权  -->
+<!-- Role Authorization -->
     <div>
       <el-drawer
-        title="角色授权"
+        title="role authorization"
         :visible.sync="rolePermissionShow"
         direction="rtl"
         size="70%"
         >
         <template slot="title">
           <div>
-            当前角色<el-tag>{{roleObj?roleObj.name:'无'}}</el-tag>
+            Current role <el-tag>{{roleObj?roleObj.name:'none'}}</el-tag>
           </div>
         </template>
         <div>
@@ -85,26 +85,26 @@ export default {
     getCrudOptions () {
       return crudOptions(this)
     },
-    pageRequest (query) {
-      return api.GetList(query)
+    pageRequest(query) {
+      return api. GetList(query)
     },
-    addRequest (row) {
+    addRequest(row) {
       return api.createObj(row)
     },
-    updateRequest (row) {
+    updateRequest(row) {
       return api.UpdateObj(row)
     },
-    delRequest (row) {
+    delRequest(row) {
       return api.DelObj(row.id)
     },
-    // 授权
-    createPermission (scope) {
-      console.log(scope)
+    // authorization
+    createPermission(scope) {
+      console. log(scope)
       this.roleObj = scope.row
       this.rolePermissionShow = true
-      // this.$router.push({
-      //   name: 'rolePermission',
-      //   params: { id: scope.row.id }
+      // this. $router. push({
+      // name: 'rolePermission',
+      // params: { id: scope. row. id }
       // })
     }
   }

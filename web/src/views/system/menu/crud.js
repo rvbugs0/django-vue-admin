@@ -2,178 +2,180 @@ import { request } from '@/api/service'
 import { urlPrefix as menuPrefix } from './api'
 import XEUtils from 'xe-utils'
 export const crudOptions = (vm) => {
-  // 验证路由地址
-  const validateWebPath = (rule, value, callback) => {
-    const isLink = vm.getEditForm().is_link
-    let pattern = /^\/.*?/
-    if (isLink) {
-      pattern = /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/g
-    } else {
-      pattern = /^\/.*?/
-    }
-    if (!pattern.test(value)) {
-      callback(new Error('correct address please'))
-    } else {
-      callback()
-    }
-  }
-  return {
-    pagination: false,
-    pageOptions: {
-      compact: true
-    },
-    options: {
-      tableType: 'vxe-table',
-      rowKey: true,
-      rowId: 'id',
-      height: '100%', // 表格高度100%, 使用toolbar必须设置
-      highlightCurrentRow: false,
-      // defaultExpandAll: true,
-      // expandAll: true,
-      treeConfig: {
-        transform: true,
-        rowField: 'id',
-        parentField: 'parent',
-        expandAll: true,
-        hasChild: 'hasChild',
-        lazy: true,
-        loadMethod: vm.loadContentMethod
-      }
-    },
-    rowHandle: {
-      view: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Retrieve')
-        }
-      },
-      edit: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Update')
-        }
-      },
-      remove: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Delete')
-        }
-      },
-      width: 230,
-      fixed: 'right',
-      custom: [{
-        show (index, row) {
-          if (row.web_path && !row.is_link) {
-            return true
-          }
-          return false
-        },
-        disabled () {
-          return !vm.hasPermissions('Update')
-        },
-        text: ' Menu Button',
-        type: 'warning',
-        size: 'small',
-        emit: 'createPermission'
-      }]
+   // verify routing address
+   const validateWebPath = (rule, value, callback) => {
+     const isLink = vm.getEditForm().is_link
+     let pattern = /^\/.*?/
+     if (isLink) {
+       pattern = /^((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+/g
+     } else {
+       pattern = /^\/.*?/
+     }
+     if (!pattern. test(value)) {
+       callback(new Error('correct address please'))
+     } else {
+       callback()
+     }
+   }
+   return {
+     pagination: false,
+     pageOptions: {
+       compact: true
+     },
+     options: {
+       tableType: 'vxe-table',
+       rowKey: true,
+       rowId: 'id',
+       height: '100%', // table height 100%, must be set when using toolbar
+       highlightCurrentRow: false,
+       // defaultExpandAll: true,
+       // expandAll: true,
+       treeConfig: {
+         transform: true,
+         rowField: 'id',
+         parentField: 'parent',
+         expandAll: true,
+         hasChild: 'hasChild',
+         lazy: true,
+         loadMethod: vm.loadContentMethod
+       }
+     },
+     rowHandle: {
+       view: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Retrieve')
+         }
+       },
+       edit: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Update')
+         }
+       },
+       remove: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Delete')
+         }
+       },
+       width: 230,
+       fixed: 'right',
+       custom: [{
+         show(index, row) {
+           if (row. web_path && ! row. is_link) {
+             return true
+           }
+           return false
+         },
+         disabled () {
+           return !vm.hasPermissions('Update')
+         },
+         text: 'Menu Button',
+         type: 'warning',
+         size: 'small',
+         emit: 'createPermission'
+       }]
 
-    },
-    indexRow: { // 或者直接传true,不显示title，不居中
-      title: 'Serial No.',
-      align: 'center',
-      width: 80
-    },
-    viewOptions: {
-      componentType: 'form'
-    },
-    formOptions: {
-      defaultSpan: 12 // 默认的表单 span
-    },
-    columns: [
-      {
-        title: 'Key words',
-        key: 'search',
-        show: false,
-        disabled: true,
-        search: {
-          disabled: false,
-          component: {
-            props: {
-              clearable: true
-            },
-            placeholder: '请输入关键词'
-          }
-        },
-        form: {
-          disabled: true,
-          component: {
-            props: {
-              clearable: true
-            }
-          }
-        },
-        view: { // 查看对话框组件的单独配置
-          disabled: true
-        }
-      },
-      {
-        title: 'ID',
-        key: 'id',
-        show: false,
-        width: 60,
-        form: {
-          component: {
-            show: false
-          }
-        }
-      },
-      {
-        title: 'Parent menu',
-        key: 'parent',
-        show: false,
-        search: {
-          disabled: true
-        },
-        type: 'cascader',
-        dict: {
-          url: menuPrefix,
-          cache: false,
-          isTree: true,
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name', // 数据字典中label字段的属性名
-          children: 'children', // 数据字典中children字段的属性名
-          getData: (url, dict, { form, component }) => { // 配置此参数会覆盖全局的getRemoteDictFunc
-            return request({ url: url, params: { limit: 999, status: 1, is_catalog: 1 } }).then(ret => {
-              const responseData = ret.data.data
-              const result = XEUtils.toArrayTree(responseData, { parentKey: 'parent', strict: true })
-              return [{ id: null, name: 'root node', children: result }]
-            })
-          }
-        },
-        form: {
-          component: {
-            props: {
-              elProps: {
-                clearable: true,
-                showAllLevels: false, // 仅显示最后一级
-                props: {
-                  checkStrictly: true, // 可以不需要选到最后一级
-                  emitPath: false,
-                  clearable: true
-                }
-              }
-            }
-          }
-        }
-      },
-      {
+     },
+     indexRow: { // Or pass true directly, do not display title, do not center
+       title: 'Serial No.',
+       align: 'center',
+       width: 80
+     },
+     viewOptions: {
+       componentType: 'form'
+     },
+     formOptions: {
+       defaultSpan: 12 // default form span
+     },
+     columns: [
+       {
+         title: 'Key words',
+         key: 'search',
+         show: false,
+         disabled: true,
+         search: {
+           disabled: false,
+           component: {
+             props: {
+               clearable: true
+             },
+             placeholder: 'Please enter keywords'
+           }
+         },
+         form: {
+           disabled: true,
+           component: {
+             props: {
+               clearable: true
+             }
+           }
+         },
+         view: { // View the individual configuration of the dialog component
+           disabled: true
+         }
+       },
+       {
+         title: 'ID',
+         key: 'id',
+         show: false,
+         width: 60,
+         form: {
+           component: {
+             show: false
+           }
+         }
+       },
+       {
+         title: 'Parent menu',
+         key: 'parent',
+         show: false,
+         search: {
+           disabled: true
+         },
+         type: 'cascader',
+         dict: {
+           url: menuPrefix,
+           cache: false,
+           isTree: true,
+           value: 'id', // attribute name of the value field in the data dictionary
+           label: 'name', // attribute name of the label field in the data dictionary
+           children: 'children', // attribute name of the children field in the data dictionary
+           getData: (url, dict, { form, component }) => { // Configuring this parameter will override the global getRemoteDictFunc
+             return request({ url: url, params: { limit: 999, status: 1, is_catalog: 1 } }).then(ret => {
+               const responseData = ret.data.data
+               const result = XEUtils.toArrayTree(responseData, { parentKey: 'parent', strict: true })
+               return [{ id: null, name: 'root node', children: result }]
+             })
+           }
+         },
+         form: {
+           component: {
+             props: {
+               elProps: {
+                 clearable: true,
+                 showAllLevels: false, // only show the last level
+                 props: {
+                   checkStrictly: true, // You don't need to select the last level
+                   emitPath: false,
+                   clearable: true
+                 }
+               }
+             }
+           }
+         }
+       },
+
+
+       {
         title: 'menu name',
         key: 'name',
         sortable: true,
-        treeNode: true, // 设置为树形列
+        treeNode: true, // set as a tree column
         search: {
           disabled: false,
           component: {
@@ -185,7 +187,7 @@ export const crudOptions = (vm) => {
         minWidth: 180,
         type: 'input',
         form: {
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             { required: true, message: 'Menu name is required' }
           ],
           component: {
@@ -274,8 +276,8 @@ export const crudOptions = (vm) => {
             if (value) {
               getColumn('web_path').title = 'external link address'
               getColumn('web_path').component.placeholder = 'Please enter the external link address'
-              getColumn('web_path').helper = {
-                render (h) {
+              getColumn('web_path'). helper = {
+                render(h) {
                   return (< el-alert title="External link address, please start with https|http|ftp|rtsp|mms" type="warning" />
                   )
                 }
@@ -283,8 +285,8 @@ export const crudOptions = (vm) => {
             } else {
               getColumn('web_path').title = 'routing address'
               getColumn('web_path').component.placeholder = 'Please enter the routing address'
-              getColumn('web_path').helper = {
-                render (h) {
+              getColumn('web_path'). helper = {
+                render(h) {
                   return (< el-alert title="The address of the url in the browser, please start with /" type="warning" />
                   )
                 }
@@ -314,7 +316,7 @@ export const crudOptions = (vm) => {
             placeholder: 'Please enter the routing address'
           },
           helper: {
-            render (h) {
+            render(h) {
               return (< el-alert title="The address of the url in the browser, please start with /" type="warning" />
               )
             }
@@ -328,7 +330,7 @@ export const crudOptions = (vm) => {
         show: false,
         dict: {
           cache: false,
-          data: vm.searchFiles()
+          data: vm. searchFiles()
         },
         form: {
           rules: [
@@ -341,12 +343,12 @@ export const crudOptions = (vm) => {
             },
             props: {
               clearable: true,
-              filterable: true // 可过滤选择项
+              filterable: true // filterable selection
             },
             placeholder: 'Please enter the component address'
           },
           helper: {
-            render (h) {
+            render(h) {
               return (< el-alert title="Folder address under src/views" type="warning" />
               )
             }
@@ -372,7 +374,7 @@ export const crudOptions = (vm) => {
             placeholder: 'Please enter a component name'
           },
           helper: {
-            render (h) {
+            render(h) {
               return (< el-alert title="The name in the xx.vue file" type="warning" />
               )
             }
@@ -387,7 +389,7 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            elProps: { // el-select的配置项，https://element.eleme.cn/#/zh-CN/component/select
+            elProps: { // el-select configuration items, https://element.eleme.cn/#/zh-CN/component/select
               filterable: true,
               multiple: true,
               clearable: true
@@ -416,7 +418,7 @@ export const crudOptions = (vm) => {
             placeholder: 'Please choose whether to cache'
           },
           helper: {
-            render (h) {
+            render(h) {
               return (< el-alert title="Whether to enable page caching, the component name needs to be consistent with the name of the xx.vue page" type="warning" />
               )
             }
@@ -439,11 +441,11 @@ export const crudOptions = (vm) => {
           component: {
             placeholder: 'Please select side visible'
           },
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             { required: true, message: 'Required fields visible on side' }
           ],
           helper: {
-            render (h) {
+            render(h) {
               return (< el-alert title="Whether to show in the side menu" type="warning" />
               )
             }
@@ -467,7 +469,7 @@ export const crudOptions = (vm) => {
           component: {
             placeholder: 'Please select a status'
           },
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             { required: true, message: 'Status Required' }
           ]
         }

@@ -1,205 +1,206 @@
 import { request } from '@/api/service'
 
 export const crudOptions = (vm) => {
-  return {
-    indexRow: { // 或者直接传true,不显示title，不居中
-      width: 60,
-      title: '序号',
-      align: 'center'
-    },
-    options: {
-      tableType: 'vxe-table',
-      rowKey: true, // 必须设置，true or false
-      height: '100%' // 表格高度100%, 使用toolbar必须设置
-    },
-    rowHandle: {
-      width: 160,
-      fixed: 'right',
-      view: false,
-      edit: {
-        thin: true,
-        text: '',
-        show () {
-          return vm.tabActivted !== 'receive'
-        },
-        disabled () {
-          return !vm.hasPermissions('Update')
-        }
-      },
-      remove: {
-        thin: true,
-        text: '',
-        show () {
-          return vm.tabActivted !== 'receive'
-        },
-        disabled () {
-          return !vm.hasPermissions('Delete')
-        }
-      },
-      custom: [
-        {
-          thin: true,
-          text: null,
-          icon: 'el-icon-view',
-          size: 'small',
-          disabled () {
-            return !vm.hasPermissions('Retrieve')
-          },
-          order: 1,
-          emit: 'onView'
-        }
-      ]
-    },
-    columns: [
-      {
-        title: 'id',
-        key: 'id',
-        width: 100,
-        form: { disabled: true }
-      },
-      {
-        title: '标题',
-        key: 'title',
-        search: {
-          disabled: false
-        },
-        width: 200,
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: '必填项'
-            }
-          ],
-          component: { span: 24, placeholder: '请输入标题' }
-        }
-      },
-      {
-        title: '是否已读',
-        key: 'is_read',
-        type: 'select',
-        width: 100,
-        show () {
-          return vm.tabActivted === 'receive'
-        },
-        dict: {
-          data: [
-            { label: '已读', value: true, color: 'success' },
-            { label: '未读', value: false, color: 'danger' }
-          ]
-        },
-        form: {
-          disabled: true
-        }
-      },
-      {
-        title: '目标类型',
-        key: 'target_type',
-        type: 'radio',
-        width: 120,
-        show () {
-          return vm.tabActivted === 'send'
-        },
-        dict: { data: [{ value: 0, label: '按用户' }, { value: 1, label: '按角色' }, { value: 2, label: '按部门' }, { value: 3, label: '通知公告' }] },
-        form: {
-          component: {
-            span: 24,
-            props: {
-              type: 'el-radio-button'
-            }
-          },
-          rules: [
-            {
-              required: true,
-              message: '必选项',
-              trigger: ['blur', 'change']
-            }
-          ]
-        }
-      },
-      {
-        title: '目标用户',
-        key: 'target_user',
-        search: {
-          disabled: true
-        },
-        width: 130,
-        type: 'table-selector',
-        disabled: true,
-        dict: {
-          cache: false,
-          url: '/api/system/user/',
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name', // 数据字典中label字段的属性名
-          getData: (url, dict, {
-            form,
-            component
-          }) => {
-            return request({
-              url: url,
-              params: {
-                page: 1,
-                limit: 10
-              }
-            }).then(ret => {
-              component._elProps.page = ret.data.page
-              component._elProps.limit = ret.data.limit
-              component._elProps.total = ret.data.total
-              return ret.data.data
-            })
-          }
-        },
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: '必填项'
-            }
-          ],
-          itemProps: {
-            class: { yxtInput: true }
-          },
-          component: {
-            span: 24,
-            show (context) {
-              return context.form.target_type === 0
-            },
-            pagination: true,
-            props: { multiple: true },
-            elProps: {
-              columns: [
-                {
-                  field: 'name',
-                  title: '用户名称'
-                },
-                {
-                  field: 'phone',
-                  title: '用户电话'
-                }
-              ]
-            }
-          }
-        },
-        component: {
-          name: 'manyToMany',
-          valueBinding: 'user_info',
-          children: 'name'
-        }
-      },
-      {
-        title: '目标角色',
-        key: 'target_role',
-        search: {
-          disabled: true
-        },
-        disabled: true,
-        width: 130,
-        type: 'table-selector',
-        dict: {
+   return {
+     indexRow: { // Or pass true directly, do not display title, do not center
+       width: 60,
+       title: 'serial number',
+       align: 'center'
+     },
+     options: {
+       tableType: 'vxe-table',
+       rowKey: true, // must be set, true or false
+       height: '100%' // table height 100%, must be set when using toolbar
+     },
+     rowHandle: {
+       width: 160,
+       fixed: 'right',
+       view: false,
+       edit: {
+         thin: true,
+         text: '',
+         show () {
+           return vm.tabActivted !== 'receive'
+         },
+         disabled () {
+           return !vm.hasPermissions('Update')
+         }
+       },
+       remove: {
+         thin: true,
+         text: '',
+         show () {
+           return vm.tabActivted !== 'receive'
+         },
+         disabled () {
+           return !vm.hasPermissions('Delete')
+         }
+       },
+       custom: [
+         {
+           thin: true,
+           text: null,
+           icon: 'el-icon-view',
+           size: 'small',
+           disabled () {
+             return !vm.hasPermissions('Retrieve')
+           },
+           order: 1,
+           emit: 'onView'
+         }
+       ]
+     },
+     columns: [
+       {
+         title: 'id',
+         key: 'id',
+         width: 100,
+         form: { disabled: true }
+       },
+       {
+         title: 'Title',
+         key: 'title',
+         search: {
+           disabled: false
+         },
+         width: 200,
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'required fields'
+             }
+           ],
+           component: { span: 24, placeholder: 'Please enter a title' }
+         }
+       },
+       {
+         title: 'Have you read',
+         key: 'is_read',
+         type: 'select',
+         width: 100,
+         show () {
+           return vm.tabActivted === 'receive'
+         },
+         dict: {
+           data: [
+             { label: 'read', value: true, color: 'success' },
+             { label: 'unread', value: false, color: 'danger' }
+           ]
+         },
+         form: {
+           disabled: true
+         }
+       },
+       {
+         title: 'Target Type',
+         key: 'target_type',
+         type: 'radio',
+         width: 120,
+         show () {
+           return vm.tabActivted === 'send'
+         },
+         dict: { data: [{ value: 0, label: 'by user' }, { value: 1, label: 'by role' }, { value: 2, label: 'by department' }, { value: 3, label: 'Notice Announcement' }] },
+         form: {
+           component: {
+             span: 24,
+             props: {
+               type: 'el-radio-button'
+             }
+           },
+           rules: [
+             {
+               required: true,
+               message: 'required',
+               trigger: ['blur', 'change']
+             }
+           ]
+         }
+       },
+       {
+         title: 'Target User',
+         key: 'target_user',
+         search: {
+           disabled: true
+         },
+         width: 130,
+         type: 'table-selector',
+         disabled: true,
+         dict: {
+           cache: false,
+           url: '/api/system/user/',
+           value: 'id', // attribute name of the value field in the data dictionary
+           label: 'name', // attribute name of the label field in the data dictionary
+           getData: (url, dict, {
+             form,
+             component
+           }) => {
+             return request({
+               url: url,
+               params: {
+                 page: 1,
+                 limit: 10
+               }
+             }).then(ret => {
+               component._elProps.page = ret.data.page
+               component._elProps.limit = ret.data.limit
+               component._elProps.total = ret.data.total
+               return ret.data.data
+             })
+           }
+         },
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'required fields'
+             }
+           ],
+           itemProps: {
+             class: { yxtInput: true }
+           },
+           component: {
+             span: 24,
+             show (context) {
+               return context.form.target_type === 0
+             },
+             pagination: true,
+             props: { multiple: true },
+             elProps: {
+               columns: [
+                 {
+                   field: 'name',
+                   title: 'Username'
+                 },
+                 {
+                   field: 'phone',
+                   title: 'User Phone'
+                 }
+               ]
+             }
+           }
+         },
+         component: {
+           name: 'manyToMany',
+           valueBinding: 'user_info',
+           children: 'name'
+         }
+       },
+       {
+         title: 'Target role',
+         key: 'target_role',
+         search: {
+           disabled: true
+         },
+         disabled: true,
+         width: 130,
+         type: 'table-selector',
+
+         dict: {
           cache: false,
           url: '/api/system/role/',
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name', // 数据字典中label字段的属性名
+          value: 'id', // attribute name of the value field in the data dictionary
+          label: 'name', // attribute name of the label field in the data dictionary
           getData: (url, dict, {
             form,
             component
@@ -219,10 +220,10 @@ export const crudOptions = (vm) => {
           }
         },
         form: {
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             {
               required: true,
-              message: '必填项'
+              message: 'required fields'
             }
           ],
           itemProps: {
@@ -239,11 +240,11 @@ export const crudOptions = (vm) => {
               columns: [
                 {
                   field: 'name',
-                  title: '角色名称'
+                  title: 'role name'
                 },
                 {
                   field: 'key',
-                  title: '权限标识'
+                  title: 'Authorization ID'
                 }
               ]
             }
@@ -256,7 +257,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '目标部门',
+        title: 'Target department',
         key: 'target_dept',
         search: {
           disabled: true
@@ -267,9 +268,9 @@ export const crudOptions = (vm) => {
           cache: false,
           url: '/api/system/dept/all_dept/',
           isTree: true,
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name', // 数据字典中label字段的属性名
-          children: 'children', // 数据字典中children字段的属性名
+          value: 'id', // attribute name of the value field in the data dictionary
+          label: 'name', // attribute name of the label field in the data dictionary
+          children: 'children', // attribute name of the children field in the data dictionary
           getData: (url, dict, {
             form,
             component
@@ -283,10 +284,10 @@ export const crudOptions = (vm) => {
         },
         disabled: true,
         form: {
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             {
               required: true,
-              message: '必填项'
+              message: 'required fields'
             }
           ],
           itemProps: {
@@ -309,16 +310,16 @@ export const crudOptions = (vm) => {
                 columns: [
                   {
                     field: 'name',
-                    title: '部门名称',
+                    title: 'Department Name',
                     treeNode: true
                   },
                   {
                     field: 'status_label',
-                    title: '状态'
+                    title: 'Status'
                   },
                   {
                     field: 'parent_name',
-                    title: '父级部门'
+                    title: 'Parent Department'
                   }
                 ]
               }
@@ -332,15 +333,15 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '内容',
+        title: 'Content',
         key: 'content',
         minWidth: 300,
-        type: 'editor-quill', // 富文本图片上传依赖file-uploader，请先配置好file-uploader
+        type: 'editor-quill', // rich text image upload depends on file-uploader, please configure file-uploader first
         form: {
-          rules: [ // 表单校验规则
+          rules: [ // form validation rules
             {
               required: true,
-              message: '必填项'
+              message: 'required fields'
             }
           ],
           component: {
@@ -349,7 +350,7 @@ export const crudOptions = (vm) => {
             },
             props: {
               uploader: {
-                type: 'form' // 上传后端类型【cos,aliyun,oss,form】
+                type: 'form' // Upload backend type [cos, aliyun, oss, form]
               }
             },
             events: {

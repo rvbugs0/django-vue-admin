@@ -1,49 +1,49 @@
 <template>
   <div style="padding: 20px">
     <el-form ref="form" :model="form" :rules="rules" label-width="80px">
-      <el-form-item label="所属分组" prop="parent">
-        <el-select v-model="form.parent" placeholder="请选择分组" clearable>
+      <el-form-item label="belongs to the group" prop="parent">
+        <el-select v-model="form.parent" placeholder="Please select group" clearable>
           <el-option :label="item.title" :value="item.id" :key="index"
                      v-for="(item,index) in parentOptions"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="标题" prop="title">
-        <el-input v-model="form.title" placeholder="请输入" clearable></el-input>
+      <el-form-item label="title" prop="title">
+        <el-input v-model="form.title" placeholder="Please enter" clearable></el-input>
       </el-form-item>
-      <el-form-item label="key值" prop="key">
-        <el-input v-model="form.key" placeholder="请输入" clearable></el-input>
+      <el-form-item label="key value" prop="key">
+        <el-input v-model="form.key" placeholder="Please enter" clearable></el-input>
       </el-form-item>
-      <el-form-item label="表单类型" prop="form_item_type">
-        <el-select v-model="form.form_item_type" placeholder="请选择" clearable>
+      <el-form-item label="form type" prop="form_item_type">
+        <el-select v-model="form.form_item_type" placeholder="Please select" clearable>
           <el-option :label="item.label" :value="item.value" :key="index"
                      v-for="(item,index) in dictionary('config_form_type')"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item
         v-if="[4,5,6].indexOf(form.form_item_type)>-1"
-        label="字典key"
+        label="dictionary key"
         prop="setting"
-        :rules="[{required: true,message: '不能为空'}]">
-        <el-input v-model="form.setting" placeholder="请输入dictionary中key值" clearable></el-input>
+        :rules="[{required: true,message: 'cannot be empty'}]">
+        <el-input v-model="form.setting" placeholder="Please enter the key value in the dictionary" clearable></el-input>
       </el-form-item>
       <div v-if="[13,14].indexOf(form.form_item_type)>-1">
         <associationTable ref="associationTable" v-model="form.setting"
                           @updateVal="associationTableUpdate"></associationTable>
       </div>
-      <el-form-item label="校验规则">
-        <el-select v-model="form.rule" multiple placeholder="请选择(可多选)" clearable>
+      <el-form-item label="validation rules">
+        <el-select v-model="form.rule" multiple placeholder="Please select (multiple choices)" clearable>
           <el-option :label="item.label" :value="item.value" :key="index"
                      v-for="(item,index) in ruleOptions"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="提示信息" prop="placeholder">
-        <el-input v-model="form.placeholder" placeholder="请输入" clearable></el-input>
+      <el-form-item label="prompt information" prop="placeholder">
+        <el-input v-model="form.placeholder" placeholder="Please enter" clearable></el-input>
       </el-form-item>
-      <el-form-item label="排序" prop="sort">
+      <el-form-item label="sort" prop="sort">
         <el-input-number v-model="form.sort" :min="0" :max="99"></el-input-number>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">立即创建</el-button>
+        <el-button type="primary" @click="onSubmit">Create Now</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -73,105 +73,105 @@ export default {
         parent: [
           {
             required: true,
-            message: '请选择'
+            message: 'Please select'
           }
         ],
         title: [
           {
             required: true,
-            message: '请输入'
+            message: 'Please enter'
           }
         ],
         key: [
           {
             required: true,
-            message: '请输入'
+            message: 'Please enter'
           },
           {
             pattern: /^[A-Za-z0-9_]+$/,
-            message: '请输入数字、字母或下划线'
+            message: 'Please enter numbers, letters or underscores'
           }
         ],
         form_item_type: [
           {
             required: true,
-            message: '请输入'
+            message: 'Please enter'
           }
         ]
       },
-      // 父级内容
+      // parent content
       parentOptions: [],
       ruleOptions: [
         {
-          label: '必填项',
-          value: '{"required": true, "message": "必填项不能为空"}'
+          label: 'required',
+          value: '{"required": true, "message": "Required items cannot be empty"}'
         },
         {
-          label: '邮箱',
-          value: '{ "type": "email", "message": "请输入正确的邮箱地址"}'
+          label: 'Email',
+          value: '{ "type": "email", "message": "Please enter a correct email address"}'
         },
         {
-          label: 'URL地址',
-          value: '{ "type": "url", "message": "请输入正确的URL地址"}'
+          label: 'URL address',
+          value: '{ "type": "url", "message": "Please enter the correct URL address"}'
         }
       ]
     }
   },
   methods: {
     getParent () {
-      api.GetList({
+      api. GetList({
         parent__isnull: true,
         limit: 999
       }).then(res => {
-        const { data } = res.data
-        this.parentOptions = data
+        const { data } = res. data
+        this. parentOptions = data
       })
     },
-    // 提交
+    // submit
     onSubmit () {
-      const that = this
-      that.associationTableUpdate().then(() => {
-        const form = JSON.parse(JSON.stringify(that.form))
-        const rules = []
-        for (const item of form.rule) {
-          const strToObj = JSON.parse(item)
-          rules.push(strToObj)
-        }
-        form.rule = rules
-        that.$refs.form.validate((valid) => {
-          if (valid) {
-            api.createObj(form).then(res => {
-              this.$message.success('新增成功')
-              this.refreshView()
-            })
-          } else {
-            console.log('error submit!!')
-            return false
-          }
-        })
-      })
-    },
-    // 关联表数据更新
-    associationTableUpdate () {
-      const that = this
-      return new Promise(function (resolve, reject) {
-        if (that.$refs.associationTable) {
-          if (!that.$refs.associationTable.onSubmit()) {
-            // eslint-disable-next-line prefer-promise-reject-errors
-            return reject(false)
-          }
-          const { formObj } = that.$refs.associationTable
-          that.form.setting = formObj
-          return resolve(true)
-        } else {
-          return resolve(true)
-        }
-      })
-    }
-  },
-  created () {
-    this.getParent()
-  }
+       const that = this
+       that.associationTableUpdate().then(() => {
+         const form = JSON. parse(JSON. stringify(that. form))
+         const rules = []
+         for (const item of form.rule) {
+           const strToObj = JSON. parse(item)
+           rules. push(strToObj)
+         }
+         form.rule = rules
+         that.$refs.form.validate((valid) => {
+           if (valid) {
+             api.createObj(form).then(res => {
+               this.$message.success('Add success')
+               this. refreshView()
+             })
+           } else {
+             console. log('error submit!!')
+             return false
+           }
+         })
+       })
+     },
+     // Association table data update
+     associationTableUpdate () {
+       const that = this
+       return new Promise(function (resolve, reject) {
+         if (that. $refs. associationTable) {
+           if (!that. $refs. associationTable. onSubmit()) {
+             // eslint-disable-next-line prefer-promise-reject-errors
+             return reject(false)
+           }
+           const { formObj } = that. $refs. associationTable
+           that.form.setting = formObj
+           return resolve(true)
+         } else {
+           return resolve(true)
+         }
+       })
+     }
+   },
+   created () {
+     this. getParent()
+   }
 }
 </script>
 

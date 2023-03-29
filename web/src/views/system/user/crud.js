@@ -2,393 +2,395 @@ import { request } from '@/api/service'
 import util from '@/libs/util'
 
 export const crudOptions = (vm) => {
-  util.filterParams(vm, ['dept_name', 'role_info{name}', 'dept_name_all'])
-  return {
-    pageOptions: {
-      compact: true
-    },
-    options: {
-      height: '100%',
-      tableType: 'vxe-table',
-      rowKey: true,
-      rowId: 'id'
-    },
-    selectionRow: {
-      align: 'center',
-      width: 46
-    },
-    rowHandle: {
-      width: 240,
-      fixed: 'right',
-      view: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Retrieve')
-        }
-      },
-      edit: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Update')
-        }
-      },
-      remove: {
-        thin: true,
-        text: '',
-        disabled () {
-          return !vm.hasPermissions('Delete')
-        }
-      },
-      custom: [
+   util.filterParams(vm, ['dept_name', 'role_info{name}', 'dept_name_all'])
+   return {
+     pageOptions: {
+       compact: true
+     },
+     options: {
+       height: '100%',
+       tableType: 'vxe-table',
+       rowKey: true,
+       rowId: 'id'
+     },
+     selectionRow: {
+       align: 'center',
+       width: 46
+     },
+     rowHandle: {
+       width: 240,
+       fixed: 'right',
+       view: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Retrieve')
+         }
+       },
+       edit: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Update')
+         }
+       },
+       remove: {
+         thin: true,
+         text: '',
+         disabled () {
+           return !vm.hasPermissions('Delete')
+         }
+       },
+       custom: [
+         {
+           thin: true,
+           text: 'reset Password',
+           size: 'small',
+           type: 'warning',
+           icon: 'el-icon-refresh-left',
+           show () {
+             return vm.hasPermissions('ResetPassword')
+           },
+           emit: 'resetPassword'
+         }
+       ]
+     },
+     viewOptions: {
+       componentType: 'form'
+     },
+     formOptions: {
+       defaultSpan: 12 // default form span
+     },
+     indexRow: { // Or pass true directly, do not display title, do not center
+       title: 'S.no.',
+       align: 'center',
+       width: 60
+     },
+     columns: [
+       {
+         title: 'Key words',
+         key: 'search',
+         show: false,
+         disabled: true,
+         search: {
+           disabled: false
+         },
+         form: {
+           disabled: true,
+           component: {
+             placeholder: 'Please enter a keyword'
+           }
+         },
+         view: {
+           disabled: true
+         }
+       },
+       {
+         title: 'ID',
+         key: 'id',
+         disabled: true,
+         form: {
+           disabled: true
+         }
+       },
+       {
+         title: 'Username',
+         key: 'username',
+         search: {
+           disabled: false
+         },
+         minWidth: 100,
+         type: 'input',
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'Username Required'
+             }
+           ],
+           component: {
+             placeholder: 'Please input Username'
+           },
+           itemProps: {
+             class: { yxtInput: true }
+           }
+         }
+       },
+       {
+         title: 'password',
+         key: 'password',
+         minWidth: 90,
+         type: 'input',
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'password required'
+             }
+           ],
+           component: {
+             span: 12,
+             showPassword: true,
+             placeholder: 'Please enter a password'
+           },
+           value: vm.systemConfig('base.default_password'),
+           editDisabled: true,
+           itemProps: {
+             class: { yxtInput: true }
+           }
+         },
+         disabled: true,
+         valueResolve(row, key) {
+           if (row. password) {
+             row.password = vm.$md5(row.password)
+           }
+         }
+       },
+       {
+         title: 'Name',
+         key: 'name',
+         minWidth: 90,
+         search: {
+           disabled: false
+         },
+         type: 'input',
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'Name is required'
+             }
+           ],
+           component: {
+             span: 12,
+             placeholder: 'Please enter your name'
+           },
+           itemProps: {
+             class: { yxtInput: true }
+           }
+         }
+       },
+       {
+         title: 'Department',
+         key: 'dept',
+         search: {
+           disabled: true
+         },
+         minWidth: 140,
+         type: 'tree-selector',
+         dict: {
+           cache: true,
+           isTree: true,
+           url: '/api/system/dept/all_dept/',
+           value: 'id', // attribute name of the value field in the data dictionary
+           label: 'name' // attribute name of the label field in the data dictionary
+         },
+         form: {
+           rules: [ // form validation rules
+             {
+               required: true,
+               message: 'required fields'
+             }
+           ],
+           itemProps: {
+             class: { yxtInput: true }
+           },
+           component: {
+             span: 12,
+             pagination: true,
+
+
+             props: { multiple: false }
+            }
+          },
+          component: {
+            name: 'foreignKey',
+            valueBinding: 'dept_name'
+          }
+        },
         {
-          thin: true,
-          text: 'reset Password',
-          size: 'small',
-          type: 'warning',
-          icon: 'el-icon-refresh-left',
-          show () {
-            return vm.hasPermissions('ResetPassword')
+          title: 'Role',
+          key: 'role',
+          search: {
+            disabled: true
           },
-          emit: 'resetPassword'
-        }
-      ]
-    },
-    viewOptions: {
-      componentType: 'form'
-    },
-    formOptions: {
-      defaultSpan: 12 // 默认的表单 span
-    },
-    indexRow: { // 或者直接传true,不显示title，不居中
-      title: 'S.no.',
-      align: 'center',
-      width: 60
-    },
-    columns: [
-      {
-        title: 'Key words',
-        key: 'search',
-        show: false,
-        disabled: true,
-        search: {
-          disabled: false
-        },
-        form: {
-          disabled: true,
-          component: {
-            placeholder: 'Please enter a keyword'
-          }
-        },
-        view: {
-          disabled: true
-        }
-      },
-      {
-        title: 'ID',
-        key: 'id',
-        disabled: true,
-        form: {
-          disabled: true
-        }
-      },
-      {
-        title: 'Username',
-        key: 'username',
-        search: {
-          disabled: false
-        },
-        minWidth: 100,
-        type: 'input',
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: 'Username Required'
-            }
-          ],
-          component: {
-            placeholder: 'Please input Username'
-          },
-          itemProps: {
-            class: { yxtInput: true }
-          }
-        }
-      },
-      {
-        title: 'password',
-        key: 'password',
-        minWidth: 90,
-        type: 'input',
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: 'password required'
-            }
-          ],
-          component: {
-            span: 12,
-            showPassword: true,
-            placeholder: '请输入密码'
-          },
-          value: vm.systemConfig('base.default_password'),
-          editDisabled: true,
-          itemProps: {
-            class: { yxtInput: true }
-          }
-        },
-        disabled: true,
-        valueResolve (row, key) {
-          if (row.password) {
-            row.password = vm.$md5(row.password)
-          }
-        }
-      },
-      {
-        title: '姓名',
-        key: 'name',
-        minWidth: 90,
-        search: {
-          disabled: false
-        },
-        type: 'input',
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: '姓名必填项'
-            }
-          ],
-          component: {
-            span: 12,
-            placeholder: '请输入姓名'
-          },
-          itemProps: {
-            class: { yxtInput: true }
-          }
-        }
-      },
-      {
-        title: '部门',
-        key: 'dept',
-        search: {
-          disabled: true
-        },
-        minWidth: 140,
-        type: 'tree-selector',
-        dict: {
-          cache: true,
-          isTree: true,
-          url: '/api/system/dept/all_dept/',
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name' // 数据字典中label字段的属性名
-        },
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: '必填项'
-            }
-          ],
-          itemProps: {
-            class: { yxtInput: true }
-          },
-          component: {
-            span: 12,
-            pagination: true,
-            props: { multiple: false }
-          }
-        },
-        component: {
-          name: 'foreignKey',
-          valueBinding: 'dept_name'
-        }
-      },
-      {
-        title: '角色',
-        key: 'role',
-        search: {
-          disabled: true
-        },
-        minWidth: 130,
-        type: 'table-selector',
-        dict: {
-          cache: false,
-          url: '/api/system/role/',
-          value: 'id', // 数据字典中value字段的属性名
-          label: 'name', // 数据字典中label字段的属性名
-          getData: (url, dict, {
-            form,
-            component
-          }) => {
-            return request({
-              url: url,
-              params: {
-                page: 1,
-                limit: 10
-              }
-            }).then(ret => {
-              component._elProps.page = ret.data.page
-              component._elProps.limit = ret.data.limit
-              component._elProps.total = ret.data.total
-              return ret.data.data
-            })
-          }
-        },
-        form: {
-          rules: [ // 表单校验规则
-            {
-              required: true,
-              message: '必填项'
-            }
-          ],
-          itemProps: {
-            class: { yxtInput: true }
-          },
-          component: {
-            span: 12,
-            pagination: true,
-            props: { multiple: true },
-            elProps: {
-              columns: [
-                {
-                  field: 'name',
-                  title: 'Role name'
-                },
-                {
-                  field: 'key',
-                  title: '权限标识'
+          minWidth: 130,
+          type: 'table-selector',
+          dict: {
+            cache: false,
+            url: '/api/system/role/',
+            value: 'id', // attribute name of the value field in the data dictionary
+            label: 'name', // attribute name of the label field in the data dictionary
+            getData: (url, dict, {
+              form,
+              component
+            }) => {
+              return request({
+                url: url,
+                params: {
+                  page: 1,
+                  limit: 10
                 }
-              ]
+              }).then(ret => {
+                component._elProps.page = ret.data.page
+                component._elProps.limit = ret.data.limit
+                component._elProps.total = ret.data.total
+                return ret.data.data
+              })
             }
-          }
-        },
-        component: {
-          name: 'manyToMany',
-          valueBinding: 'role_info',
-          children: 'name'
-        }
-      },
-      {
-        title: '手机号码',
-        key: 'mobile',
-        search: {
-          disabled: false
-        },
-        minWidth: 110,
-        type: 'input',
-        form: {
-          rules: [
-            {
-              max: 20,
-              message: '请输入正确的手机号码',
-              trigger: 'blur'
+          },
+          form: {
+            rules: [ // form validation rules
+              {
+                required: true,
+                message: 'required fields'
+              }
+            ],
+            itemProps: {
+              class: { yxtInput: true }
             },
-            {
-              pattern: /^1[3-9]\d{9}$/,
-              message: '请输入正确的手机号码'
+            component: {
+              span: 12,
+              pagination: true,
+              props: { multiple: true },
+              elProps: {
+                columns: [
+                  {
+                    field: 'name',
+                    title: 'Role name'
+                  },
+                  {
+                    field: 'key',
+                    title: 'Authorization ID'
+                  }
+                ]
+              }
             }
-          ],
-          itemProps: {
-            class: { yxtInput: true }
           },
           component: {
-            placeholder: '请输入手机号码'
-          }
-        }
-      }, {
-        title: '邮箱',
-        key: 'email',
-        minWidth: 180,
-        form: {
-          rules: [
-            {
-              type: 'email',
-              message: '请输入正确的邮箱地址',
-              trigger: ['blur', 'change']
-            }
-          ],
-          component: {
-            placeholder: '请输入邮箱'
-          }
-        }
-      },
-      {
-        title: '性别',
-        key: 'gender',
-        type: 'radio',
-        width: 70,
-        dict: {
-          data: vm.dictionary('gender')
-        },
-        form: {
-          value: 1,
-          component: {
-            span: 12
+            name: 'manyToMany',
+            valueBinding: 'role_info',
+            children: 'name'
           }
         },
-        component: { props: { color: 'auto' } } // 自动染色
-      }, {
-        title: '用户类型',
-        key: 'user_type',
-        search: {
-          disabled: false
-        },
-        width: 145,
-        type: 'select',
-        dict: {
-          data: vm.dictionary('user_type')
-        },
-        form: {
-          show: false,
-          value: 0,
-          component: {
-            span: 12
-          }
-        }
-      }, {
-        title: '状态',
-        key: 'is_active',
-        search: {
-          disabled: false
-        },
-        width: 70,
-        type: 'radio',
-        dict: {
-          data: vm.dictionary('button_status_bool')
-        },
-        form: {
-          value: true,
-          component: {
-            span: 12
-          }
-        }
-      },
-      {
-        title: '头像',
-        key: 'avatar',
-        type: 'avatar-cropper',
-        width: 60,
-        align: 'left',
-        form: {
-          component: {
-            props: {
-              elProps: { // 与el-uploader 配置一致
-                multiple: false,
-                limit: 1 // 限制5个文件
+        {
+          title: 'Mobile phone number',
+          key: 'mobile',
+          search: {
+            disabled: false
+          },
+          minWidth: 110,
+          type: 'input',
+          form: {
+            rules: [
+              {
+                max: 20,
+                message: 'Please enter the correct mobile number',
+                trigger: 'blur'
               },
-              sizeLimit: 500 * 1024 // 不能超过限制
+              {
+                pattern: /^1[3-9]\d{9}$/,
+                message: 'Please enter a correct mobile number'
+              }
+            ],
+            itemProps: {
+              class: { yxtInput: true }
             },
-            span: 24
+            component: {
+              placeholder: 'Please enter your phone number'
+            }
+          }
+        }, {
+          title: 'Mailbox',
+          key: 'email',
+          minWidth: 180,
+          form: {
+            rules: [
+              {
+                type: 'email',
+                message: 'Please enter a correct email address',
+                trigger: ['blur', 'change']
+              }
+            ],
+            component: {
+              placeholder: 'Please enter your email address'
+            }
+          }
+        },
+        {
+          title: 'Gender',
+          key: 'gender',
+          type: 'radio',
+          width: 70,
+          dict: {
+            data: vm.dictionary('gender')
           },
-          helper: '限制文件大小不能超过500k'
+          form: {
+            value: 1,
+            component: {
+              span: 12
+            }
+          },
+          component: { props: { color: 'auto' } } // automatic coloring
+        }, {
+          title: 'User Type',
+          key: 'user_type',
+          search: {
+            disabled: false
+          },
+          width: 145,
+          type: 'select',
+          dict: {
+            data: vm.dictionary('user_type')
+          },
+          form: {
+            show: false,
+            value: 0,
+            component: {
+              span: 12
+            }
+          }
+        }, {
+          title: 'Status',
+          key: 'is_active',
+          search: {
+            disabled: false
+          },
+          width: 70,
+          type: 'radio',
+          dict: {
+            data: vm.dictionary('button_status_bool')
+          },
+          form: {
+            value: true,
+            component: {
+              span: 12
+            }
+          }
+        },
+        {
+          title: 'Avatar',
+          key: 'avatar',
+          type: 'avatar-cropper',
+          width: 60,
+          align: 'left',
+          form: {
+            component: {
+              props: {
+                elProps: { // Consistent with el-uploader configuration
+                  multiple: false,
+                  limit: 1 // limit 5 files
+                },
+                sizeLimit: 500 * 1024 // cannot exceed the limit
+              },
+              span: 24
+            },
+            helper: 'Restrict file size to 500k'
+          }
         }
-      }
-    ].concat(vm.commonEndColumns({
-      create_datetime: { showTable: false },
-      update_datetime: { showTable: false }
-    }))
-  }
-}
+      ].concat(vm.commonEndColumns({
+        create_datetime: { showTable: false },
+        update_datetime: { showTable: false }
+      }))
+    }
+ }

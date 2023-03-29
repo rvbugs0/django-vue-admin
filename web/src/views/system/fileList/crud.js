@@ -34,16 +34,16 @@ export const crudOptions = (vm) => {
       componentType: 'form'
     },
     formOptions: {
-      defaultSpan: 12 // 默认的表单 span
+      defaultSpan: 12 // default form span
     },
-    indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+    indexRow: { // Or pass true directly, do not display title, do not center
+      title: 'serial number',
       align: 'center',
       width: 100
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Keywords',
         key: 'search',
         show: false,
         disabled: true,
@@ -53,7 +53,7 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter keywords'
           }
         },
         view: {
@@ -70,7 +70,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '文件名称',
+        title: 'File name',
         key: 'name',
         search: {
           disabled: false
@@ -79,12 +79,12 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入文件名称'
+            placeholder: 'Please enter a file name'
           }
         }
       },
       {
-        title: '文件地址',
+        title: 'File address',
         key: 'url',
         type: 'file-uploader',
         search: {
@@ -93,7 +93,7 @@ export const crudOptions = (vm) => {
         width: 220
       },
       {
-        title: '文件MD5',
+        title: 'File MD5',
         key: 'md5sum',
         width: 200,
         search: {
@@ -104,7 +104,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '备注',
+        title: 'Remarks',
         key: 'description',
         show: false,
         search: {
@@ -113,7 +113,7 @@ export const crudOptions = (vm) => {
         type: 'textarea',
         form: {
           component: {
-            placeholder: '请输入内容',
+            placeholder: 'Please enter content',
             showWordLimit: true,
             maxlength: '200',
             props: {
@@ -122,7 +122,7 @@ export const crudOptions = (vm) => {
           }
         }
       }, {
-        title: '创建人',
+        title: 'Creator',
         show: false,
         width: 100,
         key: 'modifier_name',
@@ -131,7 +131,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '更新时间',
+        title: 'Update time',
         key: 'update_datetime',
         width: 160,
         type: 'datetime',
@@ -140,7 +140,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '创建时间',
+        title: 'Creation time',
         key: 'create_datetime',
         width: 160,
         type: 'datetime',

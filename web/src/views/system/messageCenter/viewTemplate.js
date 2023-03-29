@@ -1,22 +1,22 @@
 export default {
   title: {
-    title: '标题',
+    title: 'Title',
     key: 'title',
     component: {
       span: 24,
-      placeholder: '请输入标题',
+      placeholder: 'Please enter a title',
       disabled: true
     },
     rules: [
       {
         required: true,
-        message: '必填项'
+        message: 'required fields'
       }
     ],
     order: 10
   },
   content: {
-    title: '内容',
+    title: 'Content',
     key: 'content',
     component: {
       name: 'd2p-quill',
@@ -32,7 +32,7 @@ export default {
     rules: [
       {
         required: true,
-        message: '必填项'
+        message: 'required fields'
       }
     ],
     order: 10
