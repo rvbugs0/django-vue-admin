@@ -18,10 +18,10 @@ export default {
   data () {
     return {
       options: [
-        { label: '默认', value: 'default' },
-        { label: '中', value: 'medium' },
-        { label: '小', value: 'small' },
-        { label: '最小', value: 'mini' }
+        { label: 'default', value: 'default' },
+        { label: 'medium', value: 'medium' },
+        { label: 'small', value: 'small' },
+        { label: 'minimum', value: 'mini' }
       ]
     }
   },
@@ -37,16 +37,16 @@ export default {
     ...mapActions({
       sizeSet: 'd2admin/size/set'
     }),
-    handleChange (value) {
-      this.sizeSet(value)
-      this.$notify({
-        title: '提示',
+    handleChange(value) {
+      this. sizeSet(value)
+      this. $notify({
+        title: 'Prompt',
         dangerouslyUseHTMLString: true,
-        message: '已更新页面内 <b>组件</b> 的 <b>默认尺寸</b><br/>例如按钮大小，<b>非字号</b>',
+        message: 'The <b>default size</b><br/> of <b>component</b> in the page has been updated, such as button size, <b>not font size</b>',
         type: 'success'
       })
     },
-    iconName (name) {
+    iconName(name) {
       return name === this.value ? 'dot-circle-o' : 'circle-o'
     }
   }
