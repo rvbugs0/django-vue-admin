@@ -23,7 +23,7 @@
         >
           <img
             v-if="asideCollapse"
-            :src="`${$baseUrl}image/theme/${themeActiveSetting.name}/logo/icon-only.png`"
+            :src="`${$baseUrl}image/theme/${themeActiveSetting.name}/logo/uta.png`"
           />
           <img
             v-else

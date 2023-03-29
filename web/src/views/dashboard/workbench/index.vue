@@ -6,47 +6,18 @@
 
       </el-avatar>
       <div class="title">
-        <h1>早安, DVAdmin, 开始您一天的工作吧！</h1>
-        <span> 今日晴，20℃ - 32℃！ </span>
+        <h1>DVAdmin - UTA</h1>
+        <span> University of Texas at Arlington</span>
       </div>
     </div>
 
     <el-row :gutter="20">
       <el-col :span="12">
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>友情链接</span>
-
-            <el-button style="float: right; padding: 3px 0" type="text">
-              <el-link href="https://bbs.django-vue-admin.com" target="_blank" type="primary">更多</el-link>
-            </el-button>
-          </div>
-          <el-row>
-              <el-col :span="8" v-for="({name,imageUrl,slogan,link},index) in projects" :key="index">
-              <el-card shadow="hover" style="padding: 0">
-                <div class="project-detail">
-                  <div>
-                    <a :href="link" target="_blank">
-                      <img :src="imageUrl" alt="">
-                      <span v-text="name" class="name"></span>
-                    </a>
-                  </div>
-                  <div v-text="slogan" class="slogan" :title="slogan"></div>
-                </div>
-
-              </el-card>
-              </el-col>
-          </el-row>
-        </el-card>
-
-      </el-col>
-
-      <el-col :span="12">
         <div class="grid-content bg-purple">
 
           <el-card class="box-card" >
             <div slot="header" class="clearfix">
-              <span>快捷导航</span>
+              <span>Dashboard</span>
             </div>
             <el-row>
               <el-col :span="8" v-for="({name,icon,route,color},index) of navigators" :key="index" style="padding: 0">
@@ -60,13 +31,18 @@
             </el-row>
           </el-card>
 
-          <el-card class="box-card"  style="margin-top: 25px">
+        </div>
+      </el-col>
+      <el-col :span="12">
+        <el-card class="box-card"  style="margin-top: 25px">
             <div class="work">
               <d2-icon-svg name="work" style="margin-left: 50%;transform: translateX(-50%);height: 216px"/>
             </div>
           </el-card>
-        </div>
+
       </el-col>
+
+
     </el-row>
 
   </d2-container>
@@ -93,66 +69,10 @@ export default {
   name: 'workbench',
   data () {
     return {
-      projects: [
-        {
-          name: '官方文档',
-          imageUrl: '/image/django-vue-admin.png',
-          slogan: 'Django-Vue-Admin 是一套全部开源的快速开发平台，毫无保留给个人及企业免费使用。',
-          link: 'http://django-vue-admin.com'
-        },
-        {
-          name: '官方论坛',
-          imageUrl: '/image/django-vue-admin.png',
-          slogan: 'Django-Vue-Admin 官方论坛',
-          link: 'http://bbs.django-vue-admin.com'
-        },
-        {
-          name: 'D2admin',
-          imageUrl: '/image/d2-pub.png',
-          slogan: 'D2Admin (opens new window)是一个完全 开源免费 的企业中后台产品前端集成方案，使用最新的前端技术栈，' +
-            '小于 60kb 的本地首屏 js 加载，已经做好大部分项目前期准备工作，并且带有大量示例代码，助力管理系统快速开发。',
-          link: 'https://d2.pub/zh'
-        },
-        {
-          name: 'SimpleUi',
-          imageUrl: '/image/simple-ui.png',
-          slogan: '一个基于Django Admin的现代化主题。',
-          link: 'https://simpleui.72wo.com/'
-        },
-        {
-          name: '若依',
-          imageUrl: '/image/ruoyi.png',
-          slogan: '基于SpringBoot、Shiro、Mybatis的权限后台管理系统。',
-          link: 'http://ruoyi.vip/'
-        },
-        {
-          name: 'Gin-Vue-Admin',
-          imageUrl: '/image/gin-vue-admin.png',
-          slogan: '使用gin+vue进行极速开发的全栈后台管理系统。',
-          link: 'https://www.gin-vue-admin.com/'
-        },
-        {
-          name: 'DCM',
-          imageUrl: '/image/django-comment-migrate.png',
-          slogan: '这是一个Django model注释迁移的app',
-          link: 'https://github.com/starryrbs/django-comment-migrate'
-        },
-        {
-          name: 'Jetbrains',
-          imageUrl: '/image/jetbrains.jpeg',
-          slogan: '我们构建我们的软件，让您可以享受构建自己的软件的乐趣',
-          link: 'https://www.jetbrains.com/'
-        },
-        {
-          name: 'Django',
-          imageUrl: '/image/django.png',
-          slogan: '有期限的完美主义者的网络框架。',
-          link: 'https://github.com/django/django'
-        }
-      ],
+      projects: [],
       navigators: [
         {
-          name: '控制台',
+          name: 'Home',
           icon: 'home',
           route: {
             name: 'index'
@@ -160,7 +80,7 @@ export default {
           color: 'rgb(31, 218, 202);'
         },
         {
-          name: '部门管理',
+          name: 'Department',
           icon: 'department',
           route: {
             name: 'dept'
@@ -168,7 +88,7 @@ export default {
           color: 'rgb(225, 133, 37);'
         },
         {
-          name: '角色管理',
+          name: 'Role',
           icon: 'role',
           route: {
             name: 'role'
@@ -176,7 +96,7 @@ export default {
           color: 'rgb(191, 12, 44);'
         },
         {
-          name: '菜单管理',
+          name: 'Menu',
           icon: 'menu',
           route: {
             name: 'menu'
@@ -184,7 +104,7 @@ export default {
           color: 'rgb(63, 178, 127);'
         },
         {
-          name: '用户管理',
+          name: 'User',
           icon: 'user',
           route: {
             name: 'user'
@@ -192,7 +112,7 @@ export default {
           color: 'rgb(191, 12, 44);'
         },
         {
-          name: '日志管理',
+          name: 'Logs',
           icon: 'log',
           route: {
             name: 'operationLog'

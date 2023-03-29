@@ -14,11 +14,6 @@ urlpatterns = [
     path('sensory_data/get_average_salinity/', average_salinity),
     path('sensory_data/get_average_ph/', average_ph),
 
-    path('chart_config/get_demo_chart_json/', get_demo_chart_json),
-    path('chart_config/get_demo_chart_json_two/', get_demo_chart_json_two),
-    path('chart_config/get_demo_chart_json_three/', get_demo_chart_json_three),
-    path('chart_config/get_demo_chart_json_four/', get_demo_chart_json_four),
-    path('chart_config/get_demo_chart_json_five/', get_demo_chart_json_five),
 
     # for dynamic charts - single endpoint
     path('chart_config/get_charts_data/', get_charts_data),
