@@ -1,6 +1,6 @@
 [
     {
-        "label": "启用/禁用-布尔值",
+        "label": "Enable/Disable Boolean",
         "value": "button_status_bool",
         "parent": null,
         "type": 0,
@@ -11,7 +11,7 @@
         "remark": null,
         "children": [
             {
-                "label": "启用",
+                "label": "enable",
                 "value": "true",
                 "parent": 1,
                 "type": 6,
@@ -23,7 +23,7 @@
                 "children": []
             },
             {
-                "label": "禁用",
+                "label": "disable",
                 "value": "false",
                 "parent": 1,
                 "type": 6,
@@ -37,7 +37,7 @@
         ]
     },
     {
-        "label": "系统按钮",
+        "label": "System Button",
         "value": "system_button",
         "parent": null,
         "type": 0,
@@ -48,7 +48,7 @@
         "remark": null,
         "children": [
             {
-                "label": "新增",
+                "label": "Create",
                 "value": "Create",
                 "parent": 66,
                 "type": 0,
@@ -60,7 +60,7 @@
                 "children": []
             },
             {
-                "label": "编辑",
+                "label": "Update",
                 "value": "Update",
                 "parent": 66,
                 "type": 0,
@@ -72,7 +72,7 @@
                 "children": []
             },
             {
-                "label": "删除",
+                "label": "Delete",
                 "value": "Delete",
                 "parent": 66,
                 "type": 0,
@@ -84,7 +84,7 @@
                 "children": []
             },
             {
-                "label": "详情",
+                "label": "Retrieve",
                 "value": "Retrieve",
                 "parent": 66,
                 "type": 0,
@@ -96,7 +96,7 @@
                 "children": []
             },
             {
-                "label": "查询",
+                "label": "Search",
                 "value": "Search",
                 "parent": 66,
                 "type": 0,
@@ -108,7 +108,7 @@
                 "children": []
             },
             {
-                "label": "保存",
+                "label": "Save",
                 "value": "Save",
                 "parent": 66,
                 "type": 0,
@@ -120,7 +120,7 @@
                 "children": []
             },
             {
-                "label": "导入",
+                "label": "Import",
                 "value": "Import",
                 "parent": 66,
                 "type": 0,
@@ -132,7 +132,7 @@
                 "children": []
             },
             {
-                "label": "导出",
+                "label": "Export",
                 "value": "Export",
                 "parent": 66,
                 "type": 0,
@@ -146,7 +146,7 @@
         ]
     },
     {
-        "label": "启用/禁用-数字值",
+        "label": "Enable/Disable Number",
         "value": "button_status_number",
         "parent": null,
         "type": 0,
@@ -157,7 +157,7 @@
         "remark": null,
         "children": [
             {
-                "label": "启用",
+                "label": "enable",
                 "value": "1",
                 "parent": 7,
                 "type": 1,
@@ -169,7 +169,7 @@
                 "children": []
             },
             {
-                "label": "禁用",
+                "label": "disable",
                 "value": "0",
                 "parent": 7,
                 "type": 1,
@@ -183,7 +183,7 @@
         ]
     },
     {
-        "label": "是/否-布尔值",
+        "label": "Yes/ No boolean",
         "value": "button_whether_bool",
         "parent": null,
         "type": 0,
@@ -194,7 +194,7 @@
         "remark": null,
         "children": [
             {
-                "label": "是",
+                "label": "Yes",
                 "value": "true",
                 "parent": 5,
                 "type": 6,
@@ -206,7 +206,7 @@
                 "children": []
             },
             {
-                "label": "否",
+                "label": "No",
                 "value": "false",
                 "parent": 5,
                 "type": 6,
@@ -220,7 +220,7 @@
         ]
     },
     {
-        "label": "是/否-数字值",
+        "label": "Yes/ No Numeric Value",
         "value": "button_whether_number",
         "parent": null,
         "type": 0,
@@ -231,7 +231,7 @@
         "remark": null,
         "children": [
             {
-                "label": "是",
+                "label": "Yes",
                 "value": "1",
                 "parent": 10,
                 "type": 1,
@@ -243,7 +243,7 @@
                 "children": []
             },
             {
-                "label": "否",
+                "label": "No",
                 "value": "2",
                 "parent": 10,
                 "type": 1,
@@ -257,7 +257,7 @@
         ]
     },
     {
-        "label": "用户类型",
+        "label": "User type",
         "value": "user_type",
         "parent": null,
         "type": 0,
@@ -268,7 +268,7 @@
         "remark": null,
         "children": [
             {
-                "label": "后台用户",
+                "label": "Background user",
                 "value": "0",
                 "parent": 15,
                 "type": 1,
@@ -280,7 +280,7 @@
                 "children": []
             },
             {
-                "label": "前台用户",
+                "label": "Foreground user",
                 "value": "1",
                 "parent": 15,
                 "type": 1,
@@ -294,7 +294,7 @@
         ]
     },
     {
-        "label": "表单类型",
+        "label": "Form type",
         "value": "config_form_type",
         "parent": null,
         "type": 0,
@@ -425,7 +425,7 @@
                 "children": []
             },
             {
-                "label": "文件附件",
+                "label": "File attachments",
                 "value": "8",
                 "parent": 49,
                 "type": 1,
@@ -437,7 +437,7 @@
                 "children": []
             },
             {
-                "label": "图片(单张)",
+                "label": "Picture (single)",
                 "value": "7",
                 "parent": 49,
                 "type": 1,
@@ -449,7 +449,7 @@
                 "children": []
             },
             {
-                "label": "图片(多张)",
+                "label": "Picture (multiple)",
                 "value": "12",
                 "parent": 49,
                 "type": 1,
@@ -461,7 +461,7 @@
                 "children": []
             },
             {
-                "label": "数组",
+                "label": "Array",
                 "value": "11",
                 "parent": 49,
                 "type": 1,
@@ -473,7 +473,7 @@
                 "children": []
             },
             {
-                "label": "关联表",
+                "label": "Association table",
                 "value": "13",
                 "parent": 49,
                 "type": 1,
@@ -485,7 +485,7 @@
                 "children": []
             },
             {
-                "label": "关联表(多选)",
+                "label": "Association table (multiple choice)",
                 "value": "14",
                 "parent": 49,
                 "type": 1,
@@ -499,7 +499,7 @@
         ]
     },
     {
-        "label": "性别",
+        "label": "Gender",
         "value": "gender",
         "parent": null,
         "type": 0,
@@ -510,7 +510,7 @@
         "remark": null,
         "children": [
             {
-                "label": "未知",
+                "label": "Unknown",
                 "value": "0",
                 "parent": 18,
                 "type": 1,
@@ -522,7 +522,7 @@
                 "children": []
             },
             {
-                "label": "男",
+                "label": "Male",
                 "value": "1",
                 "parent": 18,
                 "type": 1,
@@ -534,7 +534,7 @@
                 "children": []
             },
             {
-                "label": "女",
+                "label": "Female",
                 "value": "2",
                 "parent": 18,
                 "type": 1,

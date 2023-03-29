@@ -5629,3 +5629,51 @@ ValueError: min() arg is an empty sequence
 [2023-03-29 12:30:20,670][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.08, 127.0.0.1:50100][0m
 [2023-03-29 12:30:20,799][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:50122]
 [2023-03-29 12:30:20,802][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:50122]
+[2023-03-29 12:37:36,249][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:51535][0m
+[2023-03-29 12:37:37,750][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.00, 127.0.0.1:51535][0m
+[2023-03-29 12:37:37,810][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:51535][0m
+[2023-03-29 12:37:49,313][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:51535][0m
+[2023-03-29 12:38:08,985][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:51535][0m
+[2023-03-29 12:38:19,807][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/1/ 200 [0.01, 127.0.0.1:51535][0m
+[2023-03-29 12:38:19,877][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/menu/1/ 200 [0.07, 127.0.0.1:51535][0m
+[2023-03-29 12:38:20,079][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.08, 127.0.0.1:51535][0m
+[2023-03-29 12:38:22,153][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:50118]
+[2023-03-29 12:38:23,550][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,562][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,575][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.00, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,594][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,685][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,692][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:51748][0m
+[2023-03-29 12:38:23,696][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:51749][0m
+[2023-03-29 12:38:23,705][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:51535][0m
+[2023-03-29 12:38:23,710][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:51748][0m
+[2023-03-29 12:38:23,735][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:51749][0m
+[2023-03-29 12:38:23,967][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:51752]
+[2023-03-29 12:38:23,970][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:51752]
+[2023-03-29 12:38:24,008][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/ 200 [0.01, 127.0.0.1:51749][0m
+[2023-03-29 12:38:24,089][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.08, 127.0.0.1:51749][0m
+[2023-03-29 12:39:05,390][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:51749][0m
+[2023-03-29 12:39:07,993][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/?parent=1 200 [0.00, 127.0.0.1:51749][0m
+[2023-03-29 12:39:08,070][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?parent=1 200 [0.08, 127.0.0.1:51749][0m
+[2023-03-29 12:39:11,625][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:51749][0m
+[2023-03-29 12:50:23,181][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.07, 127.0.0.1:53062][0m
+[2023-03-29 12:50:35,331][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/3/ 200 [0.00, 127.0.0.1:53062][0m
+[2023-03-29 12:50:35,379][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/menu/3/ 200 [0.05, 127.0.0.1:53062][0m
+[2023-03-29 12:50:35,651][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:53062][0m
+[2023-03-29 12:50:38,141][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:51752]
+[2023-03-29 12:50:38,774][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:53062][0m
+[2023-03-29 12:50:38,791][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:53077][0m
+[2023-03-29 12:50:38,897][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:53077][0m
+[2023-03-29 12:50:38,910][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.04, 127.0.0.1:53062][0m
+[2023-03-29 12:50:38,933][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:53081][0m
+[2023-03-29 12:50:39,074][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:53086]
+[2023-03-29 12:50:39,076][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDY5ODQxLCJpYXQiOjE2ODAwNjI2NDEsImp0aSI6Ijg5ZjU3ZDgzZDYwZDQ1YzdhNmZkOTg2ZDMyYzZjNWVkIiwidXNlcl9pZCI6MX0.J2v6VVUWovHUTw-u1X4D8Lwa6py3V7rcg5XPzhv92o4/ [127.0.0.1:53086]
+[2023-03-29 12:50:39,175][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:53081][0m
+[2023-03-29 12:50:40,479][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu_button/?limit=20&page=1 200 [0.01, 127.0.0.1:53081][0m
+[2023-03-29 12:50:40,511][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu_button/?limit=20&page=1 200 [0.03, 127.0.0.1:53081][0m
+[2023-03-29 12:50:40,584][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /swagger.json 200 [0.00, 127.0.0.1:53081][0m
+[2023-03-29 12:50:40,837][django.channels.server.log_action():147] [INFO] [mHTTP GET /swagger.json 200 [0.25, 127.0.0.1:53081][0m
+[2023-03-29 12:55:47,283][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:53124][0m
+[2023-03-29 12:55:48,103][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/?lazy=1 200 [0.07, 127.0.0.1:53124][0m
+[2023-03-29 12:55:49,944][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/?parent=1 200 [0.01, 127.0.0.1:53124][0m
+[2023-03-29 12:55:49,997][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/?parent=1 200 [0.05, 127.0.0.1:53124][0m

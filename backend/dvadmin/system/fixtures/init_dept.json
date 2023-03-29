@@ -1,6 +1,6 @@
 [
     {
-        "name": "DVAdmin团队",
+        "name": "DVAdmin team",
         "key": "dvadmin",
         "sort": 1,
         "owner": "",
@@ -10,7 +10,7 @@
         "parent": null,
         "children": [
             {
-                "name": "运营部",
+                "name": "Operations",
                 "key": "",
                 "sort": 2,
                 "owner": "",
@@ -21,7 +21,7 @@
                 "children": []
             },
             {
-                "name": "技术部",
+                "name": "Technology",
                 "key": "technology",
                 "sort": 1,
                 "owner": "",
