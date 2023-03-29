@@ -6510,3 +6510,1404 @@ ValueError: min() arg is an empty sequence
 [2023-03-29 16:55:03,227][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.03, 127.0.0.1:65186][0m
 [2023-03-29 16:56:12,181][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.07, 127.0.0.1:65190][0m
 [2023-03-29 16:57:17,136][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:65194][0m
+[2023-03-29 17:13:38,417][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:65174]
+[2023-03-29 17:13:38,970][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.03, 127.0.0.1:49278][0m
+[2023-03-29 17:13:38,994][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.04, 127.0.0.1:49279][0m
+[2023-03-29 17:13:39,057][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:49279][0m
+[2023-03-29 17:13:39,068][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:49278][0m
+[2023-03-29 17:13:39,096][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:49283][0m
+[2023-03-29 17:13:39,235][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49287]
+[2023-03-29 17:13:39,238][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49287]
+[2023-03-29 17:13:39,328][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:49283][0m
+[2023-03-29 17:13:46,380][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:49283][0m
+[2023-03-29 17:13:46,387][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_salinity/ 200 [0.01, 127.0.0.1:49278][0m
+[2023-03-29 17:13:46,392][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/ 200 [0.02, 127.0.0.1:49279][0m
+[2023-03-29 17:13:46,398][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_ph/ 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:13:46,408][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [0.03, 127.0.0.1:49283][0m
+[2023-03-29 17:13:46,415][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [0.03, 127.0.0.1:49278][0m
+[2023-03-29 17:13:46,425][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [0.03, 127.0.0.1:49279][0m
+[2023-03-29 17:13:46,434][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [0.03, 127.0.0.1:49290][0m
+[2023-03-29 17:13:47,347][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:13:48,314][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:49290][0m
+[2023-03-29 17:13:48,340][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:13:49,330][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.01, 127.0.0.1:49290][0m
+[2023-03-29 17:13:49,351][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:14:34,260][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:14:51,613][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49287]
+[2023-03-29 17:14:52,191][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:49290][0m
+[2023-03-29 17:14:52,216][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:49290][0m
+[2023-03-29 17:14:52,298][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:49290][0m
+[2023-03-29 17:14:52,307][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:49308][0m
+[2023-03-29 17:14:52,331][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:49309][0m
+[2023-03-29 17:14:52,474][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49311]
+[2023-03-29 17:14:52,476][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49311]
+[2023-03-29 17:14:52,542][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.05, 127.0.0.1:49309][0m
+[2023-03-29 17:14:56,953][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/?limit=20&page=7241 200 [0.00, 127.0.0.1:49309][0m
+[2023-03-29 17:14:57,075][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=7241 200 [0.12, 127.0.0.1:49309][0m
+[2023-03-29 17:15:01,654][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [3.22, 127.0.0.1:49309][0m
+[2023-03-29 17:15:04,765][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [6.33, 127.0.0.1:49308][0m
+[2023-03-29 17:15:04,797][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [6.36, 127.0.0.1:49290][0m
+[2023-03-29 17:15:07,800][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [9.36, 127.0.0.1:49315][0m
+[2023-03-29 17:15:09,071][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:49315][0m
+[2023-03-29 17:15:10,753][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:49315][0m
+[2023-03-29 17:15:39,832][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/ 200 [0.01, 127.0.0.1:49315][0m
+[2023-03-29 17:15:39,873][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.04, 127.0.0.1:49315][0m
+[2023-03-29 17:15:39,913][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:49315][0m
+[2023-03-29 17:15:44,750][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [3.11, 127.0.0.1:49315][0m
+[2023-03-29 17:15:58,105][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [3.16, 127.0.0.1:49315][0m
+[2023-03-29 17:16:24,672][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:49315][0m
+[2023-03-29 17:16:30,626][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/?limit=20&page=7236 200 [0.01, 127.0.0.1:49315][0m
+[2023-03-29 17:16:30,785][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=7236 200 [0.16, 127.0.0.1:49315][0m
+[2023-03-29 17:16:31,285][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/?limit=20&page=7234 200 [0.00, 127.0.0.1:49315][0m
+[2023-03-29 17:16:31,427][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=7234 200 [0.14, 127.0.0.1:49315][0m
+[2023-03-29 17:21:41,975][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49311]
+[2023-03-29 17:21:42,644][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:49403][0m
+[2023-03-29 17:21:42,661][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:49404][0m
+[2023-03-29 17:21:42,740][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:49404][0m
+[2023-03-29 17:21:42,746][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:49403][0m
+[2023-03-29 17:21:42,771][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:49406][0m
+[2023-03-29 17:21:42,867][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49412]
+[2023-03-29 17:21:42,871][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49412]
+[2023-03-29 17:30:53,794][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:49412]
+[2023-03-30 01:09:53,680][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:09:54,661][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:09:54,661][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:09:54,662][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:20:19,585][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:20:20,103][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:20:20,103][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:20:20,104][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:20:29,789][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:52331][0m
+[2023-03-30 01:20:29,799][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:52331][0m
+[2023-03-30 01:20:29,802][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:52333][0m
+[2023-03-30 01:20:29,809][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:52333][0m
+[2023-03-30 01:20:29,852][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.00, 127.0.0.1:52333][0m
+[2023-03-30 01:20:29,854][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/captcha/ 200 [0.01, 127.0.0.1:52331][0m
+[2023-03-30 01:20:30,052][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:52331][0m
+[2023-03-30 01:20:30,085][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:52331][0m
+[2023-03-30 01:20:30,118][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.05, 127.0.0.1:52342][0m
+[2023-03-30 01:20:33,733][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/login/ 200 [0.01, 127.0.0.1:52342][0m
+[2023-03-30 01:20:33,765][dvadmin.utils.backends.authenticate():19] [INFO] superadmin system user login ...
+[2023-03-30 01:20:35,266][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/login/ 200 [1.53, 127.0.0.1:52342][0m
+[2023-03-30 01:20:35,293][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:52342][0m
+[2023-03-30 01:20:35,309][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.00, 127.0.0.1:52342][0m
+[2023-03-30 01:20:35,344][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.03, 127.0.0.1:52342][0m
+[2023-03-30 01:20:35,472][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:52374]
+[2023-03-30 01:20:35,473][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:52374]
+[2023-03-30 01:20:39,879][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.00, 127.0.0.1:52342][0m
+[2023-03-30 01:20:39,906][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:20:39,913][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.03, 127.0.0.1:52342][0m
+[2023-03-30 01:20:47,073][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:52342][0m
+[2023-03-30 01:20:47,200][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.13, 127.0.0.1:52342][0m
+[2023-03-30 01:20:55,135][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:20:55,141][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:52342][0m
+[2023-03-30 01:21:23,047][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:21:23,053][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:52342][0m
+[2023-03-30 01:21:43,774][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:21:44,588][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:21:45,042][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:21:45,042][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:21:45,043][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:21:54,403][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:21:54,413][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:52698][0m
+[2023-03-30 01:22:24,762][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_temperatures/ 200 [0.01, 127.0.0.1:52698][0m
+[2023-03-30 01:22:24,770][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_salinity/ 200 [0.01, 127.0.0.1:52825][0m
+[2023-03-30 01:22:24,777][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/ 200 [0.02, 127.0.0.1:52826][0m
+[2023-03-30 01:22:24,785][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/get_average_ph/ 200 [0.03, 127.0.0.1:52827][0m
+[2023-03-30 01:22:27,914][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [3.14, 127.0.0.1:52698][0m
+[2023-03-30 01:22:30,983][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [6.20, 127.0.0.1:52825][0m
+[2023-03-30 01:22:31,105][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [6.32, 127.0.0.1:52826][0m
+[2023-03-30 01:22:34,255][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [9.46, 127.0.0.1:52827][0m
+[2023-03-30 01:22:37,580][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_data/?limit=20&page=1 200 [0.00, 127.0.0.1:52827][0m
+[2023-03-30 01:22:37,633][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.05, 127.0.0.1:52827][0m
+[2023-03-30 01:22:56,742][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:22:57,532][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:22:57,994][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:22:57,995][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:22:57,995][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:22:58,695][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1378, in to_python
+    parsed = parse_date(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/dateparse.py", line 78, in parse_date
+    return datetime.date(**kw)
+ValueError: month must be in 1..12
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 272, in get_average_monthly_within_range
+    average_temperature_by_month = SensoryData.objects.filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1382, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2022-17-06”的值有正确的格式（YYYY-MM-DD）但它是一个错误的日期']
+
+[2023-03-30 01:22:58,699][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.04, 127.0.0.1:52970][0m
+[2023-03-30 01:23:31,108][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:23:31,754][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:23:32,145][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:23:32,145][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:23:32,146][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:24:21,869][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:24:21,879][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:53310][0m
+[2023-03-30 01:25:36,248][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:25:36,981][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:25:37,401][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:25:37,401][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:25:37,402][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:25:40,824][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:25:41,478][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:25:41,871][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:25:41,871][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:25:41,871][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:25:46,287][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:25:46,292][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.14, 127.0.0.1:53652][0m
+[2023-03-30 01:26:45,153][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:26:45,904][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:26:46,443][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:26:46,444][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:26:46,446][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:26:50,801][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:26:51,478][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:26:51,880][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:26:51,880][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:26:51,881][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:26:56,666][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:26:56,675][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:53957][0m
+[2023-03-30 01:29:04,244][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:29:04,918][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:29:05,329][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:29:05,330][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:29:05,331][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:30:31,969][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:30:32,726][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:30:33,221][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:30:33,221][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:30:33,222][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:30:38,669][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:30:39,403][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:30:39,828][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:30:39,828][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:30:39,829][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:30:44,538][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 286, in get_average_monthly_within_range
+    res.append(data['month'].strftime('%B %Y'),data['avg_temp'])
+TypeError: list.append() takes exactly one argument (2 given)
+
+[2023-03-30 01:30:44,547][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:54886][0m
+[2023-03-30 01:30:57,115][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:30:57,894][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:30:58,353][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:30:58,353][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:30:58,354][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:30:59,004][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.13, 127.0.0.1:54953][0m
+[2023-03-30 01:31:50,872][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:31:51,525][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:31:51,919][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:31:51,920][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:31:51,921][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:32:08,160][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:32:08,807][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:32:09,205][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:32:09,205][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:32:09,206][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:32:13,668][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:32:14,335][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:32:14,733][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:32:14,734][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:32:14,734][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:32:19,127][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.13, 127.0.0.1:55286][0m
+[2023-03-30 01:33:06,083][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:55286][0m
+[2023-03-30 01:33:06,123][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:55286][0m
+[2023-03-30 01:33:06,175][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:55286][0m
+[2023-03-30 01:33:06,194][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:55485][0m
+[2023-03-30 01:33:06,229][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:55486][0m
+[2023-03-30 01:33:06,331][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:55491]
+[2023-03-30 01:33:06,357][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.18, 127.0.0.1:55286][0m
+[2023-03-30 01:33:06,359][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:55491]
+[2023-03-30 01:33:09,144][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.12, 127.0.0.1:55286][0m
+[2023-03-30 01:36:12,333][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:36:13,242][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:36:13,697][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:36:13,697][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:36:13,698][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:36:21,290][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:36:21,940][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:36:22,347][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:36:22,348][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:36:22,349][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:36:28,917][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:36:29,650][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:36:30,044][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:36:30,044][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:36:30,045][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:38:41,540][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:38:42,207][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:38:42,604][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:38:42,604][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:38:42,604][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:39:02,112][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:39:02,766][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:39:03,153][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:39:03,153][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:39:03,154][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:39:26,892][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:39:27,557][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:39:27,980][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:39:27,981][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:39:27,982][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:39:40,986][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:39:41,670][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:39:42,097][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:39:42,097][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:39:42,098][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:40:34,570][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/models.py changed, reloading.
+[2023-03-30 01:40:35,248][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:40:35,633][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:40:35,634][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:40:35,634][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:41:40,924][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:41:41,588][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:41:41,996][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:41:41,996][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:41:41,997][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:44:34,839][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/?limit=20&page=1 200 [0.22, 127.0.0.1:58362][0m
+[2023-03-30 01:44:39,446][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [3.20, 127.0.0.1:58362][0m
+[2023-03-30 01:44:42,565][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [6.31, 127.0.0.1:58364][0m
+[2023-03-30 01:44:42,603][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [6.35, 127.0.0.1:58365][0m
+[2023-03-30 01:44:45,832][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [9.58, 127.0.0.1:58366][0m
+[2023-03-30 01:44:45,857][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 80, in list
+    page = self.paginate_queryset(queryset)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/pagination.py", line 216, in paginate_queryset
+    return list(self.page)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 01:44:45,861][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [8.28, 127.0.0.1:58368][0m
+[2023-03-30 01:48:53,978][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:48:54,508][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:48:54,508][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:48:54,509][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:49:00,275][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 01:49:00,279][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.04, 127.0.0.1:58427][0m
+[2023-03-30 01:49:21,389][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/models.py changed, reloading.
+[2023-03-30 01:49:22,048][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:49:22,455][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:49:22,456][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:49:22,456][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:49:32,296][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:49:32,947][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:49:33,345][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:49:33,346][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:49:33,347][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:49:45,772][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:58445][0m
+[2023-03-30 01:49:45,787][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58446][0m
+[2023-03-30 01:49:45,945][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.11, 127.0.0.1:58446][0m
+[2023-03-30 01:49:45,951][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:58445][0m
+[2023-03-30 01:49:45,976][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.14, 127.0.0.1:58450][0m
+[2023-03-30 01:49:46,100][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58455]
+[2023-03-30 01:49:46,101][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58455]
+[2023-03-30 01:49:46,138][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:58450][0m
+[2023-03-30 01:49:50,146][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/1/ 200 [0.01, 127.0.0.1:58450][0m
+[2023-03-30 01:49:50,197][django.channels.server.log_action():147] [INFO] [mHTTP DELETE /api/system/chart_config/1/ 200 [0.05, 127.0.0.1:58450][0m
+[2023-03-30 01:49:50,237][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58450][0m
+[2023-03-30 01:49:53,883][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 01:49:54,654][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:49:55,182][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:49:55,183][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:49:55,184][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:49:57,425][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/models.py changed, reloading.
+[2023-03-30 01:49:58,105][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:49:58,501][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:49:58,501][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:49:58,502][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:50:23,429][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:50:23,853][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:50:23,854][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:50:23,854][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:50:24,617][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:58487][0m
+[2023-03-30 01:50:24,628][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58488][0m
+[2023-03-30 01:50:24,749][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.11, 127.0.0.1:58488][0m
+[2023-03-30 01:50:24,756][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:58487][0m
+[2023-03-30 01:50:24,778][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.14, 127.0.0.1:58492][0m
+[2023-03-30 01:50:24,905][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58496]
+[2023-03-30 01:50:24,906][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58496]
+[2023-03-30 01:50:24,952][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58492][0m
+[2023-03-30 01:51:54,740][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/models.py changed, reloading.
+[2023-03-30 01:51:55,523][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 01:51:55,979][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 01:51:55,979][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 01:51:55,980][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 01:52:37,980][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:52:37,994][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:52:38,116][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.11, 127.0.0.1:58540][0m
+[2023-03-30 01:52:38,120][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.11, 127.0.0.1:58539][0m
+[2023-03-30 01:52:38,143][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.13, 127.0.0.1:58544][0m
+[2023-03-30 01:52:38,271][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58547]
+[2023-03-30 01:52:38,272][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58547]
+[2023-03-30 01:52:38,305][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:53:16,676][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58547]
+[2023-03-30 01:53:17,313][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:53:17,335][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:53:17,372][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:53:17,377][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:53:17,400][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58540][0m
+[2023-03-30 01:53:17,520][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58569]
+[2023-03-30 01:53:17,524][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58569]
+[2023-03-30 01:53:17,572][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:53:48,442][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58569]
+[2023-03-30 01:53:49,047][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:53:49,063][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:53:49,153][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:53:49,160][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:58544][0m
+[2023-03-30 01:53:49,187][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:58539][0m
+[2023-03-30 01:53:49,310][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58585]
+[2023-03-30 01:53:49,313][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58585]
+[2023-03-30 01:53:49,356][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:54:07,606][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58585]
+[2023-03-30 01:54:08,079][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58539][0m
+[2023-03-30 01:54:08,093][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:54:08,097][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:54:08,121][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:54:08,137][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:54:08,139][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:54:08,141][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:54:08,151][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:54:08,157][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:54:08,186][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58540][0m
+[2023-03-30 01:54:08,310][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58600]
+[2023-03-30 01:54:08,311][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58600]
+[2023-03-30 01:54:08,336][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:54:08,348][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:54:37,400][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58600]
+[2023-03-30 01:54:38,016][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:54:38,030][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:54:38,085][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:54:38,091][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:54:38,117][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:58544][0m
+[2023-03-30 01:54:38,238][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58617]
+[2023-03-30 01:54:38,240][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58617]
+[2023-03-30 01:54:38,285][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:55:10,413][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58617]
+[2023-03-30 01:55:10,898][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58544][0m
+[2023-03-30 01:55:10,911][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:55:10,916][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:55:10,932][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:55:10,952][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:55:10,958][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:55:10,961][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:55:10,973][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:55:10,979][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:55:11,005][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58540][0m
+[2023-03-30 01:55:11,130][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58631]
+[2023-03-30 01:55:11,132][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58631]
+[2023-03-30 01:55:11,157][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:55:11,171][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:55:14,141][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?public_exposed=0&limit=20&page=1 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:55:14,166][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?public_exposed=0&limit=20&page=1 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:55:18,373][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:55:18,515][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:55:19,864][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:55:20,044][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:55:20,569][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:55:21,565][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:58540][0m
+[2023-03-30 01:55:52,796][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58631]
+[2023-03-30 01:55:53,295][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:55:53,304][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:55:53,316][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:55:53,326][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:55:53,352][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:55:53,356][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:55:53,359][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:55:53,372][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:55:53,378][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:55:53,408][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58539][0m
+[2023-03-30 01:55:53,533][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58657]
+[2023-03-30 01:55:53,535][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58657]
+[2023-03-30 01:55:53,560][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:58539][0m
+[2023-03-30 01:55:53,588][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:56:36,063][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58657]
+[2023-03-30 01:56:36,671][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:56:36,692][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 01:56:36,772][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:58544][0m
+[2023-03-30 01:56:36,780][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.03, 127.0.0.1:58539][0m
+[2023-03-30 01:56:36,802][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:58540][0m
+[2023-03-30 01:56:36,923][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58679]
+[2023-03-30 01:56:36,926][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58679]
+[2023-03-30 01:56:36,968][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58540][0m
+[2023-03-30 01:56:57,903][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:56:57,950][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.04, 127.0.0.1:58540][0m
+[2023-03-30 01:57:36,055][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58679]
+[2023-03-30 01:57:36,547][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58540][0m
+[2023-03-30 01:57:36,559][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:57:36,564][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:57:36,581][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58539][0m
+[2023-03-30 01:57:36,601][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:57:36,605][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:57:36,606][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58544][0m
+[2023-03-30 01:57:36,615][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58539][0m
+[2023-03-30 01:57:36,621][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:58540][0m
+[2023-03-30 01:57:36,647][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58544][0m
+[2023-03-30 01:57:36,774][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58697]
+[2023-03-30 01:57:36,778][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58697]
+[2023-03-30 01:57:36,801][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:58544][0m
+[2023-03-30 01:57:36,825][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58544][0m
+[2023-03-30 02:00:02,819][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58697]
+[2023-03-30 02:00:03,320][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:03,335][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:03,339][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58805][0m
+[2023-03-30 02:00:03,357][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58805][0m
+[2023-03-30 02:00:03,373][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58805][0m
+[2023-03-30 02:00:03,377][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:03,379][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58809][0m
+[2023-03-30 02:00:03,387][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58805][0m
+[2023-03-30 02:00:03,392][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:03,420][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58809][0m
+[2023-03-30 02:00:03,551][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58812]
+[2023-03-30 02:00:03,555][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58812]
+[2023-03-30 02:00:03,575][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:58809][0m
+[2023-03-30 02:00:03,599][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58809][0m
+[2023-03-30 02:00:57,289][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58812]
+[2023-03-30 02:00:57,803][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.00, 127.0.0.1:58809][0m
+[2023-03-30 02:00:57,816][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:58809][0m
+[2023-03-30 02:00:57,820][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:57,845][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58804][0m
+[2023-03-30 02:00:57,862][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:57,866][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:58809][0m
+[2023-03-30 02:00:57,869][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.01, 127.0.0.1:58805][0m
+[2023-03-30 02:00:57,878][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:58804][0m
+[2023-03-30 02:00:57,884][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:58809][0m
+[2023-03-30 02:00:57,912][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:58805][0m
+[2023-03-30 02:00:58,042][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58832]
+[2023-03-30 02:00:58,045][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58832]
+[2023-03-30 02:00:58,072][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:58805][0m
+[2023-03-30 02:00:58,096][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58805][0m
+[2023-03-30 02:01:43,299][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:01:43,312][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.05, 127.0.0.1:58805][0m
+[2023-03-30 02:06:08,274][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:06:08,792][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:06:08,792][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:06:08,793][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:06:13,010][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:58895][0m
+[2023-03-30 02:06:13,031][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:58896][0m
+[2023-03-30 02:06:13,181][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.14, 127.0.0.1:58896][0m
+[2023-03-30 02:06:13,187][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.15, 127.0.0.1:58895][0m
+[2023-03-30 02:06:13,222][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.18, 127.0.0.1:58900][0m
+[2023-03-30 02:06:13,353][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58902]
+[2023-03-30 02:06:13,355][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:58902]
+[2023-03-30 02:06:13,396][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:58900][0m
+[2023-03-30 02:06:18,858][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 02:06:18,862][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.03, 127.0.0.1:58900][0m
+[2023-03-30 02:06:22,774][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 02:06:22,780][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:58900][0m
+[2023-03-30 02:06:40,109][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:06:40,889][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:06:41,348][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:06:41,349][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:06:41,349][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:07:38,610][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:07:39,010][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:07:39,010][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:07:39,010][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:08:15,288][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:08:15,302][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.06, 127.0.0.1:58918][0m
+[2023-03-30 02:14:14,938][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:14:15,440][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:14:15,440][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:14:15,441][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:14:21,754][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:59008][0m
+[2023-03-30 02:14:21,770][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:59009][0m
+[2023-03-30 02:14:21,880][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.10, 127.0.0.1:59009][0m
+[2023-03-30 02:14:21,890][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.11, 127.0.0.1:59008][0m
+[2023-03-30 02:14:21,921][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.14, 127.0.0.1:59013][0m
+[2023-03-30 02:14:22,048][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59017]
+[2023-03-30 02:14:22,050][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59017]
+[2023-03-30 02:14:22,089][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:59013][0m
+[2023-03-30 02:14:38,954][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:14:38,971][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.06, 127.0.0.1:59013][0m
+[2023-03-30 02:21:31,351][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:21:31,880][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:21:31,880][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:21:31,881][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:21:33,825][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.06, 127.0.0.1:59076][0m
+[2023-03-30 02:21:34,001][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.13, 127.0.0.1:59076][0m
+[2023-03-30 02:21:39,375][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:59076][0m
+[2023-03-30 02:21:46,108][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:59076][0m
+[2023-03-30 02:22:28,913][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:59076][0m
+[2023-03-30 02:22:46,322][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:22:47,168][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:22:47,630][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:22:47,630][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:22:47,631][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:22:59,326][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.04, 127.0.0.1:59375][0m
+[2023-03-30 02:23:25,162][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:23:26,021][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:23:26,580][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:23:26,580][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:23:26,581][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:23:34,687][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.03, 127.0.0.1:59419][0m
+[2023-03-30 02:23:43,810][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:23:44,583][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:23:45,036][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:23:45,037][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:23:45,037][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:23:50,546][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.02, 127.0.0.1:59426][0m
+[2023-03-30 02:24:10,806][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:24:11,632][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:24:12,182][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:24:12,182][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:24:12,183][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:24:19,749][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:24:20,513][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:24:20,907][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:24:20,907][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:24:20,908][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:24:24,706][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.04, 127.0.0.1:59439][0m
+[2023-03-30 02:24:48,705][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:24:49,510][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:24:49,970][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:24:49,970][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:24:49,971][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:24:53,491][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.03, 127.0.0.1:59453][0m
+[2023-03-30 02:25:59,401][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:25:59,921][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:25:59,921][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:25:59,922][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:26:01,850][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.17, 127.0.0.1:59460][0m
+[2023-03-30 02:26:11,527][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:59460][0m
+[2023-03-30 02:26:18,749][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:59460][0m
+[2023-03-30 02:26:40,123][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/chart_config/1/ 200 [0.16, 127.0.0.1:59460][0m
+[2023-03-30 02:26:40,173][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.01, 127.0.0.1:59460][0m
+[2023-03-30 02:26:55,681][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/chart_config/1/ 200 [0.05, 127.0.0.1:59460][0m
+[2023-03-30 02:26:55,758][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.04, 127.0.0.1:59460][0m
+[2023-03-30 02:26:57,777][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.15, 127.0.0.1:59460][0m
+[2023-03-30 02:27:15,865][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:59460][0m
+[2023-03-30 02:27:15,881][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:59476][0m
+[2023-03-30 02:27:15,970][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:59476][0m
+[2023-03-30 02:27:15,976][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.04, 127.0.0.1:59460][0m
+[2023-03-30 02:27:16,005][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.06, 127.0.0.1:59480][0m
+[2023-03-30 02:27:16,103][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59482]
+[2023-03-30 02:27:16,106][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59482]
+[2023-03-30 02:27:21,291][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.14, 127.0.0.1:59480][0m
+[2023-03-30 02:27:25,478][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.03, 127.0.0.1:59480][0m
+[2023-03-30 02:27:57,544][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/system/chart_config/ 200 [0.04, 127.0.0.1:59480][0m
+[2023-03-30 02:27:57,629][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.04, 127.0.0.1:59480][0m
+[2023-03-30 02:28:09,931][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [3.26, 127.0.0.1:59480][0m
+[2023-03-30 02:28:26,966][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:28:27,760][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:28:28,299][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:28:28,300][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:28:28,301][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:29:13,353][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:29:14,155][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:29:14,700][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:29:14,700][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:29:14,701][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:29:18,020][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:29:18,679][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:29:19,075][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:29:19,075][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:29:19,076][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:29:49,107][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:29:49,904][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:29:50,384][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:29:50,384][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:29:50,385][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:30:03,327][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:30:04,162][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:30:04,739][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:30:04,739][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:30:04,740][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:30:22,988][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:30:23,664][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:30:24,064][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:30:24,064][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:30:24,064][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:30:26,408][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:30:27,065][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:30:27,477][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:30:27,478][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:30:27,478][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:01,830][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:02,620][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:03,173][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:03,173][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:03,174][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:05,411][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:06,088][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:06,482][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:06,483][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:06,483][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:09,820][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:10,485][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:10,890][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:10,890][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:10,891][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:32,341][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:33,006][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:33,401][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:33,401][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:33,402][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:42,163][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:42,834][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:43,246][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:43,247][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:43,248][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:50,938][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:51,584][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:52,018][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:52,018][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:52,019][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:56,477][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:31:57,136][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:31:57,533][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:31:57,533][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:31:57,533][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:31:59,868][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:32:00,544][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:32:00,939][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:32:00,939][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:32:00,939][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:32:04,287][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:32:04,964][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:32:05,361][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:32:05,361][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:32:05,361][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:32:20,446][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:32:21,225][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:32:21,695][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:32:21,695][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:32:21,696][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:32:24,114][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 227, in get_charts_data
+    data = get_max_of_month(c.start_date,c.end_date, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 278, in get_max_of_month
+    res.append((data['month'].strftime('%B %Y'),data['avg_val']))
+KeyError: 'avg_val'
+
+[2023-03-30 02:32:24,116][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.24, 127.0.0.1:59581][0m
+[2023-03-30 02:32:58,345][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:32:59,113][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:32:59,659][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:32:59,660][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:32:59,661][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:33:02,998][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:33:03,654][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:33:04,050][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:33:04,050][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:33:04,051][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:33:07,377][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:33:08,052][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:33:08,441][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:33:08,441][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:33:08,442][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-03-30 02:33:13,521][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.24, 127.0.0.1:59594][0m
+[2023-03-30 02:33:46,836][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/2/ 200 [0.00, 127.0.0.1:59594][0m
+[2023-03-30 02:33:46,995][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/chart_config/2/ 200 [0.16, 127.0.0.1:59594][0m
+[2023-03-30 02:33:47,066][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:59594][0m
+[2023-03-30 02:33:48,524][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.23, 127.0.0.1:59594][0m
+[2023-03-30 02:33:59,199][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_temperatures/ 200 [3.15, 127.0.0.1:59594][0m
+[2023-03-30 02:34:02,237][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_salinity/ 200 [6.19, 127.0.0.1:59599][0m
+[2023-03-30 02:34:02,262][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/ 200 [6.21, 127.0.0.1:59600][0m
+[2023-03-30 02:34:05,263][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/get_average_ph/ 200 [9.21, 127.0.0.1:59601][0m
+[2023-03-30 02:34:16,315][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.23, 127.0.0.1:59601][0m
+[2023-03-30 02:34:45,289][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/chart_config/1/ 200 [0.05, 127.0.0.1:59601][0m
+[2023-03-30 02:34:45,376][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.04, 127.0.0.1:59601][0m
+[2023-03-30 02:34:47,241][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.23, 127.0.0.1:59601][0m
+[2023-03-30 02:34:55,344][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:59601][0m
+[2023-03-30 02:34:55,357][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:59601][0m
+[2023-03-30 02:34:55,362][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/user/user_info/ 200 [0.01, 127.0.0.1:59600][0m
+[2023-03-30 02:34:55,374][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.01, 127.0.0.1:59600][0m
+[2023-03-30 02:34:55,433][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/dept/all_dept/ 200 [0.01, 127.0.0.1:59600][0m
+[2023-03-30 02:34:55,440][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/init/settings/ 200 [0.01, 127.0.0.1:59601][0m
+[2023-03-30 02:34:55,447][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/menu/web_router/ 200 [0.02, 127.0.0.1:59599][0m
+[2023-03-30 02:34:55,455][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.02, 127.0.0.1:59600][0m
+[2023-03-30 02:34:55,461][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:59601][0m
+[2023-03-30 02:34:55,490][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.04, 127.0.0.1:59599][0m
+[2023-03-30 02:34:55,583][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59621]
+[2023-03-30 02:34:55,585][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMTE3NjMzLCJpYXQiOjE2ODAxMTA0MzMsImp0aSI6ImUyNDA5OTUyOWZmYzQwOGI4ZDIxMWUxYTk2YmUzNjE0IiwidXNlcl9pZCI6MX0.2o05upQXxZWQMYGQQeoE7JXZIgFXZagxhjrtRKHrmis/ [127.0.0.1:59621]
+[2023-03-30 02:34:55,590][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.00, 127.0.0.1:59599][0m
+[2023-03-30 02:34:55,800][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.21, 127.0.0.1:59599][0m
+[2023-03-30 02:35:02,112][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.02, 127.0.0.1:59599][0m
+[2023-03-30 02:35:10,384][django.channels.server.log_action():147] [INFO] [mHTTP PUT /api/system/chart_config/2/ 200 [0.05, 127.0.0.1:59599][0m
+[2023-03-30 02:35:10,461][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.04, 127.0.0.1:59599][0m
+[2023-03-30 02:35:12,716][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.23, 127.0.0.1:59599][0m
+[2023-03-30 02:36:49,042][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-03-30 02:36:49,941][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-03-30 02:36:50,405][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-03-30 02:36:50,406][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-03-30 02:36:50,406][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000

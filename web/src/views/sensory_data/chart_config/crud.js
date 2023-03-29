@@ -50,7 +50,7 @@ export const crudOptions = (vm) => {
     },
     columns: [
       {
-        title: "关键词",
+        title: "Keywords",
         key: "search",
         show: false,
         disabled: true,
@@ -63,7 +63,7 @@ export const crudOptions = (vm) => {
             props: {
               clearable: true,
             },
-            placeholder: "请输入关键词",
+            placeholder: "Please enter a keyword",
           },
         },
         view: {
@@ -98,13 +98,13 @@ export const crudOptions = (vm) => {
         form: {
           rules: [
             // 表单校验规则
-            { required: true, message: "角色名称必填项" },
+            { required: true, message: "Title is required" },
           ],
           component: {
             props: {
               clearable: true,
             },
-            placeholder: "请输入角色名称",
+            placeholder: "Please enter a title",
           },
           itemProps: {
             class: { yxtInput: true },
@@ -116,13 +116,13 @@ export const crudOptions = (vm) => {
         key: "public_exposed",
         search: {
           disabled: false,
-          title: "多选",
+          title: "Exposed",
         },
         type: "select",
         form: {
           rules: [
             // 表单校验规则
-            { required: true, message: "角色名称必填项" },
+            { required: true, message: "selection required" },
           ],
           component: {
             props: {
@@ -146,7 +146,7 @@ export const crudOptions = (vm) => {
         type: "select",
 
         form: {
-          rules: [{ required: true, message: '请选择地区' }],
+          rules: [{ required: true, message: 'Please select' }],
           component: { //添加和修改时form表单的组件，支持任何v-model组件
             props: { //配置自定义组件的属性
               filterable: true, //可过滤选择项
@@ -172,7 +172,7 @@ export const crudOptions = (vm) => {
         type: "select",
 
         form: {
-          rules: [{ required: true, message: '请选择地区' }],
+          rules: [{ required: true, message: 'Required' }],
           component: { //添加和修改时form表单的组件，支持任何v-model组件
             props: { //配置自定义组件的属性
               filterable: true, //可过滤选择项
@@ -196,7 +196,7 @@ export const crudOptions = (vm) => {
         type: "select",
 
         form: {
-          rules: [{ required: true, message: '请选择地区' }],
+          rules: [{ required: true, message: 'Required' }],
           component: { //添加和修改时form表单的组件，支持任何v-model组件
             props: { //配置自定义组件的属性
               filterable: true, //可过滤选择项
@@ -212,6 +212,40 @@ export const crudOptions = (vm) => {
             { value: 'monthly_min', label: 'Monthly Minimum Value' },
            
           ]
+        },
+      },
+      {
+        title: "Start Date",
+        key: "start_date",
+        search : {},
+        type: "date",
+
+        form: {
+          rules: [{ required: true, message: 'Required' }],
+          component: { //添加和修改时form表单的组件，支持任何v-model组件
+            props: { //配置自定义组件的属性
+              filterable: true, //可过滤选择项
+              multiple: false, //支持多选
+              clearable: true //可清除
+            }
+          }
+        },
+      },
+      {
+        title: "End Date",
+        key: "end_date",
+        search : {},
+        type: "date",
+
+        form: {
+          rules: [{ required: true, message: 'Required' }],
+          component: { //添加和修改时form表单的组件，支持任何v-model组件
+            props: { //配置自定义组件的属性
+              filterable: true, //可过滤选择项
+              multiple: false, //支持多选
+              clearable: true //可清除
+            }
+          }
         },
       }
     ],

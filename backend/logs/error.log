@@ -562,3 +562,726 @@ ValueError: min() arg is an empty sequence
     (months[i], str(min(monthlyData[i]))))
 ValueError: min() arg is an empty sequence
 
+[2023-03-30 01:20:39,906][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:20:55,135][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:21:23,047][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 285, in get_average_monthly_within_range
+    return HttpResponse(json.dumps(average_temperature_by_month), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+
+[2023-03-30 01:21:54,403][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:22:58,695][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1378, in to_python
+    parsed = parse_date(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/dateparse.py", line 78, in parse_date
+    return datetime.date(**kw)
+ValueError: month must be in 1..12
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 272, in get_average_monthly_within_range
+    average_temperature_by_month = SensoryData.objects.filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1382, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2022-17-06”的值有正确的格式（YYYY-MM-DD）但它是一个错误的日期']
+
+[2023-03-30 01:24:21,869][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:25:46,287][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:26:56,666][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 208, in get_charts_data
+    for monthly_data in data:
+TypeError: 'NoneType' object is not iterable
+
+[2023-03-30 01:30:44,538][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 204, in get_charts_data
+    data = get_average_monthly_within_range(data_objects, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 286, in get_average_monthly_within_range
+    res.append(data['month'].strftime('%B %Y'),data['avg_temp'])
+TypeError: list.append() takes exactly one argument (2 given)
+
+[2023-03-30 01:44:45,857][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 80, in list
+    page = self.paginate_queryset(queryset)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/pagination.py", line 216, in paginate_queryset
+    return list(self.page)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 01:49:00,275][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 02:01:43,299][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:06:18,858][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 02:06:22,774][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 203, in get_charts_data
+    for c in chart_configs:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'sensory_data_app_chartconfig.start_date' in 'field list'")
+
+[2023-03-30 02:08:15,288][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:14:38,954][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 453, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.OperationalError: (1054, "Unknown column 'start_date' in 'field list'")
+
+[2023-03-30 02:32:24,114][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 227, in get_charts_data
+    data = get_max_of_month(c.start_date,c.end_date, c.entity)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 278, in get_max_of_month
+    res.append((data['month'].strftime('%B %Y'),data['avg_val']))
+KeyError: 'avg_val'
+
