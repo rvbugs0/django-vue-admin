@@ -23,7 +23,7 @@
           <div style="margin-bottom: 20px">
             <div class="yxt-flex-align-center">
               <div class="yxt-divider"></div>
-              <span>数据授权</span>
+              <span>data authorization</span>
               <el-tooltip
                 class="item"
                 effect="dark"
@@ -71,7 +71,7 @@
             <div style="margin-bottom: 20px">
               <div class="yxt-flex-align-center">
                 <div class="yxt-divider"></div>
-                <span>菜单授权</span>
+                <span>menu authorization</span>
                 <el-tooltip
                   class="item"
                   effect="dark"
@@ -92,7 +92,7 @@
               :expand-on-click-node="false"
               :default-checked-keys="menuCheckedKeys"
               :check-on-click-node="false"
-              empty-text="请先选择角色"
+              empty-text="Please select a role first"
               :check-strictly="menuCheckStrictly"
               @check-change="handleCheckClick"
             >
@@ -147,27 +147,27 @@ export default {
       dataScopeOptions: [
         {
           value: 0,
-          label: '仅本人数据权限'
+          label: 'Only personal data permission'
         },
         {
           value: 1,
-          label: '本部门及以下数据权限'
+          label: 'This department and the following data permissions'
         },
         {
           value: 2,
-          label: '本部门数据权限'
+          label: 'Data permission of this department'
         },
         {
           value: 3,
-          label: '全部数据权限'
+          label: 'Full Data Access'
         },
         {
           value: 4,
-          label: '自定义数据权限'
+          label: 'Custom Data Permissions'
         }
       ],
-      dataAuthorizationTips: '授权用户可操作的数据范围',
-      menuAuthorizationTips: '授权用户在菜单中可操作的范围'
+      dataAuthorizationTips: 'The range of data that authorized users can operate',
+      menuAuthorizationTips: 'Authorized users can operate the range in the menu'
     }
   },
   watch: {
@@ -281,7 +281,7 @@ export default {
       })
       this.roleObj.permission = permissionData
       return this.updateRequest(this.roleObj).then(res => {
-        this.$message.success('更新成功')
+        this.$message.success('update completed')
       })
     },
     /** 选择角色权限范围触发 */

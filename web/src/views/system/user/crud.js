@@ -44,7 +44,7 @@ export const crudOptions = (vm) => {
       custom: [
         {
           thin: true,
-          text: '密码重置',
+          text: 'reset Password',
           size: 'small',
           type: 'warning',
           icon: 'el-icon-refresh-left',
@@ -62,13 +62,13 @@ export const crudOptions = (vm) => {
       defaultSpan: 12 // 默认的表单 span
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.no.',
       align: 'center',
       width: 60
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Key words',
         key: 'search',
         show: false,
         disabled: true,
@@ -78,7 +78,7 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter a keyword'
           }
         },
         view: {
@@ -94,7 +94,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '账号',
+        title: 'Username',
         key: 'username',
         search: {
           disabled: false
@@ -105,11 +105,11 @@ export const crudOptions = (vm) => {
           rules: [ // 表单校验规则
             {
               required: true,
-              message: '账号必填项'
+              message: 'Username Required'
             }
           ],
           component: {
-            placeholder: '请输入账号'
+            placeholder: 'Please input Username'
           },
           itemProps: {
             class: { yxtInput: true }
@@ -117,7 +117,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '密码',
+        title: 'password',
         key: 'password',
         minWidth: 90,
         type: 'input',
@@ -125,7 +125,7 @@ export const crudOptions = (vm) => {
           rules: [ // 表单校验规则
             {
               required: true,
-              message: '密码必填项'
+              message: 'password required'
             }
           ],
           component: {
@@ -255,7 +255,7 @@ export const crudOptions = (vm) => {
               columns: [
                 {
                   field: 'name',
-                  title: '角色名称'
+                  title: 'Role name'
                 },
                 {
                   field: 'key',

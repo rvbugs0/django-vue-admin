@@ -65,7 +65,7 @@ export const crudOptions = (vm) => {
       width: '30%'
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.No.',
       align: 'center',
       width: 100
     },
@@ -80,7 +80,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '父级地区',
+        title: 'Parent region',
         key: 'pcode',
         show: false,
         search: {

@@ -19,7 +19,7 @@ export default {
         name: 'index',
         fullPath: '/index',
         meta: {
-          title: '控制台',
+          title: 'Home',
           auth: false
         }
       }
@@ -33,7 +33,7 @@ export default {
   theme: {
     list: [
       {
-        title: 'd2admin 经典',
+        title: 'd2admin classic',
         name: 'd2',
         preview: 'image/theme/d2/preview@2x.png'
       },
@@ -48,18 +48,18 @@ export default {
         preview: 'image/theme/element/preview@2x.jpg'
       },
       {
-        title: '紫罗兰',
+        title: 'Violet',
         name: 'violet',
         preview: 'image/theme/violet/preview@2x.jpg'
       },
       {
-        title: '简约线条',
+        title: 'Simple lines',
         name: 'line',
         backgroundImage: 'image/theme/line/bg.jpg',
         preview: 'image/theme/line/preview@2x.jpg'
       },
       {
-        title: '流星',
+        title: 'Star',
         name: 'star',
         backgroundImage: 'image/theme/star/bg.jpg',
         preview: 'image/theme/star/preview@2x.jpg'

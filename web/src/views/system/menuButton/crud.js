@@ -22,15 +22,15 @@ export const crudOptions = (vm) => {
       width: 180,
       edit: {
         thin: true,
-        text: '编辑'
+        text: 'edit'
       },
       remove: {
         thin: true,
-        text: '删除'
+        text: 'remove'
       }
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.No.',
       align: 'center',
       width: 100
     },
@@ -42,7 +42,7 @@ export const crudOptions = (vm) => {
       defaultSpan: 24 // 默认的表单 span
     },
     columns: [{
-      title: '关键词',
+      title: 'Key words',
       key: 'search',
       show: false,
       disabled: true,
@@ -52,7 +52,7 @@ export const crudOptions = (vm) => {
           props: {
             clearable: true
           },
-          placeholder: '请输入关键词'
+          placeholder: 'Please enter a keyword'
         }
       },
       form: {
@@ -73,7 +73,7 @@ export const crudOptions = (vm) => {
     },
 
     {
-      title: '权限名称',
+      title: 'Permission name',
       key: 'name',
       sortable: true,
       width: 150,
@@ -86,7 +86,7 @@ export const crudOptions = (vm) => {
       },
       form: {
         rules: [ // 表单校验规则
-          { required: true, message: '必填项' }
+          { required: true, message: 'required fields' }
         ],
         component: {
           span: 12,
@@ -117,14 +117,14 @@ export const crudOptions = (vm) => {
         },
         helper: {
           render (h) {
-            return (< el-alert title="可手动输入不在列表中的新值" type="warning" description="比较常用的建议放在字典管理中"/>
+            return (< el-alert title="A new value not in the list can be entered manually" type="warning" description="The more commonly used suggestions are placed in dictionary management"/>
             )
           }
         }
       }
     },
     {
-      title: '权限值',
+      title: 'permission value',
       key: 'value',
       sortable: true,
       width: 200,
@@ -134,11 +134,11 @@ export const crudOptions = (vm) => {
       type: 'input',
       form: {
         rules: [ // 表单校验规则
-          { required: true, message: '必填项' }
+          { required: true, message: 'required fields' }
         ],
         component: {
           span: 12,
-          placeholder: '请输入权限值',
+          placeholder: 'Please enter permission value',
           props: {
             elProps: {
               clearable: true
@@ -150,14 +150,14 @@ export const crudOptions = (vm) => {
         },
         helper: {
           render (h) {
-            return (< el-alert title="用于前端按钮权限的判断展示" type="warning" description="使用方法：vm.hasPermissions(权限值)"/>
+            return (< el-alert title="Judgment display for front-end button permissions" type="warning" description="How to use: vm.hasPermissions (permission value)"/>
             )
           }
         }
       }
     },
     {
-      title: '请求方式',
+      title: 'Request method',
       key: 'method',
       sortable: true,
       width: 150,
@@ -175,7 +175,7 @@ export const crudOptions = (vm) => {
       },
       form: {
         rules: [ // 表单校验规则
-          { required: true, message: '必填项' }
+          { required: true, message: 'required fields' }
         ],
         component: {
           span: 12
@@ -186,7 +186,7 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: '接口地址',
+      title: 'interface address',
       key: 'api',
       sortable: true,
       search: {
@@ -214,7 +214,7 @@ export const crudOptions = (vm) => {
       },
       form: {
         rules: [ // 表单校验规则
-          { required: true, message: '必填项' }
+          { required: true, message: 'required fields' }
         ],
         component: {
           span: 24,
@@ -232,7 +232,7 @@ export const crudOptions = (vm) => {
         },
         helper: {
           render (h) {
-            return (< el-alert title="请正确填写，以免请求时被拦截。匹配单例使用正则,例如:/api/xx/.*?/" type="warning" />
+            return (< el-alert title="Please fill in correctly to avoid being intercepted when requesting. Match singletons using regular expressions, for example: /api/xx/.*?/" type="warning" />
             )
           }
         }

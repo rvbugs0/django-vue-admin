@@ -12,7 +12,7 @@ export const crudOptions = (vm) => {
       pattern = /^\/.*?/
     }
     if (!pattern.test(value)) {
-      callback(new Error('请正确的地址'))
+      callback(new Error('correct address please'))
     } else {
       callback()
     }
@@ -74,7 +74,7 @@ export const crudOptions = (vm) => {
         disabled () {
           return !vm.hasPermissions('Update')
         },
-        text: ' 菜单按钮',
+        text: ' Menu Button',
         type: 'warning',
         size: 'small',
         emit: 'createPermission'
@@ -82,7 +82,7 @@ export const crudOptions = (vm) => {
 
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'Serial No.',
       align: 'center',
       width: 80
     },
@@ -94,7 +94,7 @@ export const crudOptions = (vm) => {
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Key words',
         key: 'search',
         show: false,
         disabled: true,
@@ -131,7 +131,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '父级菜单',
+        title: 'Parent menu',
         key: 'parent',
         show: false,
         search: {
@@ -149,7 +149,7 @@ export const crudOptions = (vm) => {
             return request({ url: url, params: { limit: 999, status: 1, is_catalog: 1 } }).then(ret => {
               const responseData = ret.data.data
               const result = XEUtils.toArrayTree(responseData, { parentKey: 'parent', strict: true })
-              return [{ id: null, name: '根节点', children: result }]
+              return [{ id: null, name: 'root node', children: result }]
             })
           }
         },
@@ -170,7 +170,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '菜单名称',
+        title: 'menu name',
         key: 'name',
         sortable: true,
         treeNode: true, // 设置为树形列
@@ -186,13 +186,13 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '菜单名称必填项' }
+            { required: true, message: 'Menu name is required' }
           ],
           component: {
             props: {
               clearable: true
             },
-            placeholder: '请输入菜单名称'
+            placeholder: 'Please enter a menu name'
           },
           itemProps: {
             class: { yxtInput: true }
@@ -201,30 +201,30 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '图标',
+        title: 'icon',
         key: 'icon',
         width: 60,
         type: 'icon-selector',
         form: {
           component: {
-            placeholder: '请输入图标'
+            placeholder: 'Please enter an icon'
           }
         }
       },
       {
-        title: '排序',
+        title: 'to sort',
         key: 'sort',
         width: 60,
         type: 'number',
         form: {
           value: 1,
           component: {
-            placeholder: '请输入排序'
+            placeholder: 'Please enter sort'
           }
         }
       },
       {
-        title: '是否目录',
+        title: 'Is it a directory',
         key: 'is_catalog',
         width: 100,
         type: 'dict-switch',
@@ -237,7 +237,7 @@ export const crudOptions = (vm) => {
         form: {
           value: false,
           component: {
-            placeholder: '请选择是否目录'
+            placeholder: 'Please choose whether to catalog'
           },
           valueChange (key, value, form, { getColumn, mode, component, immediate, getComponent }) {
             if (!value) {
@@ -251,7 +251,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '外链接',
+        title: 'external link',
         key: 'is_link',
         width: 70,
         type: 'radio',
@@ -265,27 +265,27 @@ export const crudOptions = (vm) => {
               const { form } = context
               return !form.is_catalog
             },
-            placeholder: '请选择是否外链接'
+            placeholder: 'Please choose whether to link'
           },
           valueChange (key, value, form, { getColumn, mode, component, immediate, getComponent }) {
             form.web_path = undefined
             form.component = undefined
             form.component_name = undefined
             if (value) {
-              getColumn('web_path').title = '外链接地址'
-              getColumn('web_path').component.placeholder = '请输入外链接地址'
+              getColumn('web_path').title = 'external link address'
+              getColumn('web_path').component.placeholder = 'Please enter the external link address'
               getColumn('web_path').helper = {
                 render (h) {
-                  return (< el-alert title="外链接地址,请以https|http|ftp|rtsp|mms开头" type="warning" />
+                  return (< el-alert title="External link address, please start with https|http|ftp|rtsp|mms" type="warning" />
                   )
                 }
               }
             } else {
-              getColumn('web_path').title = '路由地址'
-              getColumn('web_path').component.placeholder = '请输入路由地址'
+              getColumn('web_path').title = 'routing address'
+              getColumn('web_path').component.placeholder = 'Please enter the routing address'
               getColumn('web_path').helper = {
                 render (h) {
-                  return (< el-alert title="浏览器中url的地址,请以/开头" type="warning" />
+                  return (< el-alert title="The address of the url in the browser, please start with /" type="warning" />
                   )
                 }
               }
@@ -294,13 +294,13 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '路由地址',
+        title: 'routing address',
         key: 'web_path',
         width: 150,
         show: false,
         form: {
           rules: [
-            { required: true, message: '请输入正确的路由地址' },
+            { required: true, message: 'Please enter the correct routing address' },
             { validator: validateWebPath, trigger: 'change' }
           ],
           component: {
@@ -311,18 +311,18 @@ export const crudOptions = (vm) => {
             props: {
               clearable: true
             },
-            placeholder: '请输入路由地址'
+            placeholder: 'Please enter the routing address'
           },
           helper: {
             render (h) {
-              return (< el-alert title="浏览器中url的地址,请以/开头" type="warning" />
+              return (< el-alert title="The address of the url in the browser, please start with /" type="warning" />
               )
             }
           }
         }
       },
       {
-        title: '组件地址',
+        title: 'component address',
         key: 'component',
         type: 'select',
         show: false,
@@ -332,7 +332,7 @@ export const crudOptions = (vm) => {
         },
         form: {
           rules: [
-            { required: true, message: '请选择组件地址' }
+            { required: true, message: 'Please select component address' }
           ],
           component: {
             show (context) {
@@ -343,23 +343,23 @@ export const crudOptions = (vm) => {
               clearable: true,
               filterable: true // 可过滤选择项
             },
-            placeholder: '请输入组件地址'
+            placeholder: 'Please enter the component address'
           },
           helper: {
             render (h) {
-              return (< el-alert title="src/views下的文件夹地址" type="warning" />
+              return (< el-alert title="Folder address under src/views" type="warning" />
               )
             }
           }
         }
       },
       {
-        title: '组件名称',
+        title: 'component name',
         key: 'component_name',
         width: 170,
         form: {
           rules: [
-            { required: true, message: '请输入组件名称' }
+            { required: true, message: 'Please enter a component name' }
           ],
           component: {
             show (context) {
@@ -369,18 +369,18 @@ export const crudOptions = (vm) => {
             props: {
               clearable: true
             },
-            placeholder: '请输入组件名称'
+            placeholder: 'Please enter a component name'
           },
           helper: {
             render (h) {
-              return (< el-alert title="xx.vue文件中的name" type="warning" />
+              return (< el-alert title="The name in the xx.vue file" type="warning" />
               )
             }
           }
         }
       },
       {
-        title: '拥有权限',
+        title: 'Have authority',
         key: 'menuPermission',
         type: 'select',
         width: 300,
@@ -396,7 +396,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '缓存',
+        title: 'Cache',
         key: 'cache',
         search: {
           disabled: false
@@ -413,18 +413,18 @@ export const crudOptions = (vm) => {
               const { form } = context
               return !form.is_catalog
             },
-            placeholder: '请选择是否缓存'
+            placeholder: 'Please choose whether to cache'
           },
           helper: {
             render (h) {
-              return (< el-alert title="是否开启页面缓存,需要组件名称和xx.vue页面的name一致" type="warning" />
+              return (< el-alert title="Whether to enable page caching, the component name needs to be consistent with the name of the xx.vue page" type="warning" />
               )
             }
           }
         }
       },
       {
-        title: '侧边可见',
+        title: 'Side visible',
         key: 'visible',
         search: {
           disabled: false
@@ -437,21 +437,21 @@ export const crudOptions = (vm) => {
         form: {
           value: true,
           component: {
-            placeholder: '请选择侧边可见'
+            placeholder: 'Please select side visible'
           },
           rules: [ // 表单校验规则
-            { required: true, message: '侧边可见必填项' }
+            { required: true, message: 'Required fields visible on side' }
           ],
           helper: {
             render (h) {
-              return (< el-alert title="是否显示在侧边菜单中" type="warning" />
+              return (< el-alert title="Whether to show in the side menu" type="warning" />
               )
             }
           }
         }
       },
       {
-        title: '状态',
+        title: 'Status',
         key: 'status',
         sortable: true,
         search: {
@@ -465,10 +465,10 @@ export const crudOptions = (vm) => {
         form: {
           value: true,
           component: {
-            placeholder: '请选择状态'
+            placeholder: 'Please select a status'
           },
           rules: [ // 表单校验规则
-            { required: true, message: '状态必填项' }
+            { required: true, message: 'Status Required' }
           ]
         }
       }

@@ -370,7 +370,7 @@
         "menu_button": []
     },
     {
-        "name": "常规配置",
+        "name": "Configurations",
         "icon": "cogs",
         "sort": 2,
         "is_link": false,
@@ -384,7 +384,7 @@
         "parent": null,
         "children": [
             {
-                "name": "系统配置",
+                "name": "System configuration",
                 "icon": "desktop",
                 "sort": 0,
                 "is_link": false,
@@ -525,7 +525,7 @@
                 ]
             },
             {
-                "name": "附件管理",
+                "name": "Attachments management",
                 "icon": "file-text-o",
                 "sort": 3,
                 "is_link": false,
@@ -569,7 +569,7 @@
         "menu_button": []
     },
     {
-        "name": "Login Logs",
+        "name": "System Logs",
         "icon": "book",
         "sort": 3,
         "is_link": false,
@@ -583,7 +583,7 @@
         "parent": null,
         "children": [
             {
-                "name": "登录日志",
+                "name": "Login log",
                 "icon": "file-text",
                 "sort": 1,
                 "is_link": false,

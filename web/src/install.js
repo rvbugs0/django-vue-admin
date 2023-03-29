@@ -176,7 +176,7 @@ Vue.use(D2pUploader, {
     type: 'form',
     successHandle (ret, option) {
       if (ret.data === null || ret.data === '') {
-        throw new Error('上传失败')
+        throw new Error('Upload failed')
       }
       return { url: util.baseURL() + ret.data.url, key: option.data.key, id: ret.data.id }
     },
@@ -263,7 +263,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
   }
   return [
     {
-      title: '备注',
+      title: 'Remark',
       key: 'description',
       show: showData.description.showTable,
       search: {
@@ -273,7 +273,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       form: {
         disabled: !showData.description.showForm,
         component: {
-          placeholder: '请输入内容',
+          placeholder: 'Please enter content',
           showWordLimit: true,
           maxlength: '200',
           props: {
@@ -283,7 +283,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: '修改人',
+      title: 'edited by',
       show: showData.modifier_name.showTable,
       width: 100,
       key: 'modifier_name',
@@ -292,7 +292,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: '所属部门',
+      title: 'Department',
       key: 'dept_belong_id',
       show: showData.dept_belong_id.showTable,
       width: 150,
@@ -343,7 +343,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: '更新时间',
+      title: 'Update time',
       key: 'update_datetime',
       width: 160,
       show: showData.update_datetime.showTable,
@@ -354,7 +354,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: '创建时间',
+      title: 'Creation time',
       key: 'create_datetime',
       width: 160,
       search: {
@@ -364,9 +364,9 @@ Vue.prototype.commonEndColumns = function (param = {}) {
           name: 'el-date-picker',
           props: {
             type: 'daterange',
-            'range-separator': '至',
-            'start-placeholder': '开始',
-            'end-placeholder': '结束',
+            'range-separator': 'to',
+            'start-placeholder': 'start',
+            'end-placeholder': 'end',
             valueFormat: 'yyyy-MM-dd'
           }
         }
