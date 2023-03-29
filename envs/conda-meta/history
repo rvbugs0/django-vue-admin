@@ -24,3 +24,10 @@
 +defaults/osx-64::xz-5.2.10-h6c40b1e_1
 +defaults/osx-64::zlib-1.2.13-h4dc903c_0
 # update specs: ['django']
+==> 2023-03-28 21:04:15 <==
+# cmd: /Users/raviailani/opt/anaconda3/bin/conda install --prefix /Users/raviailani/Documents/django-vue-admin/envs autopep8 -y
+# conda version: 22.11.1
++defaults/noarch::autopep8-1.6.0-pyhd3eb1b0_1
++defaults/noarch::toml-0.10.2-pyhd3eb1b0_0
++defaults/osx-64::pycodestyle-2.10.0-py311hecd8cb5_0
+# update specs: ['autopep8']
