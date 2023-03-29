@@ -6491,3 +6491,22 @@ ValueError: min() arg is an empty sequence
 [2023-03-29 16:28:41,973][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.05, 127.0.0.1:64639][0m
 [2023-03-29 16:28:42,467][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.01, 127.0.0.1:64639][0m
 [2023-03-29 16:28:42,482][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.03, 127.0.0.1:64638][0m
+[2023-03-29 16:49:43,125][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:65088][0m
+[2023-03-29 16:49:43,200][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.09, 127.0.0.1:65089][0m
+[2023-03-29 16:49:43,238][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.13, 127.0.0.1:65090][0m
+[2023-03-29 16:52:25,584][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:65162][0m
+[2023-03-29 16:52:25,613][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.02, 127.0.0.1:65162][0m
+[2023-03-29 16:52:25,630][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/captcha/ 200 [0.03, 127.0.0.1:65163][0m
+[2023-03-29 16:52:28,952][dvadmin.utils.backends.authenticate():19] [INFO] superadmin system user login ...
+[2023-03-29 16:52:30,593][django.channels.server.log_action():147] [INFO] [mHTTP POST /api/login/ 200 [1.67, 127.0.0.1:65163][0m
+[2023-03-29 16:52:30,627][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:65163][0m
+[2023-03-29 16:52:30,694][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:65163][0m
+[2023-03-29 16:52:30,831][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:65174]
+[2023-03-29 16:52:30,834][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwMDg3MTQ5LCJpYXQiOjE2ODAwNzk5NDksImp0aSI6ImY0MTY0YjRlYThjMzQwYmFhNDUxNDhjYmRmZmIwODUxIiwidXNlcl9pZCI6MX0.vlLkQ5IOS1GqnPaZF0uKxjCnsNO4_OO_naknOaDC__E/ [127.0.0.1:65174]
+[2023-03-29 16:52:35,112][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/ 200 [0.07, 127.0.0.1:65163][0m
+[2023-03-29 16:52:38,731][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?parent=19 200 [0.06, 127.0.0.1:65163][0m
+[2023-03-29 16:52:40,606][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.05, 127.0.0.1:65163][0m
+[2023-03-29 16:54:06,987][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.07, 127.0.0.1:65186][0m
+[2023-03-29 16:55:03,227][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.03, 127.0.0.1:65186][0m
+[2023-03-29 16:56:12,181][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.07, 127.0.0.1:65190][0m
+[2023-03-29 16:57:17,136][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/?limit=999&status=1&is_catalog=1 200 [0.06, 127.0.0.1:65194][0m
