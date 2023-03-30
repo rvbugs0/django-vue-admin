@@ -2,7 +2,7 @@
 import * as api from './api'
 import { crudOptions } from './crud'
 import { d2CrudPlus } from 'd2-crud-plus'
-import DynamicCharts from './DynamicCharts.vue'
+
 
 
 export default {
@@ -27,8 +27,7 @@ export default {
     delRequest(row) {
       return api.DelObj(row.id);
     }
-  },
-  components: { DynamicCharts }
+  }
 }
 </script>
 
