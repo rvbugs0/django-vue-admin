@@ -130,9 +130,11 @@ export default {
             charts.value.forEach(element => {
                 const chartDom = document.getElementById(element.id + '_chart')
                 let myChart = ''
-                if (echarts.getInstanceByDom(chartDom)) {
+                try {
+
                     myChart = echarts.getInstanceByDom(chartDom)
-                } else {
+                }
+                catch (e) {
                     myChart = echarts.init(chartDom)
                 }
                 const option = getOption(element)

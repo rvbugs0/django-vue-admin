@@ -216,20 +216,60 @@ export const crudOptions = (vm) => {
       },{
         title: "Start Date",
         key: "start_date",
-        type: "date",
-        search: {}, // Enable search by removing the "disabled" property
+        sortable: true,
+        search: {
+          disabled: false,
+          component: {
+            props: {
+              clearable: true
+            }
+          }
+        },
+  
+        type: 'date',
         form: {
-          rules: [{ required: true, message: 'Required' }]
+          rules: [ // form validation rules
+            { required: true, message: 'Required' }
+          ],
+          component: {
+            props: {
+              clearable: true
+            },
+            placeholder: 'Please enter start date'
+          },
+          itemProps: {
+            class: { yxtInput: true }
+          }
         },
       },
       {
         title: "End Date",
         key: "end_date",
-        type: "date",
-        search: {}, // Enable search by removing the "disabled" property
+        sortable: true,
+        search: {
+          disabled: false,
+          component: {
+            props: {
+              clearable: true
+            }
+          }
+        },
+  
+        type: 'date',
         form: {
-          rules: [{ required: true, message: 'Required' }],
-        }, // Add a comma after the "form" property
+          rules: [ // form validation rules
+            { required: true, message: 'Required' }
+          ],
+          component: {
+            props: {
+              clearable: true
+            },
+            placeholder: 'Please enter end date'
+          },
+          itemProps: {
+            class: { yxtInput: true }
+          }
+        } ,
       },
       
 

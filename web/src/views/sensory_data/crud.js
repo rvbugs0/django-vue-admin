@@ -5,9 +5,9 @@ export const crudOptions = (vm) => {
     },
     options: {
       tableType: 'vxe-table',
-      rowKey: true, // 必须设置，true or false
+      rowKey: true, // must be set, true or false
       rowId: 'id',
-      height: '100%', // 表格高度100%, 使用toolbar必须设置
+      height: '100%', // table height 100%, must be set when using toolbar
       highlightCurrentRow: false
 
     },
@@ -36,7 +36,7 @@ export const crudOptions = (vm) => {
       }
 
     },
-    indexRow: { // 或者直接传true,不显示title，不居中
+    indexRow: { // Or pass true directly, do not display title, do not center
       title: 'S.No.',
       align: 'center',
       width: 100
@@ -46,11 +46,11 @@ export const crudOptions = (vm) => {
       componentType: 'form'
     },
     formOptions: {
-      defaultSpan: 24, // 默认的表单 span
+      defaultSpan: 24, // default form span
       width: '35%'
     },
     columns: [{
-      title: '关键词',
+      title: 'Key words',
       key: 'search',
       show: false,
       disabled: true,
@@ -63,10 +63,10 @@ export const crudOptions = (vm) => {
           props: {
             clearable: true
           },
-          placeholder: '请输入关键词'
+          placeholder: 'Please enter keywords'
         }
       },
-      view: { // 查看对话框组件的单独配置
+      view: { // View the individual configuration of the dialog component
         disabled: true
       }
     },
@@ -95,14 +95,14 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // 表单校验规则
-          { required: true, message: '角色名称必填项' }
+        rules: [ // form validation rules
+          { required: true, message: 'Role name is required' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入角色名称'
+          placeholder: 'Please enter a role name'
         },
         itemProps: {
           class: { yxtInput: true }
@@ -124,20 +124,20 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // 表单校验规则
-          { required: true, message: '角色名称必填项' }
+        rules: [ // form validation rules
+          { required: true, message: 'Role name is required' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入角色名称'
+          placeholder: 'Please enter a role name'
         },
         itemProps: {
           class: { yxtInput: true }
         }
       }
-    }, 
+    },
     {
       title: 'pH',
       key: 'ph',
@@ -153,14 +153,14 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // 表单校验规则
-          { required: true, message: '角色名称必填项' }
+        rules: [ // form validation rules
+          { required: true, message: 'Role name is required' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入角色名称'
+          placeholder: 'Please enter a role name'
         },
         itemProps: {
           class: { yxtInput: true }
@@ -183,14 +183,14 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // 表单校验规则
-          { required: true, message: '角色名称必填项' }
+        rules: [ // form validation rules
+          { required: true, message: 'Role name is required' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入角色名称'
+          placeholder: 'Please enter a role name'
         },
         itemProps: {
           class: { yxtInput: true }
@@ -212,14 +212,14 @@ export const crudOptions = (vm) => {
 
       type: 'date',
       form: {
-        rules: [ // 表单校验规则
-          { required: true, message: '角色名称必填项' }
+        rules: [ // form validation rules
+          { required: true, message: 'Role name is required' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: '请输入角色名称'
+          placeholder: 'Please enter a role name'
         },
         itemProps: {
           class: { yxtInput: true }
