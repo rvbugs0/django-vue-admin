@@ -129,7 +129,7 @@ export default {
         function loadChart() {
             charts.value.forEach(element => {
                 const chartDom = document.getElementById(element.id + '_chart')
-                let myChart = ''
+                var myChart = ''
                 try {
 
                     myChart = echarts.getInstanceByDom(chartDom)
