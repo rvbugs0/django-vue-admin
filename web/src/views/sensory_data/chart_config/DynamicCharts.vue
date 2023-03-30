@@ -182,8 +182,16 @@ function loadChart() {
 
     charts.value.forEach(element => {
 
+
         var chartDom = document.getElementById(element.id + '_chart');
-        var myChart = echarts.init(chartDom);
+        var myChart = ""
+        if(echarts.getInstanceByDom(chartDom)){
+            myChart = echarts.getInstanceByDom(chartDom);
+        }else{
+            myChart = echarts.init(chartDom);
+
+        }
+        
         var option = getOption(element);
 
 
@@ -209,7 +217,7 @@ function loadChart() {
 <template>
     <div id="chart_container">
 
-        <div v-for="chart in charts" :id="chart.id + '_chart'" style="height:420px;width: 560px;display: block;"
+        <div v-for="chart in charts" :id="chart.id + '_chart'"  style="height:420px;width: 560px;display: block;"
             class="chart_box"></div>
 
 

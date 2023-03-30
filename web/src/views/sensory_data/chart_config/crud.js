@@ -1,22 +1,22 @@
 export const crudOptions = (vm) => {
   return {
     pageOptions: {
-      compact: true,
+      compact: true
     },
     options: {
-      tableType: "vxe-table",
+      tableType: 'vxe-table',
       rowKey: true, // 必须设置，true or false
-      rowId: "id",
-      height: "100%", // 表格高度100%, 使用toolbar必须设置
-      highlightCurrentRow: false,
+      rowId: 'id',
+      height: '100%', // 表格高度100%, 使用toolbar必须设置
+      highlightCurrentRow: false
     },
     rowHandle: {
       view: {
         thin: true,
         text: "",
         disabled() {
-          return !vm.hasPermissions("Retrieve");
-        },
+          return !vm.hasPermissions("Retrieve")
+        }
       },
       width: 230,
       edit: {
@@ -24,15 +24,15 @@ export const crudOptions = (vm) => {
         text: "",
         disabled() {
           return !vm.hasPermissions("Update");
-        },
+        }
       },
       remove: {
         thin: true,
         text: "",
-        disabled() {
+        disabled( ) {
           return !vm.hasPermissions("Delete");
         },
-      },
+      }
     },
     indexRow: {
       // 或者直接传true,不显示title，不居中
@@ -147,15 +147,15 @@ export const crudOptions = (vm) => {
 
         form: {
           rules: [{ required: true, message: 'Please select' }],
-          component: { //添加和修改时form表单的组件，支持任何v-model组件
-            props: { //配置自定义组件的属性
-              filterable: true, //可过滤选择项
-              multiple: false, //支持多选
-              clearable: true //可清除
+          component: { 
+            props: { 
+              filterable: true, 
+              multiple: false, 
+              clearable: true 
             }
           }
         },
-        dict: {  //本地数据字典
+        dict: {  
           data: [
             { value: 'sea_water_temperature_c', label: 'Sea Water Temperature' },
             { value: 'salinity', label: 'Salinity' },
@@ -197,15 +197,15 @@ export const crudOptions = (vm) => {
 
         form: {
           rules: [{ required: true, message: 'Required' }],
-          component: { //添加和修改时form表单的组件，支持任何v-model组件
-            props: { //配置自定义组件的属性
-              filterable: true, //可过滤选择项
-              multiple: false, //支持多选
-              clearable: true //可清除
+          component: { 
+            props: { 
+              filterable: true, 
+              multiple: false, 
+              clearable: true 
             }
           }
         },
-        dict: {  //本地数据字典
+        dict: {  
           data: [
             { value: 'monthly_average', label: 'Monthly Average' },
             { value: 'monthly_max', label: 'Monthly Maximum Value' },
@@ -246,8 +246,8 @@ export const crudOptions = (vm) => {
               clearable: true //可清除
             }
           }
-        },
+        }
       }
-    ],
-  };
-};
+    ]
+  }
+}
