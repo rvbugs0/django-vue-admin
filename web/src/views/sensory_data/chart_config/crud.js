@@ -213,41 +213,26 @@ export const crudOptions = (vm) => {
            
           ]
         },
-      },
-      {
+      },{
         title: "Start Date",
         key: "start_date",
-        search : {},
         type: "date",
-
+        search: {}, // Enable search by removing the "disabled" property
         form: {
-          rules: [{ required: true, message: 'Required' }],
-          component: { //添加和修改时form表单的组件，支持任何v-model组件
-            props: { //配置自定义组件的属性
-              filterable: true, //可过滤选择项
-              multiple: false, //支持多选
-              clearable: true //可清除
-            }
-          }
+          rules: [{ required: true, message: 'Required' }]
         },
       },
       {
         title: "End Date",
         key: "end_date",
-        search : {},
         type: "date",
-
+        search: {}, // Enable search by removing the "disabled" property
         form: {
           rules: [{ required: true, message: 'Required' }],
-          component: { //添加和修改时form表单的组件，支持任何v-model组件
-            props: { //配置自定义组件的属性
-              filterable: true, //可过滤选择项
-              multiple: false, //支持多选
-              clearable: true //可清除
-            }
-          }
-        }
-      }
+        }, // Add a comma after the "form" property
+      },
+      
+
     ]
   }
 }
