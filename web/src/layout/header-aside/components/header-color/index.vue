@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip effect="dark" :content="'颜色'" placement="bottom">
+  <el-tooltip effect="dark" :content="'color'" placement="bottom">
     <el-color-picker
       class="can-hover"
       :value="value"

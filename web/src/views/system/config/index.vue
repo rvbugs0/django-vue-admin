@@ -14,7 +14,7 @@
                 icon="el-icon-folder-add"
                 @click="tabsDrawer=true"
               >
-                add group
+              add group
               </el-button>
               <el-button
                 size="small"
@@ -22,7 +22,7 @@
                 icon="el-icon-edit-outline"
                 @click="contentDrawer=true"
               >
-                add content
+              add content
               </el-button>
             </el-button-group>
           </div>
@@ -32,7 +32,7 @@
     <div>
       <el-drawer
         v-if="tabsDrawer"
-        title="Add group"
+        title="add group"
         :visible.sync="tabsDrawer"
         direction="rtl"
         size="30%"
@@ -43,7 +43,7 @@
     <div>
       <el-drawer
         v-if="contentDrawer"
-        title="Add content"
+        title="add content"
         :visible.sync="contentDrawer"
         direction="rtl"
         size="30%"
@@ -94,13 +94,13 @@ export default {
   },
   methods: {
     getTabs () {
-      api. GetList({
+      api.GetList({
         limit: 999,
         parent__isnull: true
       }).then(res => {
-        const { data } = res. data
-        data. push({
-          title: 'None',
+        const { data } = res.data
+        data.push({
+          title: 'none',
           icon: 'el-icon-plus',
           key: 'null'
         })
@@ -109,7 +109,7 @@ export default {
     }
   },
   created () {
-    this. getTabs()
+    this.getTabs()
   }
 }
 </script>

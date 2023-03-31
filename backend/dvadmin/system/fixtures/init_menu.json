@@ -1,6 +1,6 @@
 [
     {
-        "name": "Settings",
+        "name": "系统管理",
         "icon": "cog",
         "sort": 1,
         "is_link": false,
@@ -14,7 +14,7 @@
         "parent": null,
         "children": [
             {
-                "name": "Menu",
+                "name": "菜单管理",
                 "icon": "navicon",
                 "sort": 1,
                 "is_link": false,
@@ -29,31 +29,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/menu/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/menu/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/menu/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/menu/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/menu/{id}/",
                         "method": 3
@@ -61,7 +61,7 @@
                 ]
             },
             {
-                "name": "API",
+                "name": "菜单按钮",
                 "icon": "dot-circle-o",
                 "sort": 2,
                 "is_link": false,
@@ -76,25 +76,25 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/menu_button/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/menu_button/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/menu_button/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/menu_button/{id}/",
                         "method": 3
@@ -102,7 +102,7 @@
                 ]
             },
             {
-                "name": "Department",
+                "name": "部门管理",
                 "icon": "bank",
                 "sort": 3,
                 "is_link": false,
@@ -117,31 +117,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/dept/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/dept/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/dept/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/dept/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/dept/{id}/",
                         "method": 3
@@ -149,7 +149,7 @@
                 ]
             },
             {
-                "name": "Role",
+                "name": "角色管理",
                 "icon": "address-book",
                 "sort": 4,
                 "is_link": false,
@@ -164,25 +164,25 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/role/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/role/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/role/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/role/{id}/",
                         "method": 2
@@ -194,7 +194,7 @@
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/role/{id}/",
                         "method": 3
@@ -202,7 +202,7 @@
                 ]
             },
             {
-                "name": "Users",
+                "name": "用户管理",
                 "icon": "users",
                 "sort": 6,
                 "is_link": false,
@@ -217,55 +217,55 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/user/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/user/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/user/",
                         "method": 1
                     },
                     {
-                        "name": "Export",
+                        "name": "导出",
                         "value": "Export",
                         "api": "/api/system/user/export/",
                         "method": 1
                     },
                     {
-                        "name": "Import",
+                        "name": "导入",
                         "value": "Import",
                         "api": "/api/system/user/import/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/user/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Reset Password",
+                        "name": "重设密码",
                         "value": "ResetPassword",
                         "api": "/api/system/user/{id}/reset_password/",
                         "method": 2
                     },
                     {
-                        "name": "Reset to default",
+                        "name": "重置密码",
                         "value": "DefaultPassword",
                         "api": "/api/system/user/{id}/reset_to_default_password/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/user/{id}/",
                         "method": 3
@@ -273,7 +273,7 @@
                 ]
             },
             {
-                "name": "Messages",
+                "name": "消息中心",
                 "icon": "bullhorn",
                 "sort": 7,
                 "is_link": false,
@@ -288,31 +288,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/message_center/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/message_center/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/message_center/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/message_center/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/menu/{id}/",
                         "method": 3
@@ -320,7 +320,7 @@
                 ]
             },
             {
-                "name": "API Whitelist",
+                "name": "接口白名单",
                 "icon": "compass",
                 "sort": 8,
                 "is_link": false,
@@ -335,31 +335,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/api_white_list/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/api_white_list/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/api_white_list/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/api_white_list/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/api_white_list/{id}/",
                         "method": 3
@@ -370,7 +370,7 @@
         "menu_button": []
     },
     {
-        "name": "Configurations",
+        "name": "常规配置",
         "icon": "cogs",
         "sort": 2,
         "is_link": false,
@@ -384,7 +384,7 @@
         "parent": null,
         "children": [
             {
-                "name": "System configuration",
+                "name": "系统配置",
                 "icon": "desktop",
                 "sort": 0,
                 "is_link": false,
@@ -399,31 +399,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/system_config/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/system_config/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/system_config/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/system_config/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/system_config/{id}/",
                         "method": 3
@@ -431,7 +431,7 @@
                 ]
             },
             {
-                "name": "Dictionary",
+                "name": "字典管理",
                 "icon": "book",
                 "sort": 1,
                 "is_link": false,
@@ -446,31 +446,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/dictionary/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/dictionary/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/dictionary/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/dictionary/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/dictionary/{id}/",
                         "method": 3
@@ -478,7 +478,7 @@
                 ]
             },
             {
-                "name": "Areas",
+                "name": "地区管理",
                 "icon": "map",
                 "sort": 2,
                 "is_link": false,
@@ -493,31 +493,31 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/area/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/area/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Create",
+                        "name": "新增",
                         "value": "Create",
                         "api": "/api/system/area/",
                         "method": 1
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/area/{id}/",
                         "method": 2
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/area/{id}/",
                         "method": 3
@@ -525,7 +525,7 @@
                 ]
             },
             {
-                "name": "Attachments management",
+                "name": "附件管理",
                 "icon": "file-text-o",
                 "sort": 3,
                 "is_link": false,
@@ -540,25 +540,25 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/file/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/file/",
                         "method": 0
                     },
                     {
-                        "name": "Update",
+                        "name": "编辑",
                         "value": "Update",
                         "api": "/api/system/file/{id}/",
                         "method": 1
                     },
                     {
-                        "name": "Delete",
+                        "name": "删除",
                         "value": "Delete",
                         "api": "/api/system/file/{id}/",
                         "method": 3
@@ -569,7 +569,7 @@
         "menu_button": []
     },
     {
-        "name": "System Logs",
+        "name": "日志管理",
         "icon": "book",
         "sort": 3,
         "is_link": false,
@@ -583,7 +583,7 @@
         "parent": null,
         "children": [
             {
-                "name": "Login log",
+                "name": "登录日志",
                 "icon": "file-text",
                 "sort": 1,
                 "is_link": false,
@@ -598,13 +598,13 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/login_log/",
                         "method": 0
                     },
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/login_log/{id}/",
                         "method": 0
@@ -612,7 +612,7 @@
                 ]
             },
             {
-                "name": "Operations log",
+                "name": "操作日志",
                 "icon": "file-code-o",
                 "sort": 2,
                 "is_link": false,
@@ -627,13 +627,13 @@
                 "children": [],
                 "menu_button": [
                     {
-                        "name": "Retrieve",
+                        "name": "详情",
                         "value": "Retrieve",
                         "api": "/api/system/operation_log/{id}/",
                         "method": 0
                     },
                     {
-                        "name": "Search",
+                        "name": "查询",
                         "value": "Search",
                         "api": "/api/system/operation_log/",
                         "method": 0
@@ -641,7 +641,7 @@
                 ]
             },
             {
-                "name": "Frontend log",
+                "name": "前端错误日志",
                 "icon": "bug",
                 "sort": 4,
                 "is_link": false,
@@ -660,12 +660,12 @@
         "menu_button": []
     },
     {
-        "name": "Project URL",
+        "name": "DVAdmin官网",
         "icon": "external-link",
         "sort": 4,
         "is_link": true,
         "is_catalog": false,
-        "web_path": "https://sccvo.org/projects/enabling-smart-cities-coastal-regions-environmental-and-industrial-change-building",
+        "web_path": "https://django-vue-admin.com",
         "component": "",
         "component_name": "",
         "status": true,

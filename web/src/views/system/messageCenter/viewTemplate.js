@@ -1,6 +1,6 @@
 export default {
   title: {
-    title: 'Title',
+    title: 'title',
     key: 'title',
     component: {
       span: 24,
@@ -16,7 +16,7 @@ export default {
     order: 10
   },
   content: {
-    title: 'Content',
+    title: 'content',
     key: 'content',
     component: {
       name: 'd2p-quill',

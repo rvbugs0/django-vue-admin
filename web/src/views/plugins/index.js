@@ -69,12 +69,12 @@ export const plugins = async function install (Vue, options) {
         }
         return false
       } catch (exception) {
-        console.log(`[${key}]插件注册失败:`, exception)
+        console.log(`[${key}]Plugin registration failed:`, exception)
         return false
       }
     }
   })
-  console.log('注册成功插件：', components)
+  console.log('Successfully registered plugin:', components)
   window.pluginsAll = components
   return components
 }

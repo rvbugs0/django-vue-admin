@@ -36,7 +36,7 @@ export default {
       'set'
     ]),
     handleSelectTheme (name) {
-      this. set(name)
+      this.set(name)
     }
   }
 }

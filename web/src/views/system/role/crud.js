@@ -5,9 +5,9 @@ export const crudOptions = (vm) => {
     },
     options: {
       tableType: 'vxe-table',
-      rowKey: true, // must be set, true or false
+      rowKey: true, // 必须设置，true or false
       rowId: 'id',
-      height: '100%', // table height 100%, must be set when using toolbar
+      height: '100%', // 表格高度100%, 使用toolbar必须设置
       highlightCurrentRow: false
 
     },
@@ -35,7 +35,7 @@ export const crudOptions = (vm) => {
         }
       },
       custom: [{
-        show(index, row) {
+        show (index, row) {
           return true
         },
         disabled () {
@@ -48,7 +48,7 @@ export const crudOptions = (vm) => {
       }]
 
     },
-    indexRow: { // Or pass true directly, do not display title, do not center
+    indexRow: { // 或者直接传true,不显示title，不居中
       title: 'S.No.',
       align: 'center',
       width: 100
@@ -58,7 +58,7 @@ export const crudOptions = (vm) => {
       componentType: 'form'
     },
     formOptions: {
-      defaultSpan: 24, // default form span
+      defaultSpan: 24, // 默认的表单 span
       width: '35%'
     },
     columns: [{
@@ -78,7 +78,7 @@ export const crudOptions = (vm) => {
           placeholder: 'Please enter a keyword'
         }
       },
-      view: { // View the individual configuration of the dialog component
+      view: { // 查看对话框组件的单独配置
         disabled: true
       }
     },
@@ -107,7 +107,7 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // form validation rules
+        rules: [ // 表单校验规则
           { required: true, message: 'Role name is required' }
         ],
         component: {
@@ -126,7 +126,7 @@ export const crudOptions = (vm) => {
       key: 'key',
       sortable: true,
       form: {
-        rules: [ // form validation rules
+        rules: [ // 表单校验规则
           { required: true, message: 'Authorization ID required' }
         ],
         component: {
@@ -140,7 +140,7 @@ export const crudOptions = (vm) => {
         }
       }
     }, {
-      title: 'to sort',
+      title: 'Sort',
       key: 'sort',
       sortable: true,
       width: 80,

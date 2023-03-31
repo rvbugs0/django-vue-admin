@@ -9,11 +9,11 @@
       @doDialogClosed="doDialogClosed"
     >
       <div slot="header">
-        <crud-search ref="search" :options="crud.searchOptions" @submit="handleSearch" />
-        <el-button size="small" type="primary" @click="addRow"><i class="el-icon-plus"/> New</el-button>
+        <crud-search ref="search" :options="crud.searchOptions" @submit="handleSearch"  />
+        <el-button size="small" type="primary" @click="addRow"><i class="el-icon-plus"/> add</el-button>
         <el-tabs v-model="tabActivted" @tab-click="onTabClick">
-          <el-tab-pane label="My Posts" name="send"></el-tab-pane>
-          <el-tab-pane label="My Receive" name="receive"></el-tab-pane>
+          <el-tab-pane label="my post" name="send"></el-tab-pane>
+          <el-tab-pane label="my reception" name="receive"></el-tab-pane>
         </el-tabs>
         <crud-toolbar :search.sync="crud.searchOptions.show"
                       :compact.sync="crud.pageOptions.compact"
@@ -37,7 +37,7 @@ export default {
   mixins: [d2CrudPlus.crud],
   data () {
     return {
-      tabActivated: 'send'
+      tabActivted: 'send'
     }
   },
   computed: {
@@ -46,16 +46,16 @@ export default {
     getCrudOptions () {
       return crudOptions(this)
     },
-    pageRequest(query) {
-      if (this. tabActivated === 'receive') {
+    pageRequest (query) {
+      if (this.tabActivted === 'receive') {
         return GetSelfReceive({ ...query })
       }
       return GetList(query)
     },
-    infoRequest(query) {
+    infoRequest (query) {
       return GetObj(query)
     },
-    addRequest(row) {
+    addRequest (row) {
       return AddObj(row).then(res => {
         const message = {
           message_id: res.data.id,
@@ -65,10 +65,10 @@ export default {
         this.$websocket.webSocketSend(message)
       })
     },
-    updateRequest(row) {
+    updateRequest (row) {
       return UpdateObj(row)
     },
-    delRequest(row) {
+    delRequest (row) {
       return DelObj(row.id)
     },
     onView ({ row, index }) {
@@ -77,16 +77,16 @@ export default {
         rowIndex: index,
         template: viewTemplate
       })
-      this. infoRequest(row)
+      this.infoRequest(row)
     },
-    onTabClick(tab) {
+    onTabClick (tab) {
       const { name } = tab
-      this.tabActivated = name
-      this. doRefresh()
+      this.tabActivted = name
+      this.doRefresh()
     },
-    // close event
+    // 关闭事件
     doDialogClosed (context) {
-      this. doRefresh()
+      this.doRefresh()
     }
   }
 }

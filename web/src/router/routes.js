@@ -1,98 +1,98 @@
 import layoutHeaderAside from '@/layout/header-aside'
 import { checkPlugins } from '@/views/plugins/index.js'
-// Since there are too many lazy loaded pages, the hot update of webpack will be too slow, so the development environment does not use lazy loading, only the production environment uses lazy loading
+// 由于懒加载页面太多的话会造成webpack热更新太慢，所以开发环境不使用懒加载，只有生产环境使用懒加载
 const _import = require('@/libs/util.import.' + process.env.NODE_ENV)
 const pluginImport = require('@/libs/util.import.plugin')
 /**
-  * Displayed within the main frame
-  */
+ * 在主框架内显示
+ */
 const frameIn = [{
-   path: '/',
-   redirect: { name: 'index' },
-   component: layoutHeaderAside,
-   children: [
-     // console
-     {
-       path: 'index',
-       name: 'index',
-       meta: {
-         auth: true
-       },
-       component:_import('dashboard/workbench/index')
-     },
-     {
-       path: 'userInfo',
-       name: 'userInfo',
-       meta: {
-         title: 'Personal Information',
-         auth: true
-       },
-       component: () => import('@/layout/header-aside/components/header-user/userinfo')
-     },
-     // dashboard workbench
-     {
-       path: 'workbench',
-       name: 'workbench',
-       meta: {
-         title: 'Workbench',
-         auth: true
-       },
-       component:_import('dashboard/workbench')
-     },
-     // Refresh the page must be kept
-     {
-       path: 'refresh',
-       name: 'refresh',
-       hidden: true,
-       component:_import('system/function/refresh')
-     },
-     // Page redirection must be preserved
-     {
-       path: 'redirect/:route*',
-       name: 'redirect',
-       hidden: true,
-       component:_import('system/function/redirect')
-     }
-   ]
+  path: '/',
+  redirect: { name: 'index' },
+  component: layoutHeaderAside,
+  children: [
+    // 控制台
+    {
+      path: 'index',
+      name: 'index',
+      meta: {
+        auth: true
+      },
+      component: _import('dashboard/workbench/index')
+    },
+    {
+      path: 'userInfo',
+      name: 'userInfo',
+      meta: {
+        title: 'personal information',
+        auth: true
+      },
+      component: () => import('@/layout/header-aside/components/header-user/userinfo')
+    },
+    // dashboard 工作台
+    {
+      path: 'workbench',
+      name: 'workbench',
+      meta: {
+        title: 'workbench',
+        auth: true
+      },
+      component: _import('dashboard/workbench')
+    },
+    // 刷新页面 必须保留
+    {
+      path: 'refresh',
+      name: 'refresh',
+      hidden: true,
+      component: _import('system/function/refresh')
+    },
+    // 页面重定向 必须保留
+    {
+      path: 'redirect/:route*',
+      name: 'redirect',
+      hidden: true,
+      component: _import('system/function/redirect')
+    }
+  ]
 }]
 
 /**
-  * displayed outside the main frame
-  */
+ * 在主框架之外显示
+ */
 const frameOut = [
-   // Log in
-   {
-     path: '/login',
-     name: 'login',
-     component:_import('system/login')
-   }
+  // 登录
+  {
+    path: '/login',
+    name: 'login',
+    component: _import('system/login')
+  }
 ]
 /**
-  * Sign in with
-  */
+ * 第三方登录
+ */
 const pluginsType = checkPlugins('dvadmin-oauth2-web')
 if (pluginsType) {
-   frameOut. push({
-     path: '/oauth2',
-     name: 'login',
-     component: pluginsType === 'local' ? _import('plugins/dvadmin-oauth2-web/src/login/index') : pluginImport('dvadmin-oauth2-web/src/login/index')
-   })
+  frameOut.push({
+    path: '/oauth2',
+    name: 'login',
+    component: pluginsType === 'local' ? _import('plugins/dvadmin-oauth2-web/src/login/index') : pluginImport('dvadmin-oauth2-web/src/login/index')
+  })
 }
 /**
-  * error page
-  */
+ * 错误页面
+ */
 const errorPage = [{
-   path: '/404',
-   name: '404',
-   component:_import('system/error/404')
+  path: '/404',
+  name: '404',
+  component: _import('system/error/404')
 }]
 
-// Export the menu that needs to be displayed
+// 导出需要显示菜单的
 export const frameInRoutes = frameIn
 
-// export after reorganization
+// 重新组织后导出
 export default [
-   ...frameIn,
-   ...frameOut,
-   ...errorPage
+  ...frameIn,
+  ...frameOut,
+  ...errorPage
 ]

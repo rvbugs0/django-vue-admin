@@ -1,10 +1,10 @@
 <!--
-  * @Create file time: 2021-06-01 22:41:21
-  * @Auther: Ape Xiaotian
-  * @last modified by: Yuan Xiaotian
-  * @last modification time: 2021-07-29 22:51:07
-  * Contact Qq:1638245306
-  * @File introduction: Menu button management (entered by the custom permission of the menu)
+ * @创建文件时间: 2021-06-01 22:41:21
+ * @Auther: 猿小天
+ * @最后修改人: 猿小天
+ * @最后修改时间: 2021-07-29 22:51:07
+ * 联系Qq:1638245306
+ * @文件介绍: 菜单按钮管理(由菜单的自定义权限进入)
 -->
 <template>
   <d2-container :class="{ 'page-compact': crud.pageOptions.compact }">
@@ -23,7 +23,7 @@
         />
         <el-button-group>
           <el-button size="small" type="primary" @click="addRow"
-          ><i class="el-icon-plus"/> New
+          ><i class="el-icon-plus"/> add
           </el-button
           >
         </el-button-group>
@@ -53,18 +53,18 @@ export default {
     getCrudOptions () {
       return crudOptions(this)
     },
-    pageRequest(query) {
-      const menuId = this. $route. query. id
-      return api. GetList({ ...query, menu: menuId })
+    pageRequest (query) {
+      const menuId = this.$route.query.id
+      return api.GetList({ ...query, menu: menuId })
     },
-    addRequest(row) {
-      const menuId = this. $route. query. id
+    addRequest (row) {
+      const menuId = this.$route.query.id
       return api.createObj(row, menuId)
     },
-    updateRequest(row) {
+    updateRequest (row) {
       return api.UpdateObj(row)
     },
-    delRequest(row) {
+    delRequest (row) {
       return api.DelObj(row.id)
     }
   }

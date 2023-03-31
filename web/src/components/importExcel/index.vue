@@ -1,7 +1,7 @@
 <template>
   <div style="display: inline-block">
     <el-button size="small" type="success" icon="el-icon-upload" @click="handleImport">
-      <slot>导入</slot>
+      <slot>Import</slot>
     </el-button>
     <el-dialog :title="upload.title" :visible.sync="upload.open" width="400px" append-to-body>
       <div v-loading="loading">
@@ -19,19 +19,19 @@
         >
           <i class="el-icon-upload"/>
           <div class="el-upload__text">
-            将文件拖到此处，或
-            <em>点击上传</em>
+            Drag files here, or
+            <em>Click to upload</em>
           </div>
-          <div slot="tip" class="el-upload__tip" style="color:red">提示：仅允许导入“xls”或“xlsx”格式文件！</div>
+          <div slot="tip" class="el-upload__tip" style="color:red">Tip: Only "xls" or "xlsx" format files are allowed to be imported!</div>
         </el-upload>
         <div>
-          <el-button type="warning" style="font-size:14px;margin-top: 20px" @click="importTemplate">下载导入模板</el-button>
-          <el-button type="warning" style="font-size:14px;margin-top: 20px" @click="updateTemplate">批量更新模板</el-button>
+          <el-button type="warning" style="font-size:14px;margin-top: 20px" @click="importTemplate">Download import template</el-button>
+          <el-button type="warning" style="font-size:14px;margin-top: 20px" @click="updateTemplate">Batch update templates</el-button>
         </div>
       </div>
       <div slot="footer" class="dialog-footer">
-        <el-button type="primary" :disabled="loading" @click="submitFileForm">确 定</el-button>
-        <el-button :disabled="loading" @click="upload.open = false">取 消</el-button>
+        <el-button type="primary" :disabled="loading" @click="submitFileForm">Sure</el-button>
+        <el-button :disabled="loading" @click="upload.open = false">Cancel</el-button>
       </div>
     </el-dialog>
   </div>
@@ -125,8 +125,8 @@ export default {
         }
       }).then(response => {
         that.loading = false
-        that.$alert('导入成功', '导入完成', {
-          confirmButtonText: '确定',
+        that.$alert('Imported successfully', 'import complete', {
+          confirmButtonText: 'Sure',
           callback: action => {
             that.refreshView()
           }

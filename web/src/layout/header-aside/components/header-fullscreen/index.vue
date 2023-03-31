@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip effect="dark" :content="active ? 'Exit full screen' : 'full screen'" placement="bottom">
+  <el-tooltip effect="dark" :content="active ? 'Exit Full Screen' : 'full screen'" placement="bottom">
     <el-button class="d2-mr btn-text can-hover" type="text" @click="toggle">
       <d2-icon v-if="active" name="compress"/>
       <d2-icon v-else name="arrows-alt" style="font-size: 16px"/>

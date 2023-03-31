@@ -13,8 +13,8 @@
           <h2 style="text-align: center">{{ siteName || processTitle }}</h2>
           <el-card shadow="always" class="card">
             <el-tabs v-model="activeName">
-              <el-tab-pane label="Login" name="first" stretch>
-                <span slot="label"><span style="margin: 30px">Login</span></span>
+              <el-tab-pane label="账号密码登录" name="first" stretch>
+                <span slot="label"><span style="margin: 30px">账号密码登录</span></span>
                 <br/>
                 <el-form
                   ref="loginForm"
@@ -28,7 +28,7 @@
                       type="text"
                       v-model="formLogin.username"
                       prefix-icon="el-icon-user-solid"
-                      placeholder="username"
+                      placeholder="用户名"
                     >
                     </el-input>
                   </el-form-item>
@@ -38,7 +38,7 @@
                       v-model="formLogin.password"
                       prefix-icon="el-icon-s-promotion"
                       show-password
-                      placeholder="password"
+                      placeholder="密码"
                       @keyup.enter.native='submit'
                     >
                     </el-input>
@@ -46,12 +46,12 @@
                   <el-form-item
                     prop="captcha"
                     v-if="captchaState"
-                    :rules="{required: true,message: 'please enter verification code',trigger: 'blur'}"
+                    :rules="{required: true,message: '请输入验证码',trigger: 'blur'}"
                   >
                     <el-input
                       type="text"
                       v-model="formLogin.captcha"
-                      placeholder="verification code"
+                      placeholder="验证码"
                       @keyup.enter.native="submit"
                     >
                       <template slot="append">
@@ -69,7 +69,7 @@
                   </el-form-item>
                 </el-form>
                 <button class="btn btn-primary btn-block" style="padding: 10px 10px;" @click="submit">
-                  login
+                  登录
                 </button>
                 <component v-if="componentTag" :is="componentTag"></component>
               </el-tab-pane>
@@ -82,7 +82,7 @@
             @click="selectUsersDialogVisible = true"
             v-if="$env === 'development'"
           >
-          Quickly select user login (dev environment only)
+            快速选择用户登录（限dev环境）
           </el-button>
           <!-- footer -->
           <div class="footer">
@@ -112,7 +112,7 @@
       <!-- //main content -->
     </div>
     <!-- //container -->
-    <el-dialog title="Quickly select users" :visible.sync="selectUsersDialogVisible" width="400px" append-to-body>
+    <el-dialog title="快速选择用户" :visible.sync="selectUsersDialogVisible" width="400px" append-to-body>
       <el-row :gutter="10" style="margin: -20px 0px -10px 0px">
         <el-col v-for="(user, index) in users" :key="index" :span="8">
           <div class="page-login--quick-user" @click="handleUserBtnClick(user)">

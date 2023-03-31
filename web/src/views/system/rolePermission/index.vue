@@ -1,10 +1,10 @@
 <!--
-  * @Create file time: 2021-06-01 22:41:21
-  * @Auther: Ape Xiaotian
-  * @last modified by: Yuan Xiaotian
-  * @last modification time: 2021-09-26 21:18:29
-  * Contact Qq:1638245306
-  * @File Introduction: Authorization Management
+ * @创建文件时间: 2021-06-01 22:41:21
+ * @Auther: 猿小天
+ * @最后修改人: 猿小天
+ * @最后修改时间: 2021-09-26 21:18:29
+ * 联系Qq:1638245306
+ * @文件介绍:授权管理
 -->
 <template>
   <div>
@@ -12,9 +12,9 @@
       <el-button
         type="primary"
         size="mini"
-        @click="submitPermission"
+        @click="submitPermisson"
         v-permission="'Save'"
-      > save
+      >Save
       </el-button>
     </div>
     <el-container style="height: 80vh; border: 1px solid #eee">
@@ -23,7 +23,7 @@
           <div style="margin-bottom: 20px">
             <div class="yxt-flex-align-center">
               <div class="yxt-divider"></div>
-              <span>data authorization</span>
+              <span>Data authorization</span>
               <el-tooltip
                 class="item"
                 effect="dark"
@@ -50,7 +50,7 @@
             </el-select>
           </div>
 
-          <div v-show="roleObj. data_range === 4" class="dept-tree">
+          <div v-show="roleObj.data_range === 4" class="dept-tree">
             <el-tree
               :data="deptOptions"
               show-checkbox
@@ -103,7 +103,7 @@
                     <el-checkbox
                       v-for="(item, index) in data.menuPermission"
                       :key="index"
-                      v-model="item. checked"
+                      v-model="item.checked"
                     >{{ item.name }}</el-checkbox>
                   </div>
                 </div>
@@ -122,230 +122,230 @@ import * as api from './api'
 import XEUtils from 'xe-utils'
 
 export default {
-   name: 'rolePermission',
-   props: {
-     roleObj: {
-       type: Object,
-       default () {
-         return {
-           name: null,
-           data_range: null
-         }
-       }
-     }
-   },
-   data () {
-     return {
-       filterText: '',
-       data: [],
-       menuOptions: [],
-       permissionData: [],
-       menuCheckedKeys: [], // The node selected by default in the menu
-       menuCheckStrictly: false,
-       deptOptions: [],
-       deptCheckedKeys: [],
-       dataScopeOptions: [
-         {
-           value: 0,
-           label: 'Only personal data permission'
-         },
-         {
-           value: 1,
-           label: 'This department and the following data permissions'
-         },
-         {
-           value: 2,
-           label: 'Data permission of this department'
-         },
-         {
-           value: 3,
-           label: 'Full Data Access'
-         },
-         {
-           value: 4,
-           label: 'Custom Data Permissions'
-         }
-       ],
-       dataAuthorizationTips: 'The range of data that authorized users can operate',
-       menuAuthorizationTips: 'Authorized users can operate the range in the menu'
-     }
-   },
-   watch: {
-     filterText(val) {
-       this.$refs.tree.filter(val)
-     }
-   },
-   methods: {
-     filterNode(value, data) {
-       if (!value) return true
-       return data.label.indexOf(value) !== -1
-     },
-     getCrudOptions () {
-       // eslint-disable-next-line no-undef
-       return crudOptions(this)
-     },
-     pageRequest(query) {
-       return api.GetList(query).then(res => {
-         res. map((value, index) => {
-           value.node_id = index
-         })
-         this.data = res
-         this.$nextTick().then(() => {
-           this.initNode()
-         })
-       })
-     },
-     initNode () {
-       this. getDeptData()
-       this. getMenuData(this. roleObj)
-       this.menuCheckedKeys = this.roleObj.menu // load checked menu
-       this.menuCheckStrictly = true // parent and child are not related to each other
-       this.deptCheckedKeys = this.roleObj.dept
-       this. GetDataScope()
-     },
-     addRequest(row) {
-       return api.createObj(row)
-     },
-     updateRequest(row) {
-       return api.UpdateObj(row)
-     },
-     delRequest(row) {
-       return api.DelObj(row.id)
-     },
-     // get department data
-     getDeptData() {
-       api.GetDataScopeDept().then(ret => {
-         this.deptOptions = XEUtils.toArrayTree(ret.data, { parentKey: 'parent', strict: false })
-       })
-     },
-     // get menu data
-     getMenuData(data) {
-       api.GetMenuData(data).then(res => {
-         res.forEach(x => {
-           // Check menuPermisson according to the permission of the current role
-           x.menuPermission.forEach(a => {
-             if (data. permission. indexOf(a. id) > -1) {
-               this. $set(a, 'checked', true)
-             } else {
-               this. $set(a, 'checked', false)
-             }
-           })
-         })
-         // Convert menu list to tree list
-         this.menuOptions = XEUtils.toArrayTree(res, {
-           parentKey: 'parent',
-           strict: true
-         })
-       })
-     },
-     // Get permission scope
-     GetDataScope () {
-       api.GetDataScope().then(res => {
-         this.dataScopeOptions = res.data
-       })
-     },
-     // All check menu node data
-     getMenuAllCheckedKeys () {
-       // currently selected menu node
-       const checkedKeys = this.$refs.menuTree.getCheckedKeys()
-       // Half-selected menu node
-       const halfCheckedKeys = this.$refs.menuTree.getHalfCheckedKeys()
-       checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
-       return checkedKeys
-     },
-     // For all custom permissions, the checked department node data
-     getDeptAllCheckedKeys() {
-       // currently selected department node
-       const checkedKeys = this. $refs. dept. getCheckedKeys()
-       // Semi-selected department nodes
-       const halfCheckedKeys = this.$refs.dept.getHalfCheckedKeys()
-       checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
-       return checkedKeys
-     },
-     // Submit changes
-     submitPermission () {
-       this.roleObj.menu = this.getMenuAllCheckedKeys() // Get the selected menu
-       this.roleObj.dept = this.getDeptAllCheckedKeys() // Get the selected department
-       const menuData = XEUtils.toTreeArray(this.menuOptions)
-       const permissionData = []
-       menuData.forEach(x => {
-         const checkedPermission = x.menuPermission.filter(f => {
-           return f. checked
-         })
+  name: 'rolePermission',
+  props: {
+    roleObj: {
+      type: Object,
+      default () {
+        return {
+          name: null,
+          data_range: null
+        }
+      }
+    }
+  },
+  data () {
+    return {
+      filterText: '',
+      data: [],
+      menuOptions: [],
+      permissionData: [],
+      menuCheckedKeys: [], // 菜单默认选中的节点
+      menuCheckStrictly: false,
+      deptOptions: [],
+      deptCheckedKeys: [],
+      dataScopeOptions: [
+        {
+          value: 0,
+          label: 'Only personal data permission'
+        },
+        {
+          value: 1,
+          label: 'This department and the following data permissions'
+        },
+        {
+          value: 2,
+          label: 'Data permission of this department'
+        },
+        {
+          value: 3,
+          label: 'Full Data Access'
+        },
+        {
+          value: 4,
+          label: 'Custom Data Permissions'
+        }
+      ],
+      dataAuthorizationTips: 'Authorized users can operate the scope of data',
+      menuAuthorizationTips: 'Authorized users can operate the range in the menu'
+    }
+  },
+  watch: {
+    filterText (val) {
+      this.$refs.tree.filter(val)
+    }
+  },
+  methods: {
+    filterNode (value, data) {
+      if (!value) return true
+      return data.label.indexOf(value) !== -1
+    },
+    getCrudOptions () {
+      // eslint-disable-next-line no-undef
+      return crudOptions(this)
+    },
+    pageRequest (query) {
+      return api.GetList(query).then(res => {
+        res.map((value, index) => {
+          value.node_id = index
+        })
+        this.data = res
+        this.$nextTick().then(() => {
+          this.initNode()
+        })
+      })
+    },
+    initNode () {
+      this.getDeptData()
+      this.getMenuData(this.roleObj)
+      this.menuCheckedKeys = this.roleObj.menu // 加载已勾选的菜单
+      this.menuCheckStrictly = true // 父子不相互关联
+      this.deptCheckedKeys = this.roleObj.dept
+      this.GetDataScope()
+    },
+    addRequest (row) {
+      return api.createObj(row)
+    },
+    updateRequest (row) {
+      return api.UpdateObj(row)
+    },
+    delRequest (row) {
+      return api.DelObj(row.id)
+    },
+    // 获取部门数据
+    getDeptData () {
+      api.GetDataScopeDept().then(ret => {
+        this.deptOptions = XEUtils.toArrayTree(ret.data, { parentKey: 'parent', strict: false })
+      })
+    },
+    // 获取菜单数据
+    getMenuData (data) {
+      api.GetMenuData(data).then(res => {
+        res.forEach(x => {
+          // 根据当前角色的permission,对menuPermisson进行勾选处理
+          x.menuPermission.forEach(a => {
+            if (data.permission.indexOf(a.id) > -1) {
+              this.$set(a, 'checked', true)
+            } else {
+              this.$set(a, 'checked', false)
+            }
+          })
+        })
+        // 将菜单列表转换为树形列表
+        this.menuOptions = XEUtils.toArrayTree(res, {
+          parentKey: 'parent',
+          strict: true
+        })
+      })
+    },
+    // 获取权限范围
+    GetDataScope () {
+      api.GetDataScope().then(res => {
+        this.dataScopeOptions = res.data
+      })
+    },
+    // 所有勾选菜单节点数据
+    getMenuAllCheckedKeys () {
+      // 目前被选中的菜单节点
+      const checkedKeys = this.$refs.menuTree.getCheckedKeys()
+      // 半选中的菜单节点
+      const halfCheckedKeys = this.$refs.menuTree.getHalfCheckedKeys()
+      checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
+      return checkedKeys
+    },
+    // 所有自定义权限时,勾选的部门节点数据
+    getDeptAllCheckedKeys () {
+      // 目前被选中的部门节点
+      const checkedKeys = this.$refs.dept.getCheckedKeys()
+      // 半选中的部门节点
+      const halfCheckedKeys = this.$refs.dept.getHalfCheckedKeys()
+      checkedKeys.unshift.apply(checkedKeys, halfCheckedKeys)
+      return checkedKeys
+    },
+    // 提交修改
+    submitPermisson () {
+      this.roleObj.menu = this.getMenuAllCheckedKeys() // 获取选中的菜单
+      this.roleObj.dept = this.getDeptAllCheckedKeys() // 获取选中的部门
+      const menuData = XEUtils.toTreeArray(this.menuOptions)
+      const permissionData = []
+      menuData.forEach(x => {
+        const checkedPermission = x.menuPermission.filter(f => {
+          return f.checked
+        })
 
-         if (checkedPermission. length > 0) {
-           for (const item of checkedPermission) {
-             permissionData. push(item. id)
-           }
-         }
-       })
-       this.roleObj.permission = permissionData
-       return this.updateRequest(this.roleObj).then(res => {
-         this.$message.success('update completed')
-       })
-     },
-     /** Select role permission range trigger */
-     dataScopeSelectChange (value) {
-       if (value !== 4) {
-         // this.$refs.dept.setCheckedKeys([]);
-       }
-     },
-     /**
-      * Click on the menu tree, select all the permissions and part of the data
-      * @param data
-      */
-      handleCheckClick(data, checked) {
-       const {
-         menuPermission,
-         children,
-         parents
-       } = data
-       this.menuCheckStrictly = false
-       for (const item of menuPermission) {
-         this.$set(item, 'checked', checked)
-       }
-       if (children && parent) {
-         for (const item of children) {
-           this.$refs.menuTree.setChecked(item.id, checked)
-         }
-       }
-     }
-   },
-   created () {
-     this. pageRequest()
-   }
+        if (checkedPermission.length > 0) {
+          for (const item of checkedPermission) {
+            permissionData.push(item.id)
+          }
+        }
+      })
+      this.roleObj.permission = permissionData
+      return this.updateRequest(this.roleObj).then(res => {
+        this.$message.success('update completed')
+      })
+    },
+    /** 选择角色权限范围触发 */
+    dataScopeSelectChange (value) {
+      if (value !== 4) {
+        // this.$refs.dept.setCheckedKeys([]);
+      }
+    },
+    /**
+     * 菜单树点击,全选权限部分数据
+     * @param data
+     */
+    handleCheckClick (data, checked) {
+      const {
+        menuPermission,
+        children,
+        parent
+      } = data
+      this.menuCheckStrictly = false
+      for (const item of menuPermission) {
+        this.$set(item, 'checked', checked)
+      }
+      if (children && parent) {
+        for (const item of children) {
+          this.$refs.menuTree.setChecked(item.id, checked)
+        }
+      }
+    }
+  },
+  created () {
+    this.pageRequest()
+  }
 }
 </script>
 
 <style lang="scss">
 .yxtInput {
-   .el-form-item__label {
-     color: #49a1ff;
-   }
+  .el-form-item__label {
+    color: #49a1ff;
+  }
 }
 
 .dept-tree::-webkit-scrollbar {
-   display: none; /* Chrome Safari */
+  display: none; /* Chrome Safari */
 }
 
 .dept-tree {
-   height: 160px;
-   overflow-y: scroll;
-   scrollbar-width: none; /* firefox */
-   -ms-overflow-style: none; /* IE 10+ */
+  height: 160px;
+  overflow-y: scroll;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
 
 .flow-tree {
-   overflow: auto;
-   flex: 1;
+  overflow: auto;
+  flex: 1;
 
-   margin: 10px;
+  margin: 10px;
 
-   .el-tree-node {
-     .el-tree-node__children {
-       overflow: visible !important
-     }
-   }
+  .el-tree-node {
+    .el-tree-node__children {
+      overflow: visible !important
+    }
+  }
 }
 
 </style>

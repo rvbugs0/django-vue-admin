@@ -2,7 +2,7 @@
   <div class="page">
     <p class="page_title">404 page not found</p>
     <el-button class="d2-mt" @click="$router.replace({ path: '/' })">
-      back to console
+      返回控制台
     </el-button>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <style lang="scss" scoped>
 .page {
   background: #303133;
-  background-blend-mode: multiply, multiply;
+  background-blend-mode: multiply,multiply;
   height: 100%;
   display: flex;
   justify-content: center;

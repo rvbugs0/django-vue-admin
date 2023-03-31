@@ -20,7 +20,7 @@
           <el-tab-pane
             v-for="page in opened"
             :key="page.fullPath"
-            :label="page.meta.title || '未命名'"
+            :label="page.meta.title || 'unnamed'"
             :name="page.fullPath"
             :closable="isTabClosable(page)"/>
         </el-tabs>
@@ -36,19 +36,19 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="left">
             <d2-icon name="arrow-left" class="d2-mr-10"/>
-            关闭左侧
+            close left
           </el-dropdown-item>
           <el-dropdown-item command="right">
             <d2-icon name="arrow-right" class="d2-mr-10"/>
-            关闭右侧
+            close right
           </el-dropdown-item>
           <el-dropdown-item command="other">
             <d2-icon name="times" class="d2-mr-10"/>
-            关闭其它
+            close other
           </el-dropdown-item>
           <el-dropdown-item command="all">
             <d2-icon name="times-circle" class="d2-mr-10"/>
-            全部关闭
+            close all
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -71,14 +71,14 @@ export default {
       contentmenuX: 0,
       contentmenuY: 0,
       contextmenuListIndex: [
-        { icon: 'times-circle', title: '关闭全部', value: 'all' }
+        { icon: 'times-circle', title: 'close all', value: 'all' }
       ],
       contextmenuList: [
-        { icon: 'refresh', title: '刷新', value: 'refresh' },
-        { icon: 'arrow-left', title: '关闭左侧', value: 'left' },
-        { icon: 'arrow-right', title: '关闭右侧', value: 'right' },
-        { icon: 'times', title: '关闭其它', value: 'other' },
-        { icon: 'times-circle', title: '关闭全部', value: 'all' }
+        { icon: 'refresh', title: 'to refresh', value: 'refresh' },
+        { icon: 'arrow-left', title: 'close left', value: 'left' },
+        { icon: 'arrow-right', title: 'close right', value: 'right' },
+        { icon: 'times', title: 'close other', value: 'other' },
+        { icon: 'times-circle', title: 'close all', value: 'all' }
       ],
       tagName: '/index'
     }
@@ -148,7 +148,7 @@ export default {
         case 'right': this.closeRight(params); break
         case 'other': this.closeOther(params); break
         case 'all': this.closeAll(); break
-        default: this.$message.error('无效的操作'); break
+        default: this.$message.error('invalid operation'); break
       }
     },
     /**

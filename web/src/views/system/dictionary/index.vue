@@ -1,6 +1,6 @@
 <template>
   <d2-container :class="{ 'page-compact': crud.pageOptions.compact }">
-    <!-- <template slot="header">Test page 1</template>-->
+    <!--    <template slot="header">测试页面1</template>-->
     <d2-crud-x
       ref="d2Crud"
       v-bind="_crudProps"
@@ -15,7 +15,7 @@
         />
         <el-button-group>
           <el-button size="small" type="primary" @click="addRow"
-            ><i class="el-icon-plus" />Add</el-button
+            ><i class="el-icon-plus" /> 新增</el-button
           >
         </el-button-group>
         <crud-toolbar
@@ -29,7 +29,7 @@
     </d2-crud-x>
     <el-drawer :visible.sync="drawer" :size="700">
       <div slot="title">
-        <span>list of dictionaries</span>
+        <span>字典列表</span>
         <el-tag size="small" style="margin-left: 10px">{{
           dictionaryRow.label
         }}</el-tag>
@@ -62,27 +62,27 @@ export default {
     getCrudOptions () {
       return crudOptions(this)
     },
-    pageRequest(query) {
+    pageRequest (query) {
       query.is_value = false
-      return api. GetList(query)
+      return api.GetList(query)
     },
-    addRequest(row) {
+    addRequest (row) {
       d2CrudPlus.util.dict.clear()
       return api.createObj(row)
     },
-    updateRequest(row) {
+    updateRequest (row) {
       d2CrudPlus.util.dict.clear()
       return api.UpdateObj(row)
     },
-    delRequest(row) {
+    delRequest (row) {
       return api.DelObj(row.id)
     },
-    // dictionary configuration
-    dictionaryConfigure(scope) {
+    // 字典配置
+    dictionaryConfigure (scope) {
       this.drawer = true
       this.dictionaryRow = scope.row
     },
-    doAfterRowChange(row) {
+    doAfterRowChange (row) {
       this.doRefresh({ from: 'afterRowChange' })
       this.$store.dispatch('d2admin/dictionary/load')
     }

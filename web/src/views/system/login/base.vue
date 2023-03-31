@@ -28,14 +28,14 @@ export default {
         username: [
           {
             required: true,
-            message: 'please enter user name',
+            message: '请输入用户名',
             trigger: 'blur'
           }
         ],
         password: [
           {
             required: true,
-            message: 'please enter password',
+            message: '请输入密码',
             trigger: 'blur'
           }
         ]
@@ -46,12 +46,12 @@ export default {
       selectUsersDialogVisible: false,
       users: [
         {
-          name: 'Superadmin',
+          name: '超管',
           username: 'superadmin',
           password: 'admin123456'
         },
         {
-          name: 'administrator',
+          name: '管理员',
           username: 'admin',
           password: 'admin123456'
         }
@@ -114,7 +114,7 @@ export default {
             })
         } else {
           // 登录表单校验失败
-          this.$message.error('Form validation failed, please check')
+          this.$message.error('表单校验失败，请检查')
         }
       })
     },

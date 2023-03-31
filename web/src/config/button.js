@@ -3,32 +3,32 @@ export const BUTTON_VALUE_TO_COLOR_MAPPING = {
   true: 'success',
   0: 'danger',
   false: 'danger',
-  Search: 'warning', // query
-  Update: 'primary', // edit
-  Create: 'success', // add
-  Retrieve: 'info', // singleton
-  Delete: 'danger' // delete
+  Search: 'warning', // 查询
+  Update: 'primary', // 编辑
+  Create: 'success', // 新增
+  Retrieve: 'info', // 单例
+  Delete: 'danger' // 删除
 }
 
 export function getButtonSettings (objectSettings) {
-  return objectSettings. map(item => {
+  return objectSettings.map(item => {
     return {
       label: item.label,
-      value: item. value,
+      value: item.value,
       color: BUTTON_VALUE_TO_COLOR_MAPPING[item.value]
     }
   })
 }
-// deprecated in v2.0.2, changed to vm.dictionary('button_status_bool')
-// enable true/disable false
-export const BUTTON_STATUS_BOOL = getButtonSettings([{ label: 'enabled', value: true }, { label: 'disabled', value: false }])
+// v2.0.2 中已弃用，改为 vm.dictionary('button_status_bool')
+// 启用 true/ 禁用 false
+export const BUTTON_STATUS_BOOL = getButtonSettings([{ label: 'Enabled', value: true }, { label: 'Disabled', value: false }])
 
-// enable 1/disable 0
+// 启用 1/ 禁用 0
 export const BUTTON_STATUS_NUMBER = getButtonSettings([{ label: 'Enabled', value: 1 }, { label: 'Disabled', value: 0 }])
 
-// yes 1/ no 0
+// 是 1/ 否 0
 export const BUTTON_WHETHER_NUMBER = getButtonSettings([{ label: 'Yes', value: 1 }, { label: 'No', value: 0 }])
-// is true/no false
+// 是 true/ 否 false
 export const BUTTON_WHETHER_BOOL = getButtonSettings([{ label: 'Yes', value: true }, { label: 'No', value: false }])
-// user type
-export const USER_TYPE = getButtonSettings([{ label: 'background user', value: 0 }, { label: 'foreground user', value: 1 }])
+// 用户类型
+export const USER_TYPE = getButtonSettings([{ label: 'Background user', value: 0 }, { label: 'Foreground user', value: 1 }])

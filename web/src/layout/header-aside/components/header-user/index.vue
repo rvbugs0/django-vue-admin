@@ -1,10 +1,10 @@
 <!--
-  * @Create file time: 2021-06-01 22:41:20
-  * @Auther: Ape Xiaotian
-  * @last modified by: Yuan Xiaotian
-  * @last modification time: 2021-07-27 00:18:52
-  * Contact Qq:1638245306
-  * @file description:
+ * @创建文件时间: 2021-06-01 22:41:20
+ * @Auther: 猿小天
+ * @最后修改人: 猿小天
+ * @最后修改时间: 2021-07-27 00:18:52
+ * 联系Qq:1638245306
+ * @文件介绍:
 -->
 <template>
   <el-dropdown size="small" class="d2-mr">
@@ -15,7 +15,7 @@
       v-if="isTenants"
       >
       <span>
-        Current tenant: {{info.tenant_name}}
+        Current tenant：{{info.tenant_name}}
       </span>
       <span class="btn-text">{{
       info.name ? `Hi ${info.name}` : "not logged in"
@@ -26,11 +26,11 @@
     }}</span>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item @click.native="userInfo">
-        <d2-icon name="cog" class="d2-mr-5" />Personal Information
+        <d2-icon name="cog" class="d2-mr-5" />Personal information
       </el-dropdown-item>
       <el-dropdown-item @click.native="logOff" divided>
         <d2-icon name="power-off" class="d2-mr-5" />
-        log out
+        logout
       </el-dropdown-item>
     </el-dropdown-menu>
     <el-image v-if="info.avatar" :src="info.avatar" :preview-src-list="[info.avatar]" style="width: 20px;height: 20px;border-radius: 20%;top: 5px;" alt="Avatar"></el-image>
@@ -51,16 +51,16 @@ export default {
   methods: {
     ...mapActions('d2admin/account', ['logout']),
     /**
-     * @description logout
+     * @description 登出
      */
     logOff () {
-      this. logout({
+      this.logout({
         confirm: true
       })
     },
-    /** personal information */
+    /** 个人信息 */
     userInfo () {
-      this. $router. push({ path: 'userInfo' })
+      this.$router.push({ path: 'userInfo' })
     }
   }
 }

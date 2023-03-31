@@ -2,13 +2,13 @@
   <div>
     <el-form ref="form" :model="form" :rules="rules" label-width="80px">
       <el-form-item label="title" prop="title">
-        <el-input v-model="form. title"></el-input>
+        <el-input v-model="form.title"></el-input>
       </el-form-item>
       <el-form-item label="key value" prop="key">
         <el-input v-model="form.key"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">Create Now</el-button>
+        <el-button type="primary" @click="onSubmit">create now</el-button>
         <el-button>Cancel</el-button>
       </el-form-item>
     </el-form>
@@ -41,7 +41,7 @@ export default {
           },
           {
             pattern: /^[A-Za-z0-9]+$/,
-            message: 'Only English and numbers'
+            message: 'English and numbers only'
           }
         ]
       }
@@ -53,11 +53,11 @@ export default {
       that.$refs.form.validate((valid) => {
         if (valid) {
           api.createObj(that.form).then(res => {
-            this.$message.success('Add success')
-            this. refreshView()
+            this.$message.success('added successfully')
+            this.refreshView()
           })
         } else {
-          console. log('error submit!!')
+          console.log('error submit!!')
           return false
         }
       })

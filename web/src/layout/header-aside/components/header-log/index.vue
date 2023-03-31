@@ -1,10 +1,10 @@
 <!--
-  * @Create file time: 2021-06-01 22:41:20
-  * @Auther: Ape Xiaotian
-  * @last modified by: Yuan Xiaotian
-  * @last modification time: 2021-06-09 11:37:44
-  * Contact Qq:1638245306
-  * @file introduction: front-end log
+ * @创建文件时间: 2021-06-01 22:41:20
+ * @Auther: 猿小天
+ * @最后修改人: 猿小天
+ * @最后修改时间: 2021-06-09 11:37:44
+ * 联系Qq:1638245306
+ * @文件介绍: 前端日志
 -->
 <template>
   <el-tooltip effect="dark" :content="tooltipContent" placement="bottom">
@@ -38,19 +38,19 @@ export default {
       logLengthError: 'log/lengthError'
     }),
     tooltipContent () {
-      return this. logLength === 0
-        ? 'No logs or exceptions'
-        : `${this.logLength} logs ${
+      return this.logLength === 0
+        ? 'no logs or exceptions'
+        : `${this.logLength} log${
             this.logLengthError > 0
-              ? ` | Contains ${this.logLengthError} exceptions`
+              ? ` | contains ${this.logLengthError} exception`
               : ''
           }`
     }
   },
   methods: {
     ...mapMutations('d2admin/log', ['clean']),
-    handleClick() {
-      this. $router. push({
+    handleClick () {
+      this.$router.push({
         name: 'frontendLog'
       })
     }

@@ -13,7 +13,7 @@
       <el-button
         class="d2-ml-0 d2-mr btn-text can-hover"
         type="text"
-        slot="reference" @click="getList">
+        slot="reference"  @click="getList">
         <el-badge
           v-if="unread > 0"
           :max="99"
@@ -54,7 +54,7 @@ export default {
     }
   },
   methods: {
-    getList() {
+    getList () {
       request({
         url: '/api/system/message_center/get_newest_msg/',
         method: 'get',

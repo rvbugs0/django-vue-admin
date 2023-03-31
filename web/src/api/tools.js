@@ -43,7 +43,7 @@ export function response (data = {}, msg = '', code = 0) {
  * @param {Any} data 返回值
  * @param {String} msg 状态信息
  */
-export function responseSuccess (data = {}, msg = '成功') {
+export function responseSuccess (data = {}, msg = 'Success') {
   return response(data, msg)
 }
 
@@ -53,7 +53,7 @@ export function responseSuccess (data = {}, msg = '成功') {
  * @param {String} msg 状态信息
  * @param {Number} code 状态码
  */
-export function responseError (data = {}, msg = '请求失败', code = 500) {
+export function responseError (data = {}, msg = 'Request failed', code = 500) {
   return response(data, msg, code)
 }
 
@@ -64,7 +64,7 @@ export function responseError (data = {}, msg = '请求失败', code = 500) {
 export function errorLog (error) {
   // 添加到日志
   store.dispatch('d2admin/log/push', {
-    message: '数据请求异常',
+    message: 'Data request exception',
     type: 'danger',
     meta: {
       error

@@ -15,16 +15,15 @@
       <el-col :span="12">
         <div class="grid-content bg-purple">
 
-          <el-card class="box-card">
+          <el-card class="box-card" >
             <div slot="header" class="clearfix">
               <span>Dashboard</span>
             </div>
             <el-row>
-              <el-col :span="8" v-for="({ name, icon, route, color }, index) of navigators" :key="index" style="padding: 0">
+              <el-col :span="8" v-for="({name,icon,route,color},index) of navigators" :key="index" style="padding: 0">
                 <el-card shadow="hover">
-                  <div style="display: flex;align-items: center;flex-direction: column;cursor: pointer"
-                    @click="() => { gotoRoute(route) }">
-                    <d2-icon-svg :name="icon" style="width: 25px;height: 25px;" :style="{ fill: color }" />
+                  <div  style="display: flex;align-items: center;flex-direction: column;cursor: pointer" @click="()=>{gotoRoute(route)}">
+                    <d2-icon-svg :name="icon" style="width: 25px;height: 25px;" :style="{fill:color}"/>
                     <div style="text-align: center;font-size: 12px;margin-top: 20px" v-text="name"></div>
                   </div>
                 </el-card>
@@ -35,11 +34,11 @@
         </div>
       </el-col>
       <el-col :span="12">
-        <el-card class="box-card" style="margin-top: 25px">
-          <div class="work">
-            <d2-icon-svg name="work" style="margin-left: 50%;transform: translateX(-50%);height: 216px" />
-          </div>
-        </el-card>
+        <el-card class="box-card"  style="margin-top: 25px">
+            <div class="work">
+              <d2-icon-svg name="work" style="margin-left: 50%;transform: translateX(-50%);height: 216px"/>
+            </div>
+          </el-card>
 
       </el-col>
 
@@ -68,7 +67,7 @@ use([
 ])
 export default {
   name: 'workbench',
-  data() {
+  data () {
     return {
       projects: [],
       navigators: [
@@ -124,18 +123,18 @@ export default {
       chartData: {
         columns: ['日期', '销售额'],
         rows: [
-          { 日期: '1月1日', 销售额: 123 },
-          { 日期: '1月2日', 销售额: 1223 },
-          { 日期: '1月3日', 销售额: 2123 },
-          { 日期: '1月4日', 销售额: 4123 },
-          { 日期: '1月5日', 销售额: 3123 },
-          { 日期: '1月6日', 销售额: 7123 }
-        ]
+        { Date: 'January 1st', Sales: 123 },
+           { Date: 'January 2', Sales: 1223 },
+           { Date: 'January 3', Sales: 2123 },
+           { Date: 'January 4th', Sales: 4123 },
+           { Date: 'January 5th', Sales: 3123 },
+           { Date: 'January 6th', Sales: 7123 }        
+          ]
       }
     }
   },
   methods: {
-    gotoRoute(route) {
+    gotoRoute (route) {
       this.$router.push(route)
     }
   }
@@ -143,101 +142,92 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$userAvatarLength: 72px;
 
-.page-header {
-  box-sizing: border-box;
-  padding: 16px;
+  $userAvatarLength: 72px;
 
-  .user-avatar {
-    width: $userAvatarLength;
-    height: $userAvatarLength;
-    line-height: $userAvatarLength;
-    display: inline-block;
-  }
-
-  .title {
-    display: inline-block;
-    padding: 0 0 0 15px;
-    position: relative;
-    top: -5px;
-
-    h1 {
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1.75rem;
+  .page-header{
+    box-sizing: border-box;
+    padding: 16px;
+    .user-avatar{
+        width: $userAvatarLength;
+        height: $userAvatarLength;
+        line-height: $userAvatarLength;
+      display: inline-block;
     }
 
-    span {
+    .title{
+      display: inline-block;
+      padding: 0 0 0 15px;
+      position: relative;
+      top: -5px;
+
+      h1{
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+      }
+      span{
+        font-size: 14px;
+        color: rgba(0,0,0,.45);
+      }
+    }
+
+  }
+
+  .project-detail{
+    color: rgba(0,0,0,.45);
+    height: 65px;
+     img {
+       width: 25px;
+       height: 25px;
+     }
+    .name{
+      margin-left: 1rem;
+      font-size: 1rem;
+      line-height: 2rem;
+      height: 2rem;
+      display: inline-block;
+      color: rgba(0,0,0,.85);
+      position: relative;
+      top: -5px;
+    }
+    .slogan{
+      font-size: 12px;
+      padding: 5px 0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+    .team{
       font-size: 14px;
-      color: rgba(0, 0, 0, .45);
     }
   }
 
-}
-
-.project-detail {
-  color: rgba(0, 0, 0, .45);
-  height: 65px;
-
-  img {
-    width: 25px;
-    height: 25px;
+  .activity{
+    padding: 0;
+    .activity-avatar{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .activity-detail{
+      padding: 10px;
+      line-height: 15px;
+      font-size: 14px;
+      color: rgba(0,0,0,.85);
+    }
+  }
+  .chart {
+    height: 408px;
   }
 
-  .name {
-    margin-left: 1rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    height: 2rem;
-    display: inline-block;
-    color: rgba(0, 0, 0, .85);
-    position: relative;
-    top: -5px;
+  .el-divider--horizontal{
+    margin: 4px 0;
+    background: 0 0;
+    border-top: 1px solid #e8eaec;
+
   }
-
-  .slogan {
-    font-size: 12px;
-    padding: 5px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .el-card, .el-message {
+    border-radius: 0;
   }
-
-  .team {
-    font-size: 14px;
-  }
-}
-
-.activity {
-  padding: 0;
-
-  .activity-avatar {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-
-  .activity-detail {
-    padding: 10px;
-    line-height: 15px;
-    font-size: 14px;
-    color: rgba(0, 0, 0, .85);
-  }
-}
-
-.chart {
-  height: 408px;
-}
-
-.el-divider--horizontal {
-  margin: 4px 0;
-  background: 0 0;
-  border-top: 1px solid #e8eaec;
-
-}
-
-.el-card,
-.el-message {
-  border-radius: 0;
-}</style>
+</style>

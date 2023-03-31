@@ -18,10 +18,10 @@ export default {
   data () {
     return {
       options: [
-        { label: 'default', value: 'default' },
-        { label: 'medium', value: 'medium' },
-        { label: 'small', value: 'small' },
-        { label: 'minimum', value: 'mini' }
+        { label: 'Default', value: 'default' },
+        { label: 'Medium', value: 'medium' },
+        { label: 'Small', value: 'small' },
+        { label: 'Minimum', value: 'mini' }
       ]
     }
   },
@@ -37,16 +37,16 @@ export default {
     ...mapActions({
       sizeSet: 'd2admin/size/set'
     }),
-    handleChange(value) {
-      this. sizeSet(value)
-      this. $notify({
+    handleChange (value) {
+      this.sizeSet(value)
+      this.$notify({
         title: 'Prompt',
         dangerouslyUseHTMLString: true,
-        message: 'The <b>default size</b><br/> of <b>component</b> in the page has been updated, such as button size, <b>not font size</b>',
+        message: 'Updated <b>default size</b><br/> of <b>components</b> within the page <br/> eg button size, <b>not font size</b>',
         type: 'success'
       })
     },
-    iconName(name) {
+    iconName (name) {
       return name === this.value ? 'dot-circle-o' : 'circle-o'
     }
   }

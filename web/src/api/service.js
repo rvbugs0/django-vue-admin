@@ -22,14 +22,14 @@ export function getErrorMessage (msg) {
       util.cookies.remove('uuid')
       router.push({ path: '/login' })
       router.go(0)
-      return '登录超时，请重新登录！'
+      return 'Login timed out, please log in again!'
     }
     if (msg.code === 'user_not_found') {
       util.cookies.remove('token')
       util.cookies.remove('uuid')
       router.push({ path: '/login' })
       router.go(0)
-      return '用户无效，请重新登录！'
+      return 'User is invalid, please login again!'
     }
     return Object.values(msg)
   }
@@ -106,7 +106,7 @@ function createService () {
       const status = get(error, 'response.status')
       switch (status) {
         case 400:
-          error.message = '请求错误'
+          error.message = 'wrong request'
           break
         case 401:
           refreshTken().then(res => {
@@ -114,35 +114,35 @@ function createService () {
           }).catch(e => {
             router.push({ name: 'login' })
             router.go(0)
-            error.message = '未认证，请登录'
+            error.message = 'Unauthenticated, please log in'
           })
           break
         case 403:
-          error.message = '拒绝访问'
+          error.message = 'Access Denied'
           break
         case 404:
-          error.message = `请求地址出错: ${error.response.config.url}`
+          error.message = `Error requesting URL: ${error.response.config.url}`
           break
         case 408:
-          error.message = '请求超时'
+          error.message = 'Request timed out'
           break
         case 500:
-          error.message = '服务器内部错误'
+          error.message = 'Internal server error'
           break
         case 501:
-          error.message = '服务未实现'
+          error.message = 'Service not implemented'
           break
         case 502:
-          error.message = '网关错误'
+          error.message = 'Gateway error'
           break
         case 503:
-          error.message = '服务不可用'
+          error.message = 'Serivce Unavailable'
           break
         case 504:
-          error.message = '网关超时'
+          error.message = 'Gateway timed out'
           break
         case 505:
-          error.message = 'HTTP版本不受支持'
+          error.message = 'HTTP version not supported'
           break
         default:
           break

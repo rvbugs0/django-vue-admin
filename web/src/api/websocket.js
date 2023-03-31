@@ -15,7 +15,7 @@ function initWebSocket (e) {
 function webSocketOnError (e) {
   ElementUI.Notification({
     title: '',
-    message: 'WebSocket连接发生错误' + JSON.stringify(e),
+    message: 'WebSocket connection error occured' + JSON.stringify(e),
     type: 'error',
     position: 'bottom-right',
     duration: 3000
@@ -33,7 +33,7 @@ function webSocketOnMessage (e) {
   store.dispatch('d2admin/messagecenter/setUnread', unread || 0)
   if (data.contentType === 'SYSTEM') {
     ElementUI.Notification({
-      title: '系统消息',
+      title: 'System message',
       message: data.content,
       type: 'success',
       position: 'bottom-right',
@@ -49,7 +49,7 @@ function webSocketOnMessage (e) {
     })
   } else if (data.contentType === 'INFO') {
     ElementUI.Notification({
-      title: '温馨提示',
+      title: 'Reminder',
       message: data.content,
       type: 'success',
       position: 'bottom-right',
@@ -57,7 +57,7 @@ function webSocketOnMessage (e) {
     })
   } else {
     ElementUI.Notification({
-      title: '温馨提示',
+      title: 'Reminder',
       message: data.content,
       type: 'info',
       position: 'bottom-right',
@@ -67,10 +67,10 @@ function webSocketOnMessage (e) {
 }
 // 关闭websiocket
 function closeWebsocket () {
-  console.log('连接已关闭...')
+  console.log('Connection closed...')
   ElementUI.Notification({
     title: 'websocket',
-    message: '连接已关闭...',
+    message: 'Connection closed...',
     type: 'danger',
     position: 'bottom-right',
     duration: 3000

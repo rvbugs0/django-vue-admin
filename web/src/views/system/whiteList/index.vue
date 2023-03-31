@@ -10,7 +10,7 @@
         />
         <el-button-group>
           <el-button size="small" type="primary" @click="addRow"
-            ><i class="el-icon-plus" />Add</el-button
+            ><i class="el-icon-plus" /> 新增</el-button
           >
         </el-button-group>
         <crud-toolbar
@@ -48,23 +48,23 @@ export default {
     getCrudOptions () {
       return crudOptions(this)
     },
-    pageRequest(query) {
+    pageRequest (query) {
       const menuId = this.$route.params.id
-      return api. GetList({ ...query, menu: menuId })
+      return api.GetList({ ...query, menu: menuId })
     },
-    addRequest(row) {
+    addRequest (row) {
       const menuId = this.$route.params.id
       return api.createObj(row, menuId)
     },
-    updateRequest(row) {
+    updateRequest (row) {
       return api.UpdateObj(row)
     },
-    delRequest(row) {
+    delRequest (row) {
       return api.DelObj(row.id)
     },
-    // Jump to the add button interface
+    // 跳转到添加按钮界面
     onLinkBtn () {
-      this. $router. push({ path: '/button' })
+      this.$router.push({ path: '/button' })
     }
   }
 }

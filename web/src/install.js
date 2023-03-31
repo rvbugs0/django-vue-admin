@@ -3,14 +3,14 @@ import Vue from 'vue'
 import d2CrudX from 'd2-crud-x'
 import { d2CrudPlus } from 'd2-crud-plus'
 import {
-   D2pAreaSelector,
-   D2pDemoExtend,
-   D2pFileUploader,
-   D2pFullEditor,
-   D2pIconSelector,
-   D2pUploader
-} from 'd2p-extends' // source code import, upload component supports lazy loading
-// http request
+  D2pAreaSelector,
+  D2pDemoExtend,
+  D2pFileUploader,
+  D2pFullEditor,
+  D2pIconSelector,
+  D2pUploader
+} from 'd2p-extends' // 源码方式引入，上传组件支持懒加载
+// http请求
 import { request } from '@/api/service'
 import util from '@/libs/util'
 import XEUtils from 'xe-utils'
@@ -19,223 +19,222 @@ import types from '@/config/d2p-extends/types'
 import { checkPlugins, plugins } from '@/views/plugins'
 
 /**
-  // vxe0
-  import 'xe-utils'
-  import VXETable from 'vxe-table'
-  import 'vxe-table/lib/index.css'
-  Vue. use(VXETable)
-  **/
+ // vxe0
+ import 'xe-utils'
+ import VXETable from 'vxe-table'
+ import 'vxe-table/lib/index.css'
+ Vue.use(VXETable)
+ **/
 
-// Imported by renaming as follows can coexist with the official version, the tag in index.vue uses <d2-crud-x /> to use the enhanced version
-// If no name is passed, the tag of d2CrudX is still <d2-crud>, which cannot coexist with the official version
+// 按如下重命名引入可与官方版共存，index.vue中标签用<d2-crud-x />使用加强版
+// 不传name，则d2CrudX的标签仍为<d2-crud>,不可与官方版共存
 Vue.use(d2CrudX, { name: 'd2-crud-x' })
-// Register the dvadmin plugin
-Vue. use(plugins)
-// // Official version [introduced here for the coexistence of demo and official version, d2-crud-x can be used to completely replace the official version in new projects]
-// Vue. use(d2Crud)
+// 注册dvadmin插件
+Vue.use(plugins)
+// // 官方版【此处为演示与官方版共存而引入，全新项目中可以用d2-crud-x完全替代官方版】
+// Vue.use(d2Crud)
 /**
-  * @description Check whether the plugin is installed
-  * @param {String} pluginName plugin name
-  */
+ * @description 校验插件是否安装
+ * @param {String} pluginName 插件名称
+ */
 Vue.prototype.checkPlugins = checkPlugins
-// import d2CrudPlus
+// 引入d2CrudPlus
 Vue.use(d2CrudPlus, {
-   starTip: false,
-   getRemoteDictFunc(url, dict) {
-     // configure your dictionary http request method here
-     // For actual use, please change it to request
-     return request({
-       url: url,
-       params: dict.body,
-       method: 'get'
-     }).then(ret => {
-       if (dict. isTree) {
-         return XEUtils.toArrayTree(ret.data.data || ret.data, { parentKey: 'parent', strict: false })
-       } else {
-         return ret.data.data || ret.data
-       }
-     })
-   },
-   commonOption () { // common configuration
-     return {
-       format: {
-         page: { // The data structure configuration returned by the page interface,
-           request: {
-             current: 'page',
-             size: 'limit'
-           },
-           response: {
-             current: 'page', // current page number ret.data.current
-             size: 'limit', // current page number ret.data.current
-             // size: (data) => { return data.size }, // the number of items per page, ret.data.size, you can also configure a method to customize the return
-             total: 'total', // total number of records ret.data.total
-             records: 'data' // list array ret.data.records
-           }
-         }
-       },
-       pageOptions: {
-         compact: true
-       },
-       options: {
-         size: 'small'
-       },
-       formOptions: {
-         nullToBlankStr: true, // When submitting the modification form, modify the undefined data to an empty string '', which can solve the problem that the field cannot be emptied
-         defaultSpan: 12, // default form span
-         saveRemind: true,
-         labelWidth: '110px'
-       },
-       viewOptions: {
-         disabled: false,
-         componentType: 'form' // [form, row] form component or row component display
-       },
-       rowHandle: {
-         width: 260,
-         edit: {
-           type: 'primary'
-         }
-       }
-     }
-   }
+  starTip: false,
+  getRemoteDictFunc (url, dict) {
+    // 此处配置你的字典http请求方法
+    // 实际使用请改成request
+    return request({
+      url: url,
+      params: dict.body,
+      method: 'get'
+    }).then(ret => {
+      if (dict.isTree) {
+        return XEUtils.toArrayTree(ret.data.data || ret.data, { parentKey: 'parent', strict: false })
+      } else {
+        return ret.data.data || ret.data
+      }
+    })
+  },
+  commonOption () { // 公共配置
+    return {
+      format: {
+        page: { // page接口返回的数据结构配置，
+          request: {
+            current: 'page',
+            size: 'limit'
+          },
+          response: {
+            current: 'page', // 当前页码 ret.data.current
+            size: 'limit', // 当前页码 ret.data.current
+            // size: (data) => { return data.size }, // 每页条数，ret.data.size, 你也可以配置一个方法，自定义返回
+            total: 'total', // 总记录数 ret.data.total
+            records: 'data' // 列表数组 ret.data.records
+          }
+        }
+      },
+      pageOptions: {
+        compact: true
+      },
+      options: {
+        size: 'small'
+      },
+      formOptions: {
+        nullToBlankStr: true, // 提交修改表单时，将undefinded的数据修改为空字符串''，可以解决无法清空字段的问题
+        defaultSpan: 12, // 默认的表单 span
+        saveRemind: true,
+        labelWidth: '110px'
+      },
+      viewOptions: {
+        disabled: false,
+        componentType: 'form' // 【form,row】 表单组件 或 行组件展示
+      },
+      rowHandle: {
+        width: 260,
+        edit: {
+          type: 'primary'
+        }
+      }
+    }
+  }
 })
 
-
-// install the extension
-// Vue. use(D2pTreeSelector)
-Vue. use(D2pAreaSelector)
+// 安装扩展插件
+// Vue.use(D2pTreeSelector)
+Vue.use(D2pAreaSelector)
 Vue.use(D2pIconSelector)
 Vue.use(D2pFullEditor, {
-   ueditor: {
-     serverUrl: '/api/ueditor/'
-   }
+  ueditor: {
+    serverUrl: '/api/ueditor/'
+  }
 })
 Vue.use(D2pDemoExtend)
-Vue. use(D2pFileUploader)
+Vue.use(D2pFileUploader)
 Vue.use(D2pUploader, {
-   defaultType: 'form',
-   cos: {
-     domain: 'https://d2p-demo-1251260344.cos.ap-guangzhou.myqcloud.com',
-     bucket: 'd2p-demo-1251260344',
-     region: 'ap-guangzhou',
-     secretId: '', //
-     secretKey: '', // pass the secretKey and secretId to represent the use of local signature mode (unsafe, not recommended for production environments)
-     getAuthorization (custom) { // Do not pass the secretKey to use the temporary signature mode, and this parameter must be passed at this time (safe, recommended for production environments)
-       return request({
-         url: '/upload/cos/getAuthorization',
-         method: 'get'
-       }).then(ret => {
-         // The return structure is as follows
-         // ret. data: {
-         // TmpSecretId,
-         // TmpSecretKey,
-         // XCosSecurityToken,
-         // ExpiredTime, // SDK will not call getAuthorization again before ExpiredTime
-         // }
-         return ret.data
-       })
-     }
-   },
-   alioss: {
-     domain: 'https://d2p-demo.oss-cn-shenzhen.aliyuncs.com',
-     bucket: 'd2p-demo',
-     region: 'oss-cn-shenzhen',
-     accessKeyId: '',
-     accessKeySecret: '',
-     getAuthorization (custom, context) { // Do not pass accessKeySecret means to use temporary signature mode, this parameter must be passed at this time (safe, recommended for production environment)
-       return request({
-         url: '/upload/alioss/getAuthorization',
-         method: 'get'
-       }).then(ret => {
-         return ret.data
-       })
-     },
-     sdkOpts: { // sdk configuration
-       secure: true // The default is non-https upload, for security, set to true
-     }
-   },
-   Qiniu: {
-     bucket: 'd2p-demo',
-     getToken(custom) {
-       return request({
-         url: '/upload/qiniu/getToken',
-         method: 'get'
-       }).then(ret => {
-         return ret.data // {token:xxx,expires:xxx}
-       })
-     },
-     domain: 'http://d2p.file.veryreader.com'
-   },
-   form: {
-     action: util. baseURL() + 'api/system/file/',
-     name: 'file',
-     data: {}, // Upload additional parameters
-     headers () {
-       return {
-         Authorization: 'JWT' + util. cookies. get('token')
-       }
-     },
-     type: 'form',
-     successHandle (ret, option) {
-       if (ret.data === null || ret.data === '') {
-         throw new Error('Upload failed')
-       }
-       return { url: util.baseURL() + ret.data.url, key: option.data.key, id: ret.data.id }
-     },
-     withCredentials: false // Whether to bring cookies
-   }
+  defaultType: 'form',
+  cos: {
+    domain: 'https://d2p-demo-1251260344.cos.ap-guangzhou.myqcloud.com',
+    bucket: 'd2p-demo-1251260344',
+    region: 'ap-guangzhou',
+    secretId: '', //
+    secretKey: '', // 传了secretKey 和secretId 代表使用本地签名模式（不安全，生产环境不推荐）
+    getAuthorization (custom) { // 不传secretKey代表使用临时签名模式,此时此参数必传（安全，生产环境推荐）
+      return request({
+        url: '/upload/cos/getAuthorization',
+        method: 'get'
+      }).then(ret => {
+        // 返回结构如下
+        // ret.data:{
+        //   TmpSecretId,
+        //   TmpSecretKey,
+        //   XCosSecurityToken,
+        //   ExpiredTime, // SDK 在 ExpiredTime 时间前，不会再次调用 getAuthorization
+        // }
+        return ret.data
+      })
+    }
+  },
+  alioss: {
+    domain: 'https://d2p-demo.oss-cn-shenzhen.aliyuncs.com',
+    bucket: 'd2p-demo',
+    region: 'oss-cn-shenzhen',
+    accessKeyId: '',
+    accessKeySecret: '',
+    getAuthorization (custom, context) { // 不传accessKeySecret代表使用临时签名模式,此时此参数必传（安全，生产环境推荐）
+      return request({
+        url: '/upload/alioss/getAuthorization',
+        method: 'get'
+      }).then(ret => {
+        return ret.data
+      })
+    },
+    sdkOpts: { // sdk配置
+      secure: true // 默认为非https上传,为了安全，设置为true
+    }
+  },
+  qiniu: {
+    bucket: 'd2p-demo',
+    getToken (custom) {
+      return request({
+        url: '/upload/qiniu/getToken',
+        method: 'get'
+      }).then(ret => {
+        return ret.data // {token:xxx,expires:xxx}
+      })
+    },
+    domain: 'http://d2p.file.veryreader.com'
+  },
+  form: {
+    action: util.baseURL() + 'api/system/file/',
+    name: 'file',
+    data: {}, // 上传附加参数
+    headers () {
+      return {
+        Authorization: 'JWT ' + util.cookies.get('token')
+      }
+    },
+    type: 'form',
+    successHandle (ret, option) {
+      if (ret.data === null || ret.data === '') {
+        throw new Error('上传失败')
+      }
+      return { url: util.baseURL() + ret.data.url, key: option.data.key, id: ret.data.id }
+    },
+    withCredentials: false // 是否带cookie
+  }
 })
 d2CrudPlus.util.columnResolve.addTypes(types)
-// Modify the official field type
+// 修改官方字段类型
 const selectType = d2CrudPlus.util.columnResolve.getType('select')
-selectType.component.props.color = 'auto' // Modify the official field type and set it to support automatic coloring
-// Get dictionary configuration
+selectType.component.props.color = 'auto' // 修改官方的字段类型，设置为支持自动染色
+// 获取字典配置
 Vue.prototype.dictionary = function (name) {
-   return store.state.d2admin.dictionary.data[name]
+  return store.state.d2admin.dictionary.data[name]
 }
-// Get the dictionary label value
+// 获取字典label值
 Vue.prototype.getDictionaryLabel = function (name, value) {
-   const data = store.state.d2admin.dictionary.data[name]
-   if (data && data instanceof Array) {
-     for (var i = 0, len = data. length; i < len; i++) {
-       if (data[i]. value === value) {
-         return data[i].label
-       }
-     }
-     return ''
-   }
-   return store.state.d2admin.dictionary.data[name]
+  const data = store.state.d2admin.dictionary.data[name]
+  if (data && data instanceof Array) {
+    for (var i = 0, len = data.length; i < len; i++) {
+      if (data[i].value === value) {
+        return data[i].label
+      }
+    }
+    return ''
+  }
+  return store.state.d2admin.dictionary.data[name]
 }
-// Get system configuration
+// 获取系统配置
 Vue.prototype.systemConfig = function (name) {
-   return store.state.d2admin.settings.data[name]
+  return store.state.d2admin.settings.data[name]
 }
-// Default Columns end showForm: display in form, showTable: display in table
+// 默认Columns 结尾 showForm：显示在form中，showTable：显示在table中
 Vue.prototype.commonEndColumns = function (param = {}) {
-   /**
-    * @param {Object} {
-     description: {
-       showForm: true,
-       showTable: false
-     },
-     dept_belong_id: {
-       showForm: false,
-       showTable: false
-     },
-     modifier_name: {
-       showForm: false,
-       showTable: false
-     },
-     update_datetime: {
-       showForm: false,
-       showTable: true
-     },
-     create_datetime: {
-       showForm: false,
-       showTable: true
-     }
-   }
+  /**
+   * @param {Object} {
+    description: {
+      showForm: true,
+      showTable: false
+    },
+    dept_belong_id: {
+      showForm: false,
+      showTable: false
+    },
+    modifier_name: {
+      showForm: false,
+      showTable: false
+    },
+    update_datetime: {
+      showForm: false,
+      showTable: true
+    },
+    create_datetime: {
+      showForm: false,
+      showTable: true
+    }
+  }
    */
-   const showData = {
+  const showData = {
     description: {
       showForm: (param.description && param.description.showForm) !== undefined ? param.description.showForm : true,
       showTable: (param.description && param.description.showTable) !== undefined ? param.description.showTable : false
@@ -264,7 +263,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
   }
   return [
     {
-      title: 'Remark',
+      title: '备注',
       key: 'description',
       show: showData.description.showTable,
       search: {
@@ -274,7 +273,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       form: {
         disabled: !showData.description.showForm,
         component: {
-          placeholder: 'Please enter content',
+          placeholder: '请输入内容',
           showWordLimit: true,
           maxlength: '200',
           props: {
@@ -284,7 +283,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: 'edited by',
+      title: '修改人',
       show: showData.modifier_name.showTable,
       width: 100,
       key: 'modifier_name',
@@ -293,7 +292,7 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: 'Department',
+      title: '所属部门',
       key: 'dept_belong_id',
       show: showData.dept_belong_id.showTable,
       width: 150,
@@ -306,18 +305,18 @@ Vue.prototype.commonEndColumns = function (param = {}) {
         url: '/api/system/dept/all_dept/',
         // isTree: true,
         // dept: true,
-        value: 'id', // attribute name of the value field in the data dictionary
-        label: 'name', // attribute name of the label field in the data dictionary
-        children: 'children' // attribute name of the children field in the data dictionary
+        value: 'id', // 数据字典中value字段的属性名
+        label: 'name', // 数据字典中label字段的属性名
+        children: 'children' // 数据字典中children字段的属性名
         // getData: (url, dict, {
-        // _,
-        // component
+        //   _,
+        //   component
         // }) => {
-        // return request({
-        // url: url
-        // }).then(ret => {
-        // return XEUtils.toArrayTree(ret.data, { parentKey: 'parent', strict: false })
-        // })
+        //   return request({
+        //     url: url
+        //   }).then(ret => {
+        //     return XEUtils.toArrayTree(ret.data, { parentKey: 'parent', strict: false })
+        //   })
         // }
       },
       component: {
@@ -330,21 +329,21 @@ Vue.prototype.commonEndColumns = function (param = {}) {
           props: { multiple: false, clearable: true }
         },
         helper: {
-          render(h) {
-            return (< el-alert title="If it is not filled by default, it is the department ID of the current created user" type="info" />
+          render (h) {
+            return (< el-alert title="默认不填则为当前创建用户的部门ID" type="info" />
             )
           }
         }
       },
-      // When receiving, process the data
+      // 接收时,处理数据
       valueBuilder (row, col) {
-        if (row[col. key]) {
+        if (row[col.key]) {
           row[col.key] = Number(row[col.key])
         }
       }
     },
     {
-      title: 'Update time',
+      title: '更新时间',
       key: 'update_datetime',
       width: 160,
       show: showData.update_datetime.showTable,
@@ -355,19 +354,19 @@ Vue.prototype.commonEndColumns = function (param = {}) {
       }
     },
     {
-      title: 'Creation time',
+      title: '创建时间',
       key: 'create_datetime',
       width: 160,
       search: {
         disabled: !showData.create_datetime.showForm,
         width: 240,
-        component: { // Query box component configuration, generated according to form configuration by default
+        component: { // 查询框组件配置，默认根据form配置生成
           name: 'el-date-picker',
           props: {
             type: 'daterange',
-            'range-separator': 'to',
-            'start-placeholder': 'start',
-            'end-placeholder': 'end',
+            'range-separator': '至',
+            'start-placeholder': '开始',
+            'end-placeholder': '结束',
             valueFormat: 'yyyy-MM-dd'
           }
         }

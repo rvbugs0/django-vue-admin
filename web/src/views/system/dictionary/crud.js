@@ -6,11 +6,11 @@ export const crudOptions = (vm) => {
     },
     options: {
       tableType: 'vxe-table',
-      rowKey: true, // must be set, true or false
+      rowKey: true, // 必须设置，true or false
       rowId: 'id',
-      height: '100%', // table height 100%, must be set when using toolbar
+      height: '100%', // 表格高度100%, 使用toolbar必须设置
       highlightCurrentRow: false,
-      treeConfig: { // tree data configuration
+      treeConfig: { // 树形数据配置
         children: 'children',
         hasChild: 'hasChildren',
         expandAll: true
@@ -40,14 +40,14 @@ export const crudOptions = (vm) => {
         }
       },
       custom: [{
-        text: 'dictionary configuration',
+        text: ' 字典配置',
         type: 'success',
         size: 'small',
         emit: 'dictionaryConfigure'
       }]
     },
-    indexRow: { // Or pass true directly, do not display title, do not center
-      title: 'serial number',
+    indexRow: { // 或者直接传true,不显示title，不居中
+      title: '序号',
       align: 'center',
       width: 80
     },
@@ -55,11 +55,11 @@ export const crudOptions = (vm) => {
       componentType: 'form'
     },
     formOptions: {
-      defaultSpan: 24, // default form span
+      defaultSpan: 24, // 默认的表单 span
       width: '35%'
     },
     columns: [{
-      title: 'Keywords',
+      title: '关键词',
       key: 'search',
       show: false,
       disabled: true,
@@ -72,10 +72,10 @@ export const crudOptions = (vm) => {
           props: {
             clearable: true
           },
-          placeholder: 'Please enter keywords'
+          placeholder: '请输入关键词'
         }
       },
-      view: { // View the individual configuration of the dialog component
+      view: { // 查看对话框组件的单独配置
         disabled: true
       }
     },
@@ -90,7 +90,7 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'dictionary name',
+      title: '字典名称',
       key: 'label',
 
       search: {
@@ -104,14 +104,14 @@ export const crudOptions = (vm) => {
 
       type: 'input',
       form: {
-        rules: [ // form validation rules
-          { required: true, message: 'Dictionary name is required' }
+        rules: [ // 表单校验规则
+          { required: true, message: '字典名称必填项' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: 'Please enter the dictionary name'
+          placeholder: '请输入字典名称'
         },
         itemProps: {
           class: { yxtInput: true }
@@ -119,7 +119,7 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'dictionary number',
+      title: '字典编号',
       key: 'value',
       search: {
         disabled: true,
@@ -131,21 +131,21 @@ export const crudOptions = (vm) => {
       },
       type: 'input',
       form: {
-        rules: [ // form validation rules
-          { required: true, message: 'dictionary number is required' }
+        rules: [ // 表单校验规则
+          { required: true, message: '字典编号必填项' }
         ],
         component: {
           props: {
             clearable: true
           },
-          placeholder: 'Please enter the dictionary number'
+          placeholder: '请输入字典编号'
         },
         itemProps: {
           class: { yxtInput: true }
         },
         helper: {
-          render(h) {
-            return (< el-alert title="How to use: vm.dictionary('dictionary number')" type="warning"/>
+          render (h) {
+            return (< el-alert title="使用方法：vm.dictionary('字典编号')" type="warning"/>
             )
           }
         }
@@ -153,7 +153,7 @@ export const crudOptions = (vm) => {
     },
 
     {
-      title: 'Status',
+      title: '状态',
       key: 'status',
       width: 90,
       search: {
@@ -169,12 +169,12 @@ export const crudOptions = (vm) => {
         }
       },
       form: {
-        rules: [ // form validation rules
-          { required: true, message: 'status required' }
+        rules: [ // 表单校验规则
+          { required: true, message: '状态必填项' }
         ],
         value: true,
         component: {
-          placeholder: 'Please select a status'
+          placeholder: '请选择状态'
         },
         itemProps: {
           class: { yxtInput: true }
@@ -182,7 +182,7 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'sort',
+      title: '排序',
       key: 'sort',
       width: 90,
       type: 'number',
