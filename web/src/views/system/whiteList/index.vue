@@ -10,7 +10,7 @@
         />
         <el-button-group>
           <el-button size="small" type="primary" @click="addRow"
-            ><i class="el-icon-plus" /> 新增</el-button
+            ><i class="el-icon-plus" /> Add</el-button
           >
         </el-button-group>
         <crud-toolbar

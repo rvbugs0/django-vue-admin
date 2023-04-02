@@ -15,7 +15,7 @@
         />
         <el-button-group>
           <el-button size="small" type="primary" @click="addRow"
-            ><i class="el-icon-plus" /> 新增</el-button
+            ><i class="el-icon-plus" /> Add</el-button
           >
         </el-button-group>
         <crud-toolbar
@@ -29,7 +29,7 @@
     </d2-crud-x>
     <el-drawer :visible.sync="drawer" :size="700">
       <div slot="title">
-        <span>字典列表</span>
+        <span>dictionary list</span>
         <el-tag size="small" style="margin-left: 10px">{{
           dictionaryRow.label
         }}</el-tag>
