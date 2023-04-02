@@ -2,7 +2,7 @@
   <div class="page">
     <p class="page_title">404 page not found</p>
     <el-button class="d2-mt" @click="$router.replace({ path: '/' })">
-      返回控制台
+      Back to console
     </el-button>
   </div>
 </template>

@@ -88,8 +88,8 @@ export default {
       // 打印一条日志的所有信息到控制台
       this.$notify({
         type: 'info',
-        title: '日志详情',
-        message: '完整的日志内容已经打印到控制台'
+        title: 'log details',
+        message: 'The complete log content has been printed to the console'
       })
       this.$log.capsule('D2Admin', 'handleShowMore', 'primary')
       console.group(log.message)
