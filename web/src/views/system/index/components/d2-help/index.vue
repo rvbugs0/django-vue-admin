@@ -2,45 +2,45 @@
   <div>
     <el-button type="primary" @click="dialogVisible = true" plain round>
       <d2-icon name="question-circle-o" class="d2-mr-5"/>
-      需要帮助吗
+      need any help
     </el-button>
     <el-dialog
-      title="帮助"
+      title="help"
       width="600px"
       :visible.sync="dialogVisible"
       :append-to-body="true">
       <div style="margin-top: -25px;">
         <h2 class="d2-mt-0">
-          这里有一些参考资料
+          Here are some references
         </h2>
         <el-button-group>
           <el-button @click="$open('https://d2.pub/zh/doc/d2-admin')">
             <d2-icon name="book" class="d2-mr-5"/>
-            文档
+            document
           </el-button>
           <el-button @click="$open('https://github.com/d2-projects/d2-admin/issues?q=is%3Aissue+is%3Aclosed')">
             <d2-icon name="question" class="d2-mr-5"/>
-            历史提问
+            historical questions
           </el-button>
           <el-button @click="$open('https://github.com/d2-projects/d2-admin/issues/new/choose')">
             <d2-icon name="plus" class="d2-mr-5"/>
-            提交问题
+            Submit a question
           </el-button>
         </el-button-group>
-        <h2>询问其它使用者或作者</h2>
+        <h2>Ask other users or authors</h2>
         <el-row :gutter="20">
           <el-col :span="12">
             <img src="./image/qq.svg" style="width: 100%;">
             <div class="d2-help--qr-info">
-              请使用手机 QQ 扫面上方二维码<br/>
-              1群 806395827 (满) | 2群 592981556
+              Please use mobile phone QQ to scan the QR code above<br/>
+              1 group 806395827 (full) | 2 groups 592981556
             </div>
           </el-col>
           <el-col :span="12">
             <img src="./image/we.svg" style="width: 100%;">
             <div class="d2-help--qr-info">
-              请使用手机微信扫面上方二维码<br/>
-              添加作者微信好友，邀请加入微信群
+              Please use WeChat to scan the QR code above<br/>
+              Add the author's WeChat friend and invite to join the WeChat group
             </div>
           </el-col>
         </el-row>

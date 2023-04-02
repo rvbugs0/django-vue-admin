@@ -15,15 +15,15 @@ export const crudOptions = (vm) => {
       width: 180,
       edit: {
         thin: true,
-        text: '编辑'
+        text: 'edit'
       },
       remove: {
         thin: true,
-        text: '删除'
+        text: 'delete'
       }
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.No.',
       align: 'center',
       width: 100
     },
@@ -36,7 +36,7 @@ export const crudOptions = (vm) => {
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Key words',
         key: 'search',
         show: false,
         disabled: true,
@@ -46,7 +46,7 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter a keyword'
           }
         },
         view: { // 查看对话框组件的单独配置
@@ -63,7 +63,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '请求方式',
+        title: 'request method',
         key: 'method',
         sortable: true,
         search: {
@@ -94,7 +94,7 @@ export const crudOptions = (vm) => {
           rules: [ // 表单校验规则
             {
               required: true,
-              message: '必填项'
+              message: 'required fields'
             }
           ],
           component: {
@@ -106,7 +106,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '接口地址',
+        title: 'interface address',
         key: 'url',
         sortable: true,
         search: {
@@ -135,7 +135,7 @@ export const crudOptions = (vm) => {
           rules: [ // 表单校验规则
             {
               required: true,
-              message: '必填项'
+              message: 'required fields'
             }
           ],
           component: {
@@ -154,14 +154,14 @@ export const crudOptions = (vm) => {
           },
           helper: {
             render (h) {
-              return (< el-alert title="请正确填写，以免请求时被拦截。匹配单例使用正则,例如:/api/xx/.*?/" type="warning"/>
+              return (< el-alert title="Please fill in correctly to avoid being intercepted when requesting. Match singletons using regular expressions, for example: /api/xx/.*?/" type="warning"/>
               )
             }
           }
         }
       },
       {
-        title: '数据权限认证',
+        title: 'Data authority authentication',
         key: 'enable_datasource',
         search: {
           disabled: false
@@ -179,7 +179,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '备注',
+        title: 'Remark',
         key: 'description',
         search: {
           disabled: true
@@ -187,7 +187,7 @@ export const crudOptions = (vm) => {
         type: 'textarea',
         form: {
           component: {
-            placeholder: '请输入内容',
+            placeholder: 'Please enter content',
             showWordLimit: true,
             maxlength: '200',
             props: {

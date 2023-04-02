@@ -9512,3 +9512,4 @@ ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ 
 ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
 
 [2023-04-02 17:48:33,340][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_data/export_data/?date_recorded=2022-07-15T05%3A00%3A00.000Z 200 [0.03, 127.0.0.1:60874][0m
+[2023-04-02 17:50:35,646][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgwNDM1MTk3LCJpYXQiOjE2ODA0Mjc5OTcsImp0aSI6IjA3YTc5MzA3M2E5ZTRkMWM4YmQ3ZmU1YzYyZWQyZjc1IiwidXNlcl9pZCI6MX0.elxlu47aQIpo0LAv3Ku7TM4szrjVxEpgASxR5Ef_5Bg/ [127.0.0.1:60878]

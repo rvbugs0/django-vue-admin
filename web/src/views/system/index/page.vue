@@ -11,9 +11,9 @@
     <div style="margin-bottom: 10px">
       <el-card class="box-card">
         <div>
-          美好的一天，从使用 dvadmin2
-          开始！您可以基于此系统进行持续开发，以做出符合自己系统。所有前端后台代码封装过后十分精简易上手，
-          出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
+          Good day, from using dvadmin2
+          start! You can continue to develop based on this system to make your own system. After all the front-end and back-end codes are encapsulated, they are very simple and easy to use.
+           The probability of error is low. It also supports mobile client access. The system will continue to update some useful functions.
         </div>
       </el-card>
     </div>
@@ -21,18 +21,18 @@
       <el-col :span="12">
         <el-card>
           <div slot="header" class="clearfix">
-            <span>作者有话说</span>
+            <span>The author has something to say</span>
             <a
               href="https://www.django-vue-admin.com/about/"
               style="float: right; padding: 3px 0; color: #409eff"
               target="_blank"
             >
-              关于我们
+            About Us
             </a>
           </div>
           <div>
             <div>
-              <el-tag>李强</el-tag>
+              <el-tag>Li Qiang</el-tag>
               <p style="text-indent: 2em">
                 Ladies and
                 gentlemen！我一直想做一款后台管理系统，看了很多优秀的开源项目，发现只有Java、Go，但是发现没有合适Python的。于是利用空闲休息时间开始自己写一
@@ -85,7 +85,7 @@
     </el-row>
     <el-row :gutter="10">
       <el-col :span="12">
-        <div>这里放项目的更新情况,最新动态</div>
+        <div>Here is the update of the project, the latest developments</div>
       </el-col>
     </el-row>
   </d2-container>

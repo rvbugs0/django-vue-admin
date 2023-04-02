@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button-group>
-      <el-button size="mini" type="success" round @click="openDialog">添加</el-button>
+      <el-button size="mini" type="success" round @click="openDialog">Add to</el-button>
     </el-button-group>
     <el-dialog
       custom-class="d2p-tree-selector-dialog"

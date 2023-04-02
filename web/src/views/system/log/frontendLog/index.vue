@@ -4,7 +4,7 @@
       :data="log"
       size="mini"
       style="width: 100%"
-      empty-text="暂无日志信息"
+      empty-text="No log information"
       stripe>
       <!-- 时间 -->
       <el-table-column
@@ -103,15 +103,15 @@ export default {
       this.uploading = true
       this.$notify({
         type: 'info',
-        title: '日志上传',
-        message: `开始上传${this.log.length}条日志`
+        title: 'log upload',
+        message: `Start uploading ${this.log.length} logs`
       })
       setTimeout(() => {
         this.uploading = false
         this.$notify({
           type: 'success',
-          title: '日志上传',
-          message: '上传成功'
+          title: 'log upload',
+          message: 'uploaded successfully'
         })
       }, 3000)
     }

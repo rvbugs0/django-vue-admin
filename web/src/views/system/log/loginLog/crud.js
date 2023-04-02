@@ -31,7 +31,7 @@ export const crudOptions = (vm) => {
       },
       remove: {
         thin: true,
-        text: '删除',
+        text: 'Delete',
         show: false,
         disabled () {
           return !vm.hasPermissions('Delete')
@@ -46,13 +46,13 @@ export const crudOptions = (vm) => {
       defaultSpan: 12 // 默认的表单 span
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.No.',
       align: 'center',
       width: 70
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Keyword',
         key: 'search',
         show: false,
         disabled: true,
@@ -62,7 +62,7 @@ export const crudOptions = (vm) => {
         form: {
           show: false,
           component: {
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter a keyword'
           }
         }
       },
@@ -76,7 +76,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '登录用户名',
+        title: 'Login username',
         key: 'username',
         search: {
           disabled: false
@@ -86,12 +86,12 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入登录用户名'
+            placeholder: 'Please enter username'
           }
         }
       },
       {
-        title: '登录ip',
+        title: 'Login IP',
         key: 'ip',
         search: {
           disabled: false
@@ -101,11 +101,11 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入登录ip'
+            placeholder: 'Please enter the login IP'
           }
         }
       }, {
-        title: '运营商',
+        title: 'ISP',
         key: 'isp',
         search: {
           disabled: true
@@ -115,124 +115,124 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入运营商'
+            placeholder: 'Please enter the ISP'
           }
         }
       }, {
-        title: '大州',
+        title: 'Continent',
         key: 'continent',
         width: 80,
         type: 'input',
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入大州'
+            placeholder: 'Please enter the continent'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '国家',
+        title: 'Country',
         key: 'country',
         width: 80,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入国家'
+            placeholder: 'Please enter country'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '省份',
+        title: 'Province',
         key: 'province',
         width: 80,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入省份'
+            placeholder: 'Please enter province'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '城市',
+        title: 'City',
         key: 'city',
         width: 80,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入城市'
+            placeholder: 'Please enter a city'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '县区',
+        title: 'District',
         key: 'district',
         width: 80,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入县区'
+            placeholder: 'Please enter a district'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '区域代码',
+        title: 'area code',
         key: 'area_code',
         width: 100,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入区域代码'
+            placeholder: 'Please enter area code'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '英文全称',
+        title: 'English full name',
         key: 'country_english',
         width: 120,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入英文全称'
+            placeholder: 'Please enter the English full name'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '简称',
+        title: 'Abbreviation',
         key: 'country_code',
         width: 100,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入简称'
+            placeholder: 'Please enter a short name'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '经度',
+        title: 'longitude',
         key: 'longitude',
         width: 80,
         type: 'input',
         disabled: true,
         form: {
           component: {
-            placeholder: '请输入经度'
+            placeholder: 'please enter longitude'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '纬度',
+        title: 'latitude',
         key: 'latitude',
         width: 80,
         type: 'input',
         disabled: true,
         form: {
           component: {
-            placeholder: '请输入纬度'
+            placeholder: 'please enter latitude'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '登录类型',
+        title: 'login type',
         key: 'login_type',
         width: 100,
         type: 'select',
@@ -240,48 +240,48 @@ export const crudOptions = (vm) => {
           disabled: false
         },
         dict: {
-          data: [{ label: '普通登录', value: 1 }, { label: '微信扫码登录', value: 2 }]
+          data: [{ label: 'Normal login', value: 1 }, { label: 'WeChat scan code login', value: 2 }]
         },
         form: {
           component: {
-            placeholder: '请选择登录类型'
+            placeholder: 'Please select a login type'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '操作系统',
+        title: 'operating system',
         key: 'os',
         width: 180,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入操作系统'
+            placeholder: 'Please enter the operating system'
           }
         }
       }, {
-        title: '浏览器名',
+        title: 'browser name',
         key: 'browser',
         width: 180,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入浏览器名'
+            placeholder: 'Please enter a browser name'
           }
         }
       }, {
-        title: 'agent信息',
+        title: 'agent information',
         key: 'agent',
         disabled: true,
         width: 180,
         type: 'input',
         form: {
           component: {
-            placeholder: '请输入agent信息'
+            placeholder: 'Please enter agent information'
           }
         }
       }, {
         fixed: 'right',
-        title: '登录时间',
+        title: 'Log in time',
         key: 'create_datetime',
         width: 160,
         type: 'datetime'

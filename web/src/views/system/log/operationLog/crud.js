@@ -31,7 +31,7 @@ export const crudOptions = (vm) => {
       },
       remove: {
         thin: true,
-        text: '删除',
+        text: 'delete',
         show: false,
         disabled () {
           return !vm.hasPermissions('Delete')
@@ -46,13 +46,13 @@ export const crudOptions = (vm) => {
       defaultSpan: 12 // 默认的表单 span
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'serial number',
       align: 'center',
       width: 70
     },
     columns: [
       {
-        title: '关键词',
+        title: 'Key words',
         key: 'search',
         show: false,
         disabled: true,
@@ -62,7 +62,7 @@ export const crudOptions = (vm) => {
         form: {
           show: false,
           component: {
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter a keyword'
           }
         }
       },
@@ -76,7 +76,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '请求模块',
+        title: 'request module',
         key: 'request_modular',
         search: {
           disabled: false
@@ -86,12 +86,12 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入请求模块'
+            placeholder: 'Please enter request module'
           }
         }
       },
       {
-        title: '请求地址',
+        title: 'request address',
         key: 'request_path',
         search: {
           disabled: false
@@ -101,12 +101,12 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入请求地址'
+            placeholder: 'Please enter the request address'
           }
         }
       },
       {
-        title: '请求参数',
+        title: 'request parameters',
         key: 'request_body',
         search: {
           disabled: true
@@ -122,12 +122,12 @@ export const crudOptions = (vm) => {
             autosize: {
               minRows: 2, maxRows: 8
             },
-            placeholder: '请输入关键词'
+            placeholder: 'Please enter a keyword'
           }
         }
       },
       {
-        title: '请求方法',
+        title: 'request method',
         key: 'request_method',
         width: 80,
         type: 'input',
@@ -137,13 +137,13 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入请求方法'
+            placeholder: 'Please enter the request method'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       },
       {
-        title: '操作说明',
+        title: 'Instructions',
         key: 'request_msg',
         disabled: true,
         form: {
@@ -153,7 +153,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: 'IP地址',
+        title: 'IP address',
         key: 'request_ip',
         search: {
           disabled: false
@@ -163,13 +163,13 @@ export const crudOptions = (vm) => {
         form: {
           disabled: true,
           component: {
-            placeholder: '请输入IP地址'
+            placeholder: 'Please enter IP address'
           }
         },
         component: { props: { color: 'auto' } } // 自动染色
       },
       {
-        title: '请求浏览器',
+        title: 'request browser',
         key: 'request_browser',
         width: 180,
         type: 'input',
@@ -179,7 +179,7 @@ export const crudOptions = (vm) => {
         component: { props: { color: 'auto' } } // 自动染色
       },
       {
-        title: '响应码',
+        title: 'response code',
         key: 'response_code',
         search: {
           disabled: true
@@ -192,7 +192,7 @@ export const crudOptions = (vm) => {
         component: { props: { color: 'auto' } } // 自动染色
       },
       {
-        title: '操作系统',
+        title: 'operating system',
         key: 'request_os',
         disabled: true,
         search: {
@@ -205,7 +205,7 @@ export const crudOptions = (vm) => {
         component: { props: { color: 'auto' } } // 自动染色
       },
       {
-        title: '返回信息',
+        title: 'returned messages',
         key: 'json_result',
         search: {
           disabled: true
@@ -217,7 +217,7 @@ export const crudOptions = (vm) => {
         },
         component: { props: { color: 'auto' } } // 自动染色
       }, {
-        title: '操作人',
+        title: 'Operator',
         width: 100,
         key: 'creator_name',
         form: {
@@ -225,7 +225,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '更新时间',
+        title: 'update time',
         key: 'update_datetime',
         width: 160,
         show: false,
@@ -236,7 +236,7 @@ export const crudOptions = (vm) => {
       },
       {
         fixed: 'right',
-        title: '操作时间',
+        title: 'operating time',
         key: 'create_datetime',
         width: 160,
         type: 'datetime',

@@ -121,7 +121,7 @@ export default {
         }
       ],
       chartData: {
-        columns: ['日期', '销售额'],
+        columns: ['date', 'sales'],
         rows: [
         { Date: 'January 1st', Sales: 123 },
            { Date: 'January 2', Sales: 1223 },

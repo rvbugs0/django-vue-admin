@@ -93,14 +93,14 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '目标类型',
+        title: 'target type',
         key: 'target_type',
         type: 'radio',
         width: 120,
         show () {
           return vm.tabActivted === 'send'
         },
-        dict: { data: [{ value: 0, label: '按用户' }, { value: 1, label: '按角色' }, { value: 2, label: '按部门' }, { value: 3, label: '通知公告' }] },
+        dict: { data: [{ value: 0, label: 'by user' }, { value: 1, label: 'by role' }, { value: 2, label: 'by department' }, { value: 3, label: 'announcement' }] },
         form: {
           component: {
             span: 24,
@@ -118,7 +118,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '目标用户',
+        title: 'Target users',
         key: 'target_user',
         search: {
           disabled: true
@@ -170,11 +170,11 @@ export const crudOptions = (vm) => {
               columns: [
                 {
                   field: 'name',
-                  title: '用户名称'
+                  title: 'user name'
                 },
                 {
                   field: 'phone',
-                  title: '用户电话'
+                  title: 'user phone'
                 }
               ]
             }
@@ -187,7 +187,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '目标角色',
+        title: 'target role',
         key: 'target_role',
         search: {
           disabled: true
@@ -239,11 +239,11 @@ export const crudOptions = (vm) => {
               columns: [
                 {
                   field: 'name',
-                  title: '角色名称'
+                  title: 'Role Name'
                 },
                 {
                   field: 'key',
-                  title: '权限标识'
+                  title: 'Authority ID'
                 }
               ]
             }
@@ -256,7 +256,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '目标部门',
+        title: 'target sector',
         key: 'target_dept',
         search: {
           disabled: true
@@ -309,16 +309,16 @@ export const crudOptions = (vm) => {
                 columns: [
                   {
                     field: 'name',
-                    title: '部门名称',
+                    title: 'Department name',
                     treeNode: true
                   },
                   {
                     field: 'status_label',
-                    title: '状态'
+                    title: 'state'
                   },
                   {
                     field: 'parent_name',
-                    title: '父级部门'
+                    title: 'parent department'
                   }
                 ]
               }
@@ -332,7 +332,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '内容',
+        title: 'content',
         key: 'content',
         minWidth: 300,
         type: 'editor-quill', // 富文本图片上传依赖file-uploader，请先配置好file-uploader
