@@ -1,6 +1,6 @@
 [
     {
-        "name": "管理员",
+        "name": "Admin",
         "key": "admin",
         "sort": 1,
         "status": true,
@@ -9,7 +9,7 @@
         "remark": null
     },
     {
-        "name": "用户",
+        "name": "Public",
         "key": "public",
         "sort": 2,
         "status": true,
