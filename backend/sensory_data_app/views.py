@@ -1,3 +1,4 @@
+from django.db.models import F
 from django.shortcuts import render
 
 import json
@@ -19,7 +20,6 @@ from django.db.models import Avg
 from django.db.models.functions import TruncMonth
 from django.db.models import Max
 from django.db.models import Min
-
 
 
 class SensoryDataSerializer(CustomModelSerializer):
@@ -194,18 +194,34 @@ class ChartConfigViewSet(CustomModelViewSet):
     serializer_class = ChartConfigSerializer
 
 
-
-
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def get_charts_data(request):
     res = []
     chart_configs = ChartConfig.objects.filter(public_exposed=True)
     for c in chart_configs:
+        if (c.function_type == "plain_value"):
+            data = get_plain_data_within_range( c.start_date, c.end_date, c.entity)
+
+            if (c.type == "bar" or c.type == "area" or c.type == "line"):
+                xData = []
+                yData = []
+                for monthly_data in data:
+                    xData.append(monthly_data[0])
+                    yData.append(monthly_data[1])
+                res_object = {}
+                res_object["id"] = c.id
+                res_object["xData"] = xData
+                res_object["yData"] = yData
+                res_object["type"] = c.type
+                res_object["title"] = c.title
+                res.append(res_object)
+
         if (c.function_type == "monthly_average"):
-            
-            data = get_average_monthly_within_range(c.start_date,c.end_date, c.entity)
-            
+
+            data = get_average_monthly_within_range(
+                c.start_date, c.end_date, c.entity)
+
             if (c.type == "bar" or c.type == "area" or c.type == "line"):
                 xData = []
                 yData = []
@@ -221,12 +237,12 @@ def get_charts_data(request):
                 res.append(res_object)
 
         if (c.function_type == "monthly_max" or c.function_type == "monthly_min"):
-            
+
             data = []
             if (c.function_type == "monthly_max"):
-                data = get_max_of_month(c.start_date,c.end_date, c.entity)
+                data = get_max_of_month(c.start_date, c.end_date, c.entity)
             else:
-                data = get_min_of_month(c.start_date,c.end_date, c.entity)
+                data = get_min_of_month(c.start_date, c.end_date, c.entity)
             if (c.type == "bar" or c.type == "area" or c.type == "line"):
                 xData = []
                 yData = []
@@ -244,7 +260,10 @@ def get_charts_data(request):
     return HttpResponse(json.dumps(res), content_type="application/json")
 
 
-def get_average_monthly_within_range(start_date,end_date, entity):
+# articles = Article.objects.values('title').annotate(article_title=F('title'))
+
+
+def get_average_monthly_within_range(start_date, end_date, entity):
 
     average_val_by_month = SensoryData.objects.filter(
         date_recorded__range=(start_date, end_date)
@@ -257,13 +276,38 @@ def get_average_monthly_within_range(start_date,end_date, entity):
     ).order_by('month')
     res = []
     for data in average_val_by_month:
-        res.append((data['month'].strftime('%B %Y'),data['avg_val']))
+        res.append((data['month'].strftime('%B %Y'), data['avg_val']))
         # print(f"Month: {} Average Temperature: {]}")
-    
+
     return res
 
 
-def get_max_of_month(start_date,end_date, entity):
+def get_plain_data_within_range(start_date, end_date, entity):
+
+    records = SensoryData.objects.filter(
+        date_recorded__range=(start_date, end_date)
+    ).annotate(
+        entity_value=F(entity)
+    ).values(
+        'entity_value','date_recorded'
+    )
+    res = []
+    
+    for data in records:
+        obj = data["date_recorded"]
+        day = obj.strftime('%d')
+        month = obj.strftime('%m')
+        year = obj.strftime('%Y')
+        d = year + "-" + month + "-" + day
+        res.append((d, data['entity_value']))
+
+
+    return res
+
+
+
+
+def get_max_of_month(start_date, end_date, entity):
     max_val_by_month = SensoryData.objects.filter(
         date_recorded__range=(start_date, end_date)
     ).annotate(
@@ -275,11 +319,11 @@ def get_max_of_month(start_date,end_date, entity):
     ).order_by('month')
     res = []
     for data in max_val_by_month:
-        res.append((data['month'].strftime('%B %Y'),data['max_val']))
+        res.append((data['month'].strftime('%B %Y'), data['max_val']))
     return res
 
 
-def get_min_of_month(start_date,end_date, entity):
+def get_min_of_month(start_date, end_date, entity):
     min_val_by_month = SensoryData.objects.filter(
         date_recorded__range=(start_date, end_date)
     ).annotate(
@@ -291,7 +335,6 @@ def get_min_of_month(start_date,end_date, entity):
     ).order_by('month')
     res = []
     for data in min_val_by_month:
-        res.append((data['month'].strftime('%B %Y'),data['min_val']))
-    
-    
+        res.append((data['month'].strftime('%B %Y'), data['min_val']))
+
     return res

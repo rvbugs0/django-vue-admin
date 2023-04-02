@@ -210,6 +210,7 @@ export const crudOptions = (vm) => {
             { value: 'monthly_average', label: 'Monthly Average' },
             { value: 'monthly_max', label: 'Monthly Maximum Value' },
             { value: 'monthly_min', label: 'Monthly Minimum Value' },
+            { value: 'plain_value', label: 'Plain value' },
            
           ]
         },
