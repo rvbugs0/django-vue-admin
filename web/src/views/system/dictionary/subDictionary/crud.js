@@ -43,7 +43,7 @@ export const crudOptions = (vm) => {
     },
     columns: [
       {
-        title: '名称',
+        title: 'name',
         key: 'label',
 
         search: {
@@ -58,13 +58,13 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '名称必填项' }
+            { required: true, message: 'Name is required' }
           ],
           component: {
             props: {
               clearable: true
             },
-            placeholder: '请输入名称'
+            placeholder: 'please enter a name'
           },
           itemProps: {
             class: { yxtInput: true }
@@ -72,7 +72,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '数据值类型',
+        title: 'data value type',
         type: 'select',
         key: 'type',
         search: {
@@ -98,14 +98,14 @@ export const crudOptions = (vm) => {
         },
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '数据值类型必填项' }
+            { required: true, message: 'Data Value Type Required' }
           ],
           value: 0,
           component: {
             props: {
               clearable: true
             },
-            placeholder: '请选择数据值类型'
+            placeholder: 'Please select a data value type'
           },
           itemProps: {
             class: { yxtInput: true }
@@ -149,8 +149,8 @@ export const crudOptions = (vm) => {
               template.component.props = {
                 dict: {
                   data: [
-                    { label: '是', value: 'true' },
-                    { label: '否', value: 'false' }
+                    { label: 'Yes', value: 'true' },
+                    { label: 'No', value: 'false' }
                   ]
                 }
               }
@@ -163,7 +163,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '数据值',
+        title: 'data value',
         key: 'value',
         search: {
           disabled: true,
@@ -211,20 +211,20 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '数据值必填项' }
+            { required: true, message: 'Data value required' }
           ],
           component: {
             props: {
               clearable: true
             },
-            placeholder: '请输入数据值'
+            placeholder: 'Please enter a data value'
           },
           itemProps: {
             class: { yxtInput: true }
           }
         }
       }, {
-        title: '状态',
+        title: 'status',
         key: 'status',
         width: 80,
         search: {
@@ -237,7 +237,7 @@ export const crudOptions = (vm) => {
         form: {
           value: true,
           rules: [ // 表单校验规则
-            { required: true, message: '状态必填项' }
+            { required: true, message: 'Status Required' }
           ],
           component: {
           },
@@ -247,7 +247,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '排序',
+        title: 'to sort',
         key: 'sort',
         width: 70,
         type: 'number',
@@ -256,14 +256,14 @@ export const crudOptions = (vm) => {
           component: {
           },
           rules: [ // 表单校验规则
-            { required: true, message: '排序必填项' }
+            { required: true, message: 'Sort Required' }
           ],
           itemProps: {
             class: { yxtInput: true }
           }
         }
       }, {
-        title: '标签颜色',
+        title: 'label color',
         key: 'color',
         width: 90,
         search: {
