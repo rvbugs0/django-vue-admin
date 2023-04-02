@@ -65,7 +65,7 @@ export const crudOptions = (vm) => {
       width: '30%'
     },
     indexRow: { // 或者直接传true,不显示title，不居中
-      title: '序号',
+      title: 'S.No.',
       align: 'center',
       width: 100
     },
@@ -143,10 +143,10 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '地区编码必填项' }
+            { required: true, message: 'Area code is required' }
           ],
           component: {
-            placeholder: '请输入地区编码'
+            placeholder: 'Please enter the area code'
           },
           itemProps: {
             class: { yxtInput: true }
@@ -154,7 +154,7 @@ export const crudOptions = (vm) => {
         }
       },
       {
-        title: '拼音',
+        title: 'Pinyin',
         key: 'pinyin',
         search: {
           disabled: true
@@ -162,17 +162,17 @@ export const crudOptions = (vm) => {
         type: 'input',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '拼音必填项' }
+            { required: true, message: 'Pinyin required' }
           ],
           itemProps: {
             class: { yxtInput: true }
           },
           component: {
-            placeholder: '请输入拼音'
+            placeholder: 'Please enter pinyin'
           }
         }
       }, {
-        title: '地区层级',
+        title: 'Regional level',
         key: 'level',
         search: {
           disabled: true
@@ -181,32 +181,32 @@ export const crudOptions = (vm) => {
         form: {
           disabled: false,
           rules: [ // 表单校验规则
-            { required: true, message: '拼音必填项' }
+            { required: true, message: 'Required' }
           ],
           itemProps: {
             class: { yxtInput: true }
           },
           component: {
-            placeholder: '请输入拼音'
+            placeholder: 'Please enter pinyin'
           }
         }
       }, {
-        title: '首字母',
+        title: 'Initials',
         key: 'initials',
         form: {
           rules: [ // 表单校验规则
-            { required: true, message: '首字母必填项' }
+            { required: true, message: 'Required' }
           ],
           itemProps: {
             class: { yxtInput: true }
           },
           component: {
-            placeholder: '请输入首字母'
+            placeholder: 'Please enter initials'
           }
         }
       },
       {
-        title: '是否启用',
+        title: 'Whether to enable',
         key: 'enable',
         search: {
           disabled: false
