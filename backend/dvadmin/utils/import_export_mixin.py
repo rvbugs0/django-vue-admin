@@ -67,7 +67,7 @@ class ImportSerializerMixin:
         :param kwargs:
         :return:
         """
-        assert self.import_field_dict, "'%s' 请配置对应的导出模板字段。" % self.__class__.__name__
+        assert self.import_field_dict, "'%s' Please configure the corresponding export template field." % self.__class__.__name__
         # 导出模板
         if request.method == "GET":
             # 示例数据
@@ -77,7 +77,7 @@ class ImportSerializerMixin:
             response["Access-Control-Expose-Headers"] = f"Content-Disposition"
             response[
                 "Content-Disposition"
-            ] = f'attachment;filename={quote(str(f"导入{get_verbose_name(queryset)}模板.xlsx"))}'
+            ] = f'attachment;filename={quote(str(f"Import {get_verbose_name(queryset)} template.xlsx"))}'
             wb = Workbook()
             ws1 = wb.create_sheet("data", 1)
             ws1.sheet_state = "hidden"
@@ -85,7 +85,7 @@ class ImportSerializerMixin:
             row = get_column_letter(len(self.import_field_dict) + 1)
             column = 10
             header_data = [
-                "序号",
+                "S.No.",
             ]
             validation_data_dict = {}
             for index, ele in enumerate(self.import_field_dict.values()):
@@ -143,7 +143,7 @@ class ImportSerializerMixin:
                 for ele in queryset.model._meta.get_fields()
                 if hasattr(ele, "many_to_many") and ele.many_to_many == True
             ]
-            import_field_dict = {'id':'更新主键(勿改)',**self.import_field_dict}
+            import_field_dict = {'id':'Update the primary key (do not change)',**self.import_field_dict}
             data = import_to_data(request.data.get("url"), import_field_dict, m2m_fields)
             for ele in data:
                 filter_dic = {'id':ele.get('id')}
@@ -152,13 +152,13 @@ class ImportSerializerMixin:
                 serializer = self.import_serializer_class(instance, data=ele, request=request)
                 serializer.is_valid(raise_exception=True)
                 serializer.save()
-            return DetailResponse(msg=f"导入成功！")
+            return DetailResponse(msg=f"Imported successfully!")
 
     @action(methods=['get'],detail=False)
     def update_template(self,request):
         queryset = self.filter_queryset(self.get_queryset())
-        assert self.import_field_dict, "'%s' 请配置对应的导入模板字段。" % self.__class__.__name__
-        assert self.import_serializer_class, "'%s' 请配置对应的导入序列化器。" % self.__class__.__name__
+        assert self.import_field_dict, "'%s' Please configure the corresponding import template field." % self.__class__.__name__
+        assert self.import_serializer_class, "'%s' Please configure the corresponding import serializer." % self.__class__.__name__
         data = self.import_serializer_class(queryset, many=True, request=request).data
         # 导出excel 表
         response = HttpResponse(content_type="application/msexcel")
@@ -169,7 +169,7 @@ class ImportSerializerMixin:
         ws1.sheet_state = "hidden"
         ws = wb.active
         import_field_dict = {}
-        header_data = ["序号","更新主键(勿改)"]
+        header_data = ["Serial number "," update the primary key (do not change)"]
         hidden_header = ["#","id"]
         #----设置选项----
         validation_data_dict = {}
@@ -298,8 +298,8 @@ class ExportSerializerMixin:
         :return:
         """
         queryset = self.filter_queryset(self.get_queryset())
-        assert self.export_field_label, "'%s' 请配置对应的导出模板字段。" % self.__class__.__name__
-        assert self.export_serializer_class, "'%s' 请配置对应的导出序列化器。" % self.__class__.__name__
+        assert self.export_field_label, "'%s' Please configure the corresponding export template field." % self.__class__.__name__
+        assert self.export_serializer_class, "'%s' Please configure the corresponding export serializer." % self.__class__.__name__
         data = self.export_serializer_class(queryset, many=True, request=request).data
         # 导出excel 表
         response = HttpResponse(content_type="application/msexcel")
@@ -307,7 +307,7 @@ class ExportSerializerMixin:
         response["content-disposition"] = f'attachment;filename={quote(str(f"导出{get_verbose_name(queryset)}.xlsx"))}'
         wb = Workbook()
         ws = wb.active
-        header_data = ["序号", *self.export_field_label.values()]
+        header_data = ["S.No.", *self.export_field_label.values()]
         hidden_header = ["#", *self.export_field_label.keys()]
         df_len_max = [self.get_string_len(ele) for ele in header_data]
         row = get_column_letter(len(self.export_field_label) + 1)
