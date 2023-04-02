@@ -37,6 +37,25 @@ class SensoryDataSerializer(CustomModelSerializer):
         fields = "__all__"
         read_only_fields = ["id"]
 
+class ExportSensoryDataSerializer(CustomModelSerializer):
+    
+    sea_water_temperature_c = serializers.FloatField( default=0.0)
+    salinity = serializers.FloatField( default=0.0)
+    dissolved_oxygen = serializers.FloatField( default = 0.0)
+    ph = serializers.FloatField( default = 0.0)
+    date_recorded = serializers.DateTimeField( default = "")
+    class Meta:
+        model = SensoryData
+        fields = (
+            "sea_water_temperature_c",
+            "salinity",
+            "dissolved_oxygen",
+            "ph",
+            "date_recorded"
+        )
+
+
+
 
 class SensoryDataViewSet(CustomModelViewSet):
     """
@@ -49,6 +68,16 @@ class SensoryDataViewSet(CustomModelViewSet):
     """
     queryset = SensoryData.objects.all()
     serializer_class = SensoryDataSerializer
+
+    export_field_label = {
+            "sea_water_temperature_c":"Sea water temperature in Degree Celcius",
+            "salinity":"Salinity",
+            "dissolved_oxygen":"Dissolved Oxygen",
+            "ph":"pH",
+            "date_recorded":"Date recorded"
+
+    }
+    export_serializer_class = ExportSensoryDataSerializer
 
 
 # view set has all the basic apis and custom api's are addded below and their urls also added in the urls.py

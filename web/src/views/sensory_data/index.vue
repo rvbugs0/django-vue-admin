@@ -6,6 +6,13 @@
         <el-button-group>
           <el-button size="small" v-permission="'Create'" type="primary" @click="addRow"><i class="el-icon-plus" />
             Add</el-button>
+            <el-button
+            size="small"
+            type="warning"
+            @click="onExport"
+            v-permission="'Export'"
+            ><i class="el-icon-download" /> export
+          </el-button>
         </el-button-group>
         <crud-toolbar :search.sync="crud.searchOptions.show" :compact.sync="crud.pageOptions.compact"
           :columns="crud.columns" @refresh="doRefresh()" @columns-filter-changed="handleColumnsFilterChanged" />
@@ -44,6 +51,16 @@ export default {
     },
     delRequest(row) {
       return api.DelObj(row.id)
+    },    onExport () {
+      const that = this
+      this.$confirm('Are you sure to export all data items?', 'warning', {
+        confirmButtonText: 'Sure',
+        cancelButtonText: 'Cancel',
+        type: 'warning'
+      }).then(function () {
+        const query = that.getSearch().getForm()
+        return api.exportData({ ...query })
+      })
     }
   }
 }

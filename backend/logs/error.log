@@ -768,3 +768,325 @@ AttributeError: 'datetime.datetime' object has no attribute 'date_field'
     day = obj.date_field.strftime('%d')
 AttributeError: 'datetime.datetime' object has no attribute 'date_field'
 
+[2023-04-02 15:17:09,328][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 301, in export_data
+    assert self.export_field_label, "'%s' 请配置对应的导出模板字段。" % self.__class__.__name__
+AssertionError: 'SensoryDataViewSet' 请配置对应的导出模板字段。
+
+[2023-04-02 15:33:35,097][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 303, in export_data
+    data = self.export_serializer_class(queryset, many=True, request=request).data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 663, in to_representation
+    return [
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django_restql/mixins.py", line 149, in to_representation
+    return super().to_representation(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 500, in to_representation
+    for field in fields:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 361, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django_restql/mixins.py", line 423, in fields
+    return self.dynamic_fields
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django_restql/mixins.py", line 383, in dynamic_fields
+    return self.allowed_fields
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django_restql/mixins.py", line 153, in allowed_fields
+    fields = super().fields
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 350, in fields
+    fields[key] = value
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/utils/serializer_helpers.py", line 152, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/fields.py", line 378, in bind
+    assert self.source != field_name, (
+AssertionError: It is redundant to specify `source='sea_water_temperature_c'` on field 'FloatField' in serializer 'ExportSensoryDataSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+
+[2023-04-02 15:36:20,246][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 80, in list
+    page = self.paginate_queryset(queryset)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 76, in page
+    number = self.validate_number(number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 54, in validate_number
+    if number > self.num_pages:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 103, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 97, in count
+    return c()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 517, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 502, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+
+[2023-04-02 15:37:13,074][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 79, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 15:37:37,548][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 300, in export_data
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 15:38:17,600][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 300, in export_data
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 15:41:33,241][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 80, in list
+    page = self.paginate_queryset(queryset)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 76, in page
+    number = self.validate_number(number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 54, in validate_number
+    if number > self.num_pages:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 103, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 97, in count
+    return c()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 517, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 502, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+
+[2023-04-02 15:42:24,023][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 80, in list
+    page = self.paginate_queryset(queryset)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 76, in page
+    number = self.validate_number(number)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 54, in validate_number
+    if number > self.num_pages:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 103, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/paginator.py", line 97, in count
+    return c()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 412, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 517, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 502, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+

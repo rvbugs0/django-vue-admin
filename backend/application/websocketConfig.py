@@ -73,10 +73,10 @@ class DvadminWebSocket(AsyncJsonWebsocketConsumer):
                 unread_count = await _get_message_unread(self.user_id)
                 if unread_count == 0:
                     # 发送连接成功
-                    await self.send_json(set_message('system', 'SYSTEM', '连接成功'))
+                    await self.send_json(set_message('system', 'SYSTEM', 'connection succeeded'))
                 else:
                     await self.send_json(
-                        set_message('system', 'SYSTEM', "请查看您的未读消息~",
+                        set_message('system', 'SYSTEM', "Please check your unread messages~",
                                     unread=unread_count))
         except InvalidSignatureError:
             await self.disconnect(None)
@@ -84,7 +84,7 @@ class DvadminWebSocket(AsyncJsonWebsocketConsumer):
     async def disconnect(self, close_code):
         # Leave room group
         await self.channel_layer.group_discard(self.chat_group_name, self.channel_name)
-        print("连接关闭")
+        print("connection closed")
         try:
             await self.close(close_code)
         except Exception:
@@ -134,7 +134,7 @@ def websocket_push(user_id,message):
     )
 
 def create_message_push(title: str, content: str, target_type: int=0, target_user: list=[], target_dept=None, target_role=None,
-             message: dict = {'contentType': 'INFO', 'content': '测试~'}, request= Request):
+             message: dict = {'contentType': 'INFO', 'content': 'test~'}, request= Request):
     if message is None:
         message = {"contentType": "INFO", "content": None}
     if target_role is None:
