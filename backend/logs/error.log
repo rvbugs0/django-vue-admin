@@ -1090,3 +1090,603 @@ ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ 
     raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
 ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
 
+[2023-04-02 16:06:27,963][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 79, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“07/13/2022”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 16:38:11,717][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 398, in get_data_within_range
+    data = data_queryset[start_index:end_index].values()
+AttributeError: 'list' object has no attribute 'values'
+
+[2023-04-02 16:38:52,138][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 399, in get_data_within_range
+    data = data_queryset[start_index:end_index].values()
+AttributeError: 'list' object has no attribute 'values'
+
+[2023-04-02 16:41:36,713][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 79, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 16:44:34,336][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 413, in get_data_within_range
+    return HttpResponse(json.dumps(response), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type SensoryData is not JSON serializable
+
+[2023-04-02 16:46:11,786][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 386, in get_data_within_range
+    data_queryset = SensoryData.objects.filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“07/13/2022”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 16:51:50,264][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 386, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 16:52:05,547][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 386, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 16:52:59,684][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 386, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 16:54:14,188][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 387, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 16:55:41,778][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 387, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 16:56:31,503][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 387, in get_data_within_range
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+TypeError: strptime() argument 1 must be str, not None
+
+[2023-04-02 17:05:26,223][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1378, in to_python
+    parsed = parse_date(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/dateparse.py", line 78, in parse_date
+    return datetime.date(**kw)
+ValueError: month must be in 1..12
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 394, in get_data_within_range
+    data_queryset = SensoryData.objects.filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1382, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2022-18-06”的值有正确的格式（YYYY-MM-DD）但它是一个错误的日期']
+
+[2023-04-02 17:11:43,884][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1378, in to_python
+    parsed = parse_date(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/utils/dateparse.py", line 78, in parse_date
+    return datetime.date(**kw)
+ValueError: month must be in 1..12
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 394, in get_data_within_range
+    data = SensoryData.objects.filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 240, in get_prep_lookup
+    rhs_value = self.lhs.output_field.get_prep_value(rhs_value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1382, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“2022-16-07”的值有正确的格式（YYYY-MM-DD）但它是一个错误的日期']
+
+[2023-04-02 17:12:37,020][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 79, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 46, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/filters.py", line 305, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1391, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1263, in build_filter
+    return self._add_q(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1410, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1345, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/query.py", line 1191, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1388, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“”的值有一个错误的日期格式。它的格式应该是YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] ']
+
+[2023-04-02 17:13:47,645][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 410, in get_data_within_range
+    res += months[i]
+NameError: name 'months' is not defined
+
+[2023-04-02 17:22:36,641][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 387, in get_data_within_range
+    dt =datetime.strptime(start_date, '%Y-%m-%d')
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains: T05:00:00.000Z
+
+[2023-04-02 17:24:47,248][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 425, in get_data_within_range
+    return HttpResponse(json.dumps(response), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type SensoryData is not JSON serializable
+
+[2023-04-02 17:25:45,861][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 426, in get_data_within_range
+    return HttpResponse(json.dumps(response), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type SensoryData is not JSON serializable
+
+[2023-04-02 17:29:15,537][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'list' object has no attribute 'sea_water_temperature_c'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 422, in get_data_within_range
+    "data": list(data),
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 531, in __iter__
+    yield self[field.field_name]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 535, in __getitem__
+    value = self.data.get(key)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 548, in data
+    ret = super().data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django_restql/mixins.py", line 149, in to_representation
+    return super().to_representation(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 502, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sea_water_temperature_c` on serializer `SensoryDataSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `list` instance.
+Original exception text was: 'list' object has no attribute 'sea_water_temperature_c'.
+
+[2023-04-02 17:33:29,814][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 422, in get_data_within_range
+    "data": list(data),
+TypeError: 'ListSerializer' object is not iterable
+
+[2023-04-02 17:33:48,586][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 422, in get_data_within_range
+    "data": list(data),
+TypeError: 'ListSerializer' object is not iterable
+
+[2023-04-02 17:41:45,061][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 432, in get_data_within_range
+    return HttpResponse(json.dumps(response), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+
+[2023-04-02 17:42:31,008][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 432, in get_data_within_range
+    return HttpResponse(json.dumps(response), content_type="application/json")
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+
+[2023-04-02 17:46:09,183][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 303, in export_data
+    data = self.export_serializer_class(queryset, many=True, request=request).data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 663, in to_representation
+    return [
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+
+[2023-04-02 17:48:11,565][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 303, in export_data
+    data = self.export_serializer_class(queryset, many=True, request=request).data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 663, in to_representation
+    return [
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+
+[2023-04-02 17:48:33,333][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/import_export_mixin.py", line 303, in export_data
+    data = self.export_serializer_class(queryset, many=True, request=request).data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 745, in data
+    ret = super().data
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 663, in to_representation
+    return [
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 280, in __iter__
+    self._fetch_all()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 528, in as_sql
+    where, w_params = self.compile(self.where) if self.where is not None else ("", [])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/where.py", line 81, in as_sql
+    sql, params = compiler.compile(child)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 315, in as_sql
+    return super().as_sql(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 194, in as_sql
+    rhs_sql, rhs_params = self.process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 301, in process_rhs
+    return super().process_rhs(compiler, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 101, in process_rhs
+    return self.get_db_prep_lookup(value, connection)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/lookups.py", line 219, in get_db_prep_lookup
+    [get_db_prep_value(value, connection, prepared=True)]
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/fields/__init__.py", line 1428, in get_db_prep_value
+    return connection.ops.adapt_datetimefield_value(value)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/backends/mysql/operations.py", line 250, in adapt_datetimefield_value
+    raise ValueError("MySQL backend does not support timezone-aware datetimes when USE_TZ is False.")
+ValueError: MySQL backend does not support timezone-aware datetimes when USE_TZ is False.
+

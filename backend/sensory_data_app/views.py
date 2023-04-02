@@ -367,3 +367,66 @@ def get_min_of_month(start_date, end_date, entity):
         res.append((data['month'].strftime('%B %Y'), data['min_val']))
 
     return res
+
+
+
+from datetime import datetime
+
+
+from django.http import JsonResponse
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def get_data_within_range(request):
+    
+    start_date = request.GET.get('start_date')
+    end_date = request.GET.get('end_date')
+    page = int(request.GET.get('page', 1))
+    limit = int(request.GET.get('limit', 10))
+
+        # Parse the datetime string
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+
+    # Extract the date part and format it as a string
+    date_str = dt.strftime("%Y-%m-%d")
+    start_date = date_str    
+    print("Start date ", start_date)
+
+    data_queryset = SensoryData.objects.filter(
+        # date_recorded__range=(start_date, end_date)
+
+         date_recorded__date=start_date
+    )
+
+    print("hello")
+    res = []
+
+    
+    for d in data_queryset:
+        data = {    "sea_water_temperature_c": d.sea_water_temperature_c,"salinity": d.salinity,"dissolved_oxygen": d.dissolved_oxygen,"ph": d.ph, "date_recorded": d.date_recorded.strftime('%Y-%m-%d %H:%M:%S') }
+        res.append(data)
+        
+
+
+    # total = data_queryset.count()
+
+    # if page < 1:
+    #     page = 1
+
+    # start_index = (page - 1) * limit
+    # end_index = start_index + limit
+    # data = [start_index:end_index].values()
+
+    # print(data)
+
+    response = {
+        "code": 2000,
+        "msg": "success",
+        "data": {
+            "page": page,
+            "total": len(res),
+            "limit": len(res),
+            "data": res,
+        }
+    }
+    
+    return HttpResponse(json.dumps(response), content_type="application/json")

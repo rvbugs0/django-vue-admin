@@ -13,6 +13,7 @@ urlpatterns = [
     path('sensory_data/get_average_temperatures/', average_temperatures),
     path('sensory_data/get_average_salinity/', average_salinity),
     path('sensory_data/get_average_ph/', average_ph),
+    path('sensory_data/get_data_within_range/', get_data_within_range),
 
 
     # for dynamic charts - single endpoint

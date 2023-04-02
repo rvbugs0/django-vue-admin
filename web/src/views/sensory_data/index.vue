@@ -6,16 +6,14 @@
         <el-button-group>
           <el-button size="small" v-permission="'Create'" type="primary" @click="addRow"><i class="el-icon-plus" />
             Add</el-button>
-            <el-button
-            size="small"
-            type="warning"
-            @click="onExport"
-            v-permission="'Export'"
-            ><i class="el-icon-download" /> export
+          <el-button size="small" type="warning" @click="onExport" v-permission="'Export'"><i class="el-icon-download" />
+            export
           </el-button>
         </el-button-group>
         <crud-toolbar :search.sync="crud.searchOptions.show" :compact.sync="crud.pageOptions.compact"
-          :columns="crud.columns" @refresh="doRefresh()" @columns-filter-changed="handleColumnsFilterChanged" />
+          :columns="crud.columns" @refresh="doRefresh()" 
+          @columns-filter-changed="handleColumnsFilterChanged"
+          />
       </div>
     </d2-crud-x>
     <!--  角色授权  -->
@@ -40,8 +38,22 @@ export default {
     getCrudOptions() {
       return crudOptions(this)
     },
+
     pageRequest(query) {
-      return api.GetList(query)
+
+      if (query.date_recorded) {
+        
+        // console.log(formattedDate)
+        var q = {...query}
+        q.start_date = query.date_recorded
+        q.end_date = query.date_recorded
+        return api.GetList(q,true)
+      }else{
+        return api.GetList(query)
+
+      }
+
+      return api.GetList(query,query.start_date)
     },
     addRequest(row) {
       return api.createObj(row)
@@ -51,7 +63,7 @@ export default {
     },
     delRequest(row) {
       return api.DelObj(row.id)
-    },    onExport () {
+    }, onExport() {
       const that = this
       this.$confirm('Are you sure to export all data items?', 'warning', {
         confirmButtonText: 'Sure',

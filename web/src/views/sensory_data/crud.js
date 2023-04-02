@@ -211,20 +211,20 @@ export const crudOptions = (vm) => {
       },
 
       type: 'date',
-      form: {
-        rules: [ // form validation rules
-          { required: true, message: 'Role name is required' }
-        ],
-        component: {
-          props: {
-            clearable: true
-          },
-          placeholder: 'Please enter a role name'
-        },
-        itemProps: {
-          class: { yxtInput: true }
-        }
-      }
+      // form: {
+      //   rules: [ // form validation rules
+      //     { required: true, message: 'Role name is required' }
+      //   ],
+      //   component: {
+      //     props: {
+      //       clearable: true
+      //     },
+      //     placeholder: 'Please enter a role name'
+      //   },
+      //   // itemProps: {
+      //   //   class: { yxtInput: true }
+      //   // }
+      // }
     }
     ]
     .concat(vm.commonEndColumns({
