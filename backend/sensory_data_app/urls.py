@@ -14,6 +14,7 @@ urlpatterns = [
     path('sensory_data/get_average_salinity/', average_salinity),
     path('sensory_data/get_average_ph/', average_ph),
     path('sensory_data/get_data_within_range/', get_data_within_range),
+    path('sensory_data/export_data_to_excel/', export_data_to_excel),
 
 
     # for dynamic charts - single endpoint

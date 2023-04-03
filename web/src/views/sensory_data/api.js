@@ -65,13 +65,23 @@ const downloadFile = function ({ url, params, method, filename = "Export_" }) {
     responseType: "blob",
     // headers: {Accept: 'application/vnd.openxmlformats-officedocument'}
   }).then((res) => {
-    const xlsxName  = "Export_"
-    // = window.decodeURI(
-    //   res.headers["content-disposition"].split("=")[1]
+
+    
+    
+    const xlsxName  = "Export.xlsx"
+    //  window.decodeURI(
+    //   res.headers["Content-Disposition"].split("=")[1]
     // );
     const fileName = xlsxName || `${filename}.xlsx`;
     if (res) {
-      const blob = new Blob([res.data], { type: "charset=utf-8" });
+      var blob;
+      if(res.data){
+
+         blob = new Blob([res.data], { type: "charset=utf-8" });
+      }else{
+         blob = new Blob([res], { type: "charset=utf-8" });
+      }
+
       const elink = document.createElement("a");
       elink.download = fileName;
       elink.style.display = "none";
@@ -85,9 +95,24 @@ const downloadFile = function ({ url, params, method, filename = "Export_" }) {
 };
 
 export function exportData(params) {
-  return downloadFile({
-    url: urlPrefix + "export_data/",
-    params: params,
-    method: "get",
-  });
+  if(params.date_recorded)
+  {
+    return downloadFile({
+      url: urlPrefix + "export_data_to_excel/",
+      params: params,
+      method: "get",
+    });
+
+  }else{
+
+    return downloadFile({
+      url: urlPrefix + "export_data/",
+      params: params,
+      method: "get",
+    });
+
+
+  }
+
+
 }

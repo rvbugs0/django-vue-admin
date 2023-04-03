@@ -430,3 +430,52 @@ def get_data_within_range(request):
     }
     
     return HttpResponse(json.dumps(response), content_type="application/json")
+
+
+
+from openpyxl import Workbook
+
+def export_data_to_excel(request):
+
+    start_date = request.GET.get('date_recorded')
+
+        # Parse the datetime string
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+
+    # Extract the date part and format it as a string
+    date_str = dt.strftime("%Y-%m-%d")
+    start_date = date_str    
+    
+
+    data = SensoryData.objects.filter(
+        # date_recorded__range=(start_date, end_date)
+
+         date_recorded__date=start_date
+    )
+
+
+
+    # Create a new workbook
+    wb = Workbook()
+
+    # Select the active worksheet
+    ws = wb.active
+
+    # Write the column headers to the worksheet
+    ws.append(['Sea Water Temperature in Degree Celcius', 'Salinity', 'Dissolved Oxygen','pH',"Date Recorded"])
+
+    # Write the data to the worksheet
+    for row in data:
+        ws.append([row.sea_water_temperature_c, row.salinity, row.dissolved_oxygen,row.ph,row.date_recorded.strftime('%Y-%m-%d %H:%M:%S')])
+
+    # Create a response object with the appropriate content type
+    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    # Set the content-disposition header to force a download
+    response['Content-Disposition'] = 'attachment; filename=export.xlsx'
+
+    # Write the workbook data to the response
+    wb.save(response)
+
+    # Return the response
+    return response

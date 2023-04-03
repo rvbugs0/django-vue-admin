@@ -71,6 +71,7 @@ export default {
         type: 'warning'
       }).then(function () {
         const query = that.getSearch().getForm()
+        console.log(query)
         return api.exportData({ ...query })
       })
     }
