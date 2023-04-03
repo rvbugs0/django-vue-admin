@@ -65,9 +65,10 @@ const downloadFile = function ({ url, params, method, filename = "Export_" }) {
     responseType: "blob",
     // headers: {Accept: 'application/vnd.openxmlformats-officedocument'}
   }).then((res) => {
-    const xlsxName = window.decodeURI(
-      res.headers["content-disposition"].split("=")[1]
-    );
+    const xlsxName  = "Export_"
+    // = window.decodeURI(
+    //   res.headers["content-disposition"].split("=")[1]
+    // );
     const fileName = xlsxName || `${filename}.xlsx`;
     if (res) {
       const blob = new Blob([res.data], { type: "charset=utf-8" });

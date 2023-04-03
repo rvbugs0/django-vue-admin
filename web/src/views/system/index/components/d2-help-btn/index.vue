@@ -5,7 +5,7 @@
       style="width: 138px;"
       @click="dialogVisible = true">
     <el-dialog
-      title="帮助"
+      title="help"
       width="800px"
       :visible.sync="dialogVisible"
       :append-to-body="true">
@@ -13,7 +13,7 @@
         <el-button-group class="d2-mb">
           <el-button @click="$open('https://github.com/greper/d2-crud-plus')">
             <d2-icon name="github" class="d2-mr-5 "/>
-            主页
+            Home page
           </el-button>
           <el-button @click="$open('http://qiniu.veryreader.com/D2CrudPlusExample/index.html')">
             <d2-icon name="book" class="d2-mr-5"/>
