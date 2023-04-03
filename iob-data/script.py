@@ -23,12 +23,20 @@ with open(input_file, 'r') as csv_file, open(output_file, 'w', newline='') as ou
     for row in reader:
         
         if(i == 0):
-            i += 1
+            
+            i+=1
             continue
-        
+
+        # if(1==i):
+        #     print(row)
+        #     i+=1
+
+            
+            
         # extract the values for the keys
         values = []
-        # print(row)
+        
+        
         
         try:
             date = row[0].split("+")[0]
@@ -41,16 +49,17 @@ with open(input_file, 'r') as csv_file, open(output_file, 'w', newline='') as ou
             salinity = float(
                 salinity[:len(salinity)-1].replace('\'', '').replace("\"", "").strip())
 
-            ph = row[2].split(":")[1]
-            ph = float(ph[:len(ph)-1].replace('\'',
-                       '').replace("\"", "").strip())
+            
+            
+            ph = row[3].split(":")[1]
+            ph= ph.replace("\"","").replace("}","").replace("'","")
+            ph = float(ph)
 
-            oxy = row[2].split(":")[1]
-            oxy = float(oxy[:len(oxy)-1].replace('\'',
-                        '').replace("\"", "").strip())
-
+            oxy = row[4].split(":")[1]
+            oxy= oxy.replace("\"","").replace("}","").replace("'","").replace("]","")
+            
             values = [date,sea, salinity, ph, oxy]
-
+            
             writer.writerow(values)
         except:
             print("Incorrectly formatted row")
