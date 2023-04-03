@@ -198,7 +198,7 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'Date Recorded',
+      title: 'Date Recorded (Start)',
       key: 'date_recorded',
       sortable: true,
       search: {
@@ -211,20 +211,23 @@ export const crudOptions = (vm) => {
       },
 
       type: 'date',
-      // form: {
-      //   rules: [ // form validation rules
-      //     { required: true, message: 'Role name is required' }
-      //   ],
-      //   component: {
-      //     props: {
-      //       clearable: true
-      //     },
-      //     placeholder: 'Please enter a role name'
-      //   },
-      //   // itemProps: {
-      //   //   class: { yxtInput: true }
-      //   // }
-      // }
+    },
+    {
+      title: 'Date Recorded (End)',
+      key: 'end_date',
+      sortable: false,
+      show:false,
+      search: {
+        disabled: false,
+        component: {
+          props: {
+            clearable: true
+          }
+        }
+      },
+
+      type: 'date',
+     
     }
     ]
     .concat(vm.commonEndColumns({

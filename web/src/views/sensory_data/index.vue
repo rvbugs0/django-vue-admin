@@ -46,7 +46,16 @@ export default {
         // console.log(formattedDate)
         var q = {...query}
         q.start_date = query.date_recorded
-        q.end_date = query.date_recorded
+        
+        if(q.end_date){
+          q.end_date = query.end_date
+
+        }else{
+          q.end_date = query.date_recorded
+        }
+
+        
+        
         return api.GetList(q,true)
       }else{
         return api.GetList(query)
@@ -86,3 +95,5 @@ export default {
   }
 }
 </style>
+
+

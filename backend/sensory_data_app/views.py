@@ -379,25 +379,29 @@ from django.http import JsonResponse
 def get_data_within_range(request):
     
     start_date = request.GET.get('start_date')
+
+
     end_date = request.GET.get('end_date')
     page = int(request.GET.get('page', 1))
     limit = int(request.GET.get('limit', 10))
 
         # Parse the datetime string
     dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-
+    e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
     # Extract the date part and format it as a string
     date_str = dt.strftime("%Y-%m-%d")
+    end_date_str = e_dt.strftime("%Y-%m-%d")
     start_date = date_str    
-    print("Start date ", start_date)
+    end_date = end_date_str
+    # print("Start date ", start_date)
 
     data_queryset = SensoryData.objects.filter(
-        # date_recorded__range=(start_date, end_date)
+        date_recorded__range=(start_date, end_date)
 
-         date_recorded__date=start_date
+        #  date_recorded__date=start_date
     )
 
-    print("hello")
+    # print("hello")
     res = []
 
     
@@ -439,18 +443,25 @@ def export_data_to_excel(request):
 
     start_date = request.GET.get('date_recorded')
 
-        # Parse the datetime string
+    # Parse the datetime string
     dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
 
     # Extract the date part and format it as a string
     date_str = dt.strftime("%Y-%m-%d")
     start_date = date_str    
-    
+
+
+    end_date = request.GET.get('end_date')
+    e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+    end_date_str = e_dt.strftime("%Y-%m-%d")
+    end_date = end_date_str
+
+
 
     data = SensoryData.objects.filter(
-        # date_recorded__range=(start_date, end_date)
+        date_recorded__range=(start_date, end_date)
 
-         date_recorded__date=start_date
+        #  date_recorded__date=start_date
     )
 
 
