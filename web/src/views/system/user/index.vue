@@ -167,6 +167,7 @@ export default {
         type: 'warning'
       }).then(function () {
         const query = that.getSearch().getForm()
+        
         return api.exportData({ ...query })
       })
     },

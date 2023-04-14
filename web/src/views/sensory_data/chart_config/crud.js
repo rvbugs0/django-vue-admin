@@ -186,6 +186,7 @@ export const crudOptions = (vm) => {
             { value: 'bar', label: 'Bar chart' },
             { value: 'line', label: 'Line chart' },
             { value: 'area', label: 'Area chart' },
+            { value: 'scroll_chart', label: 'Scrollable Line chart' },
            
           ]
         },

@@ -122,6 +122,61 @@ export default {
                         }
                     ]
                 }
+            } else if (element.type == 'scroll_chart') {
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        position: function (pt) {
+                            return [pt[0], '1%'];
+                        }
+                    },
+                    title: {
+                        left: 'center',
+                        text: element.title
+                    },
+                    toolbox: {
+                        feature: {
+                            dataZoom: {
+                                yAxisIndex: 'none'
+                            },
+                            restore: {},
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: element.xData
+                    },
+                    yAxis: {
+                        type: 'value',
+                        boundaryGap: [0, '1%']
+                    },
+                    dataZoom: [
+                        {
+                            type: 'inside',
+                            start: 0,
+                            end: 10
+                        },
+                        {
+                            start: 0,
+                            end: 10
+                        }
+                    ],
+                    series: [
+                        {
+                            name: 'Y-value',
+                            type: 'line',
+                            symbol: 'none',
+                            sampling: 'lttb',
+                            itemStyle: {
+                                color: 'rgb(255, 70, 131)'
+                            },
+
+                            data: element.yData
+                        }
+                    ]
+                };
             }
             return option
         }
