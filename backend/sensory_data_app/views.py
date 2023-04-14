@@ -232,7 +232,7 @@ def get_charts_data(request):
         if (c.function_type == "plain_value"):
             data = get_plain_data_within_range( c.start_date, c.end_date, c.entity)
 
-            if (c.type == "bar" or c.type == "area" or c.type == "line"):
+            if (c.type == "bar" or c.type == "area" or c.type == "line" or c.type=="scroll_chart"):
                 xData = []
                 yData = []
                 for monthly_data in data:
