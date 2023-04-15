@@ -10601,3 +10601,9 @@ NameError: name 'end_date' is not defined
 [2023-04-16 02:06:57,397][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.05, 127.0.0.1:52847][0m
 [2023-04-16 02:06:57,484][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNTg0NDc3LCJpYXQiOjE2ODE1NzcyNzcsImp0aSI6ImY2NDFhNmE4N2MwNDRiZGQ5YzczNzdiYjdiMDQ5ODg3IiwidXNlcl9pZCI6MX0.MoqVCMAMgveFXW3g6cPn6_jBug_cqyRWoOaNJR4LdfY/ [127.0.0.1:52901]
 [2023-04-16 02:06:57,486][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNTg0NDc3LCJpYXQiOjE2ODE1NzcyNzcsImp0aSI6ImY2NDFhNmE4N2MwNDRiZGQ5YzczNzdiYjdiMDQ5ODg3IiwidXNlcl9pZCI6MX0.MoqVCMAMgveFXW3g6cPn6_jBug_cqyRWoOaNJR4LdfY/ [127.0.0.1:52901]
+[2023-04-16 02:14:04,382][django.channels.server.log_action():166] [INFO] WebSocket DISCONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNTg0NDc3LCJpYXQiOjE2ODE1NzcyNzcsImp0aSI6ImY2NDFhNmE4N2MwNDRiZGQ5YzczNzdiYjdiMDQ5ODg3IiwidXNlcl9pZCI6MX0.MoqVCMAMgveFXW3g6cPn6_jBug_cqyRWoOaNJR4LdfY/ [127.0.0.1:52901]
+[2023-04-16 02:20:20,333][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-04-16 02:20:21,364][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-04-16 02:20:22,042][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-04-16 02:20:22,042][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-04-16 02:20:22,043][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000

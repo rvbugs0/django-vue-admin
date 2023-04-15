@@ -1,3 +1,6 @@
+from openpyxl import Workbook
+from django.http import JsonResponse
+from datetime import datetime
 from django.db.models import F
 from django.shortcuts import render
 
@@ -37,13 +40,15 @@ class SensoryDataSerializer(CustomModelSerializer):
         fields = "__all__"
         read_only_fields = ["id"]
 
+
 class ExportSensoryDataSerializer(CustomModelSerializer):
-    
-    sea_water_temperature_c = serializers.FloatField( default=0.0)
-    salinity = serializers.FloatField( default=0.0)
-    dissolved_oxygen = serializers.FloatField( default = 0.0)
-    ph = serializers.FloatField( default = 0.0)
-    date_recorded = serializers.DateTimeField( default = "")
+
+    sea_water_temperature_c = serializers.FloatField(default=0.0)
+    salinity = serializers.FloatField(default=0.0)
+    dissolved_oxygen = serializers.FloatField(default=0.0)
+    ph = serializers.FloatField(default=0.0)
+    date_recorded = serializers.DateTimeField(default="")
+
     class Meta:
         model = SensoryData
         fields = (
@@ -53,8 +58,6 @@ class ExportSensoryDataSerializer(CustomModelSerializer):
             "ph",
             "date_recorded"
         )
-
-
 
 
 class SensoryDataViewSet(CustomModelViewSet):
@@ -70,11 +73,11 @@ class SensoryDataViewSet(CustomModelViewSet):
     serializer_class = SensoryDataSerializer
 
     export_field_label = {
-            "sea_water_temperature_c":"Sea water temperature in Degree Celcius",
-            "salinity":"Salinity",
-            "dissolved_oxygen":"Dissolved Oxygen",
-            "ph":"pH",
-            "date_recorded":"Date recorded"
+        "sea_water_temperature_c": "Sea water temperature in Degree Celcius",
+        "salinity": "Salinity",
+        "dissolved_oxygen": "Dissolved Oxygen",
+        "ph": "pH",
+        "date_recorded": "Date recorded"
 
     }
     export_serializer_class = ExportSensoryDataSerializer
@@ -230,9 +233,10 @@ def get_charts_data(request):
     chart_configs = ChartConfig.objects.filter(public_exposed=True)
     for c in chart_configs:
         if (c.function_type == "plain_value"):
-            data = get_plain_data_within_range( c.start_date, c.end_date, c.entity)
+            data = get_plain_data_within_range(
+                c.start_date, c.end_date, c.entity)
 
-            if (c.type == "bar" or c.type == "area" or c.type == "line" or c.type=="scroll_chart"):
+            if (c.type == "bar" or c.type == "area" or c.type == "line" or c.type == "scroll_chart"):
                 xData = []
                 yData = []
                 for monthly_data in data:
@@ -318,10 +322,10 @@ def get_plain_data_within_range(start_date, end_date, entity):
     ).annotate(
         entity_value=F(entity)
     ).values(
-        'entity_value','date_recorded'
-    )
+        'entity_value', 'date_recorded'
+    ).order_by('date_recorded')
     res = []
-    
+
     for data in records:
         obj = data["date_recorded"]
         day = obj.strftime('%d')
@@ -330,10 +334,7 @@ def get_plain_data_within_range(start_date, end_date, entity):
         d = year + "-" + month + "-" + day
         res.append((d, data['entity_value']))
 
-
     return res
-
-
 
 
 def get_max_of_month(start_date, end_date, entity):
@@ -369,29 +370,23 @@ def get_min_of_month(start_date, end_date, entity):
     return res
 
 
-
-from datetime import datetime
-
-
-from django.http import JsonResponse
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def get_data_within_range(request):
-    
-    start_date = request.GET.get('start_date')
 
+    start_date = request.GET.get('start_date')
 
     end_date = request.GET.get('end_date')
     page = int(request.GET.get('page', 1))
     limit = int(request.GET.get('limit', 10))
 
-        # Parse the datetime string
+    # Parse the datetime string
     dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
     e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
     # Extract the date part and format it as a string
     date_str = dt.strftime("%Y-%m-%d")
     end_date_str = e_dt.strftime("%Y-%m-%d")
-    start_date = date_str    
+    start_date = date_str
     end_date = end_date_str
     # print("Start date ", start_date)
 
@@ -404,12 +399,10 @@ def get_data_within_range(request):
     # print("hello")
     res = []
 
-    
     for d in data_queryset:
-        data = {    "sea_water_temperature_c": d.sea_water_temperature_c,"salinity": d.salinity,"dissolved_oxygen": d.dissolved_oxygen,"ph": d.ph, "date_recorded": d.date_recorded.strftime('%Y-%m-%d %H:%M:%S') }
+        data = {"sea_water_temperature_c": d.sea_water_temperature_c, "salinity": d.salinity,
+                "dissolved_oxygen": d.dissolved_oxygen, "ph": d.ph, "date_recorded": d.date_recorded.strftime('%Y-%m-%d %H:%M:%S')}
         res.append(data)
-        
-
 
     # total = data_queryset.count()
 
@@ -432,12 +425,9 @@ def get_data_within_range(request):
             "data": res,
         }
     }
-    
+
     return HttpResponse(json.dumps(response), content_type="application/json")
 
-
-
-from openpyxl import Workbook
 
 def export_data_to_excel(request):
 
@@ -448,23 +438,18 @@ def export_data_to_excel(request):
 
     # Extract the date part and format it as a string
     date_str = dt.strftime("%Y-%m-%d")
-    start_date = date_str    
-
+    start_date = date_str
 
     end_date = request.GET.get('end_date')
     e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
     end_date_str = e_dt.strftime("%Y-%m-%d")
     end_date = end_date_str
 
-
-
     data = SensoryData.objects.filter(
         date_recorded__range=(start_date, end_date)
 
         #  date_recorded__date=start_date
     )
-
-
 
     # Create a new workbook
     wb = Workbook()
@@ -473,14 +458,17 @@ def export_data_to_excel(request):
     ws = wb.active
 
     # Write the column headers to the worksheet
-    ws.append(['Sea Water Temperature in Degree Celcius', 'Salinity', 'Dissolved Oxygen','pH',"Date Recorded"])
+    ws.append(['Sea Water Temperature in Degree Celcius',
+              'Salinity', 'Dissolved Oxygen', 'pH', "Date Recorded"])
 
     # Write the data to the worksheet
     for row in data:
-        ws.append([row.sea_water_temperature_c, row.salinity, row.dissolved_oxygen,row.ph,row.date_recorded.strftime('%Y-%m-%d %H:%M:%S')])
+        ws.append([row.sea_water_temperature_c, row.salinity, row.dissolved_oxygen,
+                  row.ph, row.date_recorded.strftime('%Y-%m-%d %H:%M:%S')])
 
     # Create a response object with the appropriate content type
-    response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response = HttpResponse(
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
     # Set the content-disposition header to force a download
     response['Content-Disposition'] = 'attachment; filename=export.xlsx'
