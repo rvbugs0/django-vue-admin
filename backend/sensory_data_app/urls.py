@@ -19,6 +19,7 @@ urlpatterns = [
 
     # for dynamic charts - single endpoint
     path('chart_config/get_charts_data/', get_charts_data),
+    path('chart_config/get_plain_scroll_charts/', get_plain_line_chart_data),
 
 ]
 

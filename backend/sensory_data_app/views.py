@@ -478,3 +478,30 @@ def export_data_to_excel(request):
 
     # Return the response
     return response
+
+
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def get_plain_line_chart_data(request):
+    res = []
+    entity = request.GET.get('entity')
+    data = SensoryData.objects.all().order_by(
+        'date_recorded').values('date_recorded', entity)
+    xData = []
+    yData = []
+    for record in data:
+
+        obj = record["date_recorded"]
+        day = obj.strftime('%d')
+        month = obj.strftime('%m')
+        year = obj.strftime('%Y')
+        d = year + "-" + month + "-" + day
+        xData.append(d)
+        yData.append(record[entity])
+    res_object = {}
+    res_object["xData"] = xData
+    res_object["yData"] = yData
+    res_object["title"] = entity
+    res.append(res_object)
+
+    return HttpResponse(json.dumps(res), content_type="application/json")
