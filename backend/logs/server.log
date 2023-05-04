@@ -12371,3 +12371,7 @@ TypeError: 'SensoryData' object is not subscriptable
 [2023-05-04 14:19:03,445][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
 [2023-05-04 14:19:04,100][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/?limit=20&page=1 200 [0.13, 127.0.0.1:52691][0m
 [2023-05-04 14:19:04,743][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_sensory_violation_data?limit=20&page=1 200 [0.09, 127.0.0.1:52691][0m
+[2023-05-04 14:27:26,833][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-05-04 14:27:27,322][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-05-04 14:27:27,322][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-05-04 14:27:27,323][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000

@@ -44,11 +44,11 @@ Vue.prototype.$websocket = websocket;
 
 import * as VueGoogleMaps from 'vue2-google-maps'
  
-g_key = 'AIzaSyCBEP6TXaRn4nAeL9pV5VtpzVnlfFFxXc8'
+
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: g_key,
+    key: 'AIzaSyCBEP6TXaRn4nAeL9pV5VtpzVnlfFFxXc8',
     libraries: 'places,marker', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
