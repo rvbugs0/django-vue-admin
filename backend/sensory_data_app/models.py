@@ -21,3 +21,9 @@ class ChartConfig(CoreModel):
     title = models.CharField(default="Avg monthly sea water temp. deg Celcius", blank=False, max_length=100)
     start_date = models.DateTimeField(default=timezone.now)
     end_date = models.DateTimeField(default=timezone.now)
+
+
+class SensoryDataRangeAlert(CoreModel):
+    entity = models.CharField(default="sea_water_temperature_c", blank=False, max_length=50)
+    upper_treshold = models.FloatField(default=100,blank=False)
+    lower_treshold = models.FloatField(default=-100,blank=False)
