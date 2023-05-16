@@ -2134,3 +2134,123 @@ TypeError: 'SensoryData' object is not subscriptable
     obj["sea_water_temperature_c"] = record["sea_water_temperature_c"]
 TypeError: 'SensoryData' object is not subscriptable
 
+[2023-05-15 07:40:26,064][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 661, in send_email_alerts
+    send_mail(subject, from_email, recipient_list,html_message=message)
+TypeError: send_mail() missing 1 required positional argument: 'recipient_list'
+
+[2023-05-15 07:41:00,090][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 661, in send_email_alerts
+    send_mail(subject= subject, from_email= from_email, recipient_list= recipient_list,html_message=message)
+TypeError: send_mail() missing 1 required positional argument: 'message'
+
+[2023-05-17 04:18:46,687][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: SensoryDataRangeAlert() got an unexpected keyword argument 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 958, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `SensoryDataRangeAlert.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `SensoryDataRangeAlert.objects.create()`. You may need to make the field read-only, or override the ViolationAlertsListSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: SensoryDataRangeAlert() got an unexpected keyword argument 'email'
+
+
+[2023-05-17 04:19:47,472][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: SensoryDataRangeAlert() got an unexpected keyword argument 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/viewset.py", line 75, in create
+    self.perform_create(serializer)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 62, in save
+    return super().save(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 205, in save
+    self.instance = self.create(validated_data)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/dvadmin/utils/serializers.py", line 79, in create
+    return super().create(validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 958, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `SensoryDataRangeAlert.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `SensoryDataRangeAlert.objects.create()`. You may need to make the field read-only, or override the ViolationAlertsListSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/serializers.py", line 939, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: SensoryDataRangeAlert() got an unexpected keyword argument 'email'
+
+
+[2023-05-17 04:24:29,937][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 690, in send_email_alerts
+    recipient_list.append(k["email"])
+TypeError: 'ViolationAlertsList' object is not subscriptable
+
+[2023-05-17 04:24:59,584][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 692, in send_email_alerts
+    recipient_list.append(k["email"])
+TypeError: 'ViolationAlertsList' object is not subscriptable
+

@@ -27,3 +27,8 @@ class SensoryDataRangeAlert(CoreModel):
     entity = models.CharField(default="sea_water_temperature_c", blank=False, max_length=50)
     upper_treshold = models.FloatField(default=100,blank=False)
     lower_treshold = models.FloatField(default=-100,blank=False)
+
+
+class ViolationAlertsList(CoreModel):
+    email = models.CharField(default="email", blank=False, max_length=50)
+    

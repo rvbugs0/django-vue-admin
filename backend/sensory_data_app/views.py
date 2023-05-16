@@ -1,3 +1,4 @@
+from django.db.models import Q
 from openpyxl import Workbook
 from django.http import JsonResponse
 from datetime import datetime
@@ -8,6 +9,8 @@ import json
 from .models import SensoryData
 from .models import ChartConfig
 from .models import SensoryDataRangeAlert
+from .models import ViolationAlertsList
+
 # Create your views here.
 from rest_framework import serializers
 from rest_framework.response import Response
@@ -24,6 +27,10 @@ from django.db.models import Avg
 from django.db.models.functions import TruncMonth
 from django.db.models import Max
 from django.db.models import Min
+
+
+from django.core.mail import send_mail
+from tabulate import tabulate
 
 
 class SensoryDataSerializer(CustomModelSerializer):
@@ -115,6 +122,33 @@ class SensoryDataRangeAlertViewSet(CustomModelViewSet):
 
 
 # -------------- end - alerts ----------------------------
+
+
+# -------------- alerts-list ----------------------------
+
+class ViolationAlertsListSerializer(CustomModelSerializer):
+    """
+    接口白名单-序列化器
+    """
+    email = serializers.CharField(required=True)
+
+    class Meta:
+        model = ViolationAlertsList
+        fields = "__all__"
+        read_only_fields = ["id"]
+
+
+class ViolationAlertsListViewSet(CustomModelViewSet):
+    """
+    部门管理接口
+    list:查询
+    create:新增
+    update:修改
+    retrieve:单例
+    destroy:删除
+    """
+    queryset = ViolationAlertsList.objects.all()
+    serializer_class = ViolationAlertsListSerializer
 
 
 # view set has all the basic apis and custom api's are addded below and their urls also added in the urls.py
@@ -541,12 +575,10 @@ def get_plain_line_chart_data(request):
     return HttpResponse(json.dumps(res), content_type="application/json")
 
 
-from django.db.models import Q
-
 @api_view(('GET',))
 @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
 def get_sensory_violation_data(request):
-    
+
     range_filters = SensoryDataRangeAlert.objects.all()
     if (len(range_filters) == 0):
         return HttpResponse(json.dumps([]), content_type="application/json")
@@ -561,15 +593,15 @@ def get_sensory_violation_data(request):
         tresholds[i.entity] = [i.lower_treshold, i.upper_treshold]
 
     data = SensoryData.objects.filter(
-        Q(sea_water_temperature_c__lt = tresholds["sea_water_temperature_c"][0]) |
-        Q(sea_water_temperature_c__gt = tresholds["sea_water_temperature_c"][1]) | 
-        Q(salinity__lt=tresholds["salinity"][0]) | 
+        Q(sea_water_temperature_c__lt=tresholds["sea_water_temperature_c"][0]) |
+        Q(sea_water_temperature_c__gt=tresholds["sea_water_temperature_c"][1]) |
+        Q(salinity__lt=tresholds["salinity"][0]) |
         Q(salinity__gt=tresholds["salinity"][1]) |
-        Q(ph__lt=tresholds["ph"][0]) | 
+        Q(ph__lt=tresholds["ph"][0]) |
         Q(ph__gt=tresholds["ph"][1]) |
-        Q(dissolved_oxygen__lt=tresholds["dissolved_oxygen"][0]) | 
-        Q(dissolved_oxygen__gt=tresholds["dissolved_oxygen"][1])).order_by('date_recorded').values('date_recorded','salinity','ph','dissolved_oxygen','sea_water_temperature_c',"id")
-    
+        Q(dissolved_oxygen__lt=tresholds["dissolved_oxygen"][0]) |
+        Q(dissolved_oxygen__gt=tresholds["dissolved_oxygen"][1])).order_by('date_recorded').values('date_recorded', 'salinity', 'ph', 'dissolved_oxygen', 'sea_water_temperature_c', "id")
+
     res = []
     for record in data:
 
@@ -579,7 +611,7 @@ def get_sensory_violation_data(request):
         year = obj.strftime('%Y')
         d = year + "-" + month + "-" + day
         obj = {}
-        obj["id"]= record["id"]
+        obj["id"] = record["id"]
         obj["date_recorded"] = d
         obj["sea_water_temperature_c"] = record["sea_water_temperature_c"]
         obj["salinity"] = record["salinity"]
@@ -587,8 +619,75 @@ def get_sensory_violation_data(request):
         obj["dissolved_oxygen"] = record["dissolved_oxygen"]
         # print(obj)
         res.append(obj)
-    
+
     r = {}
-    r["data"]={"total":len(res),"page":1,"limit":len(res),"data":res}
+    r["data"] = {"total": len(res), "page": 1, "limit": len(res), "data": res}
     return HttpResponse(json.dumps(r), content_type="application/json")
 
+
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def send_email_alerts(request):
+    range_filters = SensoryDataRangeAlert.objects.all()
+    if (len(range_filters) == 0):
+        return HttpResponse(json.dumps([]), content_type="application/json")
+
+    tresholds = {}
+    tresholds["sea_water_temperature_c"] = [-9999, 99999]
+    tresholds["salinity"] = [-9999999, 9999999]
+    tresholds["ph"] = [-99999, 9999999]
+    tresholds["dissolved_oxygen"] = [-9999999, 9999999]
+
+    for i in range_filters:
+        tresholds[i.entity] = [i.lower_treshold, i.upper_treshold]
+
+    data = SensoryData.objects.filter(
+        Q(sea_water_temperature_c__lt=tresholds["sea_water_temperature_c"][0]) |
+        Q(sea_water_temperature_c__gt=tresholds["sea_water_temperature_c"][1]) |
+        Q(salinity__lt=tresholds["salinity"][0]) |
+        Q(salinity__gt=tresholds["salinity"][1]) |
+        Q(ph__lt=tresholds["ph"][0]) |
+        Q(ph__gt=tresholds["ph"][1]) |
+        Q(dissolved_oxygen__lt=tresholds["dissolved_oxygen"][0]) |
+        Q(dissolved_oxygen__gt=tresholds["dissolved_oxygen"][1])).order_by('date_recorded').values('date_recorded', 'salinity', 'ph', 'dissolved_oxygen', 'sea_water_temperature_c', "id")
+
+    res = []
+    for record in data:
+
+        obj = record["date_recorded"]
+        day = obj.strftime('%d')
+        month = obj.strftime('%m')
+        year = obj.strftime('%Y')
+        d = year + "-" + month + "-" + day
+        obj = {}
+        obj["id"] = record["id"]
+        obj["date_recorded"] = d
+        obj["sea_water_temperature_c"] = record["sea_water_temperature_c"]
+        obj["salinity"] = record["salinity"]
+        obj["ph"] = record["ph"]
+        obj["dissolved_oxygen"] = record["dissolved_oxygen"]
+        # print(obj)
+        res.append(obj)
+
+    # Assuming `res` is defined as shown in the question
+    headers = ["ID", "Date Recorded",
+               "Sea Water Temperature (C)", "Salinity", "pH", "Dissolved Oxygen"]
+    table = []
+    for r in res:
+        table.append([r["id"], r["date_recorded"], r["sea_water_temperature_c"],
+                     r["salinity"], r["ph"], r["dissolved_oxygen"]])
+
+    html = tabulate(table, headers, tablefmt="html")
+
+    email_list = ViolationAlertsList.objects.all()
+    recipient_list = []
+    for k in email_list:
+        recipient_list.append(k.email)
+
+    subject = 'Violation Alerts'
+    message = '<h1>Sensory violations</h1>'+html
+    from_email = 'example@gmail.com'
+
+    send_mail(subject=subject, message='', from_email=from_email,
+              recipient_list=recipient_list, html_message=message)
+    return HttpResponse(json.dumps([]), content_type="application/json")

@@ -19,7 +19,7 @@ export default {
         this.$refs.mapRef.$mapPromise.then((map) => {
             map.panTo({ lat: this.mapCenter.lat, lng: this.mapCenter.lng })
         })
-        this.loadCharts();
+        
     }
     , components: {
         GmapMap: VueGoogleMaps.Map,
@@ -27,98 +27,10 @@ export default {
     }, methods: {
         onMarkerClick(marker) {
             alert(`Marker ${marker.title} clicked`);
-            var parentDiv = document.getElementById("right");
-            parentDiv.innerHTML = "";
-            this.loadCharts();
+            window.open(`/location_chart_detailed/#/location_chart_detailed`, '_blank');
+
         },
-        loadCharts() {
-            var entities = ["sea_water_temperature_c", "ph", "dissolved_oxygen", "salinity"]
-            for (var i = 0; i < entities.length; i++) {
-
-                var promise = request({
-                    url: '/api/system/chart_config/get_plain_scroll_charts/',
-                    method: 'get',
-                    params: { entity: entities[i] }
-                });
-
-                promise.then(function (data) {
-                    
-                    var element = data[0];
-                    
-                    var option = {
-                        tooltip: {
-                            trigger: 'axis',
-                            position: function (pt) {
-                                return [pt[0], '1%'];
-                            }
-                        },
-                        title: {
-                            left: 'center',
-                            text: element.title
-                        },
-                        toolbox: {
-                            feature: {
-                                dataZoom: {
-                                    yAxisIndex: 'none'
-                                },
-                                restore: {},
-                                saveAsImage: {}
-                            }
-                        },
-                        xAxis: {
-                            type: 'category',
-                            boundaryGap: false,
-                            data: element.xData
-                        },
-                        yAxis: {
-                            type: 'value',
-                            boundaryGap: [0, '1%']
-                        },
-                        dataZoom: [
-                            {
-                                type: 'inside',
-                                start: 0,
-                                end: 10
-                            },
-                            {
-                                start: 0,
-                                end: 10
-                            }
-                        ],
-                        series: [
-                            {
-                                name: 'Y-value',
-                                type: 'line',
-                                symbol: 'none',
-                                sampling: 'lttb',
-                                itemStyle: {
-                                    color: 'rgb(255, 70, 131)'
-                                },
-
-                                data: element.yData
-                            }
-                        ]
-                    };
-                    // Create a div element with id "child"
-                    var childDiv = document.createElement("div");
-                    childDiv.id = "chart_" + i;
-                    childDiv.style.width = "700px";
-                    childDiv.style.height = "400px";
-
-                    // Get the parent div element by id "parent"
-                    var parentDiv = document.getElementById("right");
-
-                    // Append the child div element as a child of the parent div element
-                    parentDiv.appendChild(childDiv);
-
-                    let myChart = echarts.init(childDiv)
-                    myChart.setOption(option)
-                })
-
-            }
-
-
-        }
+        
     }
 }
 
@@ -128,24 +40,10 @@ export default {
 <template>
     <div class="contain">
         <div class="left">
-            <gmap-map ref="mapRef" :center="mapCenter" :zoom="mapZoom" style="height: 400px; width: 100%">
+            <gmap-map ref="mapRef" :center="mapCenter" :zoom="mapZoom" style="height: 700px; width: 100%">
                 <gmap-marker v-for="(marker, index) in markers" :key="index" :position="marker.position"
                     :label="marker.title" @click="onMarkerClick(marker)"></gmap-marker>
             </gmap-map>
-
-            <div class="inside-left">
-                <!-- content goes here -->
-                <h3>Marker Description</h3>
-                <br>
-                <div v-for="(marker, index) in markers" :key="index">
-                    <h4>Title : {{ marker.title }}</h4>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="right-div" id="right">
-
 
 
         </div>
@@ -166,7 +64,7 @@ export default {
 
 .left {
     display: inline-block;
-    width: 40%;
+    width: 100%;
     vertical-align: top;
 }
 
@@ -174,7 +72,8 @@ export default {
     background-color: white;
     display: inline-block;
     width: 60%;
-    overflow-y: scroll; /* Add this line to make it scrollable */
+    overflow-y: scroll;
+    /* Add this line to make it scrollable */
     height: 100vh;
     vertical-align: top;
     padding-bottom: 200px;

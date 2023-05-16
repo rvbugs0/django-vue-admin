@@ -8,6 +8,8 @@ system_url = routers.SimpleRouter()
 system_url.register(r'sensory_data', SensoryDataViewSet)
 system_url.register(r'chart_config', ChartConfigViewSet)
 system_url.register(r'sensory_alerts', SensoryDataRangeAlertViewSet)
+system_url.register(r'violation_alerts_list', ViolationAlertsListViewSet)
+
 
 urlpatterns = [
 
@@ -21,7 +23,12 @@ urlpatterns = [
     # for dynamic charts - single endpoint
     path('chart_config/get_charts_data/', get_charts_data),
     path('chart_config/get_plain_scroll_charts/', get_plain_line_chart_data),
-    path('sensory_alerts/get_sensory_violation_data',get_sensory_violation_data)
+    path('sensory_alerts/get_sensory_violation_data',get_sensory_violation_data),
+    path('sensory_alerts/send_email_alerts',send_email_alerts)
+
+
+
+    
 ]
 
 urlpatterns += system_url.urls

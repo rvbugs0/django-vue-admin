@@ -6,7 +6,7 @@ import { d2CrudPlus } from 'd2-crud-plus'
 
 
 export default {
-  name: "range_violations",
+  name: "violation_alerts_list",
   mixins: [d2CrudPlus.crud],
   data() {
     return {};
