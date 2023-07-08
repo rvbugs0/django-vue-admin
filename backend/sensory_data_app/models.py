@@ -4,13 +4,18 @@ from django.utils import timezone
 
 # Create your models here.
 
-class SensoryData(CoreModel):
-    sea_water_temperature_c = models.FloatField()
-    salinity = models.FloatField()
-    ph = models.FloatField()
-    dissolved_oxygen = models.FloatField()
+class AIRSensorData(CoreModel):
+    SO2_value = models.FloatField()
+    NO2_value = models.FloatField()
+    O3_value = models.FloatField()
+    sensor_location = models.CharField(max_length=100)
     date_recorded = models.DateTimeField()
 
+class THSensorData(CoreModel):
+    humidity_value = models.FloatField()
+    temperature_value = models.FloatField()
+    sensor_location = models.CharField(max_length=100)
+    date_recorded = models.DateTimeField()
 
 
 class ChartConfig(CoreModel):

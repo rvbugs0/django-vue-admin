@@ -81,8 +81,8 @@ export const crudOptions = (vm) => {
     },
 
     {
-      title: 'Sea water Temperature (C)',
-      key: 'sea_water_temperature_c',
+      title: 'Humidity Value',
+      key: 'humidity_value',
       sortable: true,
       search: {
         disabled: false,
@@ -110,37 +110,8 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'Salinity',
-      key: 'salinity',
-      sortable: true,
-      search: {
-        disabled: false,
-        component: {
-          props: {
-            clearable: true
-          }
-        }
-      },
-
-      type: 'input',
-      form: {
-        rules: [ // form validation rules
-          { required: true, message: 'Role name is required' }
-        ],
-        component: {
-          props: {
-            clearable: true
-          },
-          placeholder: 'Please enter a role name'
-        },
-        itemProps: {
-          class: { yxtInput: true }
-        }
-      }
-    },
-    {
-      title: 'pH',
-      key: 'ph',
+      title: 'Temperature Value',
+      key: 'temperature_value',
       sortable: true,
       search: {
         disabled: false,
@@ -169,8 +140,8 @@ export const crudOptions = (vm) => {
     },
 
     {
-      title: 'Dissolved Oxygen',
-      key: 'dissolved_oxygen',
+      title: 'Sensor Location',
+      key: 'sensor_location',
       sortable: true,
       search: {
         disabled: false,
