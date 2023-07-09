@@ -8,7 +8,7 @@
  */
 
 import { request } from "@/api/service";
-export const urlPrefix = "/api/system/sensory_data/";
+export const urlPrefix = "/api/system/air_sensor_data/";
 
 export function GetList(query, range_search = undefined) {
   if (range_search) {

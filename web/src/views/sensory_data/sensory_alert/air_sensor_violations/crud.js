@@ -81,8 +81,8 @@ export const crudOptions = (vm) => {
     },
 
     {
-      title: 'Sea water Temperature (C)',
-      key: 'sea_water_temperature_c',
+      title: 'SO2 Value',
+      key: 'SO2_value',
       sortable: true,
       search: {
         disabled: false,
@@ -110,8 +110,8 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'Salinity',
-      key: 'salinity',
+      title: 'NO2 Value',
+      key: 'NO2_value',
       sortable: true,
       search: {
         disabled: false,
@@ -139,8 +139,8 @@ export const crudOptions = (vm) => {
       }
     },
     {
-      title: 'pH',
-      key: 'ph',
+      title: 'O3 Value',
+      key: 'O3_value',
       sortable: true,
       search: {
         disabled: false,
@@ -168,35 +168,6 @@ export const crudOptions = (vm) => {
       }
     },
 
-    {
-      title: 'Dissolved Oxygen',
-      key: 'dissolved_oxygen',
-      sortable: true,
-      search: {
-        disabled: false,
-        component: {
-          props: {
-            clearable: true
-          }
-        }
-      },
-
-      type: 'input',
-      form: {
-        rules: [ // form validation rules
-          { required: true, message: 'Role name is required' }
-        ],
-        component: {
-          props: {
-            clearable: true
-          },
-          placeholder: 'Please enter a role name'
-        },
-        itemProps: {
-          class: { yxtInput: true }
-        }
-      }
-    },
     {
       title: 'Date Recorded (Start)',
       key: 'date_recorded',

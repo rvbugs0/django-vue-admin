@@ -157,10 +157,11 @@ export const crudOptions = (vm) => {
         },
         dict: {  
           data: [
-            { value: 'sea_water_temperature_c', label: 'Sea Water Temperature' },
-            { value: 'salinity', label: 'Salinity' },
-            { value: 'ph', label: 'pH' },
-            { value: 'dissolved_oxygen', label: 'Dissolved Oxygen' }
+            { value: 'NO2_value', label: 'NO2' },
+            { value: 'SO2_value', label: 'SO2' },
+            { value: 'O3_value', label: 'O3' },
+            { value: 'temperature_value', label: 'Temperature' },
+            { value: 'humidity_value', label: 'Humidity' }
            
           ]
         },

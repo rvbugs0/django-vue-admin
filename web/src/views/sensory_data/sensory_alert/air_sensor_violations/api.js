@@ -12,7 +12,7 @@ export const urlPrefix = "/api/system/sensory_alerts/";
 
 export function GetList(query) {
   return request({
-    url: urlPrefix+"get_sensory_violation_data",
+    url: urlPrefix+"get_air_sensor_violation_data",
     method: "get",
     params: { ...query },
   });
