@@ -2484,3 +2484,87 @@ KeyError: 'sensor_location'
     raise FieldError("Cannot resolve keyword '%s' into field. "
 django.core.exceptions.FieldError: Cannot resolve keyword 'SO2_value' into field. Choices are: create_datetime, creator, creator_id, date_recorded, dept_belong_id, description, humidity_value, id, modifier, sensor_location, temperature_value, update_datetime
 
+[2023-07-09 08:01:07,880][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 109, in send_messages
+    sent = self._send(message)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 125, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 887, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError l2-20020a4a4342000000b005634ef4f1c0sm2657655ooj.31 - gsmtp', 'example@gmail.com')
+
+[2023-07-09 08:01:26,525][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 109, in send_messages
+    sent = self._send(message)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 125, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 887, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError i2-20020a4ac502000000b0055516447257sm2668689ooq.29 - gsmtp', 'iraviailani@gmail.com')
+
+[2023-07-09 08:02:19,957][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f7-20020a9d5e87000000b006b8ad42654csm2983322otl.0 - gsmtp')
+
+[2023-07-09 08:02:37,219][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p25-20020a056830131900b006b466ed0484sm2937735otq.67 - gsmtp')
+

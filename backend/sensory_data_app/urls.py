@@ -23,7 +23,7 @@ urlpatterns = [
     # path('chart_config/get_plain_scroll_charts/', get_plain_line_chart_data),
     path('sensory_alerts/get_th_sensor_violation_data',get_th_sensor_violation_data),
     path('sensory_alerts/get_air_sensor_violation_data',get_air_sensor_violation_data),
-    # path('sensory_alerts/send_email_alerts',send_email_alerts)
+    path('sensory_alerts/send_email_alerts',send_email_alerts)
 
 
 

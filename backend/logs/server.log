@@ -14896,3 +14896,261 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'SO2_value' into field
 [2023-07-09 07:52:48,353][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/?limit=20&page=1 200 [0.06, 127.0.0.1:60469][0m
 [2023-07-09 07:52:51,112][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_th_sensor_violation_data?limit=20&page=1 200 [0.02, 127.0.0.1:60469][0m
 [2023-07-09 07:52:54,490][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/violation_alerts_list/?limit=20&page=1 200 [0.02, 127.0.0.1:60469][0m
+[2023-07-09 07:56:54,444][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 07:56:55,395][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 07:56:55,951][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 07:56:55,952][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 07:56:55,952][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 07:59:15,191][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 07:59:16,147][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 07:59:16,704][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 07:59:16,704][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 07:59:16,705][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:00:22,074][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:00:22,991][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:00:23,544][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:00:23,544][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:00:23,545][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:00:51,021][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:00:51,837][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:00:52,442][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:00:52,442][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:00:52,444][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:01:01,038][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/urls.py changed, reloading.
+[2023-07-09 08:01:01,834][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:01:02,307][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:01:02,308][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:01:02,309][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:01:04,729][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:60562][0m
+[2023-07-09 08:01:04,743][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:60563][0m
+[2023-07-09 08:01:04,917][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.12, 127.0.0.1:60563][0m
+[2023-07-09 08:01:04,924][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:60562][0m
+[2023-07-09 08:01:04,952][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.15, 127.0.0.1:60568][0m
+[2023-07-09 08:01:05,055][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60573]
+[2023-07-09 08:01:05,057][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60573]
+[2023-07-09 08:01:07,468][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/sensory_alerts/send_email_alerts 200 [0.01, 127.0.0.1:60568][0m
+[2023-07-09 08:01:07,880][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 109, in send_messages
+    sent = self._send(message)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 125, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 887, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError l2-20020a4a4342000000b005634ef4f1c0sm2657655ooj.31 - gsmtp', 'example@gmail.com')
+
+[2023-07-09 08:01:07,886][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [0.41, 127.0.0.1:60568][0m
+[2023-07-09 08:01:23,861][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:01:24,834][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:01:25,338][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:01:25,338][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:01:25,339][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:01:26,525][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 109, in send_messages
+    sent = self._send(message)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 125, in _send
+    self.connection.sendmail(from_email, recipients, message.as_bytes(linesep='\r\n'))
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 887, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError i2-20020a4ac502000000b0055516447257sm2668689ooq.29 - gsmtp', 'iraviailani@gmail.com')
+
+[2023-07-09 08:01:26,530][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [0.34, 127.0.0.1:60587][0m
+[2023-07-09 08:01:31,919][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:01:32,742][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:01:33,222][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:01:33,222][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:01:33,223][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:02:16,457][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:02:17,343][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:02:17,819][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:02:17,820][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:02:17,820][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:02:19,957][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f7-20020a9d5e87000000b006b8ad42654csm2983322otl.0 - gsmtp')
+
+[2023-07-09 08:02:19,967][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [0.58, 127.0.0.1:60604][0m
+[2023-07-09 08:02:31,816][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:02:32,744][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:02:33,241][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:02:33,241][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:02:33,242][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:02:37,219][dvadmin.utils.exception.CustomExceptionHandler():54] [ERROR] Traceback (most recent call last):
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py", line 699, in send_email_alerts
+    send_mail(subject=subject, message='', from_email=from_email,
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/Users/raviailani/Documents/envs/lib/python3.9/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 750, in login
+    raise last_exception
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/Users/raviailani/opt/anaconda3/lib/python3.9/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p25-20020a056830131900b006b466ed0484sm2937735otq.67 - gsmtp')
+
+[2023-07-09 08:02:37,229][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [0.66, 127.0.0.1:60613][0m
+[2023-07-09 08:03:36,349][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:03:37,277][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:03:37,794][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:03:37,794][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:03:37,795][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:03:42,393][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.01, 127.0.0.1:60659][0m
+[2023-07-09 08:03:42,412][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.02, 127.0.0.1:60659][0m
+[2023-07-09 08:03:42,558][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.11, 127.0.0.1:60659][0m
+[2023-07-09 08:03:42,564][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:60663][0m
+[2023-07-09 08:03:42,591][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.14, 127.0.0.1:60664][0m
+[2023-07-09 08:03:42,686][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60668]
+[2023-07-09 08:03:42,688][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60668]
+[2023-07-09 08:03:48,710][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [1.59, 127.0.0.1:60664][0m
+[2023-07-09 08:05:05,926][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:05:06,860][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:05:07,391][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:05:07,392][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:05:07,393][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:05:11,750][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:05:12,446][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:05:12,956][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:05:12,956][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:05:12,957][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:05:16,268][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:05:16,937][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:05:17,344][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:05:17,344][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:05:17,345][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:05:20,664][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:05:21,349][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:05:21,772][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:05:21,772][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:05:21,773][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:06:10,152][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:06:11,081][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:06:11,663][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:06:11,663][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:06:11,664][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:06:20,184][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:06:20,993][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:06:21,485][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:06:21,486][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:06:21,486][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:07:47,423][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:07:48,433][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:08:23,621][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:08:24,458][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:08:24,992][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:08:24,992][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:08:24,993][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:08:44,965][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:08:45,892][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:08:46,427][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:08:46,428][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:08:46,429][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:08:54,938][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:08:55,849][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:08:56,337][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:08:56,338][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:08:56,339][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:10:26,725][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:10:27,717][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:10:28,294][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:10:28,294][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:10:28,295][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:11:11,624][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/views.py changed, reloading.
+[2023-07-09 08:11:12,563][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:11:13,118][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:11:13,118][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:11:13,119][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:11:39,362][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.02, 127.0.0.1:60794][0m
+[2023-07-09 08:11:39,387][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.04, 127.0.0.1:60795][0m
+[2023-07-09 08:11:39,549][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.12, 127.0.0.1:60795][0m
+[2023-07-09 08:11:39,556][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.12, 127.0.0.1:60794][0m
+[2023-07-09 08:11:39,584][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.15, 127.0.0.1:60799][0m
+[2023-07-09 08:11:39,737][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60803]
+[2023-07-09 08:11:39,741][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60803]
+[2023-07-09 08:11:41,299][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_th_sensor_violation_data?limit=20&page=1 200 [0.02, 127.0.0.1:60799][0m
+[2023-07-09 08:11:58,909][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:11:59,900][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:12:00,461][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:12:00,462][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:12:00,463][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:12:04,003][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/dictionary/?dictionary_key=all 200 [0.04, 127.0.0.1:60817][0m
+[2023-07-09 08:12:04,021][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/user/user_info/ 200 [0.03, 127.0.0.1:60818][0m
+[2023-07-09 08:12:04,139][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.11, 127.0.0.1:60818][0m
+[2023-07-09 08:12:04,144][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/init/settings/ 200 [0.11, 127.0.0.1:60817][0m
+[2023-07-09 08:12:04,170][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/menu/web_router/ 200 [0.13, 127.0.0.1:60821][0m
+[2023-07-09 08:12:04,271][django.channels.server.log_action():168] [INFO] WebSocket HANDSHAKING /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60824]
+[2023-07-09 08:12:04,273][django.channels.server.log_action():164] [INFO] WebSocket CONNECT /ws/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg4ODY2MjgwLCJpYXQiOjE2ODg4NTkwODAsImp0aSI6Ijk3OGUzMWVlNmEwYzRmZjRhYWJiOTU5NzU3ZmY3YzZlIiwidXNlcl9pZCI6MX0.nLOhYF2S2xkSazuRwpAdXhxJnQyUXWYdePlqtwC4G9Q/ [127.0.0.1:60824]
+[2023-07-09 08:12:10,966][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/send_email_alerts 200 [2.61, 127.0.0.1:60821][0m
+[2023-07-09 08:12:41,273][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/application/settings.py changed, reloading.
+[2023-07-09 08:12:42,086][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:12:42,550][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:12:42,550][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:12:42,551][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:12:56,333][django.utils.autoreload.trigger_reload():250] [INFO] /Users/raviailani/Documents/django-vue-admin/backend/sensory_data_app/urls.py changed, reloading.
+[2023-07-09 08:12:57,118][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:12:57,632][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:12:57,632][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:12:57,633][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
+[2023-07-09 08:13:11,229][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/violation_alerts_list/?limit=20&page=1 200 [0.15, 127.0.0.1:60847][0m
+[2023-07-09 08:13:15,115][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/dept/all_dept/ 200 [0.03, 127.0.0.1:60847][0m
+[2023-07-09 08:13:19,165][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/air_sensor_data/?limit=20&page=1 200 [0.01, 127.0.0.1:60847][0m
+[2023-07-09 08:13:19,221][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/air_sensor_data/?limit=20&page=1 200 [0.05, 127.0.0.1:60847][0m
+[2023-07-09 08:13:20,019][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_air_sensor_violation_data?limit=20&page=1 200 [0.02, 127.0.0.1:60847][0m
+[2023-07-09 08:13:23,724][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/chart_config/?limit=20&page=1 200 [0.00, 127.0.0.1:60847][0m
+[2023-07-09 08:13:23,776][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/?limit=20&page=1 200 [0.05, 127.0.0.1:60847][0m
+[2023-07-09 08:13:25,285][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/chart_config/get_charts_data/?page=1&limit=999 200 [0.03, 127.0.0.1:60847][0m
+[2023-07-09 08:13:29,533][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/?limit=20&page=1 200 [0.07, 127.0.0.1:60847][0m
+[2023-07-09 08:13:31,098][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_th_sensor_violation_data?limit=20&page=1 200 [0.02, 127.0.0.1:60847][0m
+[2023-07-09 08:13:36,654][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/get_th_sensor_violation_data?limit=20&page=1 200 [0.02, 127.0.0.1:60847][0m
+[2023-07-09 08:13:38,148][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/violation_alerts_list/?limit=20&page=1 200 [0.01, 127.0.0.1:60847][0m
+[2023-07-09 08:14:02,870][django.channels.server.log_action():147] [INFO] [mHTTP OPTIONS /api/system/th_sensor_data/?limit=20&page=1 200 [0.01, 127.0.0.1:60847][0m
+[2023-07-09 08:14:02,922][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/th_sensor_data/?limit=20&page=1 200 [0.05, 127.0.0.1:60847][0m
+[2023-07-09 08:14:05,635][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/violation_alerts_list/?limit=20&page=1 200 [0.04, 127.0.0.1:60847][0m
+[2023-07-09 08:14:09,624][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/?limit=20&page=1 200 [0.04, 127.0.0.1:60847][0m

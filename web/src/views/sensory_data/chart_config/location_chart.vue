@@ -1,8 +1,6 @@
 <script>
 import * as VueGoogleMaps from 'vue2-google-maps';
-import * as echarts from 'echarts'
-import { request } from '@/api/service'
-
+//  key in src/main.js
 export default {
     name: "location_chart",
 

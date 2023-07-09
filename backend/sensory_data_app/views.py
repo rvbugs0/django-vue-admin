@@ -638,69 +638,150 @@ def get_air_sensor_violation_data(request):
     r["data"] = {"total": len(res), "page": 1, "limit": len(res), "data": res}
     return HttpResponse(json.dumps(r), content_type="application/json")
 
-# @api_view(('GET',))
-# @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
-# def send_email_alerts(request):
-#     range_filters = SensoryDataRangeAlert.objects.all()
-#     if (len(range_filters) == 0):
-#         return HttpResponse(json.dumps([]), content_type="application/json")
 
-#     tresholds = {}
-#     tresholds["sea_water_temperature_c"] = [-9999, 99999]
-#     tresholds["salinity"] = [-9999999, 9999999]
-#     tresholds["ph"] = [-99999, 9999999]
-#     tresholds["dissolved_oxygen"] = [-9999999, 9999999]
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def send_email_alerts(request):
 
-#     for i in range_filters:
-#         tresholds[i.entity] = [i.lower_treshold, i.upper_treshold]
+    send_air_violations_email()
+    send_th_violations_email()
+    return HttpResponse(json.dumps([]), content_type="application/json")
 
-#     data = SensoryData.objects.filter(
-#         Q(sea_water_temperature_c__lt=tresholds["sea_water_temperature_c"][0]) |
-#         Q(sea_water_temperature_c__gt=tresholds["sea_water_temperature_c"][1]) |
-#         Q(salinity__lt=tresholds["salinity"][0]) |
-#         Q(salinity__gt=tresholds["salinity"][1]) |
-#         Q(ph__lt=tresholds["ph"][0]) |
-#         Q(ph__gt=tresholds["ph"][1]) |
-#         Q(dissolved_oxygen__lt=tresholds["dissolved_oxygen"][0]) |
-#         Q(dissolved_oxygen__gt=tresholds["dissolved_oxygen"][1])).order_by('date_recorded').values('date_recorded', 'salinity', 'ph', 'dissolved_oxygen', 'sea_water_temperature_c', "id")
 
-#     res = []
-#     for record in data:
 
-#         obj = record["date_recorded"]
-#         day = obj.strftime('%d')
-#         month = obj.strftime('%m')
-#         year = obj.strftime('%Y')
-#         d = year + "-" + month + "-" + day
-#         obj = {}
-#         obj["id"] = record["id"]
-#         obj["date_recorded"] = d
-#         obj["sea_water_temperature_c"] = record["sea_water_temperature_c"]
-#         obj["salinity"] = record["salinity"]
-#         obj["ph"] = record["ph"]
-#         obj["dissolved_oxygen"] = record["dissolved_oxygen"]
-#         # print(obj)
-#         res.append(obj)
 
-#     # Assuming `res` is defined as shown in the question
-#     headers = ["ID", "Date Recorded",
-#                "Sea Water Temperature (C)", "Salinity", "pH", "Dissolved Oxygen"]
-#     table = []
-#     for r in res:
-#         table.append([r["id"], r["date_recorded"], r["sea_water_temperature_c"],
-#                      r["salinity"], r["ph"], r["dissolved_oxygen"]])
 
-#     html = tabulate(table, headers, tablefmt="html")
 
-#     email_list = ViolationAlertsList.objects.all()
-#     recipient_list = []
-#     for k in email_list:
-#         recipient_list.append(k.email)
+def send_th_violations_email():
+    range_filters = SensoryDataRangeAlert.objects.all()
+    if (len(range_filters) == 0):
+        return HttpResponse(json.dumps([]), content_type="application/json")
 
-#     subject = 'Violation Alerts'
-#     message = '<h1>Sensory violations</h1>'+html
-#     from_email = 'example@gmail.com'
+    tresholds = {}
+    tresholds["temperature_value"] = [-9999, 99999]
+    tresholds["humidity_value"] = [-9999999, 9999999]
+    
+    
+    for i in range_filters:
+        tresholds[i.entity] = [i.lower_treshold, i.upper_treshold]
 
-#     send_mail(subject=subject, message='', from_email=from_email,
-#               recipient_list=recipient_list, html_message=message)
-#     return HttpResponse(json.dumps([]), content_type="application/json")
+    data = THSensorData.objects.filter(
+        Q(temperature_value__lt=tresholds["temperature_value"][0]) |
+        Q(temperature_value__gt=tresholds["temperature_value"][1]) |
+        Q(humidity_value__lt=tresholds["humidity_value"][0]) |
+        Q(humidity_value__gt=tresholds["humidity_value"][1])).order_by('date_recorded').values('date_recorded', 'temperature_value', 'humidity_value','sensor_location', "id")
+
+
+    res = []
+    for record in data:
+
+        obj = record["date_recorded"]
+        day = obj.strftime('%d')
+        month = obj.strftime('%m')
+        year = obj.strftime('%Y')
+        d = year + "-" + month + "-" + day
+        obj = {}
+        obj["id"] = record["id"]
+        obj["sensor_location"]= record["sensor_location"]
+        obj["date_recorded"] = d
+        obj["temperature_value"] = record["temperature_value"]
+        obj["humidity_value"] = record["humidity_value"]
+        # print(obj)
+        res.append(obj)
+
+    # Assuming `res` is defined as shown in the question
+    headers = ["ID", "Date Recorded",
+               "Temperature", "Humidity","Sensor Location"]
+    table = []
+    for r in res:
+        table.append([r["id"], r["date_recorded"], r["temperature_value"],
+                     r["humidity_value"], r["sensor_location"]])
+
+    html = tabulate(table, headers, tablefmt="html")
+
+    email_list = ViolationAlertsList.objects.all()
+    recipient_list = []
+    for k in email_list:
+        recipient_list.append(k.email)
+
+    subject = 'Violation Alerts'
+    message = '<h1>Sensory violations</h1>'+html
+    from_email = 'example@gmail.com'
+
+    # for additional settings - go to backend/application/settings.py - scroll to bottom
+    send_mail(subject=subject, message='', from_email=from_email,
+              recipient_list=recipient_list, html_message=message)
+    
+
+
+
+
+def send_air_violations_email():
+    range_filters = SensoryDataRangeAlert.objects.all()
+    if (len(range_filters) == 0):
+        return HttpResponse(json.dumps([]), content_type="application/json")
+
+    tresholds = {}
+    tresholds["SO2_value"] = [-9999, 99999]
+    tresholds["NO2_value"] = [-9999999, 9999999]
+    tresholds["O3_value"] = [-99999, 9999999]    
+    
+    for i in range_filters:
+        tresholds[i.entity] = [i.lower_treshold, i.upper_treshold]
+
+    data = AIRSensorData.objects.filter(
+        Q(SO2_value__lt=tresholds["SO2_value"][0]) |
+        Q(SO2_value__gt=tresholds["SO2_value"][1]) |
+        Q(NO2_value__lt=tresholds["NO2_value"][0]) |
+        Q(NO2_value__gt=tresholds["NO2_value"][1]) |
+        Q(O3_value__lt=tresholds["O3_value"][0]) |
+        Q(O3_value__gt=tresholds["O3_value"][1])
+        ).order_by('date_recorded').values('date_recorded', 'SO2_value', 'NO2_value','O3_value','sensor_location', "id")
+
+
+    res = []
+    for record in data:
+
+        obj = record["date_recorded"]
+        day = obj.strftime('%d')
+        month = obj.strftime('%m')
+        year = obj.strftime('%Y')
+        d = year + "-" + month + "-" + day
+        obj = {}
+        obj["id"] = record["id"]
+        obj["sensor_location"] = record["sensor_location"]
+        obj["date_recorded"] = d
+        obj["O3_value"] = record["O3_value"]
+        obj["SO2_value"] = record["SO2_value"]
+        obj["NO2_value"] = record["NO2_value"]
+
+        # print(obj)
+        res.append(obj)
+
+    # Assuming `res` is defined as shown in the question
+    headers = ["ID", "Date Recorded",
+               "SO2", "NO2","O3","Sensor Location"]
+    table = []
+    for r in res:
+        table.append([r["id"], r["date_recorded"], r["SO2_value"],
+                     r["NO2_value"],r["O3_value"], r["sensor_location"]])
+
+    html = tabulate(table, headers, tablefmt="html")
+
+    email_list = ViolationAlertsList.objects.all()
+    recipient_list = []
+    for k in email_list:
+        recipient_list.append(k.email)
+
+    subject = 'Violation Alerts'
+    message = '<h1>Sensory violations</h1>'+html
+    from_email = 'example@gmail.com'
+
+    # for additional settings - go to backend/application/settings.py - scroll to bottom
+    send_mail(subject=subject, message='', from_email=from_email,
+              recipient_list=recipient_list, html_message=message)
+    
+
+
+
+
