@@ -15154,3 +15154,7 @@ smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepte
 [2023-07-09 08:14:02,922][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/th_sensor_data/?limit=20&page=1 200 [0.05, 127.0.0.1:60847][0m
 [2023-07-09 08:14:05,635][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/violation_alerts_list/?limit=20&page=1 200 [0.04, 127.0.0.1:60847][0m
 [2023-07-09 08:14:09,624][django.channels.server.log_action():147] [INFO] [mHTTP GET /api/system/sensory_alerts/?limit=20&page=1 200 [0.04, 127.0.0.1:60847][0m
+[2023-07-09 08:57:18,285][django.utils.autoreload.run_with_reloader():636] [INFO] Watching for file changes with StatReloader
+[2023-07-09 08:57:19,031][daphne.server.run():113] [INFO] HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[2023-07-09 08:57:19,032][daphne.server.run():122] [INFO] Configuring endpoint tcp:port=8000:interface=0.0.0.0
+[2023-07-09 08:57:19,033][daphne.server.listen_success():153] [INFO] Listening on TCP address 0.0.0.0:8000
