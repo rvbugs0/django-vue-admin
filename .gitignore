@@ -4,3 +4,5 @@
 
 .history/
 .vscode/
+
+web/node_modules

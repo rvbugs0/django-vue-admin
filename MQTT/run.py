@@ -9,8 +9,8 @@ from dateutil.parser import parse
 mqtt_broker = "47.190.103.180"
 mqtt_port = 1883
 mqtt_topic = "application/1/device/ff000000000013dc/event/up"
-auth_username = ""
-auth_password = ""
+auth_username = "iobMQTT"
+auth_password = "mqtt123456"
 
 # MQTT callback function
 def on_connect(client, userdata, flags, rc):
