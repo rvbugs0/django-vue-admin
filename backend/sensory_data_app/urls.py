@@ -14,7 +14,7 @@ system_url.register(r'violation_alerts_list', ViolationAlertsListViewSet)
 
 urlpatterns = [
 
-    # path('sensory_data/get_data_within_range/', get_data_within_range),
+    path('th_sensor_data/get_data_within_range/', get_th_data_within_range),
     # path('sensory_data/export_data_to_excel/', export_data_to_excel),
 
 

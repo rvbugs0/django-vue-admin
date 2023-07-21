@@ -197,7 +197,7 @@ export const crudOptions = (vm) => {
         }
       },
 
-      type: 'date',
+      type: 'datetime',
      
     }
     ]

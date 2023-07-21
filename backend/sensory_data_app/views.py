@@ -405,63 +405,63 @@ def get_min_of_month(start_date, end_date, entity):
     return res
 
 
-# @api_view(('GET',))
-# @renderer_classes((TemplateHTMLRenderer, JSONRenderer))
-# def get_data_within_range(request):
+@api_view(('GET',))
+@renderer_classes((TemplateHTMLRenderer, JSONRenderer))
+def get_th_data_within_range(request):
 
-#     start_date = request.GET.get('start_date')
+    start_date = request.GET.get('start_date')
 
-#     end_date = request.GET.get('end_date')
-#     page = int(request.GET.get('page', 1))
-#     limit = int(request.GET.get('limit', 10))
+    end_date = request.GET.get('end_date')
+    page = int(request.GET.get('page', 1))
+    limit = int(request.GET.get('limit', 10))
 
-#     # Parse the datetime string
-#     dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-#     e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
-#     # Extract the date part and format it as a string
-#     date_str = dt.strftime("%Y-%m-%d")
-#     end_date_str = e_dt.strftime("%Y-%m-%d")
-#     start_date = date_str
-#     end_date = end_date_str
-#     # print("Start date ", start_date)
+    # Parse the datetime string
+    dt = datetime.strptime(start_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+    e_dt = datetime.strptime(end_date, "%Y-%m-%dT%H:%M:%S.%fZ")
+    # Extract the date part and format it as a string
+    date_str = dt.strftime("%Y-%m-%d")
+    end_date_str = e_dt.strftime("%Y-%m-%d")
+    start_date = date_str
+    end_date = end_date_str
+    # print("Start date ", start_date)
 
-#     data_queryset = SensoryData.objects.filter(
-#         date_recorded__range=(start_date, end_date)
+    data_queryset = THSensorData.objects.filter(
+        date_recorded__range=(start_date, end_date)
 
-#         #  date_recorded__date=start_date
-#     )
+        #  date_recorded__date=start_date
+    )
 
-#     # print("hello")
-#     res = []
+    # print("hello")
+    res = []
 
-#     for d in data_queryset:
-#         data = {"sea_water_temperature_c": d.sea_water_temperature_c, "salinity": d.salinity,
-#                 "dissolved_oxygen": d.dissolved_oxygen, "ph": d.ph, "date_recorded": d.date_recorded.strftime('%Y-%m-%d %H:%M:%S')}
-#         res.append(data)
+    for d in data_queryset:
+        data = {"NO2_value": d.NO2_value, "SO2_value": d.SO2_value,
+                "O3_value": d.O3_value, "sensor_location": d.sensor_location, "date_recorded": d.date_recorded.strftime('%Y-%m-%d %H:%M:%S')}
+        res.append(data)
 
-#     # total = data_queryset.count()
+    # total = data_queryset.count()
 
-#     # if page < 1:
-#     #     page = 1
+    # if page < 1:
+    #     page = 1
 
-#     # start_index = (page - 1) * limit
-#     # end_index = start_index + limit
-#     # data = [start_index:end_index].values()
+    # start_index = (page - 1) * limit
+    # end_index = start_index + limit
+    # data = [start_index:end_index].values()
 
-#     # print(data)
+    # print(data)
 
-#     response = {
-#         "code": 2000,
-#         "msg": "success",
-#         "data": {
-#             "page": page,
-#             "total": len(res),
-#             "limit": len(res),
-#             "data": res,
-#         }
-#     }
+    response = {
+        "code": 2000,
+        "msg": "success",
+        "data": {
+            "page": page,
+            "total": len(res),
+            "limit": len(res),
+            "data": res,
+        }
+    }
 
-#     return HttpResponse(json.dumps(response), content_type="application/json")
+    return HttpResponse(json.dumps(response), content_type="application/json")
 
 
 # def export_data_to_excel(request):
@@ -570,15 +570,10 @@ def get_th_sensor_violation_data(request):
     res = []
     for record in data:
 
-        obj = record["date_recorded"]
-        day = obj.strftime('%d')
-        month = obj.strftime('%m')
-        year = obj.strftime('%Y')
-        d = year + "-" + month + "-" + day
         obj = {}
         obj["id"] = record["id"]
         obj["sensor_location"] = record["sensor_location"]
-        obj["date_recorded"] = d
+        obj["date_recorded"] = record["date_recorded"].strftime("%Y-%m-%dT%H:%M:%S")
         obj["temperature_value"] = record["temperature_value"]
         obj["humidity_value"] = record["humidity_value"]
         # print(obj)
@@ -619,15 +614,10 @@ def get_air_sensor_violation_data(request):
     res = []
     for record in data:
 
-        obj = record["date_recorded"]
-        day = obj.strftime('%d')
-        month = obj.strftime('%m')
-        year = obj.strftime('%Y')
-        d = year + "-" + month + "-" + day
         obj = {}
         obj["id"] = record["id"]
         obj["sensor_location"] = record["sensor_location"]
-        obj["date_recorded"] = d
+        obj["date_recorded"] = record["date_recorded"].strftime("%Y-%m-%dT%H:%M:%S")
         obj["O3_value"] = record["O3_value"]
         obj["SO2_value"] = record["SO2_value"]
         obj["NO2_value"] = record["NO2_value"]
@@ -674,16 +664,10 @@ def send_th_violations_email():
 
     res = []
     for record in data:
-
-        obj = record["date_recorded"]
-        day = obj.strftime('%d')
-        month = obj.strftime('%m')
-        year = obj.strftime('%Y')
-        d = year + "-" + month + "-" + day
         obj = {}
         obj["id"] = record["id"]
         obj["sensor_location"]= record["sensor_location"]
-        obj["date_recorded"] = d
+        obj["date_recorded"] = record["date_recorded"].strftime("%Y-%m-%dT%H:%M:%S")
         obj["temperature_value"] = record["temperature_value"]
         obj["humidity_value"] = record["humidity_value"]
         # print(obj)
@@ -741,16 +725,10 @@ def send_air_violations_email():
 
     res = []
     for record in data:
-
-        obj = record["date_recorded"]
-        day = obj.strftime('%d')
-        month = obj.strftime('%m')
-        year = obj.strftime('%Y')
-        d = year + "-" + month + "-" + day
         obj = {}
         obj["id"] = record["id"]
         obj["sensor_location"] = record["sensor_location"]
-        obj["date_recorded"] = d
+        obj["date_recorded"] = record["date_recorded"].strftime("%Y-%m-%dT%H:%M:%S")
         obj["O3_value"] = record["O3_value"]
         obj["SO2_value"] = record["SO2_value"]
         obj["NO2_value"] = record["NO2_value"]

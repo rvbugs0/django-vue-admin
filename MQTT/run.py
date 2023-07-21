@@ -26,34 +26,35 @@ def on_message(client, userdata, msg):
     print(decoded_data)
     obj = json.loads(decoded_data)
     
+    try:
+        if(len(obj["object"]["messages"])==2): #TH data
+            sensor_values = {}
+            for o in obj["object"]["messages"]:
+                if(o["measurementId"]=="Humidity"):
+                    sensor_values["humidity_value"]=o["measurementValue"]
+                elif(o["measurementId"]=="Temperature"):
+                    sensor_values["temperature_value"]=o["measurementValue"]
+            
+            datetime_object = parse(obj["rxInfo"][0]["time"])
+            mysql_date_string = datetime_object.strftime("%Y-%m-%d %H:%M:%S")
+            add_th_data(sensor_values["humidity_value"],sensor_values["temperature_value"],obj["devEUI"],mysql_date_string)
+            
+        else: #AIR data
 
-    if(len(obj["object"]["messages"])==2): #TH data
-        sensor_values = {}
-        for o in obj["object"]["messages"]:
-            if(o["measurementId"]=="Humidity"):
-                sensor_values["humidity_value"]=o["measurementValue"]
-            elif(o["measurementId"]=="Temperature"):
-                sensor_values["temperature_value"]=o["measurementValue"]
-        
-        datetime_object = parse(obj["rxInfo"][0]["time"])
-        mysql_date_string = datetime_object.strftime("%Y-%m-%d %H:%M:%S")
-        add_th_data(sensor_values["humidity_value"],sensor_values["temperature_value"],obj["devEUI"],mysql_date_string)
-        
-    else: #AIR data
-
-        sensor_values = {}
-        for o in obj["object"]["messages"]:
-            if(o["measurementId"]=="NO2"):
-                sensor_values["NO2_value"]=o["measurementValue"]
-            elif(o["measurementId"]=="SO2"):
-                sensor_values["SO2_value"]=o["measurementValue"]
-            elif(o["measurementId"]=="O3"):
-                sensor_values["O3_value"]=o["measurementValue"]
-        
-        datetime_object = parse(obj["rxInfo"][0]["time"])
-        mysql_date_string = datetime_object.strftime("%Y-%m-%d %H:%M:%S")
-        add_air_data(sensor_values["SO2_value"],sensor_values["NO2_value"],sensor_values["O3_value"],obj["devEUI"],mysql_date_string)
-    
+            sensor_values = {}
+            for o in obj["object"]["messages"]:
+                if(o["measurementId"]=="NO2"):
+                    sensor_values["NO2_value"]=o["measurementValue"]
+                elif(o["measurementId"]=="SO2"):
+                    sensor_values["SO2_value"]=o["measurementValue"]
+                elif(o["measurementId"]=="O3"):
+                    sensor_values["O3_value"]=o["measurementValue"]
+            
+            datetime_object = parse(obj["rxInfo"][0]["time"])
+            mysql_date_string = datetime_object.strftime("%Y-%m-%d %H:%M:%S")
+            add_air_data(sensor_values["SO2_value"],sensor_values["NO2_value"],sensor_values["O3_value"],obj["devEUI"],mysql_date_string)
+    except Exception as e:
+        print('Exception: ',e)
 
 
 def decode_payload(topic, payload):
